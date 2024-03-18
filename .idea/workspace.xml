@@ -9,27 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="마이바티스 연동작업">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/mapper/DemoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/DemoVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/service/CMM/DemoService.java" afterDir="false" />
+    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="마이바티스 DB연결 성공">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/TEST01IN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/TEST01OUT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/support/AcpyMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/support/LowerKeyMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/demo/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/demo/controller/mainControllor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/controller/mainControllor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/demo/filter/CharacterEncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/filter/CharacterEncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/demo/test/DB_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/test/DB_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/CMM/test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/CMM/Demo_SQL.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/controller/mainControllor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/controller/mainControllor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/mapper/DemoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/DemoVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/db/DemoVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/service/CMM/DemoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/service/CMM/DemoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/CMM/Demo_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/CMM/Demo_SQL.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/com/example/acpy/demo/config/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/com/example/acpy/demo/controller/mainControllor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/com/example/acpy/demo/filter/CharacterEncodingFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/mappers/CMM/test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/mappers/CMM/Demo_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/mappers/CMM/Demo_SQL.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/spring/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/spring/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/acpy/demo/config/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/acpy/demo/controller/mainControllor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/acpy/demo/filter/CharacterEncodingFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/CMM/test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/CMM/Demo_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/CMM/Demo_SQL.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +119,7 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.acpy.models.service" />
       <recent name="com.example.acpy.demo.controller" />
     </key>
   </component>
@@ -289,7 +285,7 @@
       <workItem from="1710643116826" duration="1842000" />
       <workItem from="1710645067413" duration="414000" />
       <workItem from="1710645497605" duration="111000" />
-      <workItem from="1710645623130" duration="10501000" />
+      <workItem from="1710645623130" duration="17116000" />
     </task>
     <task id="LOCAL-00001" summary="마이바티스 연동작업">
       <created>1710727382342</created>
@@ -298,7 +294,21 @@
       <option name="project" value="LOCAL" />
       <updated>1710727382342</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="마이바티스 DB연결 성공">
+      <created>1710737679177</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710737679177</updated>
+    </task>
+    <task id="LOCAL-00003" summary="마이바티스 DB연결 성공">
+      <created>1710737689909</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710737689909</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,6 +327,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="마이바티스 연동작업" />
-    <option name="LAST_COMMIT_MESSAGE" value="마이바티스 연동작업" />
+    <MESSAGE value="마이바티스 DB연결 성공" />
+    <option name="LAST_COMMIT_MESSAGE" value="마이바티스 DB연결 성공" />
   </component>
 </project>

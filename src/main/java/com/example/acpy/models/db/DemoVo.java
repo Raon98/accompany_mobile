@@ -1,4 +1,4 @@
-package com.example.acpy.models;
+package com.example.acpy.models.db;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;

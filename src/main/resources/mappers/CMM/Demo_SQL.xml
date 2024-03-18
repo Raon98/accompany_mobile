@@ -3,10 +3,20 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.acpy.mapper.DemoMapper">
-
-    <select id="select" resultType="com.example.acpy.models.DemoVo">
+    <select id="selectAll" resultType="com.example.acpy.support.LowerKeyMap">
         select *
         from ACP_MST mst
     </select>
 
+
+    <select id="selectParamTest" resultType="com.example.acpy.support.LowerKeyMap">
+        select *
+        from ACP_MST mst
+        where mst.idty = #{idty}
+    </select>
+
+    <insert id="insertTest">
+        INSERT INTO acp_mst (UID,PASS,IDTY,NAME,MAIL,MOHP,UAGE,USEX,UARS,INID,INDT,UPID,UPDT)
+            VALUE (#{uid},#{pass},#{idty},#{name},#{mail},#{mohp},#{uage},#{usex},#{uars},"ADMIN","","ADMIN","")
+    </insert>
 </mapper>
