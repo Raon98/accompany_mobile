@@ -1,4 +1,4 @@
-package com.example.acpy.demo.config;
+package com.example.acpy.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,0 +1,12 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.acpy.mapper.DemoMapper">
+
+    <select id="select" resultType="com.example.acpy.models.DemoVo">
+        select *
+        from ACP_MST mst
+    </select>
+
+</mapper>
