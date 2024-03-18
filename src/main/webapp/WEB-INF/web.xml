@@ -7,7 +7,7 @@
   <!-- 추가된 내용 -->
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:spring/*Context.xml</param-value>
+    <param-value>/WEB-INF/spring/applicationContext.xml</param-value>
   </context-param>
 
   <listener>

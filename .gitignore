@@ -1,0 +1,56 @@
+# macOS system files
+.DS_Store
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# Build output
+/build/
+/dist/
+/node_modules/
+/bower_components/
+
+# Package files
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+.env.local
+
+# Dependency directories
+/vendor/
+/node_modules/
+
+# Compiled files
+*.class
+*.war
+*.ear
+*.jar
+
+# Compiled Python files
+*.pyc
+*.pyo
+__pycache__/
+
+# Compiled Java files
+*.class
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Exclude database properties file
+*.properties
