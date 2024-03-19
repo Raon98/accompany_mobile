@@ -1,28 +1,25 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import {accompany} from "plugins/accompany";
 
 function App() {
     const [res, setRes] = useState([]);
 
-    axios.defaults.baseURL = 'http://localhost:8090';
-
+    const { $api } = accompany()
     let data  = {
         uid : "cheol1998"
     }
     useEffect(() => {
-        axios.post('/api/AUI0101S01', data, {
-            headers: {
-                'Content-Type': 'application/json'
+        $api("AUI0101S01", "yourScreenId", data,
+            (res) => {
+                if(res.data){
+                    console.log("Success:", res);
+                }
+            },
+            (err) => {
             }
-        })
-            .then((response) => {
-                console.log(response.data);
-                setRes(response.data);
-            })
-            .catch((error) => {
-                console.error('Error fetching data:', error);
-            });
+        )
     }, []);
 
     return (

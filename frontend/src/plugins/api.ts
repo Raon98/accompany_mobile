@@ -1,10 +1,11 @@
 import axios from "axios";
-import * as process from "process";
+
+const baseURL = process.env.REACT_APP_BACKEND_LOCAL_URL
 
 let config = {
-    baseURL : process.env.REACT_BACKBASE_URL,
-    timeout : 60 * 1000,
-    withCredentials : true
+    baseURL: baseURL,
+    timeout: 60 * 1000,
+    withCredentials: true
 }
 
 const _axios = axios.create(config);
@@ -27,26 +28,32 @@ _axios.interceptors.response.use(
     }
 )
 
-interface apiPros {
-    serviceId : string, // 서비스 아이디
-    screedId? : string,
-    methodId? : string,
-    params? : object | string,
-    successCall? : Function,
-    failCall? : Function
-}
-export const $api =  (props:apiPros)=> {
-    const serviceId = props.methodId === null ? props.serviceId : props.serviceId +'/'+props.methodId
-    axios.post(`/api/${serviceId}`, props.params, {
+/**
+ *
+ * @param serviceId
+ * @param screedId
+ * @param params
+ * @param successCall
+ * @param failCall
+ */
+export const $api = (serviceId: string, screedId?: string, params?: object | string, successCall?: (res: any) => void, failCall?: (err: any) => void) => {
+    _axios.post(`/api/${serviceId}`, {
+        REQ_COM: {
+            serviceId: serviceId,
+            screenId: screedId,
+            langCd: 'ko'
+        },
+        REQ_DAT: params
+    }, {
         headers: {
             'Content-Type': 'application/json; charset=uft-8'
         }
     })
-        .then((response) => {
-
+        .then((res) => {
+            successCall && successCall(res)
         })
-        .catch((error) => {
-            console.error('Error fetching data:', error);
+        .catch((err) => {
+            failCall && failCall(err)
+            console.error(err);
         });
-
 }

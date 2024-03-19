@@ -1,11 +1,11 @@
-package com.example.acpy.models.service;
+package com.example.acpy.models.service.ACM;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
 @Data
 @Component
-public class TEST01OUT {
+public class ACM0101OUT {
 
    private Object data;
    private String code;

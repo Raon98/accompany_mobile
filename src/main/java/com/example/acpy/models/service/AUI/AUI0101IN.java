@@ -1,11 +1,11 @@
-package com.example.acpy.models.service;
+package com.example.acpy.models.service.AUI;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
 @Data
 @Component
-public class TEST01IN {
+public class AUI0101IN {
 
     private String uid;
     private String pass;
