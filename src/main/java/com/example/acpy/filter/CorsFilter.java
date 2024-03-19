@@ -1,5 +1,7 @@
 package com.example.acpy.filter;
 
+import com.example.acpy.config.constants.CoreConstants;
+
 import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -10,7 +12,7 @@ public class CorsFilter implements Filter {
             throws IOException, ServletException {
         HttpServletResponse res = (HttpServletResponse) response;
 
-        res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+        res.setHeader("Access-Control-Allow-Origin", CoreConstants.ALLOWED_ORIGIN);
         res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
         res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
         res.setHeader("Access-Control-Allow-Credentials", "true");

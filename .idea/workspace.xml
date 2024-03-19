@@ -9,16 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="Typescirpt REACT.js 추가완료">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/controller/ApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/controller/ApiControllerBakc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/filter/CorsFilter.java" afterDir="false" />
+    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="백엔드 CORS 해결완료">
+      <change afterPath="$PROJECT_DIR$/frontend/src/plugins/accompany.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/plugins/api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/controller/mainControllor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/service/CMM/DemoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/service/USER/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/controller/AccompanyApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/controller/ApiControllerBakc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/filter/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/filter/CorsFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/service/USER/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/service/AUI/AUI0101Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/CMM/Demo_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/AUI/AUI_0101_SQL.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/mappers/CMM/Demo_SQL.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/CMM/Demo_SQL.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +34,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="spring-beans.schema" />
         <option value="myBatisXML" />
-        <option value="TypeScript File" />
         <option value="Class" />
+        <option value="TypeScript File" />
+        <option value="spring-beans.schema" />
       </list>
     </option>
   </component>
@@ -111,6 +116,7 @@
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\java\com\example\acpy\demo\config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\resources" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\resources\mappers\config" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\resources\mappers" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\resources\templates" />
@@ -288,7 +294,7 @@
       <workItem from="1710645497605" duration="111000" />
       <workItem from="1710645623130" duration="18243000" />
       <workItem from="1710747004585" duration="5396000" />
-      <workItem from="1710806892485" duration="7356000" />
+      <workItem from="1710806892485" duration="15114000" />
     </task>
     <task id="LOCAL-00001" summary="마이바티스 연동작업">
       <created>1710727382342</created>
@@ -325,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710814149964</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="백엔드 CORS 해결완료">
+      <created>1710814327632</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710814327632</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,6 +360,7 @@
     <MESSAGE value="마이바티스 DB연결 성공" />
     <MESSAGE value="마이바티스 DB연결 TEST 완료" />
     <MESSAGE value="Typescirpt REACT.js 추가완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="Typescirpt REACT.js 추가완료" />
+    <MESSAGE value="백엔드 CORS 해결완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="백엔드 CORS 해결완료" />
   </component>
 </project>

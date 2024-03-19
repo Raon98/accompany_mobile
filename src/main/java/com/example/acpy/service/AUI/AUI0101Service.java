@@ -1,4 +1,4 @@
-package com.example.acpy.service.USER;
+package com.example.acpy.service.AUI;
 
 import com.example.acpy.models.service.TEST01IN;
 import com.example.acpy.models.service.TEST01OUT;
@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 
-@Service("UserService")
-public class UserService {
+@Service("AUI0101Service")
+public class AUI0101Service {
     /**
      *
      * @param in
@@ -18,7 +18,7 @@ public class UserService {
      * @return
      * @throws Exception
      */
-    public List<LowerKeyMap> selectAll(TEST01IN in, TEST01OUT out) throws Exception {
+    public List<LowerKeyMap> AUI0101S01(TEST01IN in, TEST01OUT out) throws Exception {
         List<LowerKeyMap> map = AcpyMapper.selectList("selectAll",in);
         out.setData(map);
         return map;

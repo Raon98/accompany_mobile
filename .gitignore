@@ -54,3 +54,6 @@ Thumbs.db
 
 # Exclude database properties file
 *.properties
+
+config/constants/
+*Constants.java

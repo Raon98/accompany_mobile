@@ -11,7 +11,7 @@ function App() {
         uid : "cheol1998"
     }
     useEffect(() => {
-        axios.post('/api/UserService/selectAll', data, {
+        axios.post('/api/AUI0101S01', data, {
             headers: {
                 'Content-Type': 'application/json'
             }
