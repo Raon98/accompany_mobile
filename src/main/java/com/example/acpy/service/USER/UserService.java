@@ -1,4 +1,4 @@
-package com.example.acpy.service.CMM;
+package com.example.acpy.service.USER;
 
 import com.example.acpy.models.service.TEST01IN;
 import com.example.acpy.models.service.TEST01OUT;
@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 
-@Service
-public class DemoService {
+@Service("UserService")
+public class UserService {
     /**
      *
      * @param in
