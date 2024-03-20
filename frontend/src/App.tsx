@@ -1,32 +1,13 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import './App.css';
-import {accompany} from "plugins/accompany";
+import React from 'react';
+import DrawingCanvas from 'components/DrawingCanvas';
 
-function App() {
-    const [res, setRes] = useState([]);
-
-    const { $api } = accompany()
-    let data  = {
-        uid : "cheol1998"
-    }
-    useEffect(() => {
-        $api("AUI0101S01", "yourScreenId", data,
-            (res) => {
-                if(res.data){
-                    console.log("Success:", res);
-                }
-            },
-            (err) => {
-            }
-        )
-    }, []);
-
+const App: React.FC = () => {
     return (
         <div>
-            백엔드 테스트 : {JSON.stringify(res)} {/* 받은 데이터 확인 */}
+            <h1>Canvas Drawing and Text Recognition</h1>
+            <DrawingCanvas />
         </div>
     );
-}
+};
 
 export default App;

@@ -9,28 +9,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="서버로그사용 추가및 백엔드공통화 로직 변경">
-      <change afterPath="$PROJECT_DIR$/frontend/.env.development" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/webpack.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/config/JacksonConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/AUI/AUI0101IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/AUI/AUI0101OUT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/service/ACM/ACM0101Service.java" afterDir="false" />
+    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="임시 visionKey">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/DrawingCanvas.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/config/CloudVisionConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/controller/CloudVisionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/AVS/AVS0101IN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/AVS/AVS0101OUT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/service/AVS/AVS0101Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/plugins/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/plugins/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/controller/AccompanyApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/controller/AccompanyApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/db/DemoVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/db/AUI/AUI01REQ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/TEST01IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/ACM/ACM0101IN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/TEST01OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/ACM/ACM0101OUT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/ACM/ACM0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/ACM/ACM0101IN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/AUI/AUI0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/AUI/AUI0101IN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/service/ACM/ACM0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/service/ACM/ACM0101Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/service/AUI/AUI0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/acpy/service/AUI/AUI0101Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/AUI/AUI_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/AUI/AUI_0101_SQL.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/mappers/AUI/AUI_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/mappers/AUI/AUI_0101_SQL.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/AUI/AUI_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/AUI/AUI_0101_SQL.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +41,7 @@
         <option value="myBatisXML" />
         <option value="spring-beans.schema" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
         <option value="Class" />
       </list>
     </option>
@@ -92,51 +90,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/LG/Desktop/portfoilo/accompany_mobile/frontend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15625",
-    "project.structure.side.proportion": "0.2410197",
-    "settings.editor.selected.configurable": "fileTemplates",
-    "spring.configuration.checksum": "9a59f267df7b686029b9a7935569a952",
-    "ts.external.directory.path": "C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\frontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/LG/Desktop/portfoilo/accompany_mobile/src/main/java/com/example/acpy/models/service/AVS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15625&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2410197&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;9a59f267df7b686029b9a7935569a952&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\java\com\example\acpy\models\service\AVS" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\java\com\example\acpy\models\service\AUI" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\java\com\example\acpy\models\service" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\java\com\example\acpy\service\ACM" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\resources\mappers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\resources" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\resources\config" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\resources\mappers\config" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\resources\mappers" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\resources\templates" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\resources\vision" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.acpy.models.service.ACM" />
       <recent name="com.example.acpy.controller" />
+      <recent name="com.example.acpy.config.constants" />
+      <recent name="com.example.acpy.models.service.ACM" />
       <recent name="com.example.acpy.models.service" />
       <recent name="com.example.acpy.demo.controller" />
     </key>
@@ -251,6 +250,83 @@
         </option>
       </method>
     </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="c7148aeb-d8ea-4661-b318-d040effedb77" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="55068" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat: accompany_mobile" type="com.poratu.idea.plugins.tomcat" temporary="true">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
       <predefined_log_file enabled="true" id="Tomcat Access Log" />
@@ -311,7 +387,15 @@
       <workItem from="1710835994391" duration="351000" />
       <workItem from="1710836383222" duration="382000" />
       <workItem from="1710836804901" duration="723000" />
-      <workItem from="1710837559117" duration="7995000" />
+      <workItem from="1710837559117" duration="8386000" />
+      <workItem from="1710892968361" duration="3906000" />
+      <workItem from="1710900613189" duration="162000" />
+      <workItem from="1710900832878" duration="214000" />
+      <workItem from="1710901076245" duration="1159000" />
+      <workItem from="1710903692699" duration="17255000" />
+      <workItem from="1710923600676" duration="5480000" />
+      <workItem from="1710929136623" duration="2192000" />
+      <workItem from="1710931375633" duration="646000" />
     </task>
     <task id="LOCAL-00001" summary="마이바티스 연동작업">
       <created>1710727382342</created>
@@ -362,7 +446,21 @@
       <option name="project" value="LOCAL" />
       <updated>1710828265229</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="백엔드 out data 담기 성공">
+      <created>1710845696485</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710845696485</updated>
+    </task>
+    <task id="LOCAL-00009" summary="임시 visionKey">
+      <created>1710931308265</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1710931308265</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,6 +484,8 @@
     <MESSAGE value="Typescirpt REACT.js 추가완료" />
     <MESSAGE value="백엔드 CORS 해결완료" />
     <MESSAGE value="서버로그사용 추가및 백엔드공통화 로직 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="서버로그사용 추가및 백엔드공통화 로직 변경" />
+    <MESSAGE value="백엔드 out data 담기 성공" />
+    <MESSAGE value="임시 visionKey" />
+    <option name="LAST_COMMIT_MESSAGE" value="임시 visionKey" />
   </component>
 </project>

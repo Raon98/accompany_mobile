@@ -32,7 +32,6 @@ public class AUI0101Service {
      * @throws Exception
      */
     public boolean AUI0101S02(AUI0101IN in, AUI0101OUT out) throws Exception {
-        in.setIdty("2");
         List<LowerKeyMap> list = AcpyMapper.selectList("selectParamTest",in);
         out.setData(list);
         return true;

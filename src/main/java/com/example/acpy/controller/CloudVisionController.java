@@ -1,33 +1,22 @@
-package com.example.acpy.service.ACM;
-
-import com.example.acpy.models.service.ACM.ACM0101IN;
-import com.example.acpy.models.service.ACM.ACM0101OUT;
-import com.example.acpy.support.AcpyMapper;
-import com.example.acpy.support.LowerKeyMap;
+import com.google.api.gax.rpc.ApiException;
 import com.google.cloud.vision.v1.*;
 import com.google.protobuf.ByteString;
-import org.springframework.stereotype.Service;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+@RestController
+public class CloudVisionController {
 
-@Service("ACM0101Service")
-public class ACM0101Service {
-    /**
-     *
-     * @param ACM0101IN in
-     * @param ACM0101OUT out
-     * @return
-     * @throws Exception
-     */
-    public boolean ACM0101S01(ACM0101IN in, ACM0101OUT out) throws Exception {
+    @PostMapping("/ext/vision")
+    public ResponseEntity<String> imageToTextVision(@RequestBody String imageData) {
         try {
-            // 베이스64로 인코딩된 이미지를 바이트 배열로 디코딩
-            byte[] imageBytes = Files.readAllBytes(Paths.get(in.getImagePath()));
+            // 이미지 파일을 byte 배열로 변환
+            byte[] imageBytes = imageData.getBytes();
 
             // Google Vision API 클라이언트 생성
             try (ImageAnnotatorClient client = ImageAnnotatorClient.create()) {
@@ -51,14 +40,13 @@ public class ACM0101Service {
                     }
                 }
 
-                // 추출된 텍스트를 out 객체에 설정하여 리턴
-                out.setData(resultText.toString());
-                return true;
+                // 추출된 텍스트 반환
+                return ResponseEntity.ok(resultText.toString());
             }
-        } catch (IOException e) {
+        } catch (IOException | ApiException e) {
             // 에러 발생 시 처리
             e.printStackTrace();
-            return false;
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error occurred: " + e.getMessage());
         }
     }
 }
