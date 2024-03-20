@@ -20,18 +20,18 @@ const DrawingCanvas: React.FC = () => {
         const context = canvas.getContext('2d');
         if (!context) return;
 
-        // Get canvas image data
-        const imageData = canvas.toDataURL('image/png');
+        const imageData = canvas.toDataURL('image/png').split(',')[1];
 
+        console.log(imageData)
         _axios.post(`/api/vision`, {
-           imagePath : imageData
+            base64Image : imageData // 이미지 데이터를 filePath라는 이름으로 전송
         }, {
             headers: {
                 'Content-Type': 'application/json; charset=uft-8'
             }
         })
             .then((res) => {
-                    console.log(res);
+                console.log(res);
             })
             .catch((err) => {
                 console.error(err);

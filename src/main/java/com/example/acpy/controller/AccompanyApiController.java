@@ -15,11 +15,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.ByteArrayInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 import java.util.Map;
 
@@ -36,42 +40,65 @@ public class AccompanyApiController {
         this.applicationContext = applicationContext;
     }
     @PostMapping("/api/vision")
-    public ResponseEntity<String> imageToTextVision(@RequestBody String imageData) {
+    public ResponseEntity<String> detectTextFromImage(@RequestBody String filePath) {
+        String path = "C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\src\\main\\resources\\132.png";
         try {
-            // 이미지 파일을 byte 배열로 변환
-            byte[] imageBytes = imageData.getBytes();
 
-            // Google Vision API 클라이언트 생성
-            try (ImageAnnotatorClient client = ImageAnnotatorClient.create()) {
-                // 이미지 주석 요청 생성
-                AnnotateImageRequest request = AnnotateImageRequest.newBuilder()
-                        .setImage(Image.newBuilder().setContent(ByteString.copyFrom(imageBytes)))
-                        .addFeatures(Feature.newBuilder().setType(Feature.Type.TEXT_DETECTION))
-                        .build();
-                List<AnnotateImageRequest> requests = new ArrayList<>();
-                requests.add(request);
+            byte[] imageData = readImageDataFromFile(path);
 
-                // 이미지 주석 처리
-                BatchAnnotateImagesResponse response = client.batchAnnotateImages(requests);
+            String detectedText = detectText(imageData);
 
-                // 결과 처리
-                StringBuilder resultText = new StringBuilder();
-                for (AnnotateImageResponse res : response.getResponsesList()) {
-                    for (EntityAnnotation annotation : res.getTextAnnotationsList()) {
-                        // 이미지에서 추출된 텍스트 추가
-                        resultText.append(annotation.getDescription()).append("\n");
-                    }
-                }
-
-                // 추출된 텍스트 반환
-                return ResponseEntity.ok(resultText.toString());
-            }
-        } catch (IOException | ApiException e) {
-            // 에러 발생 시 처리
+            // 추출된 텍스트 반환
+            return ResponseEntity.ok(detectedText);
+        } catch (IOException e) {
             e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error occurred: " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error occurred while processing the image: " + e.getMessage());
         }
     }
+
+    // 파일로부터 이미지 데이터 읽어오기
+    private byte[] readImageDataFromFile(String filePath) throws IOException {
+        // 파일에서 이미지 바이트 데이터를 읽어옴
+        try (FileInputStream fileInputStream = new FileInputStream(filePath)) {
+            byte[] imageData = new byte[fileInputStream.available()];
+            fileInputStream.read(imageData);
+            return imageData;
+        }
+    }
+
+    // Vision API를 사용하여 텍스트 감지
+    private String detectText(byte[] imageData) throws IOException {
+        List<AnnotateImageRequest> requests = new ArrayList<>();
+
+        // 이미지 바이트 데이터를 사용하여 Image 객체 생성
+        Image img = Image.newBuilder().setContent(ByteString.copyFrom(imageData)).build();
+
+        // Feature와 AnnotateImageRequest 생성
+        Feature feat = Feature.newBuilder().setType(Feature.Type.TEXT_DETECTION).build();
+        AnnotateImageRequest request = AnnotateImageRequest.newBuilder().addFeatures(feat).setImage(img).build();
+        requests.add(request);
+
+        // Vision API 클라이언트 생성
+        try (ImageAnnotatorClient client = ImageAnnotatorClient.create()) {
+            // 이미지에서 텍스트 감지 요청 보내기
+            BatchAnnotateImagesResponse response = client.batchAnnotateImages(requests);
+            // 응답 받은 결과 중에서 감지된 텍스트 추출
+            StringBuilder resultText = new StringBuilder();
+            for (AnnotateImageResponse res : response.getResponsesList()) {
+                if (res.hasError()) {
+                    // 에러가 발생한 경우 에러 메시지 반환
+                    return "Error: " + res.getError().getMessage();
+                }
+                // 이미지에서 추출된 텍스트 결과 처리
+                for (EntityAnnotation annotation : res.getTextAnnotationsList()) {
+                    resultText.append(annotation.getDescription()).append("\n");
+                }
+            }
+            return resultText.toString();
+        }
+    }
+
 
     @PostMapping("/api/{serviceId}")
     public ResponseEntity<Object> postServiceAPiRequest(

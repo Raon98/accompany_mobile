@@ -20,11 +20,23 @@ public class CloudVisionController {
 
             // Google Vision API 클라이언트 생성
             try (ImageAnnotatorClient client = ImageAnnotatorClient.create()) {
+                // 언어 코드 설정
+                String languageCode = "ko"; // 예시: 한국어
+                ImageContext imageContext = ImageContext.newBuilder().addLanguageHints(languageCode).build();
+
+                // 텍스트 감지 및 인식 기능 설정 추가
+                Feature textDetectionFeature = Feature.newBuilder()
+                        .setType(Feature.Type.TEXT_DETECTION)
+                        .setMaxResults(10) // 최대 인식 결과 수 설정
+                        .build();
+
                 // 이미지 주석 요청 생성
                 AnnotateImageRequest request = AnnotateImageRequest.newBuilder()
                         .setImage(Image.newBuilder().setContent(ByteString.copyFrom(imageBytes)))
-                        .addFeatures(Feature.newBuilder().setType(Feature.Type.TEXT_DETECTION))
+                        .addFeatures(textDetectionFeature) // 텍스트 감지 및 인식 기능 추가
+                        .setImageContext(imageContext) // 언어 설정 추가
                         .build();
+
                 List<AnnotateImageRequest> requests = new ArrayList<>();
                 requests.add(request);
 
