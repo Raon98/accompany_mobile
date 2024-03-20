@@ -15,10 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.ByteArrayInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -40,14 +37,20 @@ public class AccompanyApiController {
         this.applicationContext = applicationContext;
     }
     @PostMapping("/api/vision")
-    public ResponseEntity<String> detectTextFromImage(@RequestBody String filePath) {
-        String path = "C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\src\\main\\resources\\132.png";
+    public ResponseEntity<String> detectTextFromImage(@RequestBody Map<String, String> requestBody) {
+        String path = "C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\src\\main\\resources\\image\\132.png";
         try {
+            LOGGER.info("============= filePath CALL START ==============");
+            String base64EncodedImage = requestBody.get("base64Image");
 
-            byte[] imageData = readImageDataFromFile(path);
-
+            // 이미지 파일로 저장
+            String filePath = saveBase64ImageToFile(base64EncodedImage);
+            LOGGER.info("============= Service filePath {} ==============",filePath);
+            byte[] imageData = readImageDataFromFile(filePath);
+            LOGGER.info("============= Service imageData {} ==============",imageData);
             String detectedText = detectText(imageData);
-
+            LOGGER.info("============= Service detectedText {} ==============",detectedText);
+            LOGGER.info("============= Service CALL END ==============");
             // 추출된 텍스트 반환
             return ResponseEntity.ok(detectedText);
         } catch (IOException e) {
@@ -55,6 +58,21 @@ public class AccompanyApiController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Error occurred while processing the image: " + e.getMessage());
         }
+    }
+
+    private String saveBase64ImageToFile(String base64EncodedImage) throws IOException {
+        // 임시 이미지 파일 경로
+        String tempFilePath = "C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\src\\main\\resources\\image\\image.png";
+
+        // Base64 디코딩된 이미지 데이터를 바이트 배열로 변환
+        byte[] imageBytes = Base64.getDecoder().decode(base64EncodedImage);
+
+        // 임시 이미지 파일로 저장
+        FileOutputStream fileOutputStream = new FileOutputStream(tempFilePath);
+        fileOutputStream.write(imageBytes);
+        fileOutputStream.close();
+
+        return tempFilePath;
     }
 
     // 파일로부터 이미지 데이터 읽어오기

@@ -1,7 +1,11 @@
 import React, { useState, useRef } from 'react';
+
+import CanvasDraw from "react-canvas-draw";
 import axios from 'axios';
 
-let config = {
+interface DrawingCanvasProps {}
+
+const config = {
     baseURL: 'http://localhost:8090',
     timeout: 60 * 1000,
     withCredentials: true
@@ -9,25 +13,22 @@ let config = {
 
 const _axios = axios.create(config);
 
-const DrawingCanvas: React.FC = () => {
-    const canvasRef = useRef<HTMLCanvasElement>(null);
+const DrawingCanvas: React.FC<DrawingCanvasProps> = () => {
+    const canvasRef = useRef<CanvasDraw>(null);
     const [recognizedText, setRecognizedText] = useState<string>('');
 
-    const handleCanvasDraw =  () => {
+    const handleCanvasDraw = () => {
         if (!canvasRef.current) return;
 
-        const canvas = canvasRef.current;
-        const context = canvas.getContext('2d');
-        if (!context) return;
+        // @ts-ignore
+        const imageData = canvasRef.current.canvas.drawing.toDataURL('image/png').split(',')[1];
 
-        const imageData = canvas.toDataURL('image/png').split(',')[1];
-
-        console.log(imageData)
+        console.log(imageData);
         _axios.post(`/api/vision`, {
-            base64Image : imageData // 이미지 데이터를 filePath라는 이름으로 전송
+            base64Image: imageData // 이미지 데이터를 filePath라는 이름으로 전송
         }, {
             headers: {
-                'Content-Type': 'application/json; charset=uft-8'
+                'Content-Type': 'application/json; charset=utf-8'
             }
         })
             .then((res) => {
@@ -38,48 +39,24 @@ const DrawingCanvas: React.FC = () => {
             });
     };
 
+    const clearCanvas = () => {
+        if (!canvasRef.current) return;
+
+        canvasRef.current.clear();
+    };
+
     return (
         <div>
-            <canvas
+            <CanvasDraw
                 ref={canvasRef}
-                width={400}
-                height={200}
-                onMouseDown={(e) => {
-                    const canvas = canvasRef.current;
-                    if (!canvas) return;
-
-                    const context = canvas.getContext('2d');
-                    if (!context) return;
-
-                    const rect = canvas.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-
-                    context.beginPath();
-                    context.moveTo(x, y);
-
-                    canvas.addEventListener(
-                        'mousemove',
-                        (ev) => {
-                            const rect = canvas.getBoundingClientRect();
-                            const mx = ev.clientX - rect.left;
-                            const my = ev.clientY - rect.top;
-                            context.lineTo(mx, my);
-                            context.stroke();
-                        },
-                        false
-                    );
-
-                    canvas.addEventListener(
-                        'mouseup',
-                        () => {
-                            canvas.removeEventListener('mousemove', () => {});
-                        },
-                        false
-                    );
-                }}
+                canvasWidth={1920}
+                canvasHeight={720}
+                brushRadius={15} // 선의 굵기 설정
+                lazyRadius={0} // 마우스를 따라다니는 선의 부드러운 정도 설정
+                hideGrid={true} // 그리드 숨기기
             />
             <button onClick={handleCanvasDraw}>Recognize Text</button>
+            <button onClick={clearCanvas}>Clear</button>
             <div>Recognized Text: {recognizedText}</div>
         </div>
     );
