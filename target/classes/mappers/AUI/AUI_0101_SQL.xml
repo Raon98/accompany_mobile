@@ -2,14 +2,14 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="acpy.support.AcpyMapper">
-    <select id="selectAll" resultType="com.example.acpy.support.LowerKeyMap">
+<mapper namespace="acpy.api.support.AcpyMapper">
+    <select id="selectAll" resultType="acpy.api.support.LowerKeyMap">
         select *
         from ACP_MST mst
     </select>
 
 
-    <select id="selectParamTest" resultType="com.example.acpy.support.LowerKeyMap">
+    <select id="selectParamTest" resultType="acpy.api.support.LowerKeyMap">
         select *
         from ACP_MST mst
         where mst.idty = #{idty}

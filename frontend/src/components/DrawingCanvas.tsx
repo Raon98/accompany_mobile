@@ -15,7 +15,7 @@ const _axios = axios.create(config);
 
 const DrawingCanvas: React.FC<DrawingCanvasProps> = () => {
     const canvasRef = useRef<CanvasDraw>(null);
-    const [recognizedText, setRecognizedText] = useState<string>('');
+    const [recognizedText, setRecognizedText] = useState<string[]>([]);
 
     const handleCanvasDraw = () => {
         if (!canvasRef.current) return;
@@ -23,8 +23,7 @@ const DrawingCanvas: React.FC<DrawingCanvasProps> = () => {
         // @ts-ignore
         const imageData = canvasRef.current.canvas.drawing.toDataURL('image/png').split(',')[1];
 
-        console.log(imageData);
-        _axios.post(`/api/vision`, {
+        _axios.post(`/ext/GoogleVision`, {
             base64Image: imageData // 이미지 데이터를 filePath라는 이름으로 전송
         }, {
             headers: {
@@ -32,7 +31,11 @@ const DrawingCanvas: React.FC<DrawingCanvasProps> = () => {
             }
         })
             .then((res) => {
-                console.log(res);
+                if (res){
+                    setRecognizedText([...res.data].filter(v=>v !== '\n'))
+
+                    console.log(recognizedText)
+                }
             })
             .catch((err) => {
                 console.error(err);
@@ -49,7 +52,7 @@ const DrawingCanvas: React.FC<DrawingCanvasProps> = () => {
         <div>
             <CanvasDraw
                 ref={canvasRef}
-                canvasWidth={1920}
+                canvasWidth={1280}
                 canvasHeight={720}
                 brushRadius={15} // 선의 굵기 설정
                 lazyRadius={0} // 마우스를 따라다니는 선의 부드러운 정도 설정
@@ -57,7 +60,7 @@ const DrawingCanvas: React.FC<DrawingCanvasProps> = () => {
             />
             <button onClick={handleCanvasDraw}>Recognize Text</button>
             <button onClick={clearCanvas}>Clear</button>
-            <div>Recognized Text: {recognizedText}</div>
+            <div style={{ fontSize : 30 }}>추출한 텍스트입니다.: {recognizedText}</div>
         </div>
     );
 };

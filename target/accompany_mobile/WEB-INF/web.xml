@@ -48,7 +48,7 @@
 
   <filter>
     <filter-name>CorsFilter</filter-name>
-    <filter-class>com.example.acpy.filter.CorsFilter</filter-class>
+    <filter-class>acpy.api.filter.CorsFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>CorsFilter</filter-name>

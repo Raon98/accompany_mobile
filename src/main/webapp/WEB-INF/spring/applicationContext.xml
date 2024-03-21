@@ -5,16 +5,15 @@
        xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
 
-    <!-- 데이터베이스 연결 정보를 포함하는 properties 파일 경로 확인 -->
+
     <context:property-placeholder location="/WEB-INF/database.properties"/>
 
     <!-- MyBatis Mapper를 스캔하여 빈으로 등록하는 설정 -->
-    <mybatis:scan base-package="com.example.acpy.mapper" />
-    <context:component-scan base-package="com.example.acpy" /> <!-- 패키지 경로 수정 필요 -->
+    <mybatis:scan base-package="acpy" />
+    <context:component-scan base-package="acpy" />
     <!-- 데이터베이스 연결 DataSource 빈 설정 -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="org.mariadb.jdbc.Driver"/>
-        <!-- database.properties 파일에 정의된 프로퍼티 사용 -->
         <property name="url" value="${jdbc.url}"/>
         <property name="username" value="${jdbc.username}"/>
         <property name="password" value="${jdbc.password}"/>
