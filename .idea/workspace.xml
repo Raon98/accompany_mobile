@@ -9,47 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="Support-AcpyLogger 전역으로 추가">
-      <change afterPath="$PROJECT_DIR$/src/main/java/acpy/api/controller/AccompanyApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/acpy/api/controller/GoogleVisionController.java" afterDir="false" />
+    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="불필요한 파일 정리및 파일구조변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/DrawingCanvas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DrawingCanvas.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/config/CloudVisionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/config/CloudVisionConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/config/JacksonConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/config/JacksonConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/controller/AccompanyApiController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/controller/CloudVisionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/filter/CharacterEncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/filter/CharacterEncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/filter/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/filter/CorsFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/db/AUI/AUI01REQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/models/db/AUI/AUI01REQ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/ACM/ACM0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/models/service/ACM/ACM0101IN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/ACM/ACM0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/models/service/ACM/ACM0101OUT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/AUI/AUI0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/models/service/AUI/AUI0101IN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/AUI/AUI0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/models/service/AUI/AUI0101OUT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/AVS/AVS0101IN.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/models/service/AVS/AVS0101OUT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/service/ACM/ACM0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/service/ACM/ACM0101Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/service/AUI/AUI0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/service/AUI/AUI0101Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/service/AVS/AVS0101Service.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/support/AcpyLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/support/AcpyLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/support/AcpyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/support/AcpyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/support/LowerKeyMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/support/LowerKeyMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/acpy/test/DB_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/test/DB_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/132.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/plugins/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/plugins/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/controller/GoogleVisionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/controller/GoogleVisionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/image/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/AUI/AUI_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/AUI/AUI_0101_SQL.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/dispatcher-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/mappers/AUI/AUI_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/mappers/AUI/AUI_0101_SQL.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/spring/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/spring/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/spring/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/spring/dispatcher-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/views/home/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/image/132.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/image/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/image/image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/AUI/AUI_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/AUI/AUI_0101_SQL.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -419,7 +385,7 @@
       <workItem from="1710929136623" duration="2192000" />
       <workItem from="1710931375633" duration="646000" />
       <workItem from="1710982176903" duration="846000" />
-      <workItem from="1710983178358" duration="6829000" />
+      <workItem from="1710983178358" duration="12418000" />
     </task>
     <task id="LOCAL-00001" summary="마이바티스 연동작업">
       <created>1710727382342</created>
@@ -498,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710984350813</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="불필요한 파일 정리및 파일구조변경">
+      <created>1710996597191</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1710996597191</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +499,8 @@
     <MESSAGE value="임시 visionKey" />
     <MESSAGE value="이미지 - 텍스트 변환 로직 성공" />
     <MESSAGE value="Support-AcpyLogger 전역으로 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="Support-AcpyLogger 전역으로 추가" />
+    <MESSAGE value="불필요한 파일 정리및 파일구조변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="불필요한 파일 정리및 파일구조변경" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

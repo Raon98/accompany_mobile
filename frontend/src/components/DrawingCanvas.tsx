@@ -1,7 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 
 import CanvasDraw from "react-canvas-draw";
 import axios from 'axios';
+import {$api} from "plugins/api";
 
 interface DrawingCanvasProps {}
 
@@ -10,43 +11,56 @@ const config = {
     timeout: 60 * 1000,
     withCredentials: true
 }
-
+const {AsyncPost} = $api
 const _axios = axios.create(config);
 
 const DrawingCanvas: React.FC<DrawingCanvasProps> = () => {
     const canvasRef = useRef<CanvasDraw>(null);
     const [recognizedText, setRecognizedText] = useState<string[]>([]);
 
-    const handleCanvasDraw = () => {
-        if (!canvasRef.current) return;
+    const func = {
+        handleCanvasDraw : ()=> {
+            if (!canvasRef.current) return;
+            // @ts-ignore
+            const imageData = canvasRef.current.canvas.drawing.toDataURL('image/png').split(',')[1];
+            const params = {base64Image: imageData};
 
-        // @ts-ignore
-        const imageData = canvasRef.current.canvas.drawing.toDataURL('image/png').split(',')[1];
-
-        _axios.post(`/ext/GoogleVision`, {
-            base64Image: imageData // 이미지 데이터를 filePath라는 이름으로 전송
-        }, {
-            headers: {
-                'Content-Type': 'application/json; charset=utf-8'
-            }
-        })
-            .then((res) => {
-                if (res){
-                    setRecognizedText([...res.data].filter(v=>v !== '\n'))
-
-                    console.log(recognizedText)
+            AsyncPost('ext', 'GoogleVision', 'DrawingCanvass', params,
+                (res) => {
+                    setRecognizedText(func.recognizedFilter([...res]))
+                });
+        },
+        clearCanvas:()=>{
+            if (!canvasRef.current) return;
+            canvasRef.current.clear();
+        },
+        /*20240321 텍스트 필터기능 모음자음일경우 filter*/
+        recognizedFilter:(textArr:string[])=>{
+            let arr = textArr.filter(v=>v !== '\n' && func.containsLetters(v))
+            return arr;
+        },
+        containsLetters:(str:string) => {
+            let word = [
+                {w1:'ㄱ',w2:'ㅎ'},
+                {w1:'ㅏ',w2:'ㅣ'}
+            ]
+            let result
+            for (let i=0; i<word.length; i++){
+                result = word.every( char => str <= word[i].w2 && word[i].w1 <= str)
+                if (result === true){
+                    return false
                 }
-            })
-            .catch((err) => {
-                console.error(err);
-            });
-    };
+            }
+            return true
+    }
+    }
+    useEffect(()=>{
+        if(recognizedText.length > 0) {
+            console.log(recognizedText)
+        }
 
-    const clearCanvas = () => {
-        if (!canvasRef.current) return;
+    },[recognizedText])
 
-        canvasRef.current.clear();
-    };
 
     return (
         <div>
@@ -58,8 +72,8 @@ const DrawingCanvas: React.FC<DrawingCanvasProps> = () => {
                 lazyRadius={0} // 마우스를 따라다니는 선의 부드러운 정도 설정
                 hideGrid={true} // 그리드 숨기기
             />
-            <button onClick={handleCanvasDraw}>Recognize Text</button>
-            <button onClick={clearCanvas}>Clear</button>
+            <button onClick={func.handleCanvasDraw}>Recognize Text</button>
+            <button onClick={func.clearCanvas}>Clear</button>
             <div style={{ fontSize : 30 }}>추출한 텍스트입니다.: {recognizedText}</div>
         </div>
     );

@@ -25,11 +25,12 @@ import java.util.Map;
 public class GoogleVisionController {
 
     @PostMapping("/GoogleVision")
-    public ResponseEntity<String> GoogleVisionImgToText(@RequestBody Map<String, String> requestBody){
+    public ResponseEntity<String> GoogleVisionImgToText(@RequestBody Map<String, Object> requestBody){
 
         try {
             AcpyLogger.info("=============  CALL GoogleVision START ==============");
-            String base64EncodedImage = requestBody.get("base64Image");
+            Map<String, Object> datParams = (Map<String, Object>) requestBody.get("REQ_DAT");
+            String base64EncodedImage = (String) datParams.get("base64Image");
 
             // 이미지 파일로 저장
             String filePath = saveBase64ImageToFile(base64EncodedImage);

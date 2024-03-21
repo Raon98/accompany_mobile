@@ -30,14 +30,40 @@ _axios.interceptors.response.use(
 
 /**
  *
+ * @param proxy
  * @param serviceId
  * @param screedId
  * @param params
  * @param successCall
  * @param failCall
  */
-export const $api = (serviceId: string, screedId?: string, params?: object | string, successCall?: (res: any) => void, failCall?: (err: any) => void) => {
-    _axios.post(`/api/${serviceId}`, {
+
+/*비동기 POST 방식*/
+const AsyncPost = async (proxy:string,serviceId: string, screedId?: string, params?: object | string, successCall?: (res: any) => void, failCall?: (err: any) => void) => {
+     await _axios.post(`/${proxy}/${serviceId}`, {
+         REQ_COM: {
+             serviceId: serviceId,
+             screenId: screedId,
+             langCd: 'ko'
+         },
+         REQ_DAT: params
+     }, {
+         headers: {
+             'Content-Type': 'application/json; charset=uft-8'
+         }
+     })
+         .then((res) => {
+             successCall && successCall(res)
+         })
+         .catch((err) => {
+             failCall && failCall(err)
+             console.error(err);
+         });
+}
+
+/*동기 POST 방식*/
+const Post = (proxy:string,serviceId: string, screedId?: string, params?: object | string, successCall?: (res: any) => void, failCall?: (err: any) => void) => {
+    _axios.post(`/${proxy}/${serviceId}`, {
         REQ_COM: {
             serviceId: serviceId,
             screenId: screedId,
@@ -57,3 +83,4 @@ export const $api = (serviceId: string, screedId?: string, params?: object | str
             console.error(err);
         });
 }
+export const $api = { Post , AsyncPost}
