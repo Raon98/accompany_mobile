@@ -1,13 +1,13 @@
 import React from 'react';
-import GvCanves from "components/GVCanves";
+import Router from "router";
+import { ToastContainer } from "react-toastify";
 
-
-const App: React.FC = () => {
+const App = () => {
     return (
-        <div>
-            <h1>Canvas Drawing and Text Recognition</h1>
-            <GvCanves/>
-        </div>
+        <>
+            <ToastContainer/>
+            <Router/>
+        </>
     );
 };
 

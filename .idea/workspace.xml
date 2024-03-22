@@ -10,20 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="파일 구조변경 변경">
-      <change afterPath="$PROJECT_DIR$/frontend/.npmrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/router/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.development" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/DrawingCanvas.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/plugins/accompany.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/plugins/accompany.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/plugins/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/plugins/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/react-app-env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/webpack.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/image/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/image/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/image/image.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -412,6 +405,7 @@
       <workItem from="1711091659646" duration="698000" />
       <workItem from="1711092374378" duration="301000" />
       <workItem from="1711092689671" duration="455000" />
+      <workItem from="1711093166181" duration="1131000" />
     </task>
     <task id="LOCAL-00001" summary="마이바티스 연동작업">
       <created>1710727382342</created>
@@ -511,7 +505,21 @@
       <option name="project" value="LOCAL" />
       <updated>1711007000478</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="파일 구조변경 변경">
+      <created>1711093407387</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1711093407387</updated>
+    </task>
+    <task id="LOCAL-00016" summary="파일 구조변경 변경">
+      <created>1711093420099</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1711093420099</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +550,8 @@
     <MESSAGE value="불필요한 파일 정리및 파일구조변경" />
     <MESSAGE value=" /*20240321 텍스트 필터기능 모음자음일경우 filter*/" />
     <MESSAGE value=" /*20240321 텍스트 필터기능 영어/한글변환 filter*/" />
-    <option name="LAST_COMMIT_MESSAGE" value=" /*20240321 텍스트 필터기능 영어/한글변환 filter*/" />
+    <MESSAGE value="파일 구조변경 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="파일 구조변경 변경" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
