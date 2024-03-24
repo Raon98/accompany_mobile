@@ -1,26 +1,15 @@
-import {
-    Route,
-    Routes,
-    Navigate
-} from "react-router-dom";
-import GvCanves from "components/GVCanves";
+import {Routes} from "react-router-dom";
+import AccompanyLayout from "components/AccompanyLayout";
 
 interface RouterProps {
     isAuthenticated : boolean;
 }
 export default function Router() {
-    /*지정되지않은 페이지
-    * <Route path="*" element={<Navigate replace to="/"/> }/>
-    * */
 
     return (
         <>
             <Routes>
-                {
-                        <>
-                            <Route path="/" element={<GvCanves/>}/>
-                        </>
-                }
+                <AccompanyLayout/>
             </Routes>
         </>
     )
