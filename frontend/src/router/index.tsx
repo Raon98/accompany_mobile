@@ -1,18 +1,34 @@
-import {Routes} from "react-router-dom";
-import AccompanyLayout from "components/AccompanyLayout";
+import React from 'react';
+import {Route, Routes} from 'react-router-dom';
+import ACM0101P01 from "views/ACM/ACM0101P01";
+import GVCanves from "components/GVCanves";
 
-interface RouterProps {
-    isAuthenticated : boolean;
+interface RouterPath {
+    path : string
+    component : React.ComponentType
 }
 export default function Router() {
 
+    const routerPath: RouterPath[] = [
+        {
+            path: '/',
+            component: ACM0101P01
+        },
+        {
+            path: '/GVC0101P01',
+            component: GVCanves
+        },
+    ];
+
     return (
-        <>
-            <Routes>
-                <AccompanyLayout/>
-            </Routes>
-        </>
-    )
+        <Routes>
+            {routerPath.map(route => (
+                <Route
+                    key={route.path}
+                    path={route.path}
+                    element={<route.component/>}
+                />
+            ))}
+        </Routes>
+    );
 }
-
-

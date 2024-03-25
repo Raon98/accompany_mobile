@@ -1,11 +1,12 @@
 import React from 'react';
 
-const Acm0101P01 = () => {
+const ACM0101P01 = () => {
     return (
         <div>
-            메인페이지
+            메인페이지입니다
+            <button>클릭하세요</button>
         </div>
     );
 };
 
-export default Acm0101P01;
+export default ACM0101P01;
