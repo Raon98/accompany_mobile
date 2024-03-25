@@ -14,6 +14,10 @@ export default function Router() {
             component: lazy(() => import('views/ACM/ACM0101P01'))
         },
         {
+            path: '/ACM0101P02',
+            component: lazy(()=> import('views/ACM/ACM0101P02'))
+        },
+        {
             path: '/GVC0101P01',
             component: lazy(()=> import('components/GVCanves'))
         },
