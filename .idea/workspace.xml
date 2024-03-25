@@ -9,10 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="프로젝트 라우터 정리 임시저장">
+    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="프로젝트 메인 레이아웃 재정비">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -404,7 +405,7 @@
       <workItem from="1711093166181" duration="1222000" />
       <workItem from="1711254235433" duration="4608000" />
       <workItem from="1711264087101" duration="862000" />
-      <workItem from="1711343341222" duration="3605000" />
+      <workItem from="1711343341222" duration="4335000" />
     </task>
     <task id="LOCAL-00001" summary="마이바티스 연동작업">
       <created>1710727382342</created>
@@ -539,7 +540,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711346893393</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="프로젝트 메인 레이아웃 재정비">
+      <created>1711347066405</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1711347066405</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,7 +582,8 @@
     <MESSAGE value="router 세팅 및 toast세팅" />
     <MESSAGE value="프로젝트 레이아웃정리" />
     <MESSAGE value="프로젝트 라우터 정리 임시저장" />
-    <option name="LAST_COMMIT_MESSAGE" value="프로젝트 라우터 정리 임시저장" />
+    <MESSAGE value="프로젝트 메인 레이아웃 재정비" />
+    <option name="LAST_COMMIT_MESSAGE" value="프로젝트 메인 레이아웃 재정비" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

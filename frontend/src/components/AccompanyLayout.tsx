@@ -1,7 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import AccompanySection from "components/AccompanySection";
 import Router from "router";
-import { ToastContainer } from "react-toastify";
 
 const AccompanyHeader = lazy(() => import("components/AccompanyHeader"));
 const AccompanyFooter = lazy(() => import("components/AccompanyFooter"));
