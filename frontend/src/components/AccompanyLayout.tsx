@@ -1,26 +1,23 @@
-import React, {lazy} from 'react';
+import React, { lazy, Suspense } from 'react';
 import AccompanySection from "components/AccompanySection";
 import Router from "router";
+import { ToastContainer } from "react-toastify";
 
+const AccompanyHeader = lazy(() => import("components/AccompanyHeader"));
+const AccompanyFooter = lazy(() => import("components/AccompanyFooter"));
 
 const AccompanyLayout = () => {
-
-    const AccompanyHeader = lazy(async () => await import("components/AccompanyHeader"));
-    const AccompanyFooter = lazy(async () => await import("components/AccompanyFooter"));
-
-
     return (
         <>
-            <div className="Accompanylayout">
-                <AccompanyHeader/>
+            <Suspense fallback={<div>Loading...</div>}>
+                <AccompanyHeader />
                 <div className="contents">
-                        <AccompanySection>
-                                     <Router/>
-                        </AccompanySection>
+                    <AccompanySection>
+                        <Router />
+                    </AccompanySection>
                 </div>
-                <AccompanyFooter/>
-            </div>
-
+                <AccompanyFooter />
+            </Suspense>
         </>
     );
 };
