@@ -1,31 +1,15 @@
-import React, {lazy, Suspense} from 'react';
+import React, {Suspense} from 'react';
 import {Route, Routes} from 'react-router-dom';
+import {AccompanyLayoutProps} from "components/AccompanyLayout";
 
-interface RouterPath {
-    path : string
-    component : React.ComponentType
 
-}
-export default function Router() {
-
-    const routerPath: RouterPath[] = [
-        {
-            path: '/',
-            component: lazy(() => import('views/ACM/ACM0101P01'))
-        },
-        {
-            path: '/ACM0101P02',
-            component: lazy(()=> import('views/ACM/ACM0101P02'))
-        },
-        {
-            path: '/GVC0101P01',
-            component: lazy(()=> import('components/GVCanves'))
-        },
-    ];
-
+export default function Router({pathList} : AccompanyLayoutProps) {
+    if (!pathList || pathList.length === 0) {
+        return <div>'ERROR'</div>;
+    }
     return (
         <Routes>
-            {routerPath.map(route => (
+            { pathList.map(route => (
                 <Route
                     key={route.path}
                     path={route.path}

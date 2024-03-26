@@ -39,7 +39,7 @@ _axios.interceptors.response.use(
  */
 
 /*비동기 POST 방식*/
-const AsyncPost = async (proxy:string,serviceId: string, screedId?: string, params?: object | string, successCall?: (res: any) => void, failCall?: (err: any) => void) => {
+const AsyncPost = async (proxy:string,serviceId: string, screedId?: string, params?: any, successCall?: (res: any) => void, failCall?: (err: any) => void) => {
      await _axios.post(`/${proxy}/${serviceId}`, {
          REQ_COM: {
              serviceId: serviceId,
@@ -53,7 +53,7 @@ const AsyncPost = async (proxy:string,serviceId: string, screedId?: string, para
          }
      })
          .then((res) => {
-             successCall && successCall(res)
+             successCall && successCall(res.data)
          })
          .catch((err) => {
              failCall && failCall(err)
@@ -62,7 +62,7 @@ const AsyncPost = async (proxy:string,serviceId: string, screedId?: string, para
 }
 
 /*동기 POST 방식*/
-const Post = (proxy:string,serviceId: string, screedId?: string, params?: object | string, successCall?: (res: any) => void, failCall?: (err: any) => void) => {
+const Post = (proxy:string,serviceId: string, screedId?: string, params?: any, successCall?: (res: any) => void, failCall?: (err: any) => void) => {
     _axios.post(`/${proxy}/${serviceId}`, {
         REQ_COM: {
             serviceId: serviceId,
@@ -76,7 +76,7 @@ const Post = (proxy:string,serviceId: string, screedId?: string, params?: object
         }
     })
         .then((res) => {
-            successCall && successCall(res)
+            successCall && successCall(res.data)
         })
         .catch((err) => {
             failCall && failCall(err)

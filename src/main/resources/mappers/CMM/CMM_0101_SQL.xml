@@ -1,0 +1,12 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="acpy.api.support.AcpyMapper">
+    <select id="selectMenuPath" resultType="acpy.api.support.LowerKeyMap">
+        SELECT cpnt_id AS COMPONENT,
+               cpnt_path AS PATH
+        FROM acp_menu_path
+        WHERE CHNL ='M'
+    </select>
+</mapper>

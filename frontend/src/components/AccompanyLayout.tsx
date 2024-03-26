@@ -2,12 +2,17 @@ import React, {lazy, Suspense, useEffect, useState} from 'react';
 import AccompanySection from "components/AccompanySection";
 import Router from "router";
 import {useLocation} from "react-router-dom";
+import {RspProps} from "App";
 
 
 const AccompanyHeader = lazy(() => import("components/AccompanyHeader"));
 const AccompanyFooter = lazy(() => import("components/AccompanyFooter"));
 
-const AccompanyLayout = () => {
+export interface AccompanyLayoutProps {
+    pathList: RspProps[];
+}
+
+const AccompanyLayout = ({pathList}:AccompanyLayoutProps) => {
     /*DB에서 */
     const [headerFlag, setHeaderFlag] = useState(false)
     let location = useLocation();
@@ -27,7 +32,7 @@ const AccompanyLayout = () => {
                 {headerFlag && ( <AccompanyHeader />)}
                 <div className="contents">
                     <AccompanySection>
-                        <Router />
+                        <Router pathList={pathList}/>
                     </AccompanySection>
                 </div>
                 <AccompanyFooter />
