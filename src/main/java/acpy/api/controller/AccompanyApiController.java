@@ -26,8 +26,6 @@ public class AccompanyApiController {
         this.applicationContext = applicationContext;
     }
 
-    private GoogleVisionController googleVisionController;
-
     @PostMapping("/{serviceId}")
     public ResponseEntity<Object> postServiceAPiRequest(
             @PathVariable(required = false) String serviceId,
@@ -89,7 +87,7 @@ public class AccompanyApiController {
     }
 
     private Object mapParamsToInObject(String inClassName, Map<String, Object> params) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-        Class<?> inClass = Class.forName("acpy.api.models.service."+inClassName.substring(0,3)+"."+ inClassName);
+        Class<?> inClass = Class.forName("acpy.models.service."+inClassName.substring(0,3)+"."+ inClassName);
         Object inObj = inClass.getDeclaredConstructor().newInstance();
 
         // 파라미터 매핑
