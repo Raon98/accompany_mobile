@@ -9,12 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="라우터 경로 DB작업 완료">
+    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="/*20240327 헤더푸터 사용/미사용여부 체크*/">
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/AUI/AUI0101P01.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/AUS/AUS0101P01.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/acpy/models/service/AUS/AUS0101IN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/acpy/models/service/AUS/AUS0101OUT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/acpy/service/AUS/AUS0101Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/AUS/AUS_0101_SQL.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/CMM/CMM_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/CMM/CMM_0101_SQL.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +30,9 @@
         <option value="myBatisXML" />
         <option value="spring-beans.schema" />
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
         <option value="Class" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -79,37 +81,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LG/Desktop/portfoilo/accompany_mobile/src/main/resources/mappers&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15625&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2410197&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;9a59f267df7b686029b9a7935569a952&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/LG/Desktop/portfoilo/accompany_mobile/src/main/resources/mappers",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15625",
+    "project.structure.side.proportion": "0.2410197",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "9a59f267df7b686029b9a7935569a952",
+    "ts.external.directory.path": "C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\resources\mappers" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\java\acpy\models\service\AUS" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\java\acpy\service\AUS" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\java\acpy\models\service\CMM" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\views\ACM" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\components" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\views" />
@@ -409,7 +411,7 @@
       <workItem from="1711264087101" duration="862000" />
       <workItem from="1711343341222" duration="5206000" />
       <workItem from="1711349354369" duration="2978000" />
-      <workItem from="1711500131141" duration="4222000" />
+      <workItem from="1711500131141" duration="10130000" />
     </task>
     <task id="LOCAL-00001" summary="마이바티스 연동작업">
       <created>1710727382342</created>
@@ -572,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711440124454</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="/*20240327 헤더푸터 사용/미사용여부 체크*/">
+      <created>1711524120162</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1711524120162</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,7 +620,8 @@
     <MESSAGE value="프로젝트 메인 레이아웃 비동기 컴포넌트 세팅 완료" />
     <MESSAGE value="API 파일구조수정" />
     <MESSAGE value="라우터 경로 DB작업 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="라우터 경로 DB작업 완료" />
+    <MESSAGE value="/*20240327 헤더푸터 사용/미사용여부 체크*/" />
+    <option name="LAST_COMMIT_MESSAGE" value="/*20240327 헤더푸터 사용/미사용여부 체크*/" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
