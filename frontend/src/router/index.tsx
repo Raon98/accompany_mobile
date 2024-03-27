@@ -5,7 +5,7 @@ import {AccompanyLayoutProps} from "components/AccompanyLayout";
 
 export default function Router({pathList} : AccompanyLayoutProps) {
     if (!pathList || pathList.length === 0) {
-        return <div>'ERROR'</div>;
+        return <div>Loading...</div>;
     }
     return (
         <Routes>

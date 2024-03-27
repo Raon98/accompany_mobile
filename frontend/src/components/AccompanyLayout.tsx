@@ -1,4 +1,4 @@
-import React, {lazy, Suspense, useEffect, useState} from 'react';
+import React, {ComponentType, lazy, Suspense, useEffect, useState} from 'react';
 import AccompanySection from "components/AccompanySection";
 import Router from "router";
 import {useLocation} from "react-router-dom";
@@ -13,29 +13,30 @@ export interface AccompanyLayoutProps {
 }
 
 const AccompanyLayout = ({pathList}:AccompanyLayoutProps) => {
-    /*DB에서 */
-    const [headerFlag, setHeaderFlag] = useState(false)
+    const [headerFlag, setHeaderFlag] = useState(true)
+    const [footerFlag, setFooterFlag] = useState(true)
     let location = useLocation();
 
-
-    useEffect(()=>{
-        if(location.pathname === '/ACM0101P02'){
-            setHeaderFlag(true)
-        }else {
-            setHeaderFlag(false)
+    useEffect(() => {
+        /*20240327 헤더푸터 사용/미사용여부 체크*/
+        if (pathList?.length) {
+            setHeaderFlag(pathList.filter(v => v.path === location.pathname)[0].hd_flag === 'Y')
+            setFooterFlag(pathList.filter(v => v.path === location.pathname)[0].ft_flag === 'Y')
         }
-    },[location.pathname])
+
+
+    }, [location.pathname])
 
     return (
         <>
             <Suspense fallback={<div>Loading...</div>}>
-                {headerFlag && ( <AccompanyHeader />)}
+                {headerFlag && (<AccompanyHeader/>)}
                 <div className="contents">
                     <AccompanySection>
                         <Router pathList={pathList}/>
                     </AccompanySection>
                 </div>
-                <AccompanyFooter />
+                {footerFlag && <AccompanyFooter/>}
             </Suspense>
         </>
     );

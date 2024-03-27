@@ -4,7 +4,9 @@ import AccompanyLayout from "components/AccompanyLayout";
 import {$api} from "plugins/api";
 
 export interface RspProps {
-    path: string
+    path: string,
+    hd_flag : string,
+    ft_flag : string,
     component: ComponentType
 }
 
@@ -16,8 +18,9 @@ const App = () => {
             $api.AsyncPost('api', 'CMM0101S01', '', null, (res) => {
                 let pathList = res.data.map((v: RspProps) => ({
                     path: v.path,
-                   // component: lazy(() => import(`views/ACM/ACM0101P01`))
-                    component: lazy(() => import(`${v.component}`))
+                    component: lazy(() => import(`${v.component}`)),
+                    hd_flag : v.hd_flag,
+                    ft_flag : v.ft_flag
                 }))
                 setPathList(pathList)
             });
@@ -26,8 +29,13 @@ const App = () => {
     }, [initialized]);
     return (
         <>
-            <ToastContainer/>
-            <AccompanyLayout pathList={pathList}/>
+            {pathList?.length && (
+            <>
+                <ToastContainer/>
+                <AccompanyLayout pathList={pathList}/>
+            </>
+            )
+        }
         </>
     );
 };
