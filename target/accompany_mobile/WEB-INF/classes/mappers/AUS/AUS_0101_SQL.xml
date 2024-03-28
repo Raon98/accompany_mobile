@@ -1,0 +1,20 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="acpy.api.support.AcpyMapper">
+    <insert id="insertRouterMenuPath">
+        INSERT INTO acp_menu_path(CHNL,CPNT_ID,CPNT_PATH,HD_FLAG,FT_FLAG,INID,INDT,UPID,UPDT)
+            VALUES (
+                #{chnl},
+                #{component_id},
+                #{component_path},
+                #{header_flag},
+                #{footer_flag},
+                'admin',
+                NOW(),
+                '',
+                ''
+            )
+    </insert>
+</mapper>
