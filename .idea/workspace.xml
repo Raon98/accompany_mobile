@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="accompany_mobile:war" />
       <artifact name="accompany_mobile:war exploded" />
     </artifacts-to-build>
   </component>
@@ -10,6 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="/*20240327 헤더푸터 사용/미사용여부 체크*/">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose-mobile.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +33,7 @@
         <option value="TypeScript File" />
         <option value="Class" />
         <option value="TypeScript JSX File" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -145,6 +152,11 @@
             <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
+        <artifact name="accompany_mobile:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/accompany_mobile_war" />
+          </settings>
+        </artifact>
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="a6dc7934-acba-4510-8de9-c79a41a0095d" />
@@ -232,6 +244,7 @@
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="accompany_mobile:war exploded" />
+          <artifact name="accompany_mobile:war" />
         </option>
       </method>
     </configuration>
@@ -335,6 +348,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="JUnit.DB_Test" />
       <item itemvalue="Smart Tomcat.Tomcat: accompany_mobile" />
@@ -406,7 +425,15 @@
       <workItem from="1711343341222" duration="5206000" />
       <workItem from="1711349354369" duration="2978000" />
       <workItem from="1711500131141" duration="10130000" />
-      <workItem from="1711583377215" duration="1204000" />
+      <workItem from="1711583377215" duration="2688000" />
+      <workItem from="1711676806559" duration="1321000" />
+      <workItem from="1711678229821" duration="33000" />
+      <workItem from="1711678317836" duration="70000" />
+      <workItem from="1711678419000" duration="3987000" />
+      <workItem from="1711688238759" duration="3769000" />
+      <workItem from="1711692056887" duration="10589000" />
+      <workItem from="1711713033237" duration="789000" />
+      <workItem from="1711714474177" duration="1320000" />
     </task>
     <task id="LOCAL-00001" summary="마이바티스 연동작업">
       <created>1710727382342</created>
