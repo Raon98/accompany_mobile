@@ -4,6 +4,7 @@ FROM node:20 AS build
 # 작업 디렉토리 설정
 WORKDIR /app
 
+COPY .npmrc ./.npmrc
 # 패키지 파일 복사
 COPY package.json package-lock.json ./
 
@@ -14,7 +15,6 @@ RUN npm install
 COPY src ./src
 COPY public ./public
 COPY .env.development ./.env.development
-COPY .npmrc ./.npmrc
 COPY webpack.config.ts ./webpack.config.ts
 COPY tsconfig.json ./tsconfig.json
 
@@ -25,7 +25,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # NGINX 설정 파일 복사
-COPY nginx.conf /etc/nginx/conf.d
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # 빌드된 애플리케이션 파일을 NGINX의 HTML 디렉토리로 복사
 COPY --from=build /app/build /usr/share/nginx/html
