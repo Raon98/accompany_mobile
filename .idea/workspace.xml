@@ -10,13 +10,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="Docker 추가">
+    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="Docker Nginx 설정파일 수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose-mobile.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-mobile.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.development" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/nginx.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/plugins/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/plugins/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/controller/AccompanyApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/controller/AccompanyApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/controller/GoogleVisionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/controller/GoogleVisionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/META-INF/MANIFEST.MF" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +107,7 @@
     "project.structure.side.proportion": "0.2410197",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "spring.configuration.checksum": "9a59f267df7b686029b9a7935569a952",
-    "ts.external.directory.path": "C:\\Users\\LG\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\231.9011.34\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\frontend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -434,7 +439,13 @@
       <workItem from="1711692056887" duration="10589000" />
       <workItem from="1711713033237" duration="789000" />
       <workItem from="1711714474177" duration="1320000" />
-      <workItem from="1711762929496" duration="2626000" />
+      <workItem from="1711762929496" duration="9246000" />
+      <workItem from="1711937840772" duration="3879000" />
+      <workItem from="1711944154958" duration="3186000" />
+      <workItem from="1711947482183" duration="3524000" />
+      <workItem from="1711951943926" duration="7364000" />
+      <workItem from="1711961581309" duration="8910000" />
+      <workItem from="1712016470113" duration="8456000" />
     </task>
     <task id="LOCAL-00001" summary="마이바티스 연동작업">
       <created>1710727382342</created>
@@ -611,7 +622,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711763076847</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Docker Nginx 설정파일 수정">
+      <created>1711930301898</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1711930301898</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -652,7 +670,8 @@
     <MESSAGE value="라우터 경로 DB작업 완료" />
     <MESSAGE value="/*20240327 헤더푸터 사용/미사용여부 체크*/" />
     <MESSAGE value="Docker 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="Docker 추가" />
+    <MESSAGE value="Docker Nginx 설정파일 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="Docker Nginx 설정파일 수정" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

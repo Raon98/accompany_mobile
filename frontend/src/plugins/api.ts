@@ -40,7 +40,7 @@ _axios.interceptors.response.use(
 
 /*비동기 POST 방식*/
 const AsyncPost = async (proxy:string,serviceId: string, screedId?: string, params?: any, successCall?: (res: any) => void, failCall?: (err: any) => void) => {
-     await _axios.post(`/${proxy}/${serviceId}`, {
+     await _axios.post(`/v1/${proxy}/${serviceId}`, {
          REQ_COM: {
              serviceId: serviceId,
              screenId: screedId,
@@ -63,7 +63,7 @@ const AsyncPost = async (proxy:string,serviceId: string, screedId?: string, para
 
 /*동기 POST 방식*/
 const Post = (proxy:string,serviceId: string, screedId?: string, params?: any, successCall?: (res: any) => void, failCall?: (err: any) => void) => {
-    _axios.post(`/${proxy}/${serviceId}`, {
+    _axios.post(`/v1/${proxy}/${serviceId}`, {
         REQ_COM: {
             serviceId: serviceId,
             screenId: screedId,

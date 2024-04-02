@@ -1,32 +1,36 @@
-# 베이스 이미지로 AdoptOpenJDK 11 사용
-FROM adoptopenjdk:11-jre-hotspot
+# 베이스 이미지
+FROM adoptopenjdk/openjdk11:alpine-slim
 
-# 작업 디렉토리 설정
-WORKDIR /app
+# 앱 디렉토리 생성
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-# 애플리케이션 WAR 파일 복사
-COPY target/accompany_mobile.war /app/accompany_mobile.war
+# 필요한 파일들 복사
+COPY . /usr/src/app
 
-# MariaDB JDBC 드라이버 다운로드 및 복사
-ADD https://downloads.mariadb.com/Connectors/java/connector-java-2.3.0/mariadb-java-client-2.3.0.jar /app/mariadb-java-client.jar
+# Maven 설치
+RUN apk add --no-cache maven
 
-# Tomcat 다운로드 및 압축 해제
-ADD https://downloads.apache.org/tomcat/tomcat-8/v8.5.99/bin/apache-tomcat-8.5.99.tar.gz /tmp
-RUN tar -xzf /tmp/apache-tomcat-8.5.99.tar.gz -C /opt && \
-    rm /tmp/apache-tomcat-8.5.99.tar.gz
+# Maven 빌드
+RUN mvn clean package
 
-# Spring application context 및 dispatcher servlet 설정 파일 복사
-COPY src/main/webapp/WEB-INF/spring/applicationContext.xml /opt/apache-tomcat-8.5.99/webapps/accompany_mobile/WEB-INF/classes/spring/
-COPY src/main/webapp/WEB-INF/spring/dispatcher-servlet.xml /opt/apache-tomcat-8.5.99/webapps/accompany_mobile/WEB-INF/classes/spring/
+# 톰캣 다운로드 및 설치
+ENV TOMCAT_VERSION 8.5.99
+ENV CATALINA_HOME /usr/local/tomcat
 
-# 웹 애플리케이션 설정 파일(web.xml) 복사
-COPY src/main/webapp/WEB-INF/web.xml /opt/apache-tomcat-8.5.99/webapps/accompany_mobile/WEB-INF/
+RUN wget https://downloads.apache.org/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
+    tar -xzf apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
+    rm apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
+    mv apache-tomcat-${TOMCAT_VERSION} ${CATALINA_HOME}
 
-# 데이터베이스 설정 파일 복사
-COPY src/main/webapp/WEB-INF/database.properties /opt/apache-tomcat-8.5.99/webapps/accompany_mobile/
+# Maven 빌드 후 생성된 WAR 파일을 이동
+RUN mv /usr/src/app/target/v1.war ${CATALINA_HOME}/webapps/
 
-# 포트 노출
+# MariaDB 설치
+RUN apk add --no-cache mariadb mariadb-client
+
+# 톰캣 실행
+CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
+
+# 8090 포트 노출
 EXPOSE 8090
-
-# 컨테이너 실행 시 Tomcat 시작
-CMD ["/opt/apache-tomcat-8.5.99/bin/catalina.sh", "run"]

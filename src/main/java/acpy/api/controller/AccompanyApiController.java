@@ -14,7 +14,7 @@ import java.lang.reflect.Method;
 import java.util.Map;
 
 
-@RequestMapping("/api")
+@RequestMapping("/v1/api")
 @RestController
 public class AccompanyApiController {
     private final ObjectMapper objectMapper;

@@ -31,7 +31,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /app/build /usr/share/nginx/html
 
 # 포트 노출
-EXPOSE 80
+EXPOSE 3000
 
 # 컨테이너 실행 시 NGINX 시작
 CMD ["nginx", "-g", "daemon off;"]

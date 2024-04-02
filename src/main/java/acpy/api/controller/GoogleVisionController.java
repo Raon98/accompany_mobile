@@ -6,10 +6,7 @@ import com.google.cloud.vision.v1.*;
 import com.google.protobuf.ByteString;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -20,10 +17,14 @@ import java.util.List;
 import java.util.Map;
 
 
-@RequestMapping("/ext")
+@RequestMapping("/v1/ext")
 @RestController
 public class GoogleVisionController {
 
+    @GetMapping("/test")
+    public String test(){
+        return "HELLO";
+    }
     @PostMapping("/GoogleVision")
     public ResponseEntity<String> GoogleVisionImgToText(@RequestBody Map<String, Object> requestBody){
 
