@@ -3,16 +3,16 @@ version: '3.8'
 services:
   backend:
     build:
-      context: ./  # 백엔드 도커 파일이 있는 경로
+      context: ./backend  # 백엔드 도커 파일이 있는 경로
     ports:
-      - "8090:8090"  # 백엔드 컨테이너의 포트를 호스트의 8090 포트로 매핑
+      - "8090:8080"  # 백엔드 컨테이너의 포트를 호스트의 8090 포트로 매핑
     depends_on:
       - database  # 백엔드가 데이터베이스 컨테이너에 의존함을 나타냄
     environment:
       - DATABASE_URL=${DATABASE_URL}
       - JDBC_USERNAME=${JDBC_USERNAME}
       - JDBC_PASSWORD=${JDBC_PASSWORD}
-
+      - LANG=C.UTF-8
   frontend:
     build:
       context: ./frontend  # 프론트엔드 도커 파일이 있는 경로

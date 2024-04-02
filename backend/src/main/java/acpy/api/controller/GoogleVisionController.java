@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 
-@RequestMapping("/v1/ext")
+@RequestMapping("/ext")
 @RestController
 public class GoogleVisionController {
 

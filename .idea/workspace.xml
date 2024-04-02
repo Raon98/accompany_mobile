@@ -10,18 +10,83 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="Docker Nginx 설정파일 수정">
+    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="docker 설정파일수정">
+      <change afterPath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/classes/image/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/classes/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/classes/mappers/AUI/AUI_0101_SQL.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/classes/mappers/AUS/AUS_0101_SQL.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/classes/mappers/CMM/CMM_0101_SQL.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/classes/visionKey.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/spring/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/spring/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/image/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/mappers/AUI/AUI_0101_SQL.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/mappers/AUS/AUS_0101_SQL.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/mappers/CMM/CMM_0101_SQL.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/visionKey.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose-mobile.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-mobile.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.development" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/nginx.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/plugins/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/plugins/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/controller/AccompanyApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/controller/AccompanyApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/controller/GoogleVisionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/controller/GoogleVisionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/config/CloudVisionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/CloudVisionConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/config/JacksonConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/JacksonConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/controller/AccompanyApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/controller/AccompanyApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/controller/GoogleVisionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/controller/GoogleVisionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/filter/CharacterEncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/filter/CharacterEncodingFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/filter/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/filter/CorsFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/support/AcpyLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/support/AcpyLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/support/AcpyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/support/AcpyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/support/LowerKeyMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/support/LowerKeyMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/test/DB_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/test/DB_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/db/AUI/AUI01REQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/db/AUI/AUI01REQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/service/ACM/ACM0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACM/ACM0101IN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/service/ACM/ACM0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACM/ACM0101OUT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/service/AUI/AUI0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUI/AUI0101IN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/service/AUI/AUI0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUI/AUI0101OUT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/service/AUS/AUS0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUS/AUS0101IN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/service/AUS/AUS0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUS/AUS0101OUT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/service/CMM/CMM0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/CMM/CMM0101IN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/service/CMM/CMM0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/CMM/CMM0101OUT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/service/ACM/ACM0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/service/ACM/ACM0101Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/service/AUI/AUI0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/service/AUI/AUI0101Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/service/AUS/AUS0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/service/AUS/AUS0101Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/service/CMM/CMM0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/service/CMM/CMM0101Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/image/image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/AUI/AUI_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/AUI/AUI_0101_SQL.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/AUS/AUS_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/AUS/AUS_0101_SQL.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/CMM/CMM_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/CMM/CMM_0101_SQL.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/visionKey.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/visionKey.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/spring/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/spring/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/image/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/mappers/AUI/AUI_0101_SQL.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/mappers/AUS/AUS_0101_SQL.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/mappers/CMM/CMM_0101_SQL.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/classes/visionKey.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/lib/spring-aop-5.3.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/lib/spring-beans-5.3.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/lib/spring-context-5.3.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/lib/spring-core-5.3.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/lib/spring-expression-5.3.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/lib/spring-jcl-5.3.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/lib/spring-web-5.3.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/lib/spring-webmvc-5.3.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/spring/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/spring/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accompany_mobile/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/image/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/AUI/AUI_0101_SQL.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/AUS/AUS_0101_SQL.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/CMM/CMM_0101_SQL.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/visionKey.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,11 +185,11 @@
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\views\ACM" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\views" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\app\(main)\(GVC)" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\app\(main)" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\app" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\app\(GVC)" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -445,7 +510,7 @@
       <workItem from="1711947482183" duration="3524000" />
       <workItem from="1711951943926" duration="7364000" />
       <workItem from="1711961581309" duration="8910000" />
-      <workItem from="1712016470113" duration="8456000" />
+      <workItem from="1712016470113" duration="14213000" />
     </task>
     <task id="LOCAL-00001" summary="마이바티스 연동작업">
       <created>1710727382342</created>
@@ -629,7 +694,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711930301898</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="docker 설정파일수정">
+      <created>1712034516356</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1712034516356</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -671,7 +743,8 @@
     <MESSAGE value="/*20240327 헤더푸터 사용/미사용여부 체크*/" />
     <MESSAGE value="Docker 추가" />
     <MESSAGE value="Docker Nginx 설정파일 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="Docker Nginx 설정파일 수정" />
+    <MESSAGE value="docker 설정파일수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker 설정파일수정" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
