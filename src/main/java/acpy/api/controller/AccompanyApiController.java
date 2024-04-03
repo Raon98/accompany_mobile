@@ -26,6 +26,7 @@ public class AccompanyApiController {
         this.applicationContext = applicationContext;
     }
 
+
     @PostMapping("/{serviceId}")
     public ResponseEntity<Object> postServiceAPiRequest(
             @PathVariable(required = false) String serviceId,
@@ -49,16 +50,12 @@ public class AccompanyApiController {
 
             // 요청된 메서드 가져오기
             Method method = findMethod(serviceBean, serviceId);
-            Object inObj;
-            if (method != null) {
-                if(params.get("REQ_DAT") != null || params.get("REQ_DAT") != ""){
-                    Map<String, Object> datParams = (Map<String, Object>) params.get("REQ_DAT");
-                    Map<String, Object> modifiedParams = datParams != null ? datParams : params;
-                    inObj = mapParamsToInObject(ServiceId + "IN",modifiedParams);
-                }else{
-                    inObj = applicationContext.getBean(ServiceId + "IN");
-                }
 
+            if (method != null) {
+                Map<String, Object> datParams = (Map<String, Object>) params.get("REQ_DAT");
+                Map<String, Object> modifiedParams = datParams != null ? datParams : params;
+
+                Object inObj = mapParamsToInObject(ServiceId + "IN",modifiedParams);
                 Object outObj = applicationContext.getBean(ServiceId + "OUT");
 
                 AcpyLogger.info("============= Service inObj {} ==============",inObj);
