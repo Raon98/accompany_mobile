@@ -8,17 +8,21 @@ import {$api} from "plugins/api";
  **************************/
 
 type chnlType = 'M' | 'A'
+type ynType = 'Y' | 'N'
 
 const AUS0101P01 = () => {
     const [chnl, setChnl] = useState<chnlType>('M')
     const [componentId, setComponentId] = useState('')
     const [componentPath, setComponentPath] = useState('')
-    const [headerFlag, setHeaderFlag] = useState('')
-    const [footerFlag, setFooterFlag] = useState('')
+    const [headerFlag, setHeaderFlag] = useState<ynType>('Y')
+    const [footerFlag, setFooterFlag] = useState<ynType>('N')
 
     const func = {
         onChange: (e:React.ChangeEvent<HTMLFormElement | HTMLInputElement>) => {
             const { target : {name,value}} = e
+
+            console.log(name)
+            console.log(value)
             if (name === 'chnl'){
                 setChnl(e.target.value);
             }
@@ -87,15 +91,17 @@ const AUS0101P01 = () => {
                 </div>
                 <div className="form__block">
                     <div className="form__title">HEADER (Y/N)</div>
-                    <label htmlFor="header_flag"/>
-                    <input type="text" name="header_flag" id="header_flag" required
-                           value={headerFlag} onChange={func.onChange}/>
+                    <label htmlFor="Header_Y">Y</label>
+                    <input type="radio" name="header_flag" id="Header_Y" value="Y" checked={headerFlag === 'Y'} onChange={func.onChange}/>
+                    <label htmlFor="Header_N">N</label>
+                    <input type="radio" name="header_flag" id="Header_N" value="N" checked={headerFlag === 'N'} onChange={func.onChange}/>
                 </div>
                 <div className="form__block">
                     <div className="form__title">FOOTER (Y/N)</div>
-                    <label htmlFor="footer_flag"/>
-                    <input type="text" name="footer_flag" id="footer_flag" required
-                           value={footerFlag} onChange={func.onChange}/>
+                    <label htmlFor="Footer_Y">Y</label>
+                    <input type="radio" name="footer_flag" id="Footer_Y" value="Y" checked={footerFlag === 'Y'} onChange={func.onChange}/>
+                    <label htmlFor="Footer_N">N</label>
+                    <input type="radio" name="footer_flag" id="Footer_N" value="N" checked={footerFlag === 'N'} onChange={func.onChange}/>
                 </div>
             </div>
             <div className="router_regist">
