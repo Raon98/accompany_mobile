@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="accompany_mobile:war" />
       <artifact name="accompany_mobile:war exploded" />
     </artifacts-to-build>
   </component>
@@ -10,110 +9,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="docker 설정파일수정">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/acpy/api/controller/GoogleVisionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/accompany_mobile.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/accompany_mobile.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/CloudVisionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/config/CloudVisionConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/JacksonConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/config/JacksonConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/controller/AccompanyApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/controller/AccompanyApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/controller/GoogleVisionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/filter/CharacterEncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/filter/CharacterEncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/filter/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/filter/CorsFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/support/AcpyLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/support/AcpyLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/support/AcpyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/support/AcpyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/support/LowerKeyMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/support/LowerKeyMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/test/DB_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/api/test/DB_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/db/AUI/AUI01REQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/models/db/AUI/AUI01REQ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACM/ACM0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/models/service/ACM/ACM0101IN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACM/ACM0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/models/service/ACM/ACM0101OUT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUI/AUI0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/models/service/AUI/AUI0101IN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUI/AUI0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/models/service/AUI/AUI0101OUT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUS/AUS0101IN.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUS/AUS0101OUT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/CMM/CMM0101IN.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/CMM/CMM0101OUT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/service/ACM/ACM0101Service.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/service/AUI/AUI0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/acpy/service/AUI/AUI0101Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/service/AUS/AUS0101Service.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/service/CMM/CMM0101Service.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/image/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/AUI/AUI_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/AUI/AUI_0101_SQL.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/AUS/AUS_0101_SQL.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/CMM/CMM_0101_SQL.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/visionKey.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/visionKey.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/spring/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/spring/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/dispatcher-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/classes/image/image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/classes/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/classes/mappers/AUI/AUI_0101_SQL.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/classes/mappers/AUS/AUS_0101_SQL.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/classes/mappers/CMM/CMM_0101_SQL.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/classes/visionKey.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/spring/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/spring/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/accompany_mobile/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/image/image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/mappers/AUI/AUI_0101_SQL.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/mappers/AUS/AUS_0101_SQL.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/mappers/CMM/CMM_0101_SQL.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/visionKey.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/config/CloudVisionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/CloudVisionConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/config/JacksonConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/JacksonConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/controller/AccompanyApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/controller/AccompanyApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/controller/GoogleVisionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/controller/GoogleVisionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/filter/CharacterEncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/filter/CharacterEncodingFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/filter/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/filter/CorsFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/support/AcpyLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/support/AcpyLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/support/AcpyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/support/AcpyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/support/LowerKeyMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/support/LowerKeyMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/test/DB_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/test/DB_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/db/AUI/AUI01REQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/db/AUI/AUI01REQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/service/ACM/ACM0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACM/ACM0101IN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/service/ACM/ACM0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACM/ACM0101OUT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/service/AUI/AUI0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUI/AUI0101IN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/service/AUI/AUI0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUI/AUI0101OUT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/service/AUI/AUI0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/service/AUI/AUI0101Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/image/image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/AUI/AUI_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/AUI/AUI_0101_SQL.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/visionKey.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/visionKey.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/spring/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/spring/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="myBatisXML" />
-        <option value="spring-beans.schema" />
-        <option value="JavaScript File" />
-        <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
-        <option value="Dockerfile" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
-  </component>
-  <component name="GitToolBoxStore">
-    <option name="projectConfigVersion" value="5" />
-    <option name="recentBranches">
-      <RecentBranches>
-        <option name="branchesForRepo">
-          <list>
-            <RecentBranchesForRepo>
-              <option name="branches">
-                <list>
-                  <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1710645105" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1710645104" />
-                  </RecentBranch>
-                </list>
-              </option>
-              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
-            </RecentBranchesForRepo>
-          </list>
-        </option>
-      </RecentBranches>
-    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -125,79 +65,32 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2diUdBHURFqRk9IRGcVLwBKsHxJ" />
+  <component name="ProjectId" id="2eaEtxPGqtBL9bv3BU3mnuhkeZ9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LG/Desktop/portfoilo/accompany_mobile&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/LG/Desktop/portfoilo/accompany_mobile/backend/src/main/webapp/WEB-INF/web.xml&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15625&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2410197&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;9a59f267df7b686029b9a7935569a952&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile1\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;f03a238012279e29ccfbbe1565e83249&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;module&quot;
-    ]
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile1" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile1\src\main\java\acpy\api\controller" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile1\src\main\webapp\WEB-INF" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile1\src\main\java\acpy\api" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\src\main\resources\mappers" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile1" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\views" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\app\(main)\(GVC)" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\app\(main)" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="acpy.service.CMM" />
-      <recent name="com.example.acpy.controller" />
-      <recent name="com.example.acpy.config.constants" />
-      <recent name="com.example.acpy.models.service.ACM" />
-      <recent name="com.example.acpy.models.service" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.99">
-    <configuration name="DB_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="accompany_mobile" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DB_Test" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat 8.5.99" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.99" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="Tomcat 8.5.98" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.98" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8 " />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="accompany_mobile:war exploded">
@@ -205,14 +98,9 @@
             <option name="CONTEXT_PATH" value="/v1" />
           </settings>
         </artifact>
-        <artifact name="accompany_mobile:war">
-          <settings>
-            <option name="CONTEXT_PATH" value="/accompany_mobile_war" />
-          </settings>
-        </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="a6dc7934-acba-4510-8de9-c79a41a0095d" />
+        <option name="BASE_DIRECTORY_NAME" value="4fffe243-bb8b-4e5e-8fd7-812037808766" />
         <option name="HTTP_PORT" value="8090" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
@@ -231,7 +119,7 @@
         </ENTRIES>
       </extension>
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="59355" />
+        <option name="DEBUG_PORT" value="56955" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -297,448 +185,25 @@
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="accompany_mobile:war exploded" />
-          <artifact name="accompany_mobile:war" />
         </option>
       </method>
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="c7148aeb-d8ea-4661-b318-d040effedb77" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="55068" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat: accompany_mobile" type="com.poratu.idea.plugins.tomcat" temporary="true">
-      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
-      <predefined_log_file enabled="true" id="Tomcat Access Log" />
-      <predefined_log_file id="Tomcat Catalina Log" />
-      <predefined_log_file id="Tomcat Manager Log" />
-      <predefined_log_file id="Tomcat Host Manager Log" />
-      <option name="catalinaBase" value="C:\Users\LG\.SmartTomcat\accompany_mobile\accompany_mobile" />
-      <option name="contextPath" value="/" />
-      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="extraClassPath" value="" />
-      <option name="tomcatInfo">
-        <TomcatInfo>
-          <option name="name" value="Apache Tomcat/8.5.99" />
-          <option name="path" value="$PROJECT_DIR$/../../../../../apache-tomcat-8.5.99" />
-          <option name="version" value="8.5.99.0" />
-        </TomcatInfo>
-      </option>
-      <option name="vmOptions" value="" />
-      <module name="accompany_mobile" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile">
-        <settings />
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="JUnit.DB_Test" />
-      <item itemvalue="Smart Tomcat.Tomcat: accompany_mobile" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.99" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.DB_Test" />
-        <item itemvalue="Smart Tomcat.Tomcat: accompany_mobile" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e194a548-3f14-4a74-bcd1-21f95b7cb0df" name="Changes" comment="" />
-      <created>1710490477475</created>
+      <changelist id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="" />
+      <created>1712134509436</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1710490477475</updated>
-      <workItem from="1710490479061" duration="1286000" />
-      <workItem from="1710492113292" duration="582000" />
-      <workItem from="1710492710564" duration="143000" />
-      <workItem from="1710492886943" duration="564000" />
-      <workItem from="1710589275670" duration="15000" />
-      <workItem from="1710634164656" duration="6808000" />
-      <workItem from="1710643116826" duration="1842000" />
-      <workItem from="1710645067413" duration="414000" />
-      <workItem from="1710645497605" duration="111000" />
-      <workItem from="1710645623130" duration="18243000" />
-      <workItem from="1710747004585" duration="5396000" />
-      <workItem from="1710806892485" duration="21374000" />
-      <workItem from="1710834962514" duration="351000" />
-      <workItem from="1710835334341" duration="628000" />
-      <workItem from="1710835994391" duration="351000" />
-      <workItem from="1710836383222" duration="382000" />
-      <workItem from="1710836804901" duration="723000" />
-      <workItem from="1710837559117" duration="8386000" />
-      <workItem from="1710892968361" duration="3906000" />
-      <workItem from="1710900613189" duration="162000" />
-      <workItem from="1710900832878" duration="214000" />
-      <workItem from="1710901076245" duration="1159000" />
-      <workItem from="1710903692699" duration="17255000" />
-      <workItem from="1710923600676" duration="5480000" />
-      <workItem from="1710929136623" duration="2192000" />
-      <workItem from="1710931375633" duration="646000" />
-      <workItem from="1710982176903" duration="846000" />
-      <workItem from="1710983178358" duration="15863000" />
-      <workItem from="1711065980279" duration="3147000" />
-      <workItem from="1711072234265" duration="4708000" />
-      <workItem from="1711079287077" duration="456000" />
-      <workItem from="1711079825832" duration="1889000" />
-      <workItem from="1711081777980" duration="1052000" />
-      <workItem from="1711082913226" duration="1968000" />
-      <workItem from="1711084929302" duration="422000" />
-      <workItem from="1711085506833" duration="495000" />
-      <workItem from="1711086079957" duration="205000" />
-      <workItem from="1711086357333" duration="23000" />
-      <workItem from="1711086428071" duration="5000" />
-      <workItem from="1711086623897" duration="935000" />
-      <workItem from="1711087584729" duration="2413000" />
-      <workItem from="1711090190777" duration="1390000" />
-      <workItem from="1711091659646" duration="698000" />
-      <workItem from="1711092374378" duration="301000" />
-      <workItem from="1711092689671" duration="455000" />
-      <workItem from="1711093166181" duration="1222000" />
-      <workItem from="1711254235433" duration="4608000" />
-      <workItem from="1711264087101" duration="862000" />
-      <workItem from="1711343341222" duration="5206000" />
-      <workItem from="1711349354369" duration="2978000" />
-      <workItem from="1711500131141" duration="10130000" />
-      <workItem from="1711583377215" duration="2688000" />
-      <workItem from="1711676806559" duration="1321000" />
-      <workItem from="1711678229821" duration="33000" />
-      <workItem from="1711678317836" duration="70000" />
-      <workItem from="1711678419000" duration="3987000" />
-      <workItem from="1711688238759" duration="3769000" />
-      <workItem from="1711692056887" duration="10589000" />
-      <workItem from="1711713033237" duration="789000" />
-      <workItem from="1711714474177" duration="1320000" />
-      <workItem from="1711762929496" duration="9246000" />
-      <workItem from="1711937840772" duration="3879000" />
-      <workItem from="1711944154958" duration="3186000" />
-      <workItem from="1711947482183" duration="3524000" />
-      <workItem from="1711951943926" duration="7364000" />
-      <workItem from="1711961581309" duration="8910000" />
-      <workItem from="1712016470113" duration="14213000" />
-      <workItem from="1712130521443" duration="2679000" />
-      <workItem from="1712133360617" duration="36000" />
+      <updated>1712134509436</updated>
+      <workItem from="1712134520854" duration="285000" />
+      <workItem from="1712189031549" duration="335000" />
+      <workItem from="1712189507490" duration="324000" />
     </task>
-    <task id="LOCAL-00001" summary="마이바티스 연동작업">
-      <created>1710727382342</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1710727382342</updated>
-    </task>
-    <task id="LOCAL-00002" summary="마이바티스 DB연결 성공">
-      <created>1710737679177</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1710737679177</updated>
-    </task>
-    <task id="LOCAL-00003" summary="마이바티스 DB연결 성공">
-      <created>1710737689909</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1710737689909</updated>
-    </task>
-    <task id="LOCAL-00004" summary="마이바티스 DB연결 TEST 완료">
-      <created>1710744322922</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1710744322922</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Typescirpt REACT.js 추가완료">
-      <created>1710814149964</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1710814149964</updated>
-    </task>
-    <task id="LOCAL-00006" summary="백엔드 CORS 해결완료">
-      <created>1710814327632</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1710814327632</updated>
-    </task>
-    <task id="LOCAL-00007" summary="서버로그사용 추가및 백엔드공통화 로직 변경">
-      <created>1710828265229</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1710828265229</updated>
-    </task>
-    <task id="LOCAL-00008" summary="백엔드 out data 담기 성공">
-      <created>1710845696485</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1710845696485</updated>
-    </task>
-    <task id="LOCAL-00009" summary="임시 visionKey">
-      <created>1710931308265</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1710931308265</updated>
-    </task>
-    <task id="LOCAL-00010" summary="이미지 - 텍스트 변환 로직 성공">
-      <created>1710951603604</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1710951603604</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Support-AcpyLogger 전역으로 추가">
-      <created>1710984350813</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1710984350813</updated>
-    </task>
-    <task id="LOCAL-00012" summary="불필요한 파일 정리및 파일구조변경">
-      <created>1710996597191</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1710996597191</updated>
-    </task>
-    <task id="LOCAL-00013" summary=" /*20240321 텍스트 필터기능 모음자음일경우 filter*/">
-      <created>1711005353429</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1711005353429</updated>
-    </task>
-    <task id="LOCAL-00014" summary=" /*20240321 텍스트 필터기능 영어/한글변환 filter*/">
-      <created>1711007000478</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1711007000478</updated>
-    </task>
-    <task id="LOCAL-00015" summary="파일 구조변경 변경">
-      <created>1711093407387</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1711093407387</updated>
-    </task>
-    <task id="LOCAL-00016" summary="파일 구조변경 변경">
-      <created>1711093420099</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1711093420099</updated>
-    </task>
-    <task id="LOCAL-00017" summary="router 세팅 및 toast세팅">
-      <created>1711094377652</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1711094377652</updated>
-    </task>
-    <task id="LOCAL-00018" summary="프로젝트 레이아웃정리">
-      <created>1711264939478</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1711264939478</updated>
-    </task>
-    <task id="LOCAL-00019" summary="프로젝트 라우터 정리 임시저장">
-      <created>1711346893393</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1711346893393</updated>
-    </task>
-    <task id="LOCAL-00020" summary="프로젝트 메인 레이아웃 재정비">
-      <created>1711347066405</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1711347066405</updated>
-    </task>
-    <task id="LOCAL-00021" summary="프로젝트 메인 레이아웃 비동기 컴포넌트 세팅 완료">
-      <created>1711347740378</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1711347740378</updated>
-    </task>
-    <task id="LOCAL-00022" summary="API 파일구조수정">
-      <created>1711422379562</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1711422379562</updated>
-    </task>
-    <task id="LOCAL-00023" summary="라우터 경로 DB작업 완료">
-      <created>1711440124454</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1711440124454</updated>
-    </task>
-    <task id="LOCAL-00024" summary="/*20240327 헤더푸터 사용/미사용여부 체크*/">
-      <created>1711524120162</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1711524120162</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Docker 추가">
-      <created>1711763076847</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1711763076847</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Docker Nginx 설정파일 수정">
-      <created>1711930301898</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1711930301898</updated>
-    </task>
-    <task id="LOCAL-00027" summary="docker 설정파일수정">
-      <created>1712034516356</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1712034516356</updated>
-    </task>
-    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="마이바티스 연동작업" />
-    <MESSAGE value="마이바티스 DB연결 성공" />
-    <MESSAGE value="마이바티스 DB연결 TEST 완료" />
-    <MESSAGE value="Typescirpt REACT.js 추가완료" />
-    <MESSAGE value="백엔드 CORS 해결완료" />
-    <MESSAGE value="서버로그사용 추가및 백엔드공통화 로직 변경" />
-    <MESSAGE value="백엔드 out data 담기 성공" />
-    <MESSAGE value="임시 visionKey" />
-    <MESSAGE value="이미지 - 텍스트 변환 로직 성공" />
-    <MESSAGE value="Support-AcpyLogger 전역으로 추가" />
-    <MESSAGE value="불필요한 파일 정리및 파일구조변경" />
-    <MESSAGE value=" /*20240321 텍스트 필터기능 모음자음일경우 filter*/" />
-    <MESSAGE value=" /*20240321 텍스트 필터기능 영어/한글변환 filter*/" />
-    <MESSAGE value="파일 구조변경 변경" />
-    <MESSAGE value="router 세팅 및 toast세팅" />
-    <MESSAGE value="프로젝트 레이아웃정리" />
-    <MESSAGE value="프로젝트 라우터 정리 임시저장" />
-    <MESSAGE value="프로젝트 메인 레이아웃 재정비" />
-    <MESSAGE value="프로젝트 메인 레이아웃 비동기 컴포넌트 세팅 완료" />
-    <MESSAGE value="API 파일구조수정" />
-    <MESSAGE value="라우터 경로 DB작업 완료" />
-    <MESSAGE value="/*20240327 헤더푸터 사용/미사용여부 체크*/" />
-    <MESSAGE value="Docker 추가" />
-    <MESSAGE value="Docker Nginx 설정파일 수정" />
-    <MESSAGE value="docker 설정파일수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="docker 설정파일수정" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.io.FileNotFoundException" package="java.io" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

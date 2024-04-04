@@ -3,7 +3,7 @@
 
 # Editor-specific files
 .vscode/
-.idea/
+backend/.idea/
 
 # Build output
 /build/
@@ -50,7 +50,7 @@ Thumbs.db
 *.iml
 *.ipr
 *.iws
-.idea/
+backend/.idea/
 
 # Exclude database properties file
 *.properties
