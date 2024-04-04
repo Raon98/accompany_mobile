@@ -5,14 +5,14 @@ services:
     build:
       context: ./backend  # 백엔드 도커 파일이 있는 경로
     ports:
-      - "8090:8080"  # 백엔드 컨테이너의 포트를 호스트의 8090 포트로 매핑
+      - "8090:8090"  # 백엔드 컨테이너의 포트를 호스트의 8090 포트로 매핑
     depends_on:
       - database  # 백엔드가 데이터베이스 컨테이너에 의존함을 나타냄
     environment:
-      - DATABASE_URL=${DATABASE_URL}
-      - JDBC_USERNAME=${JDBC_USERNAME}
-      - JDBC_PASSWORD=${JDBC_PASSWORD}
       - LANG=C.UTF-8
+    networks:
+      - my_network
+
   frontend:
     build:
       context: ./frontend  # 프론트엔드 도커 파일이 있는 경로
@@ -23,11 +23,20 @@ services:
       - REACT_APP_BACKEND_URL=http://backend:8090   # 백엔드 URL을 환경 변수로 설정
     depends_on:
       - backend  # 프론트엔드가 백엔드 컨테이너에 의존함을 나타냄
+    networks:
+      - my_network
 
   database:
     image: mariadb:10.6.17  # 이미지 이름 및 버전
+    restart: always
     ports:
-      - "3307:3307"
+      - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}  # root 비밀번호 설정
-      MYSQL_DATABASE: ${MYSQL_DATABASE}  # 데이터베이스 이름 설정
+      MYSQL_ROOT_PASSWORD: acpy01!  # root 비밀번호 설정
+      MYSQL_DATABASE: acpy  # 데이터베이스 이름 설정
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge

@@ -29,11 +29,11 @@ RUN mv /usr/src/app/target/v1.war ${CATALINA_HOME}/webapps/
 # 톰캣의 포트 설정 변경
 RUN sed -i 's/<Connector port="8080"/<Connector port="8090"/' ${CATALINA_HOME}/conf/server.xml
 
-# MariaDB 설치
-RUN apk add --no-cache mariadb mariadb-client
+# JDBC 연결 설정
+RUN sed -i 's#</Context>#<Resource name="jdbc/acpy" auth="Container" type="javax.sql.DataSource" maxActive="100" maxIdle="30" maxWait="10000" username="root" password="acpy01!" driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/acpy" /></Context>#' ${CATALINA_HOME}/conf/context.xml
 
 # 톰캣 실행
 CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
 
 # 8090 포트 노출
-EXPOSE 8080
+EXPOSE 8090
