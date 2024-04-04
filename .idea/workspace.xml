@@ -9,43 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/accompany_mobile.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/accompany_mobile.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="backend 파일 분리">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/CMM/CMM0101IN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/CMM/CMM0101OUT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/service/CMM/CMM0101Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/CMM/CMM_0101_SQL.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/config/CloudVisionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/CloudVisionConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/config/JacksonConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/JacksonConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/controller/AccompanyApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/controller/AccompanyApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/controller/GoogleVisionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/controller/GoogleVisionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/filter/CharacterEncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/filter/CharacterEncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/filter/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/filter/CorsFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/support/AcpyLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/support/AcpyLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/support/AcpyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/support/AcpyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/support/LowerKeyMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/support/LowerKeyMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/api/test/DB_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/test/DB_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/db/AUI/AUI01REQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/db/AUI/AUI01REQ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/service/ACM/ACM0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACM/ACM0101IN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/service/ACM/ACM0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACM/ACM0101OUT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/service/AUI/AUI0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUI/AUI0101IN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/models/service/AUI/AUI0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUI/AUI0101OUT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acpy/service/AUI/AUI0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/service/AUI/AUI0101Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/image/image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/AUI/AUI_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/AUI/AUI_0101_SQL.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/visionKey.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/visionKey.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/spring/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/spring/dispatcher-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.development" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,24 +40,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LG/Desktop/portfoilo/accompany_mobile/backend/src/main/webapp/WEB-INF/web.xml&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15625&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2410197&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;f03a238012279e29ccfbbe1565e83249&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/LG/Desktop/portfoilo/accompany_mobile/backend/src/main/java/acpy/service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15625",
+    "project.structure.side.proportion": "0.2410197",
+    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable",
+    "spring.configuration.checksum": "f03a238012279e29ccfbbe1565e83249",
+    "ts.external.directory.path": "C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\java\acpy\service" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\java\acpy\models\service" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\resources\mappers" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 8.5.98" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.98" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
@@ -199,11 +177,34 @@
       <updated>1712134509436</updated>
       <workItem from="1712134520854" duration="285000" />
       <workItem from="1712189031549" duration="335000" />
-      <workItem from="1712189507490" duration="324000" />
+      <workItem from="1712189507490" duration="1806000" />
     </task>
+    <task id="LOCAL-00001" summary="backend 파일 분리">
+      <created>1712190190860</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712190190860</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="backend 파일 분리" />
+    <option name="LAST_COMMIT_MESSAGE" value="backend 파일 분리" />
   </component>
 </project>
