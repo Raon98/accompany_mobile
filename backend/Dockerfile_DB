@@ -1,16 +1,6 @@
-# 기반이 되는 이미지를 지정합니다.
 FROM mariadb:10.6.17
 
-# 환경 변수를 설정합니다.
-ENV MYSQL_ROOT_PASSWORD acpy01!
-ENV MYSQL_DATABASE ACPY
-ENV DATABASE_URL jdbc:mysql://database:3306/acpy
-ENV JDBC_USERNAME root
-ENV JDBC_PASSWORD acpy01!
+ENV MYSQL_ROOT_PASSWORD=acpy01!
+ENV MYSQL_DATABASE=acpy
 
-# 포트를 노출합니다.
 EXPOSE 3306
-
-# MariaDB의 설정 파일을 새로 작성하여 포트를 3307로 설정합니다.
-RUN echo '[mysqld]' > /etc/mysql/my.cnf && \
-    echo 'port=3306' >> /etc/mysql/my.cnf

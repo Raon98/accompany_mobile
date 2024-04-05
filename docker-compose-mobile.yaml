@@ -3,11 +3,11 @@ version: '3.8'
 services:
   backend:
     build:
-      context: ./backend  # 백엔드 도커 파일이 있는 경로
+      context: ./backend
     ports:
-      - "8090:8090"  # 백엔드 컨테이너의 포트를 호스트의 8090 포트로 매핑
+      - "8090:8090"
     depends_on:
-      - database  # 백엔드가 데이터베이스 컨테이너에 의존함을 나타냄
+      - database
     environment:
       - LANG=C.UTF-8
     networks:
@@ -15,25 +15,24 @@ services:
 
   frontend:
     build:
-      context: ./frontend  # 프론트엔드 도커 파일이 있는 경로
+      context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"  # 프론트엔드 컨테이너의 포트를 호스트의 80 포트로 매핑
+      - "3000:3000"
     environment:
-      - REACT_APP_BACKEND_URL=http://backend:8090   # 백엔드 URL을 환경 변수로 설정
+      - REACT_APP_BACKEND_URL=http://localhost:8090/v1/
     depends_on:
-      - backend  # 프론트엔드가 백엔드 컨테이너에 의존함을 나타냄
+      - backend
     networks:
       - my_network
 
   database:
-    image: mariadb:10.6.17  # 이미지 이름 및 버전
+    build:
+      context: ./backend
+      dockerfile: Dockerfile_DB
     restart: always
     ports:
       - "3306:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: acpy01!  # root 비밀번호 설정
-      MYSQL_DATABASE: acpy  # 데이터베이스 이름 설정
     networks:
       - my_network
 

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = process.env.REACT_APP_BACKEND_LOCAL_URL
+const baseURL = "http://localhost:8090/v1/"
 
 let config = {
     baseURL: baseURL,
@@ -40,7 +40,7 @@ _axios.interceptors.response.use(
 
 /*비동기 POST 방식*/
 const AsyncPost = async (proxy:string,serviceId: string, screedId?: string, params?: any, successCall?: (res: any) => void, failCall?: (err: any) => void) => {
-     await _axios.post(`/v1/${proxy}/${serviceId}`, {
+     await _axios.post(`/${proxy}/${serviceId}`, {
          REQ_COM: {
              serviceId: serviceId,
              screenId: screedId,
@@ -63,7 +63,7 @@ const AsyncPost = async (proxy:string,serviceId: string, screedId?: string, para
 
 /*동기 POST 방식*/
 const Post = (proxy:string,serviceId: string, screedId?: string, params?: any, successCall?: (res: any) => void, failCall?: (err: any) => void) => {
-    _axios.post(`/v1/${proxy}/${serviceId}`, {
+    _axios.post(`/${proxy}/${serviceId}`, {
         REQ_COM: {
             serviceId: serviceId,
             screenId: screedId,

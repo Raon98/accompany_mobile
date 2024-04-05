@@ -16,7 +16,7 @@ backend/.idea/
 npm-debug.log*
 
 # Environment variables
-.env
+.env.development
 .env.local
 
 # Dependency directories

@@ -10,14 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="라우터 등록페이지 수정">
-      <change afterPath="$PROJECT_DIR$/backend/Dockerfile_DB" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/DatabaseConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/test/DB_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/test/DB_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Dockerfile_DB" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile_DB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose-mobile.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-mobile.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.env.development" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/plugins/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/plugins/api.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +35,7 @@
       <list>
         <option value="myBatisXML" />
         <option value="Class" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -71,7 +78,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LG/Desktop/portfoilo/accompany_mobile/backend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/LG/Desktop/portfoilo/accompany_mobile/frontend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
@@ -86,6 +93,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\java\acpy\service" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\java\acpy\models\service" />
@@ -211,6 +219,8 @@
       <workItem from="1712213485916" duration="4457000" />
       <workItem from="1712218564299" duration="410000" />
       <workItem from="1712220012501" duration="6237000" />
+      <workItem from="1712275269988" duration="12994000" />
+      <workItem from="1712291584206" duration="1179000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
