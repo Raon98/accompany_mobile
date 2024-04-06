@@ -9,11 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="라우터 등록페이지 수정">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="docker 연결 성공">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/CloudVisionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/CloudVisionConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/filter/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/filter/CorsFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose-mobile.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-mobile.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/plugins/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/plugins/api.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712194604787</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="docker 연결 성공">
+      <created>1712318997202</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712318997202</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +282,7 @@
     <MESSAGE value="backend 라우터 파일 원복" />
     <MESSAGE value="backend DB연결 수정" />
     <MESSAGE value="라우터 등록페이지 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="라우터 등록페이지 수정" />
+    <MESSAGE value="docker 연결 성공" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker 연결 성공" />
   </component>
 </project>

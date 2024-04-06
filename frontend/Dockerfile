@@ -9,9 +9,12 @@ COPY .npmrc ./.npmrc
 COPY package.json package-lock.json ./
 COPY src ./src
 COPY public ./public
-COPY .env.development ./.env.development
 COPY webpack.config.ts ./webpack.config.ts
 COPY tsconfig.json ./tsconfig.json
+
+# 환경 변수 출력
+ARG REACT_APP_BACKEND_URL
+RUN echo "REACT_APP_BACKEND_URL: $REACT_APP_BACKEND_URL"
 
 # 애플리케이션 종속성 설치
 RUN npm install
@@ -27,9 +30,6 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 # 빌드된 애플리케이션을 Nginx의 정적 파일 디렉토리로 복사
 COPY --from=build /app/build /usr/share/nginx/html
-
-# 환경 변수를 이용하여 백엔드 주소 설정
-ENV BACKEND_URL="http://backend:8090/v1/"
 
 # Nginx가 리버스 프록시로 작동하도록 설정
 # 서비스 호출 시 백엔드 주소로 포워딩
