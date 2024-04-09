@@ -8,7 +8,7 @@
     DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
     DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
   run: |
-    cat .env  # .env 파일 내용 출력
+    cat .env
     docker-compose -f docker-compose-mobile.yaml build
     echo "${secrets.DOCKER_USERNAME}" | docker login -u "${secrets.DOCKERHUB_TOKEN}" --password-stdin 
     docker-compose -f docker-compose-mobile.yaml push
