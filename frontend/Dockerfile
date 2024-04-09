@@ -12,7 +12,6 @@ COPY public ./public
 COPY webpack.config.ts ./webpack.config.ts
 COPY tsconfig.json ./tsconfig.json
 
-# 환경 변수 출력
 ARG REACT_APP_BACKEND_URL
 RUN echo "REACT_APP_BACKEND_URL: $REACT_APP_BACKEND_URL"
 

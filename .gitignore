@@ -16,7 +16,6 @@ backend/.idea/
 npm-debug.log*
 
 # Environment variables
-.env.development
 .env.local
 
 # Dependency directories
@@ -57,5 +56,3 @@ backend/.idea/
 
 config/constants/
 *Constants.java
-
-.env
