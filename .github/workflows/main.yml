@@ -22,6 +22,13 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
+      - name: Create .env file
+        run: |
+          echo "REACT_APP_BACKEND_URL=${{ secrets.REACT_APP_BACKEND_URL }}" >> .env
+          echo "MYSQL_ROOT_PASSWORD=${{ secrets.MYSQL_ROOT_PASSWORD }}" >> .env
+          echo "MYSQL_DATABASE=${{ secrets.MYSQL_DATABASE }}" >> .env
+          echo "CORE_ALLOWED_ORIGIN=${{ secrets.CORE_ALLOWED_ORIGIN }}" >> .env
+
       - name: Build and push Docker images
         run: |
           docker-compose -f docker-compose-mobile.yaml build
