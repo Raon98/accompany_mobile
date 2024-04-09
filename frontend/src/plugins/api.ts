@@ -4,8 +4,6 @@
     
     const baseURL = process.env.REACT_APP_BACKEND_URL
 
-    console.log("baseURL: " + baseURL)
-    console.log("baseURL: " + JSON.stringify(process.env))
     let config = {
         baseURL: baseURL,
         timeout: 60 * 1000,
