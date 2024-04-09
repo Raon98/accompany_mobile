@@ -9,17 +9,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      REACT_APP_BACKEND_URL: ${{ secrets.REACT_APP_BACKEND_URL }}
+      MYSQL_ROOT_PASSWORD: ${{ secrets.MYSQL_ROOT_PASSWORD }}
+      MYSQL_DATABASE: ${{ secrets.MYSQL_DATABASE }}
+      CORE_ALLOWED_ORIGIN: ${{ secrets.CORE_ALLOWED_ORIGIN }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
-
-      - name: Display Secrets
-        run: |
-          echo "DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}"
-          echo "DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}"
 
       - name: Build and push Docker images
         run: |
