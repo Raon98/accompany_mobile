@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="파일임시저장">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="프론트 args를 이용해 내부 env값 전달">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose-mobile.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-mobile.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/plugins/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/plugins/api.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +238,7 @@
       <workItem from="1712493249487" duration="581000" />
       <workItem from="1712495524391" duration="569000" />
       <workItem from="1712503220159" duration="33000" />
-      <workItem from="1712646117265" duration="5569000" />
+      <workItem from="1712646117265" duration="10607000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -290,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712650132502</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="프론트 args를 이용해 내부 env값 전달">
+      <created>1712651824987</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712651824987</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +332,7 @@
     <MESSAGE value="docker 연결 성공" />
     <MESSAGE value="main.yml 수정" />
     <MESSAGE value="파일임시저장" />
-    <option name="LAST_COMMIT_MESSAGE" value="파일임시저장" />
+    <MESSAGE value="프론트 args를 이용해 내부 env값 전달" />
+    <option name="LAST_COMMIT_MESSAGE" value="프론트 args를 이용해 내부 env값 전달" />
   </component>
 </project>
