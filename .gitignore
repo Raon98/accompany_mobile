@@ -56,3 +56,5 @@ backend/.idea/
 
 config/constants/
 *Constants.java
+
+.env
