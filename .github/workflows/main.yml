@@ -27,7 +27,7 @@ jobs:
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
         run: |
           docker-compose -f docker-compose-mobile.yaml build
-          echo "${DOCKERHUB_TOKEN}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+          echo "dckr_pat_Vd5Hf1l2q0FV6mCntuSCjoP6r74" | docker login -u "raon98" --password-stdin 
           docker-compose -f docker-compose-mobile.yaml push
 
       - name: Deploy
