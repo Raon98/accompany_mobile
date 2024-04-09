@@ -21,16 +21,22 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      args:
+        - REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
     ports:
       - "3000:3000"
     depends_on:
       - backend
+    environment:
+      - REACT_APP_BACKEND_URL=http://backend:8090
     networks:
       - my_network
-    environment:
-      - REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
     env_file:
       - .env
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+
   database:
     image: raon98/accompany_mobile:database
     build:
@@ -48,6 +54,7 @@ services:
       - database_data:/var/lib/mysql
     env_file:
       - .env
+
 networks:
   my_network:
     driver: bridge
