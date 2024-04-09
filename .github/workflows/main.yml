@@ -26,7 +26,7 @@ jobs:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
         run: |
-          cat
+          cat .env
           docker-compose -f docker-compose-mobile.yaml build
-          echo "${DOCKERHUB_TOKEN}" | docker login -u "${DOCKER_USERNAME}" --password-stdin 
+          echo "${secrets.DOCKERHUB_TOKEN}" | docker login -u "${secrets.DOCKER_USERNAME}" --password-stdin 
           docker-compose -f docker-compose-mobile.yaml push
