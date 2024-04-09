@@ -1,31 +1,14 @@
-name: CI/CD
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-
-      - name: Build and push Docker images
-        env:
-          MYSQL_ROOT_PASSWORD: ${{ secrets.MYSQL_ROOT_PASSWORD }}
-          MYSQL_DATABASE: ${{ secrets.MYSQL_DATABASE }}
-          REACT_APP_BACKEND_AXIOS_URL: ${{ secrets.REACT_APP_BACKEND_AXIOS_URL }}
-          OCR_VISION_KEY: ${{ secrets.OCR_VISION_KEY }}
-          CORE_ALLOWED_ORIGIN: ${{ secrets.CORE_ALLOWED_ORIGIN }}
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
-        run: |
-          docker-compose -f docker-compose-mobile.yaml build
-          echo "${DOCKERHUB_TOKEN}" | docker login -u "${DOCKER_USERNAME}" --password-stdin 
-          docker-compose -f docker-compose-mobile.yaml push
+- name: Build and push Docker images
+  env:
+    MYSQL_ROOT_PASSWORD: ${{ secrets.MYSQL_ROOT_PASSWORD }}
+    MYSQL_DATABASE: ${{ secrets.MYSQL_DATABASE }}
+    REACT_APP_BACKEND_AXIOS_URL: ${{ secrets.REACT_APP_BACKEND_AXIOS_URL }}
+    OCR_VISION_KEY: ${{ secrets.OCR_VISION_KEY }}
+    CORE_ALLOWED_ORIGIN: ${{ secrets.CORE_ALLOWED_ORIGIN }}
+    DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+    DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+  run: |
+    cat .env  # .env 파일 내용 출력
+    docker-compose -f docker-compose-mobile.yaml build
+    echo "${secrets.DOCKER_USERNAME}" | docker login -u "${secrets.DOCKERHUB_TOKEN}" --password-stdin 
+    docker-compose -f docker-compose-mobile.yaml push
