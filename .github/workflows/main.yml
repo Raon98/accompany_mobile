@@ -21,9 +21,9 @@ jobs:
           echo "DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}"
           echo "DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}"
 
-      # - name: Build and push Docker images
-      #   run: |
-      #     cat .env
-      #     docker-compose -f docker-compose-mobile.yaml build
-      #     echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-      #     docker-compose -f docker-compose-mobile.yaml push
+      - name: Build and push Docker images
+        run: |
+          cat .env
+          docker-compose -f docker-compose-mobile.yaml build
+         echo "dckr_pat_Vd5Hf1l2q0FV6mCntuSCjoP6r74" | docker login -u "raon98" --password-stdin
+          docker-compose -f docker-compose-mobile.yaml push
