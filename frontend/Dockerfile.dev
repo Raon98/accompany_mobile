@@ -1,0 +1,19 @@
+FROM node:20 AS build
+
+WORKDIR /app
+
+COPY .npmrc ./.npmrc
+COPY package.json package-lock.json ./
+COPY src ./src
+COPY public ./public
+COPY webpack.config.ts ./webpack.config.ts
+COPY tsconfig.json ./tsconfig.json
+
+RUN npm install
+
+ARG REACT_APP_BACKEND_URL
+ENV REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
+
+RUN echo "REACT_APP_BACKEND_URL: $REACT_APP_BACKEND_URL"
+
+CMD ["npm", "run", "start"]

@@ -20,7 +20,7 @@ services:
     image: raon98/accompany_mobile:frontend
     build:
       context: ./frontend
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
       args:
         - REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
     ports:
@@ -29,6 +29,9 @@ services:
       - REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
     depends_on:
       - backend
+    volumes:
+    - /usr/src/app/node_modules
+    - ./frontend:/app
     networks:
       - my_network
     env_file:
