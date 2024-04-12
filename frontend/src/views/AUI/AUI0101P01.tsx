@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 const AUI0101P01 = () => {
     const navigate = useNavigate();
-    console.log("뭐지123")
+    console.log("뭐지1231")
     return (
         <div>
             로그인페이지 실시간반영됐나?
