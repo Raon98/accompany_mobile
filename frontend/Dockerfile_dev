@@ -1,28 +1,19 @@
 # Node 버전 20을 기반으로 하는 이미지 사용
-FROM node:20 AS build
+FROM node:20 AS dev
 
-# 작업 디렉토리 생성 및 설정
-WORKDIR /usr/src/app
+WORKDIR /app
 
 COPY .npmrc ./.npmrc
 
-COPY package.json ./
+COPY ./package.json  ./
 
 RUN npm install
 
-# 호스트 시스템의 현재 디렉토리에 있는 모든 소스코드를 컨테이너의 /app 디렉토리로 복사
-COPY . .
+COPY ./ ./
 
 ARG REACT_APP_BACKEND_URL
 ENV REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
 
 RUN echo "REACT_APP_BACKEND_URL: $REACT_APP_BACKEND_URL"
 
-# 프론트엔드 애플리케이션 빌드
-RUN npm run build
-
-# 3000번 포트를 외부에 노출
-EXPOSE 3000
-
-# 앱 실행
-CMD ["npm", "start"]
+CMD ["npm","run","dev"]

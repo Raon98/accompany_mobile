@@ -27,8 +27,12 @@ services:
       - "3000:3000"
     environment:
       - REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
+      - CHOKIDAR_USEPOLLING=true
     depends_on:
       - backend
+    volumes:
+    - /app/node_modules
+    - ./frontend:/app
     stdin_open: true
     networks:
       - my_network
