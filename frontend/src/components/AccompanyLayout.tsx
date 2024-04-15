@@ -1,4 +1,4 @@
-import React, {ComponentType, lazy, Suspense, useEffect, useState} from 'react';
+import React, {lazy, Suspense, useEffect, useState} from 'react';
 import AccompanySection from "components/AccompanySection";
 import Router from "router";
 import {useLocation} from "react-router-dom";
