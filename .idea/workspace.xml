@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="20240412 임시저장">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="20240415 frontend docker 실시간 연동테스트">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose-mobile.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-mobile.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/Dockerfile_dev" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Dockerfile_dev" afterDir="false" />
@@ -247,7 +247,9 @@
       <workItem from="1712817717823" duration="6476000" />
       <workItem from="1712879638756" duration="2242000" />
       <workItem from="1713159658396" duration="8540000" />
-      <workItem from="1713169511374" duration="1502000" />
+      <workItem from="1713169511374" duration="1999000" />
+      <workItem from="1713485214248" duration="580000" />
+      <workItem from="1714009412938" duration="4126000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -312,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712887394173</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="20240415 frontend docker 실시간 연동테스트">
+      <created>1713171363362</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713171363362</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,6 +359,7 @@
     <MESSAGE value="파일임시저장" />
     <MESSAGE value="프론트 args를 이용해 내부 env값 전달" />
     <MESSAGE value="20240412 임시저장" />
-    <option name="LAST_COMMIT_MESSAGE" value="20240412 임시저장" />
+    <MESSAGE value="20240415 frontend docker 실시간 연동테스트" />
+    <option name="LAST_COMMIT_MESSAGE" value="20240415 frontend docker 실시간 연동테스트" />
   </component>
 </project>

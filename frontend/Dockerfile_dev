@@ -1,7 +1,7 @@
 # Node 버전 20을 기반으로 하는 이미지 사용
 FROM node:20 AS dev
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
 COPY .npmrc ./.npmrc
 
@@ -16,4 +16,4 @@ ENV REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
 
 RUN echo "REACT_APP_BACKEND_URL: $REACT_APP_BACKEND_URL"
 
-CMD ["npm","run","dev"]
+CMD ["npm","run","start"]

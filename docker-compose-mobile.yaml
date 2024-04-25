@@ -31,8 +31,8 @@ services:
     depends_on:
       - backend
     volumes:
-    - /app/node_modules
-    - ./frontend:/app
+    - /usr/src/app/node_modules
+    - ./frontned:/usr/src/app
     stdin_open: true
     networks:
       - my_network
