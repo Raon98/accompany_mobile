@@ -7,8 +7,6 @@ services:
       context: ./backend
     ports:
       - "8090:8090"
-    depends_on:
-      - database
     environment:
       - LANG=C.UTF-8
     networks:
@@ -23,6 +21,7 @@ services:
       dockerfile: Dockerfile_dev
       args:
         - REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
+        - CHOKIDAR_USEPOLLING=true
     ports:
       - "3000:3000"
     environment:
@@ -31,30 +30,11 @@ services:
     depends_on:
       - backend
     volumes:
-    - /app/node_modules
-    - ./frontend:/app
+      - /usr/src/app/node_modules
+      - ./frontend:/usr/src/app
     stdin_open: true
     networks:
       - my_network
-    env_file:
-      - .env
-
-
-  database:
-    image: raon98/accompany_mobile:database
-    build:
-      context: ./backend
-      dockerfile: Dockerfile_DB
-    restart: always
-    environment:
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
-    ports:
-      - "3307:3306"
-    networks:
-      - my_network
-    volumes:
-      - database_data:/var/lib/mysql
     env_file:
       - .env
 
@@ -62,5 +42,3 @@ networks:
   my_network:
     driver: bridge
 
-volumes:
-  database_data:
