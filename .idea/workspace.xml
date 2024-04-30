@@ -9,13 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="20240425 frontend docker 실시간 연동테스트">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="20240430 frontend docker 실시간 연동 성공">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Dockerfile_DB" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/DatabaseConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/AUI/AUI_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/AUI/AUI_0101_SQL.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/CMM/CMM_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/CMM/CMM_0101_SQL.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/spring/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/spring/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose-mobile.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-mobile.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Dockerfile_dev" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Dockerfile_dev" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/views/AUI/AUI0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/AUI/AUI0101P01.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/webpack.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +258,7 @@
       <workItem from="1714368642450" duration="662000" />
       <workItem from="1714369766018" duration="9225000" />
       <workItem from="1714380323865" duration="147000" />
-      <workItem from="1714449997249" duration="4281000" />
+      <workItem from="1714449997249" duration="9021000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -334,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714036006892</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="20240430 frontend docker 실시간 연동 성공">
+      <created>1714457639526</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1714457639526</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,6 +384,7 @@
     <MESSAGE value="20240412 임시저장" />
     <MESSAGE value="20240415 frontend docker 실시간 연동테스트" />
     <MESSAGE value="20240425 frontend docker 실시간 연동테스트" />
-    <option name="LAST_COMMIT_MESSAGE" value="20240425 frontend docker 실시간 연동테스트" />
+    <MESSAGE value="20240430 frontend docker 실시간 연동 성공" />
+    <option name="LAST_COMMIT_MESSAGE" value="20240430 frontend docker 실시간 연동 성공" />
   </component>
 </project>

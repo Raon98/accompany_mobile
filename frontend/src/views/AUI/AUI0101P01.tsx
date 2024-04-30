@@ -5,7 +5,7 @@ const AUI0101P01 = () => {
     console.log("왜안돼121")
     return (
         <div>
-            로그인페이지 실시간반영됐나?
+            로그인페이지 실시간반영됐나? 응
            <div>
                <button onClick={() => navigate("/ACM0101P01")}>클릭하세요</button>
            </div>

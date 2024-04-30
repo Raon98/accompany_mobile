@@ -16,7 +16,7 @@
     </select>
 
     <insert id="insertTest">
-        INSERT INTO acp_mst (UID,PASS,IDTY,NAME,MAIL,MOHP,UAGE,USEX,UARS,INID,INDT,UPID,UPDT)
+        INSERT INTO ACP_MST (UID,PASS,IDTY,NAME,MAIL,MOHP,UAGE,USEX,UARS,INID,INDT,UPID,UPDT)
             VALUE (#{uid},#{pass},#{idty},#{name},#{mail},#{mohp},#{uage},#{usex},#{uars},"ADMIN","","ADMIN","")
     </insert>
 </mapper>

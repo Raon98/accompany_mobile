@@ -9,7 +9,7 @@
     <context:property-placeholder location="/WEB-INF/database.properties"/>
 
     <!-- MyBatis Mapper를 스캔하여 빈으로 등록하는 설정 -->
-    <mybatis:scan base-package="acpy" />
+    <mybatis:scan base-package="ACPY" />
     <context:component-scan base-package="acpy" />
     <!-- 데이터베이스 연결 DataSource 빈 설정 -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">

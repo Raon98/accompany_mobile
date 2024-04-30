@@ -22,8 +22,6 @@ RUN mv /usr/src/app/target/v1.war ${CATALINA_HOME}/webapps/
 
 RUN sed -i 's/<Connector port="8080"/<Connector port="8090"/' ${CATALINA_HOME}/conf/server.xml
 
-RUN sed -i 's#</Context>#<Resource name="jdbc/acpy" auth="Container" type="javax.sql.DataSource" maxActive="100" maxIdle="30" maxWait="10000" username="root" password="acpy01!" driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/acpy" /></Context>#' ${CATALINA_HOME}/conf/context.xml
-
 CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
 
 EXPOSE 8090

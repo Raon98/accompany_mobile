@@ -9,7 +9,7 @@
                cpnt_path AS PATH,
                hd_flag AS HD_FLAG,
                ft_flag AS FT_FLAG
-        FROM acp_menu_path
+        FROM ACP_MENU_PATH
         WHERE CHNL ='M'
     </select>
 </mapper>
