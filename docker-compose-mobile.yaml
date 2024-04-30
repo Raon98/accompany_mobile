@@ -23,6 +23,7 @@ services:
       dockerfile: Dockerfile_dev
       args:
         - REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
+        - CHOKIDAR_USEPOLLING=true
     ports:
       - "3000:3000"
     environment:
@@ -31,8 +32,8 @@ services:
     depends_on:
       - backend
     volumes:
-    - /usr/src/app/node_modules
-    - ./frontned:/usr/src/app
+      - /usr/src/app/node_modules
+      - ./frontend:/usr/src/app
     stdin_open: true
     networks:
       - my_network
