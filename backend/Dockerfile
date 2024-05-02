@@ -1,9 +1,8 @@
 FROM adoptopenjdk/openjdk11:alpine-slim
 
-RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-COPY .. /usr/src/app
+COPY . /usr/src/app
 
 RUN apk add --no-cache maven \
     && apk add --no-cache curl
@@ -11,6 +10,7 @@ RUN apk add --no-cache maven \
 RUN mvn clean package
 
 ENV TOMCAT_VERSION 8.5.99
+ENV MAVEN_HOME=/root/.m2/repository
 ENV CATALINA_HOME /usr/local/tomcat
 
 RUN wget https://downloads.apache.org/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
@@ -20,7 +20,11 @@ RUN wget https://downloads.apache.org/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/apa
 
 RUN mv /usr/src/app/target/v1.war ${CATALINA_HOME}/webapps/
 
-RUN sed -i 's/<Connector port="8080"/<Connector port="8090"/' ${CATALINA_HOME}/conf/server.xml
+COPY ./script/redeploy.sh /usr/local/bin/redeploy.sh
+RUN chmod +x /usr/local/bin/redeploy.sh
+
+RUN sed -i 's/<Connector port="8080"/<Connector port="8090"/' ${CATALINA_HOME}/conf/server.xml && \
+    sed -i '/<Host name="localhost" appBase="webapps"/a unpackWARs="true" autoDeploy="true" reloadable="true"' ${CATALINA_HOME}/conf/server.xml
 
 CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
 
