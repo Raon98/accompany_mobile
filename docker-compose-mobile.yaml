@@ -7,6 +7,9 @@ services:
       context: ./backend
     ports:
       - "8090:8090"
+    volumes:
+      - /usr/src/app/target
+      - ./backend:/usr/src/app
     environment:
       - LANG=C.UTF-8
     networks:
