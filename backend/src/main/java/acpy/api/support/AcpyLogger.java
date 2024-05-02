@@ -16,8 +16,8 @@ public class AcpyLogger {
         LOGGER.info(message);
     }
 
-    public static void info(String message, Object... objArg) {
-        LOGGER.info(message, objArg);
+    public static <T> void info(String message, T... args) {
+        LOGGER.info(message, (Object[]) args);
     }
 
     public static void debug(String message) {

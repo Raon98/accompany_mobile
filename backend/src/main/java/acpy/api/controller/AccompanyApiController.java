@@ -50,7 +50,7 @@ public class AccompanyApiController {
 
             // 요청된 메서드 가져오기
             Method method = findMethod(serviceBean, serviceId);
-
+            AcpyLogger.info("============= method : {}==============", method);
             if (method != null) {
                 Map<String, Object> datParams = (Map<String, Object>) params.get("REQ_DAT");
                 Map<String, Object> modifiedParams = datParams != null ? datParams : params;

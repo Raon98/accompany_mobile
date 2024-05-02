@@ -13,7 +13,6 @@ type ynType = 'Y' | 'N'
 const AUS0101P01 = () => {
     const [chnl, setChnl] = useState<chnlType>('M')
     const [componentId, setComponentId] = useState('')
-    const [componentPath, setComponentPath] = useState('')
     const [headerFlag, setHeaderFlag] = useState<ynType>('Y')
     const [footerFlag, setFooterFlag] = useState<ynType>('N')
 
@@ -21,16 +20,11 @@ const AUS0101P01 = () => {
         onChange: (e:React.ChangeEvent<HTMLFormElement | HTMLInputElement>) => {
             const { target : {name,value}} = e
 
-            console.log(name)
-            console.log(value)
             if (name === 'chnl'){
                 setChnl(e.target.value);
             }
             if (name === 'component_id'){
                 setComponentId(e.target.value)
-            }
-            if (name === 'component_path'){
-                setComponentPath(e.target.value)
             }
             if (name === 'header_flag'){
                 setHeaderFlag(e.target.value)
@@ -41,16 +35,21 @@ const AUS0101P01 = () => {
 
         },
         registration : () => {
+
+
+            let id = `views/${componentId.slice(0,3)}/${componentId}`
+            let path = `/${componentId}`
+
             console.log("현재채널값은 : " + chnl)
-            console.log("현재 componentId 값은 : " + componentId)
-            console.log("현재 componentPath 값은 : " + componentPath)
+            console.log("현재 ID 값은 : " + id)
+            console.log("현재 PATH 값은 : " + path)
             console.log("현재 headerFlag 값은 : " + headerFlag)
             console.log("현재 footerFlag 값은 : " + footerFlag)
 
             let params = {
                 chnl : chnl,
-                component_id : componentId,
-                component_path : componentPath,
+                component_id : id,
+                component_path : path,
                 header_flag : headerFlag,
                 footer_flag : footerFlag
             }
@@ -77,17 +76,10 @@ const AUS0101P01 = () => {
                     <input type="radio" name="chnl" id="admin" value="A" checked={chnl === 'A'} onChange={func.onChange}/>
                 </div>
                 <div className="form__block">
-                    <div className="form__title">화면 ID</div>
+                    <div className="form__title">화면 ID EX)AUS0101P01</div>
                     <label htmlFor="component_id"/>
                     <input type="text" name="component_id" id="component_id" required
                            value={componentId}  onChange={func.onChange}/>
-                </div>
-                <div className="form__block">
-                    <div className="form__title">화면 PATH</div>
-                    <label htmlFor="component_path"/>
-                    <input type="text" name="component_path" id="component_path" required
-                           value={componentPath} onChange={func.onChange}
-                    />
                 </div>
                 <div className="form__block">
                     <div className="form__title">HEADER (Y/N)</div>
