@@ -2,11 +2,14 @@ import React, {Suspense} from 'react';
 import {Route, Routes} from 'react-router-dom';
 import {AccompanyLayoutProps} from "components/AccompanyLayout";
 
-
-export default function Router({pathList} : AccompanyLayoutProps) {
+interface RouterProps {
+    isAuthenticated: boolean
+}
+export default function Router({pathList} : AccompanyLayoutProps, {isAuthenticated} : RouterProps) {
     if (!pathList || pathList.length === 0) {
         return <div>Loading...</div>;
     }
+
     return (
         <Routes>
             { pathList.map(route => (

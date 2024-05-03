@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 import {$api} from "plugins/api";
 
-/**************************
- * 파일명 : AUS0101P01
- * 설명 : 라우터 등록 페이지
- * 작성자 : 김성철
- **************************/
 
+/******************************
+ * @사용자유저환경설정:메뉴등록 (ACCOMPANY USER SETTING)
+ * @작성자:김성철
+ ********************************/
 type chnlType = 'M' | 'A'
 type ynType = 'Y' | 'N'
 
