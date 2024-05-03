@@ -9,16 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="화면등록화면 재 업로드">
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/AUL/AUL0101P01.tsx" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="로그인화면 설계">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/plugins/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/plugins/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/CMM/CMM_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/CMM/CMM_0101_SQL.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/ACM/ACM0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/ACM/ACM0101P01.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/ACM/ACM0101P02.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/ACM/ACM0101P02.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/AUI/AUI0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/AUI/AUI0101P01.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/AUS/AUS0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/AUS/AUS0101P01.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/AUL/AUL0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/AUL/AUL0101P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +94,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "Rebasing develop",
-    "last_opened_file_path": "C:/Users/LG/Desktop/portfoilo/accompany_mobile/frontend/src/views/AUL",
+    "last_opened_file_path": "C:/Users/LG/Desktop/sungcheol/study/2024/react_blog",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -260,7 +257,7 @@
       <workItem from="1714380323865" duration="147000" />
       <workItem from="1714449997249" duration="13561000" />
       <workItem from="1714607791557" duration="27062000" />
-      <workItem from="1714693799153" duration="2717000" />
+      <workItem from="1714693799153" duration="7886000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -374,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714639959169</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="로그인화면 설계">
+      <created>1714701721014</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714701721014</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,6 +423,7 @@
     <MESSAGE value="도커 백엔드 restart 추가 및 불필요 파일 삭제" />
     <MESSAGE value="도커 백엔드 restart 설정 및 shell script 추가" />
     <MESSAGE value="화면등록화면 재 업로드" />
-    <option name="LAST_COMMIT_MESSAGE" value="화면등록화면 재 업로드" />
+    <MESSAGE value="로그인화면 설계" />
+    <option name="LAST_COMMIT_MESSAGE" value="로그인화면 설계" />
   </component>
 </project>

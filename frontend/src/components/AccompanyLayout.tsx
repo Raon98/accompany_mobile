@@ -10,14 +10,16 @@ const AccompanyFooter = lazy(() => import("components/AccompanyFooter"));
 
 export interface AccompanyLayoutProps {
     pathList: RspProps[];
+    rootPath: string
 }
 
-const AccompanyLayout = ({pathList}:AccompanyLayoutProps) => {
+const AccompanyLayout = ({pathList,rootPath}:AccompanyLayoutProps) => {
     const [headerFlag, setHeaderFlag] = useState(true)
     const [footerFlag, setFooterFlag] = useState(true)
     let location = useLocation();
 
     useEffect(() => {
+        console.log(pathList)
         /*20240327 헤더푸터 사용/미사용여부 체크*/
         if (pathList?.length) {
             setHeaderFlag(pathList.filter(v => v.path === location.pathname)[0].hd_flag === 'Y')
@@ -33,7 +35,7 @@ const AccompanyLayout = ({pathList}:AccompanyLayoutProps) => {
                 {headerFlag && (<AccompanyHeader/>)}
                 <div className="contents">
                     <AccompanySection>
-                        <Router pathList={pathList}/>
+                        <Router pathList={pathList} rootPath={rootPath}/>
                     </AccompanySection>
                 </div>
                 {footerFlag && <AccompanyFooter/>}

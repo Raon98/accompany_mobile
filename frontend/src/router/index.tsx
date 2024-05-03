@@ -1,15 +1,11 @@
 import React, {Suspense} from 'react';
-import {Route, Routes} from 'react-router-dom';
+import {Navigate, Route, Routes} from 'react-router-dom';
 import {AccompanyLayoutProps} from "components/AccompanyLayout";
 
-interface RouterProps {
-    isAuthenticated: boolean
-}
-export default function Router({pathList} : AccompanyLayoutProps, {isAuthenticated} : RouterProps) {
+export default function Router({pathList,rootPath} : AccompanyLayoutProps) {
     if (!pathList || pathList.length === 0) {
         return <div>Loading...</div>;
     }
-
     return (
         <Routes>
             { pathList.map(route => (
@@ -22,6 +18,7 @@ export default function Router({pathList} : AccompanyLayoutProps, {isAuthenticat
                         </Suspense>}
                 />
             ))}
+            <Route path="*" element={<Navigate replace to={rootPath}/> }/>
         </Routes>
     );
 }

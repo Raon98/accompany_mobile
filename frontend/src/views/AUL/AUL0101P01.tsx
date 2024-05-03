@@ -8,6 +8,8 @@ import {useNavigate} from "react-router-dom";
 
 const AUL0101P01 = () => {
     const navigate = useNavigate();
+
+    console.log("로그인페이지")
     return (
         <div>
             로그인페이지입니다.
