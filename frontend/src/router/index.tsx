@@ -1,9 +1,8 @@
 import React, {Suspense} from 'react';
-import {Route, Routes} from 'react-router-dom';
+import {Navigate, Route, Routes} from 'react-router-dom';
 import {AccompanyLayoutProps} from "components/AccompanyLayout";
 
-
-export default function Router({pathList} : AccompanyLayoutProps) {
+export default function Router({pathList,rootPath} : AccompanyLayoutProps) {
     if (!pathList || pathList.length === 0) {
         return <div>Loading...</div>;
     }
@@ -19,6 +18,7 @@ export default function Router({pathList} : AccompanyLayoutProps) {
                         </Suspense>}
                 />
             ))}
+            <Route path="*" element={<Navigate replace to={rootPath}/> }/>
         </Routes>
     );
 }

@@ -1,7 +1,5 @@
     import axios from "axios";
 
-    // const baseURL = "http://localhost:8090/v1/"
-    
     const baseURL = process.env.REACT_APP_BACKEND_URL
 
     let config = {

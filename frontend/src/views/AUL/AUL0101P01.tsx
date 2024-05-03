@@ -2,18 +2,19 @@
 import {useNavigate} from "react-router-dom";
 
  /******************************
-  * @사용자공통메인페이지 (ACCOMPANY COMMON MAIN)
+  * @사용자로그인 (ACCOMPANY USER LOGIN)
   * @작성자:김성철
   ********************************/
 
-const ACM0101P01 = () => {
+const AUL0101P01 = () => {
     const navigate = useNavigate();
+
+    console.log("로그인페이지")
     return (
         <div>
-            메인페이지입니다
-            <button onClick={() => navigate("/ACM0101P02")}>클릭하세요</button>
+            로그인페이지입니다.
         </div>
     );
 };
 
-export default ACM0101P01;
+export default AUL0101P01;

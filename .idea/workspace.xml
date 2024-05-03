@@ -9,20 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="도커 백엔드 restart 설정 및 shell script 추가">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUS/AUS0101IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUS/AUS0101OUT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/service/AUS/AUS0101Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/AUS/AUS_0101_SQL.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="로그인화면 설계">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/controller/AccompanyApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/controller/AccompanyApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/controller/FileLoaderController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/support/AcpyLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/support/AcpyLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/v1/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/AUS/AUS0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/AUS/AUS0101P01.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/CMM/CMM_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/CMM/CMM_0101_SQL.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/AUL/AUL0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/AUL/AUL0101P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +94,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "Rebasing develop",
-    "last_opened_file_path": "C:/Users/LG/Desktop/portfoilo/accompany_mobile/backend/src/main/java/acpy/models/service/AUS",
+    "last_opened_file_path": "C:/Users/LG/Desktop/sungcheol/study/2024/react_blog",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -110,17 +103,17 @@
     "project.structure.side.proportion": "0.2410197",
     "settings.editor.selected.configurable": "MavenSettings",
     "spring.configuration.checksum": "461824838e3acc67aef1e47df69b78bf",
-    "ts.external.directory.path": "C:\\Users\\LG\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\231.9011.34\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\frontend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\views\AUL" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\java\acpy\models\service\AUS" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\resources\mappers\AUS" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend" />
@@ -263,7 +256,8 @@
       <workItem from="1714369766018" duration="9225000" />
       <workItem from="1714380323865" duration="147000" />
       <workItem from="1714449997249" duration="13561000" />
-      <workItem from="1714607791557" duration="25274000" />
+      <workItem from="1714607791557" duration="27062000" />
+      <workItem from="1714693799153" duration="7886000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -370,7 +364,21 @@
       <option name="project" value="LOCAL" />
       <updated>1714633403269</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="화면등록화면 재 업로드">
+      <created>1714639959169</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1714639959169</updated>
+    </task>
+    <task id="LOCAL-00017" summary="로그인화면 설계">
+      <created>1714701721014</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714701721014</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,6 +422,8 @@
     <MESSAGE value="불필요한 파일 제거 및 DB서버 주소 변경" />
     <MESSAGE value="도커 백엔드 restart 추가 및 불필요 파일 삭제" />
     <MESSAGE value="도커 백엔드 restart 설정 및 shell script 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="도커 백엔드 restart 설정 및 shell script 추가" />
+    <MESSAGE value="화면등록화면 재 업로드" />
+    <MESSAGE value="로그인화면 설계" />
+    <option name="LAST_COMMIT_MESSAGE" value="로그인화면 설계" />
   </component>
 </project>
