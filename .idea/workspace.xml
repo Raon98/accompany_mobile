@@ -9,13 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="로그인화면 설계">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="docker 연결 성공">
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/scss/reset.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/CMM/CMM_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/CMM/CMM_0101_SQL.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/AUL/AUL0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/AUL/AUL0101P01.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,40 +24,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="myBatisXML" />
-        <option value="TypeScript File" />
         <option value="Class" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
-    <option name="recentBranches">
-      <RecentBranches>
-        <option name="branchesForRepo">
-          <list>
-            <RecentBranchesForRepo>
-              <option name="branches">
-                <list>
-                  <RecentBranch>
-                    <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1712650070" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1712650069" />
-                  </RecentBranch>
-                </list>
-              </option>
-              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
-            </RecentBranchesForRepo>
-          </list>
-        </option>
-      </RecentBranches>
-    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -93,8 +67,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Rebasing develop",
-    "last_opened_file_path": "C:/Users/LG/Desktop/sungcheol/study/2024/react_blog",
+    "git-widget-placeholder": "Rebasing main",
+    "last_opened_file_path": "C:/Users/LG/Desktop/portfoilo/accompany_mobile",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -109,11 +83,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\views\AUL" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\java\acpy\models\service\AUS" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\resources\mappers\AUS" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\java\acpy\service" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\java\acpy\models\service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend" />
@@ -242,22 +216,7 @@
       <workItem from="1712493249487" duration="581000" />
       <workItem from="1712495524391" duration="569000" />
       <workItem from="1712503220159" duration="33000" />
-      <workItem from="1712646117265" duration="10607000" />
-      <workItem from="1712793253891" duration="3080000" />
-      <workItem from="1712799631597" duration="9475000" />
-      <workItem from="1712817717823" duration="6476000" />
-      <workItem from="1712879638756" duration="2242000" />
-      <workItem from="1713159658396" duration="8540000" />
-      <workItem from="1713169511374" duration="1999000" />
-      <workItem from="1713485214248" duration="580000" />
-      <workItem from="1714009412938" duration="4822000" />
-      <workItem from="1714095230676" duration="1604000" />
-      <workItem from="1714368642450" duration="662000" />
-      <workItem from="1714369766018" duration="9225000" />
-      <workItem from="1714380323865" duration="147000" />
-      <workItem from="1714449997249" duration="13561000" />
-      <workItem from="1714607791557" duration="27062000" />
-      <workItem from="1714693799153" duration="7886000" />
+      <workItem from="1714891060389" duration="782000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -294,91 +253,7 @@
       <option name="project" value="LOCAL" />
       <updated>1712318997202</updated>
     </task>
-    <task id="LOCAL-00006" summary="main.yml 수정">
-      <created>1712642992101</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1712642992101</updated>
-    </task>
-    <task id="LOCAL-00007" summary="파일임시저장">
-      <created>1712650132502</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1712650132502</updated>
-    </task>
-    <task id="LOCAL-00008" summary="프론트 args를 이용해 내부 env값 전달">
-      <created>1712651824987</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1712651824987</updated>
-    </task>
-    <task id="LOCAL-00009" summary="20240412 임시저장">
-      <created>1712887394173</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1712887394173</updated>
-    </task>
-    <task id="LOCAL-00010" summary="20240415 frontend docker 실시간 연동테스트">
-      <created>1713171363362</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1713171363362</updated>
-    </task>
-    <task id="LOCAL-00011" summary="20240425 frontend docker 실시간 연동테스트">
-      <created>1714036006892</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1714036006892</updated>
-    </task>
-    <task id="LOCAL-00012" summary="20240430 frontend docker 실시간 연동 성공">
-      <created>1714457639526</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1714457639526</updated>
-    </task>
-    <task id="LOCAL-00013" summary="불필요한 파일 제거 및 DB서버 주소 변경">
-      <created>1714461660525</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1714461660525</updated>
-    </task>
-    <task id="LOCAL-00014" summary="도커 백엔드 restart 설정 및 shell script 추가">
-      <created>1714633361941</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1714633361941</updated>
-    </task>
-    <task id="LOCAL-00015" summary="도커 백엔드 restart 설정 및 shell script 추가">
-      <created>1714633403269</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1714633403269</updated>
-    </task>
-    <task id="LOCAL-00016" summary="화면등록화면 재 업로드">
-      <created>1714639959169</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1714639959169</updated>
-    </task>
-    <task id="LOCAL-00017" summary="로그인화면 설계">
-      <created>1714701721014</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1714701721014</updated>
-    </task>
-    <option name="localTasksCounter" value="18" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,18 +287,6 @@
     <MESSAGE value="backend DB연결 수정" />
     <MESSAGE value="라우터 등록페이지 수정" />
     <MESSAGE value="docker 연결 성공" />
-    <MESSAGE value="main.yml 수정" />
-    <MESSAGE value="파일임시저장" />
-    <MESSAGE value="프론트 args를 이용해 내부 env값 전달" />
-    <MESSAGE value="20240412 임시저장" />
-    <MESSAGE value="20240415 frontend docker 실시간 연동테스트" />
-    <MESSAGE value="20240425 frontend docker 실시간 연동테스트" />
-    <MESSAGE value="20240430 frontend docker 실시간 연동 성공" />
-    <MESSAGE value="불필요한 파일 제거 및 DB서버 주소 변경" />
-    <MESSAGE value="도커 백엔드 restart 추가 및 불필요 파일 삭제" />
-    <MESSAGE value="도커 백엔드 restart 설정 및 shell script 추가" />
-    <MESSAGE value="화면등록화면 재 업로드" />
-    <MESSAGE value="로그인화면 설계" />
-    <option name="LAST_COMMIT_MESSAGE" value="로그인화면 설계" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker 연결 성공" />
   </component>
 </project>
