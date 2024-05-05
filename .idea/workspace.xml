@@ -9,11 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="docker 연결 성공">
-      <change afterPath="$PROJECT_DIR$/frontend/src/assets/scss/reset.css" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="css 파일구조">
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/scss/components/buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/scss/layout/contents.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/scss/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/sanitize.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/scss/base/sanitize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +94,8 @@
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\java\acpy\models\service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\assets\scss\base" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\assets\scss" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile" />
     </key>
@@ -216,7 +222,8 @@
       <workItem from="1712493249487" duration="581000" />
       <workItem from="1712495524391" duration="569000" />
       <workItem from="1712503220159" duration="33000" />
-      <workItem from="1714891060389" duration="782000" />
+      <workItem from="1714891060389" duration="3034000" />
+      <workItem from="1714895016754" duration="385000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -253,7 +260,21 @@
       <option name="project" value="LOCAL" />
       <updated>1712318997202</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="sanitize css 추가">
+      <created>1714892060329</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714892060329</updated>
+    </task>
+    <task id="LOCAL-00007" summary="sanitize css 추가">
+      <created>1714892070837</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714892070837</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +308,8 @@
     <MESSAGE value="backend DB연결 수정" />
     <MESSAGE value="라우터 등록페이지 수정" />
     <MESSAGE value="docker 연결 성공" />
-    <option name="LAST_COMMIT_MESSAGE" value="docker 연결 성공" />
+    <MESSAGE value="sanitize css 추가" />
+    <MESSAGE value="css 파일구조" />
+    <option name="LAST_COMMIT_MESSAGE" value="css 파일구조" />
   </component>
 </project>
