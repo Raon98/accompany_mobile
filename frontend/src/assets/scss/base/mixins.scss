@@ -1,0 +1,41 @@
+$button-font-size: 16px;
+$button-padding: 10px 20px;
+$button-border-radius: 4px;
+
+@mixin button-style_mixin($color) {
+  padding: $button-padding;
+  font-size: $button-font-size;
+  border-radius: $button-border-radius;
+  color: white;
+  background-color: $color;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken($color, 10%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba($color, 0.5);
+  }
+}
+
+@mixin fixed_mixin($width:100%) {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: $width;
+}
+
+@mixin flex-box_mixin($direction:row,$justify:space-between,$align:center){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-content: $align;
+}

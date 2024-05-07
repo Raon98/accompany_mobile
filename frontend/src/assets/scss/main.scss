@@ -1,6 +1,9 @@
 /*BASE*/
-@import 'base/sanitize.css';
+@import 'base/reset.css';
 
 /*COMPONENTS*/
 @import 'components/buttons';
 
+
+/*layout*/
+@import "layout/layout";
