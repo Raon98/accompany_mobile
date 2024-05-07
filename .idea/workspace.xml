@@ -9,8 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="css 파일구조 및 layout.scss 추가">
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="package.json 재업로드">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/components/buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/scss/components/buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/layout/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/scss/layout/layout.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +219,7 @@
       <workItem from="1712503220159" duration="33000" />
       <workItem from="1714891060389" duration="3034000" />
       <workItem from="1714895016754" duration="697000" />
-      <workItem from="1715041455837" duration="3314000" />
+      <workItem from="1715041455837" duration="3956000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -282,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715044984449</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="package.json 재업로드">
+      <created>1715045033652</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715045033652</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,6 +328,7 @@
     <MESSAGE value="sanitize css 추가" />
     <MESSAGE value="css 파일구조" />
     <MESSAGE value="css 파일구조 및 layout.scss 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="css 파일구조 및 layout.scss 추가" />
+    <MESSAGE value="package.json 재업로드" />
+    <option name="LAST_COMMIT_MESSAGE" value="package.json 재업로드" />
   </component>
 </project>

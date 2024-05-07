@@ -1,4 +1,4 @@
-@import "../base/mixins";
+@use "../base/mixins";
 
 $color-primary: #007bff;
 $color-success: #28a745;
@@ -6,13 +6,13 @@ $color-danger: #dc3545;
 
 
 .button {
-  @include button-style_mixin($color-primary);
+  @include mixins.button-style_mixin($color-primary);
 }
 
 .button-success {
-  @include button-style_mixin($color-success);
+  @include mixins.button-style_mixin($color-success);
 }
 
 .button-danger {
-  @include button-style_mixin($color-danger);
+  @include mixins.button-style_mixin($color-danger);
 }
