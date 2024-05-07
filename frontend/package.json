@@ -32,7 +32,7 @@
     "eject": "react-scripts eject",
     "start-react": "WATCHPACK_POLLING=true react-scripts start",
     "sass": "sass --watch scss:css",
-    "dev" : "npm-run-all --parallel start sass"
+    "dev" : "npm-run-all --parallel start-react sass"
   },
   "eslintConfig": {
     "extends": [
