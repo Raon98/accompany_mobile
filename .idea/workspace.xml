@@ -9,18 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="프로젝트 구조 백엔드 명칭 변경">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="브라우저 라우터로 다시 변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/ACS/ACS_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/ACS/ACS_0101_SQL.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AccompanySection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AccompanySection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/GVCanves.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GoogleVisionCanves.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/RedirectionRoute.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/layout/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/scss/layout/layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AccompanyFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AccompanyFooter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AccompanyHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AccompanyHeader.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0101P01.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0102P02.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0102P02.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +223,7 @@
       <workItem from="1714891060389" duration="3034000" />
       <workItem from="1714895016754" duration="697000" />
       <workItem from="1715041455837" duration="3956000" />
-      <workItem from="1715132131744" duration="19426000" />
+      <workItem from="1715132131744" duration="19786000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -315,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715150197136</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="브라우저 라우터로 다시 변경">
+      <created>1715158357354</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715158357354</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,6 +356,7 @@
     <MESSAGE value="package.json 재업로드" />
     <MESSAGE value="라우터 적용방식 리뉴얼" />
     <MESSAGE value="프로젝트 구조 백엔드 명칭 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="프로젝트 구조 백엔드 명칭 변경" />
+    <MESSAGE value="브라우저 라우터로 다시 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="브라우저 라우터로 다시 변경" />
   </component>
 </project>

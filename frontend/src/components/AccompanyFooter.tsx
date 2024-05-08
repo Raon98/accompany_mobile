@@ -2,7 +2,7 @@ import React from 'react';
 
 const AccompanyFooter = () => {
     return (
-        <div>
+        <div >
             바텀입니다.
         </div>
     );
