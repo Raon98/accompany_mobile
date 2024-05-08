@@ -1,7 +1,7 @@
 import React, {ReactNode} from 'react';
 
 export interface LayoutProps {
-    children: ReactNode
+    children?: ReactNode
 }
 
 const AccompanySection = ({children} : LayoutProps) => {

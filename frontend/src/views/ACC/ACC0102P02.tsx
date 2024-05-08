@@ -14,7 +14,7 @@ const ACC0102P01 = () => {
     return (
         <div>
             회원가입페이지.
-            <button onClick={() => navigate("/ACC0102P02")}>로그인페이지로 돌아가기</button>
+            <button onClick={() => navigate("/ACC0102P01")}>로그인페이지로 돌아가기</button>
         </div>
     );
 };

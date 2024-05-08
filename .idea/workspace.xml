@@ -9,22 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="라우터 적용방식 리뉴얼">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="프로젝트 구조 백엔드 명칭 변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/db/AUI/AUI01REQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/db/ACC/ACC01REQ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACM/ACM0101IN.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACM/ACM0101OUT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUI/AUI0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACS/ACS0201IN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUI/AUI0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACS/ACS0201OUT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUS/AUS0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AAS/AAS0101IN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUS/AUS0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AAS/AAS0101OUT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/CMM/CMM0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACS/ACS0101IN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/CMM/CMM0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACS/ACS0101OUT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/service/AUI/AUI0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/service/ACS/ACS0201Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/service/AUS/AUS0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/service/AAS/AAS0101Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/service/CMM/CMM0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/service/ACS/ACS0101Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/RedirectionRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RedirectionRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/ACS/ACS_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/ACS/ACS_0101_SQL.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AccompanySection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AccompanySection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/GVCanves.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GoogleVisionCanves.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/RedirectionRoute.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0101P01.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0102P02.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0102P02.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,11 +97,11 @@
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\java\acpy\service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\resources\mappers\ACS" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\views\APC" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\assets\scss\base" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\assets\scss" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile" />
     </key>
   </component>
   <component name="RunManager">
@@ -233,7 +229,7 @@
       <workItem from="1714891060389" duration="3034000" />
       <workItem from="1714895016754" duration="697000" />
       <workItem from="1715041455837" duration="3956000" />
-      <workItem from="1715132131744" duration="11335000" />
+      <workItem from="1715132131744" duration="19426000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -312,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715147824772</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="프로젝트 구조 백엔드 명칭 변경">
+      <created>1715150197136</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1715150197136</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,6 +354,7 @@
     <MESSAGE value="css 파일구조 및 layout.scss 추가" />
     <MESSAGE value="package.json 재업로드" />
     <MESSAGE value="라우터 적용방식 리뉴얼" />
-    <option name="LAST_COMMIT_MESSAGE" value="라우터 적용방식 리뉴얼" />
+    <MESSAGE value="프로젝트 구조 백엔드 명칭 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="프로젝트 구조 백엔드 명칭 변경" />
   </component>
 </project>

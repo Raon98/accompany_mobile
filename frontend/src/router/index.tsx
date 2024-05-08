@@ -1,53 +1,39 @@
-import React from 'react';
-import {createBrowserRouter, Route} from 'react-router-dom';
-import RedirectionRoute from "components/RedirectionRoute";
-
+import { Route, Routes } from "react-router-dom";
+import React from "react";
 import ACC0101P01 from "views/ACC/ACC0101P01";
+import AAC0101P01 from "views/AAC/AAC0101P01";
 import ACC0102P01 from "views/ACC/ACC0102P01";
 import ACC0102P02 from "views/ACC/ACC0102P02";
-import AAC0101P01 from "views/AAC/AAC0101P01";
 
-export const router = createBrowserRouter([
-    {
-        path : "/",
-        element : <RedirectionRoute><ACC0101P01/></RedirectionRoute>,
-        errorElement : <div>Error</div>,
-        children : [
-            {
-                path: "/",
-                element :
-                    <>
-                        {/*공통*/}
-                        <RedirectionRoute>
-                            {/*ACC*/}
-                            <Route path="*" element={<ACC0101P01/>}/>
-                            <Route path="ACC0101P01" element={<ACC0101P01/>}/>
-                        </RedirectionRoute>
+interface RouterProps {
+    isAuthenticated: boolean;
+    role?: string;
+}
 
-                        {/*관리자*/}
-                        <RedirectionRoute role="A">
-                            {/*AAC*/}
-                            <Route path="AAC0101P01" element={<AAC0101P01/>}/>
-                        </RedirectionRoute>
-                    </>
-            }
-        ]
-    },
-    {
-        // 로그인
-        path: "/ACC0102P01",
-        element: <ACC0102P01/>,
-        errorElement: <div>Error</div>
-    },
-    {
-        // 회원가입
-        path: "/ACC0102P02",
-        element: <ACC0102P02/>,
-        errorElement: <div>Error</div>
-    },
-    {
-        path: "*",
-        element: <RedirectionRoute><ACC0101P01/></RedirectionRoute>
-    }
+export default function Router({ isAuthenticated, role }: RouterProps) {
+    return (
+        <Routes>
+            {/* 로그인 후 공통 경로 */}
+            {isAuthenticated && (
+                <>
+                    <Route path="/" element={<ACC0101P01 />} />
+                    <Route path="*" element={<ACC0101P01 />} />
+                </>
+            )}
 
-])
+            {/* 관리자 권환 */}
+            {isAuthenticated && role === 'A' && (
+                <Route path="/AAC0101P01" element={<AAC0101P01 />} />
+            )}
+
+            {/* 로그인 전 경로 */}
+            {!isAuthenticated && (
+                <>
+                    <Route path="/ACC0102P01" element={<ACC0102P01 />} />
+                    <Route path="/ACC0102P02" element={<ACC0102P02 />} />
+                    <Route path="/*" element={<ACC0102P01 />} />
+                </>
+            )}
+        </Routes>
+    );
+}

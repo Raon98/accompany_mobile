@@ -3,15 +3,15 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="ACPY.CMM">
+<mapper namespace="ACPY.ACS">
     <select id="selectMenuPath" resultType="acpy.api.support.LowerKeyMap">
-        SELECT cpnt_id AS COMPONENT,
-               cpnt_path AS PATH,
+        SELECT cpnt_path AS PATH,
                hd_flag AS HD_FLAG,
                ft_flag AS FT_FLAG,
                auth_yn AS AUTH_YN
         FROM ACP_MENU_PATH
         WHERE CHNL ='M'
+        AND cpnt_path = ${path}
         ORDER BY CPNT_PATH
     </select>
 </mapper>
