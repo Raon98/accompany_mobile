@@ -16,27 +16,38 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element :
-                    <RedirectionRoute>
-                        {/*ACC*/}
-                        <Route path="ACC0101P01" element={<ACC0101P01/>}/>
+                    <>
+                        {/*공통*/}
+                        <RedirectionRoute>
+                            {/*ACC*/}
+                            <Route path="*" element={<ACC0101P01/>}/>
+                            <Route path="ACC0101P01" element={<ACC0101P01/>}/>
+                        </RedirectionRoute>
 
-                        {/*AAC*/}
-                        <Route path="AAC0101P01" element={<AAC0101P01/>}/>
-                    </RedirectionRoute>
+                        {/*관리자*/}
+                        <RedirectionRoute role="A">
+                            {/*AAC*/}
+                            <Route path="AAC0101P01" element={<AAC0101P01/>}/>
+                        </RedirectionRoute>
+                    </>
             }
         ]
     },
     {
         // 로그인
-        path : "/ACC0102P01",
-        element : <ACC0102P01/>,
-        errorElement : <div>Error</div>
+        path: "/ACC0102P01",
+        element: <ACC0102P01/>,
+        errorElement: <div>Error</div>
     },
     {
         // 회원가입
-        path : "/ACC0102P02",
-        element : <ACC0102P02/>,
-        errorElement : <div>Error</div>
+        path: "/ACC0102P02",
+        element: <ACC0102P02/>,
+        errorElement: <div>Error</div>
+    },
+    {
+        path: "*",
+        element: <RedirectionRoute><ACC0101P01/></RedirectionRoute>
     }
 
 ])

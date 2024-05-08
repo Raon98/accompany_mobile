@@ -1,11 +1,11 @@
-package acpy.models.db.AUI;
+package acpy.models.db.ACC;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
 @Data
 @Component
-public class AUI01REQ {
+public class ACC01REQ {
     private String uid;
     private String name;
 }

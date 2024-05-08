@@ -9,19 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="package.json 재업로드">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/RedirectionRoute.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0102P02.tsx" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="라우터 적용방식 리뉴얼">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AccompanySection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AccompanySection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/db/AUI/AUI01REQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/db/ACC/ACC01REQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACM/ACM0101IN.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACM/ACM0101OUT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUI/AUI0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACS/ACS0201IN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUI/AUI0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACS/ACS0201OUT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUS/AUS0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AAS/AAS0101IN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AUS/AUS0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/AAS/AAS0101OUT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/CMM/CMM0101IN.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACS/ACS0101IN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/CMM/CMM0101OUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/models/service/ACS/ACS0101OUT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/service/AUI/AUI0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/service/ACS/ACS0201Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/service/AUS/AUS0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/service/AAS/AAS0101Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/service/CMM/CMM0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/service/ACS/ACS0101Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/RedirectionRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RedirectionRoute.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/ACM/ACM0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0101P01.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/ACM/ACM0101P02.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/AUI/AUI0101P01.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/AUL/AUL0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0102P01.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/AUS/AUS0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/AAC/AAC0101P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +233,7 @@
       <workItem from="1714891060389" duration="3034000" />
       <workItem from="1714895016754" duration="697000" />
       <workItem from="1715041455837" duration="3956000" />
-      <workItem from="1715132131744" duration="9063000" />
+      <workItem from="1715132131744" duration="11335000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -302,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715045033652</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="라우터 적용방식 리뉴얼">
+      <created>1715147824772</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1715147824772</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +350,7 @@
     <MESSAGE value="css 파일구조" />
     <MESSAGE value="css 파일구조 및 layout.scss 추가" />
     <MESSAGE value="package.json 재업로드" />
-    <option name="LAST_COMMIT_MESSAGE" value="package.json 재업로드" />
+    <MESSAGE value="라우터 적용방식 리뉴얼" />
+    <option name="LAST_COMMIT_MESSAGE" value="라우터 적용방식 리뉴얼" />
   </component>
 </project>

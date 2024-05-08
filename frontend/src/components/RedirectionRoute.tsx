@@ -1,10 +1,15 @@
 import {Navigate} from 'react-router-dom';
-import {LayoutProps} from "components/AccompanySection"
+import {ReactNode} from "react";
 
+interface redirectRouteProps {
+    children: ReactNode,
+    role? : string
+}
 
-const RedirectionRoute = ({ children } : LayoutProps) => {
+const RedirectionRoute = ({ children,role } : redirectRouteProps) => {
     const isAuthenticated = true;
-    if (!isAuthenticated) {
+    const dumpRole:string = "C,A"
+    if (!isAuthenticated || (role && dumpRole.includes(role))) {
         // 로그인 페이지로 리디렉션
         return <Navigate to="/ACC0102P01" replace />;
     }
