@@ -32,21 +32,17 @@ const App = () => {
                 }))
                 setPathList(pathList)
                 setRootPath(rootRoute.component)
-                navigate(rootRoute.component)
             });
             setInitialized(true);
         }
     }, [initialized]);
     return (
-        <>
-            {pathList?.length && (
+
             <>
                 <ToastContainer/>
-                <AccompanyLayout pathList={pathList} rootPath={rootPath}/>
+                <AccompanyLayout/>
             </>
-            )
-        }
-        </>
+
     );
 };
 
