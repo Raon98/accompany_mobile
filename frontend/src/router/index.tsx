@@ -1,24 +1,39 @@
-import React, {Suspense} from 'react';
-import {Navigate, Route, Routes} from 'react-router-dom';
-import {AccompanyLayoutProps} from "components/AccompanyLayout";
+import { Route, Routes } from "react-router-dom";
+import React from "react";
+import ACC0101P01 from "views/ACC/ACC0101P01";
+import AAC0101P01 from "views/AAC/AAC0101P01";
+import ACC0102P01 from "views/ACC/ACC0102P01";
+import ACC0102P02 from "views/ACC/ACC0102P02";
 
-export default function Router({pathList,rootPath} : AccompanyLayoutProps) {
-    if (!pathList || pathList.length === 0) {
-        return <div>Loading...</div>;
-    }
+interface RouterProps {
+    isAuthenticated: boolean;
+    role?: string;
+}
+
+export default function Router({ isAuthenticated, role }: RouterProps) {
     return (
         <Routes>
-            { pathList.map(route => (
-                <Route
-                    key={route.path}
-                    path={route.path}
-                    element={
-                        <Suspense fallback={<div>Loading...</div>}>
-                            <route.component/>
-                        </Suspense>}
-                />
-            ))}
-            <Route path="*" element={<Navigate replace to={rootPath}/> }/>
+            {/* 로그인 후 공통 경로 */}
+            {isAuthenticated && (
+                <>
+                    <Route path="/" element={<ACC0101P01 />} />
+                    <Route path="*" element={<ACC0101P01 />} />
+                </>
+            )}
+
+            {/* 관리자 권환 */}
+            {isAuthenticated && role === 'A' && (
+                <Route path="/AAC0101P01" element={<AAC0101P01 />} />
+            )}
+
+            {/* 로그인 전 경로 */}
+            {!isAuthenticated && (
+                <>
+                    <Route path="/ACC0102P01" element={<ACC0102P01 />} />
+                    <Route path="/ACC0102P02" element={<ACC0102P02 />} />
+                    <Route path="/*" element={<ACC0102P01 />} />
+                </>
+            )}
         </Routes>
     );
 }

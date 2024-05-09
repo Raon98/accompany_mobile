@@ -1,11 +1,11 @@
-package acpy.models.service.AUS;
+package acpy.models.service.AAS;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
 @Data
 @Component
-public class AUS0101IN {
+public class AAS0101IN {
     private String chnl;
     private String component_id;
     private String component_path;

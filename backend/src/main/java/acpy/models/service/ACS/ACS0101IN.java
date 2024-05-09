@@ -1,11 +1,11 @@
-package acpy.models.service.CMM;
+package acpy.models.service.ACS;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
 @Data
 @Component
-public class CMM0101IN {
+public class ACS0101IN {
 
     private String path;
 

@@ -1,13 +1,13 @@
 import React, {ReactNode} from 'react';
 
-interface LayoutProps {
-    children: ReactNode
+export interface LayoutProps {
+    children?: ReactNode
 }
 
 const AccompanySection = ({children} : LayoutProps) => {
     return (
         <>
-            <div className="acpy_section">
+            <div>
                 {children}
             </div>
         </>

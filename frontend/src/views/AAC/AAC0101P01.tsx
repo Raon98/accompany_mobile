@@ -3,13 +3,14 @@ import {$api} from "plugins/api";
 
 
 /******************************
- * @사용자유저환경설정:메뉴등록 (ACCOMPANY USER SETTING)
+ * @관리자 (ACCOMPANY ADMIN COMPONENT)
+ * @화면명: 화면 라우터 관리/설정
  * @작성자:김성철
  ********************************/
 type chnlType = 'M' | 'A'
 type ynType = 'Y' | 'N'
 
-const AUS0101P01 = () => {
+const AAC0101P01 = () => {
     const [chnl, setChnl] = useState<chnlType>('M')
     const [componentId, setComponentId] = useState('')
     const [headerFlag, setHeaderFlag] = useState<ynType>('Y')
@@ -103,4 +104,4 @@ const AUS0101P01 = () => {
 
 };
 
-export default AUS0101P01;
+export default AAC0101P01;

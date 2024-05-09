@@ -8,7 +8,7 @@ enum Language {
     KOREAN = '한글(KOREAN)'
 }
 
-const GvCanves  = () => {
+const GoogleVisionCanves  = () => {
         const canvasRef = useRef<CanvasDraw>(null);
         const [recognizedText, setRecognizedText] = useState<string[]>([]);
         const [lang, setLang] = useState<String>(Language.KOREAN)
@@ -79,4 +79,4 @@ const GvCanves  = () => {
         );
     };
 
-export default GvCanves;
+export default GoogleVisionCanves;

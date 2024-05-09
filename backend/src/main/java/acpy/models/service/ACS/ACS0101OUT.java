@@ -1,11 +1,11 @@
-package acpy.models.service.AUS;
+package acpy.models.service.ACS;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
 @Data
 @Component
-public class AUS0101OUT {
+public class ACS0101OUT {
 
    private Object data;
    private String code;

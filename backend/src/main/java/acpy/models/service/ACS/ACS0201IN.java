@@ -1,11 +1,11 @@
-package acpy.models.service.AUI;
+package acpy.models.service.ACS;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
 @Data
 @Component
-public class AUI0101IN {
+public class ACS0201IN {
 
     private String uid; /*아이디*/
     private String pass; /*비밀번호*/

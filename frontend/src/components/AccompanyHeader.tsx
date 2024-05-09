@@ -2,9 +2,9 @@ import React from 'react';
 
 const AccompanyHeader = () => {
     return (
-        <div>
+        <header>
             헤더입니다.
-        </div>
+        </header>
     );
 };
 
