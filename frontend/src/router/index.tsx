@@ -15,25 +15,45 @@ interface RouterProps {
 const NCM = [
     {
         path: "/ACC0102P01",
-        el: <ACC0102P01/>
+        el: <ACC0102P01/>,
+        hd: false,
+        ft: false
     },
     {
         path: "/ACC0102P02",
-        el: <ACC0102P02/>
+        el: <ACC0102P02/>,
+        hd: false,
+        ft: false
     }
 ]
 /* 로그인 후 공통  */
 const YCM = [
     {
+        path: "/",
+        el: <ACC0101P01/>,
+        hd: true,
+        ft: false
+    },
+    {
+        path: "/ACC0101P01",
+        el: <ACC0101P01/>,
+        hd: true,
+        ft: true
+    },
+    {
         path: "/ACC0101P02",
-        el: <ACC0101P02/>
+        el: <ACC0101P02/>,
+        hd: false,
+        ft: false
     }
 ]
 /*관리자 */
 const ADM = [
     {
         path: "/AAC0101P01",
-        el: <AAC0101P01/>
+        el: <AAC0101P01/>,
+        hd: false,
+        ft: false
     }
 ]
 
@@ -49,7 +69,7 @@ export default function Router({isAuthenticated, role}: RouterProps) {
                     {NCM.map((route,idx) => (
                         <Route key={idx} path={route.path} element={route.el}/>
                     ))}
-                    <Route path="*" element={<ACC0102P01/>}/>
+                    <Route path="/*" element={<ACC0102P01/>}/>
                 </>
             )}
             {/* 로그인 후 공통 경로 */}
@@ -58,7 +78,8 @@ export default function Router({isAuthenticated, role}: RouterProps) {
                     {YCM.map((route,idx) => (
                         <Route key={idx} path={route.path} element={route.el}/>
                     ))}
-                    <Route path="/*" element={<ACC0101P01/>}/>
+                    {/* <Route path="*" element={<ACC0101P01/>}/> */}
+                    
                 </>
             )}
 
@@ -68,7 +89,7 @@ export default function Router({isAuthenticated, role}: RouterProps) {
                     {ADM.map((route,idx) => (
                         <Route key={idx} path={route.path} element={route.el}/>
                     ))}
-                    <Route path="/*" element={<ACC0101P01/>}/>
+                    {/* <Route path="/*" element={<ACC0101P01/>}/> */}
                 </>
             )}
 

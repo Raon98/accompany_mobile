@@ -11,7 +11,8 @@ const ACC0101P02 = () => {
     const navigate = useNavigate();
     return (
         <div>
-            메인페이지입니다
+            서브페이지입니다.
+            <button onClick={() => navigate("/ACC0101P01")}>메인페이지로</button>
         </div>
     );
 };

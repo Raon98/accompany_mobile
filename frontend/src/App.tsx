@@ -1,6 +1,7 @@
 import React, {ComponentType} from 'react';
 import {ToastContainer} from "react-toastify";
 import AccompanyLayout from "components/AccompanyLayout";
+import { useNavigate } from 'react-router-dom';
 
 
 export type AuthYn = 'Y' | 'N'
