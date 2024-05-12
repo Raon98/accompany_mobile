@@ -1,9 +1,8 @@
 import React, {lazy, useEffect, useState} from 'react';
 import AccompanySection from "components/AccompanySection";
-import Router from "router";
+import Router,{RIM} from 'router';{} from "router";
 import {$api} from "plugins/api";
 import {useLocation} from "react-router-dom";
-
 
 const AccompanyHeader = lazy(() => import("components/AccompanyHeader"));
 const AccompanyFooter = lazy(() => import("components/AccompanyFooter"));
@@ -25,7 +24,7 @@ const AccompanyLayout = () => {
 
         console.log(location.pathname)
         $api.AsyncPost('api', 'ACS0101S01', '', {path : location.pathname}, (res) => {
-
+    
             console.log(res.data)
             // let pathList = routeFilter.map((v: RspProps) => ({
             //     path: v.path,
