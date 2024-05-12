@@ -46,17 +46,17 @@ export default function Router({isAuthenticated, role}: RouterProps) {
             {/* 로그인 전 경로 */}
             {!isAuthenticated && (
                 <>
-                    {NCM.map(route => (
-                        <Route path={route.path} element={route.el}/>
+                    {NCM.map((route,idx) => (
+                        <Route key={idx} path={route.path} element={route.el}/>
                     ))}
-                    <Route path="/*" element={<ACC0102P01/>}/>
+                    <Route path="*" element={<ACC0102P01/>}/>
                 </>
             )}
             {/* 로그인 후 공통 경로 */}
             {isAuthenticated && (
                 <>
-                    {YCM.map(route => (
-                        <Route path={route.path} element={route.el}/>
+                    {YCM.map((route,idx) => (
+                        <Route key={idx} path={route.path} element={route.el}/>
                     ))}
                     <Route path="/*" element={<ACC0101P01/>}/>
                 </>
@@ -65,8 +65,8 @@ export default function Router({isAuthenticated, role}: RouterProps) {
             {/* 관리자 권환 */}
             {isAuthenticated && role === 'A' && (
                 <>
-                    {ADM.map(route => (
-                        <Route path={route.path} element={route.el}/>
+                    {ADM.map((route,idx) => (
+                        <Route key={idx} path={route.path} element={route.el}/>
                     ))}
                     <Route path="/*" element={<ACC0101P01/>}/>
                 </>

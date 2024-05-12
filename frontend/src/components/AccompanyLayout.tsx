@@ -1,6 +1,6 @@
 import React, {lazy, useEffect, useState} from 'react';
 import AccompanySection from "components/AccompanySection";
-import Router,{RIM} from 'router';{} from "router";
+import Router,{RIM} from 'router';
 import {$api} from "plugins/api";
 import {useLocation} from "react-router-dom";
 
