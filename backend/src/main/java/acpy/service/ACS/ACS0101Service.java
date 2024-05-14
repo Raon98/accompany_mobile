@@ -14,8 +14,8 @@ import java.util.List;
 public class ACS0101Service {
     /**
      * 모바일 화면 경로
-     * @param CMM0101IN in
-     * @param CMM0101OUT out
+     * @param ACS0101IN in
+     * @param ACS0101OUT out
      * @return
      * @throws Exception
      */

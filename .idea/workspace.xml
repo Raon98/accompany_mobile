@@ -9,11 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="main.scss 적용">
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0101P02.tsx" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="header scss 수정">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/CorsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AccompanyLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/filter/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/filter/CorsFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/service/ACS/ACS0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/service/ACS/ACS0101Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/ACS/ACS_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/ACS/ACS_0101_SQL.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0101P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="myBatisXML" />
-        <option value="Class" />
         <option value="TypeScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -110,6 +112,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="acpy.api.config" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\views\ACC" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile" />
@@ -251,7 +256,9 @@
       <workItem from="1714895016754" duration="697000" />
       <workItem from="1715041455837" duration="3956000" />
       <workItem from="1715132131744" duration="19786000" />
-      <workItem from="1715324419361" duration="2462000" />
+      <workItem from="1715324419361" duration="3066000" />
+      <workItem from="1715558121063" duration="1306000" />
+      <workItem from="1715671817198" duration="4709000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -351,7 +358,35 @@
       <option name="project" value="LOCAL" />
       <updated>1715324540308</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="라우터 관리방법 수정">
+      <created>1715326901798</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1715326901798</updated>
+    </task>
+    <task id="LOCAL-00016" summary="톰캣 버전 업그레이드 대응 99=&gt;100">
+      <created>1715675290788</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1715675290789</updated>
+    </task>
+    <task id="LOCAL-00017" summary="구글 visionkey">
+      <created>1715676160484</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1715676160485</updated>
+    </task>
+    <task id="LOCAL-00018" summary="header scss 수정">
+      <created>1715676301400</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1715676301400</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,6 +428,10 @@
     <MESSAGE value="프로젝트 구조 백엔드 명칭 변경" />
     <MESSAGE value="브라우저 라우터로 다시 변경" />
     <MESSAGE value="scss 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="scss 수정" />
+    <MESSAGE value="라우터 관리방법 수정" />
+    <MESSAGE value="톰캣 버전 업그레이드 대응 99=&gt;100" />
+    <MESSAGE value="구글 visionkey" />
+    <MESSAGE value="header scss 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="header scss 수정" />
   </component>
 </project>

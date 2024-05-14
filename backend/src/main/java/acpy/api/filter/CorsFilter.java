@@ -1,6 +1,8 @@
 package acpy.api.filter;
 
 
+import acpy.api.config.CorsConfig;
+
 import javax.servlet.*;
 
 import javax.servlet.http.HttpServletResponse;
@@ -12,10 +14,10 @@ public class CorsFilter implements Filter {
             throws IOException, ServletException {
         HttpServletResponse res = (HttpServletResponse) response;
 
-        res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-        res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization,Access-Control-Allow-Origin");
-        res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-        res.setHeader("Access-Control-Allow-Credentials", "true");
+        res.setHeader("Access-Control-Allow-Origin", CorsConfig.getAllowedOrigins());
+        res.setHeader("Access-Control-Allow-Headers", CorsConfig.getAllowedHeaders());
+        res.setHeader("Access-Control-Allow-Methods", CorsConfig.getAllowedMethods());
+        res.setHeader("Access-Control-Allow-Credentials", String.valueOf(CorsConfig.isAllowCredentials()));
 
         chain.doFilter(request, response);
     }

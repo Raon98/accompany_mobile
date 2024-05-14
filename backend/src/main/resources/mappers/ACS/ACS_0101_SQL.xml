@@ -5,12 +5,7 @@
 
 <mapper namespace="ACPY.ACS">
     <select id="selectMenuPath" resultType="acpy.api.support.LowerKeyMap">
-        SELECT cpnt_path AS PATH,
-               hd_flag AS HD_FLAG,
-               ft_flag AS FT_FLAG
-        FROM ACP_MENU_PATH
-        WHERE CHNL ='M'
-        AND cpnt_path = #{path}
-        ORDER BY CPNT_PATH
+        SELECT *
+        FROM ACP_MENU
     </select>
 </mapper>
