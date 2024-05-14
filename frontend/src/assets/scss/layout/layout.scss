@@ -13,10 +13,12 @@
 header {
   @include mixins.flex-box_mixin;
   @include mixins.fixed_mixin;
+  top: 0;
+  left : 0;
   z-index: 5;
   height: 3.5rem;
   padding: 0 1.25rem;
-  background-color: #feffd9;
+  background-color: aliceblue;
 }
 .footer {
   @include mixins.flex-box_mixin;

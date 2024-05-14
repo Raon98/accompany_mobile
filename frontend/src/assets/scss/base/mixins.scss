@@ -26,10 +26,6 @@ $button-border-radius: 4px;
 
 @mixin fixed_mixin($width:100%) {
   position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
   width: $width;
 }
 
@@ -37,5 +33,5 @@ $button-border-radius: 4px;
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
-  align-content: $align;
+  align-items: $align;
 }
