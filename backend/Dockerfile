@@ -9,7 +9,7 @@ RUN apk add --no-cache maven \
 
 RUN mvn clean package
 
-ENV TOMCAT_VERSION 8.5.99
+ENV TOMCAT_VERSION 8.5.100
 ENV MAVEN_HOME=/root/.m2/repository
 ENV CATALINA_HOME /usr/local/tomcat
 
