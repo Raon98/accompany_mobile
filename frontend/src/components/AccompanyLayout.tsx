@@ -9,12 +9,13 @@ const AccompanyFooter = lazy(() => import("components/AccompanyFooter"));
 
 
 const AccompanyLayout = () => {
-    const isAuthenticated = true
+    const isAuthenticated = false
     const role = 'C,A'
     const [headerFlag, setHeaderFlag] = useState(false)
     const [footerFlag, setFooterFlag] = useState(false)
     const location = useLocation()
-    
+    const navigate = useNavigate();
+
     useEffect(() => {
         /*20240510 헤더푸터 사용/미사용여부 체크*/
         let path = RIM.filter(v => v.path === location.pathname)
@@ -22,8 +23,13 @@ const AccompanyLayout = () => {
             setHeaderFlag(path[0].hd)
             setFooterFlag(path[0].ft)
         }
-
+        
+        if(!isAuthenticated){
+            navigate("/ACC0102P01")
+        }
+        
     }, [location.pathname])
+
 
     return (
         <>
