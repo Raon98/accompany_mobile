@@ -29,9 +29,9 @@ $button-border-radius: 4px;
   width: $width;
 }
 
-@mixin flex-box_mixin($direction:row,$justify:space-between,$align:center){
+@mixin flex_mixin($justify:space-between,$align:center){
   display: flex;
-  flex-direction: $direction;
+  flex-direction: row;
   justify-content: $justify;
   align-items: $align;
 }

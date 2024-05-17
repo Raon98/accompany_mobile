@@ -11,7 +11,7 @@
   padding: 3.5rem 1.5rem 3.75rem;
 }
 header {
-  @include mixins.flex-box_mixin;
+  @include mixins.flex_mixin;
   @include mixins.fixed_mixin;
   top: 0;
   left : 0;
@@ -21,7 +21,7 @@ header {
   background-color: aliceblue;
 }
 .footer {
-  @include mixins.flex-box_mixin;
+  @include mixins.flex_mixin;
   @include mixins.fixed_mixin;
   z-index:900;
   background-color: gray;
