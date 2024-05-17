@@ -1,0 +1,20 @@
+fieldset {
+  width: 100%;
+  border : 0;
+  min-width: 0;
+}
+
+.form {
+  & > *:not(legned) + * {
+    margin-top: 0.5rem;
+  }
+}
+
+.form {
+  background-color: #000;
+
+
+  > *:not(legend) + * {
+    margin-top: 0.5rem;
+  }
+}

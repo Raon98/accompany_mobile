@@ -9,13 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="header scss 수정">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/CorsConfig.java" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="coreFilter properties 적용 테스트 임시업로드">
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/scss/layout/form.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/filter/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/filter/CorsFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/service/ACS/ACS0101Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/service/ACS/ACS0101Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/ACS/ACS_0101_SQL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/ACS/ACS_0101_SQL.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0101P01.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/components/buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/scss/components/buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/layout/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/scss/layout/layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0102P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0102P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +257,8 @@
       <workItem from="1715132131744" duration="19786000" />
       <workItem from="1715324419361" duration="3066000" />
       <workItem from="1715558121063" duration="1306000" />
-      <workItem from="1715671817198" duration="4709000" />
+      <workItem from="1715671817198" duration="5225000" />
+      <workItem from="1715925294822" duration="1666000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -386,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715676301400</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="coreFilter properties 적용 테스트 임시업로드">
+      <created>1715676795107</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1715676795107</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,6 +439,7 @@
     <MESSAGE value="톰캣 버전 업그레이드 대응 99=&gt;100" />
     <MESSAGE value="구글 visionkey" />
     <MESSAGE value="header scss 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="header scss 수정" />
+    <MESSAGE value="coreFilter properties 적용 테스트 임시업로드" />
+    <option name="LAST_COMMIT_MESSAGE" value="coreFilter properties 적용 테스트 임시업로드" />
   </component>
 </project>

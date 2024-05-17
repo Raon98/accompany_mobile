@@ -12,9 +12,35 @@ const ACC0102P01 = () => {
 
     console.log("로그인페이지")
     return (
-        <div>
-            로그인페이지입니다.
-            <button onClick={() => navigate("/")}>메인페이지로 돌아가</button>
+        <div className="login">
+            <div className="login__logo">
+                동행하다
+            </div>
+            <fieldset className="form">
+                <dl className="form__icon id">
+                    <dd>
+                        <div className="from__block">
+                            <input type="text" name="username" title="아이디" placeholder="아이디를 입력해주세요."/>
+                        </div>
+                    </dd>
+                </dl>
+                <dl className="form__icon password">
+                    <dd>
+                        <div className="from__block">
+                            <input type="text" name="password" title="비밀번호" placeholder="비밀번호를 입력해주세요."/>
+                            <button type="button" name="password" className="btn-password"/>
+                        </div>
+                    </dd>
+                </dl>
+                <div className="form__util">
+                    <a href="javascript:void(0)" className="from__sign">
+                        회원가입
+                    </a>
+                </div>
+            </fieldset>
+            <div className="login__btn button">
+                <button>로그인</button>
+            </div>
         </div>
     );
 };
