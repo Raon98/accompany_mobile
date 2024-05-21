@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 /******************************
@@ -9,7 +9,19 @@ import { useNavigate } from "react-router-dom";
 
 const ACC0102P01 = () => {
     const navigate = useNavigate();
+    const [uid, setUid] = useState<string>('')
+    const [password, setPassword] = useState<string>('')
 
+    const onChange = (e:React.ChangeEvent<HTMLFormElement>) => {
+        const {target : {name, value}} = e;
+
+        if(name === 'username'){
+
+        }
+        if(name === 'password'){
+            
+        }
+    }
     return (
         <div className="login">
             <div className="login__logo">

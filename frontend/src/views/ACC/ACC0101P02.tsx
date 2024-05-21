@@ -9,6 +9,7 @@ import {useNavigate} from "react-router-dom";
 
 const ACC0101P02 = () => {
     const navigate = useNavigate();
+    
     return (
         <div>
             서브페이지입니다.
