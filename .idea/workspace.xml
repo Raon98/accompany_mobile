@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="프론트엔드 상단으로 파일위치 상단으로 변경">
-      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/base/common.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/base/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/base/mixins.scss" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="공통 scss추가">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/CloudVisionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/CloudVisionConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +257,7 @@
       <workItem from="1715671817198" duration="5225000" />
       <workItem from="1715925294822" duration="3042000" />
       <workItem from="1716337258281" duration="2231000" />
-      <workItem from="1716357967215" duration="823000" />
+      <workItem from="1716357967215" duration="2133000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -412,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716358345008</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="공통 scss추가">
+      <created>1716358822272</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1716358822272</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,6 +469,7 @@
     <MESSAGE value="coreFilter properties 적용 테스트 임시업로드" />
     <MESSAGE value="로그인페이지 html 작성" />
     <MESSAGE value="프론트엔드 상단으로 파일위치 상단으로 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="프론트엔드 상단으로 파일위치 상단으로 변경" />
+    <MESSAGE value="공통 scss추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="공통 scss추가" />
   </component>
 </project>
