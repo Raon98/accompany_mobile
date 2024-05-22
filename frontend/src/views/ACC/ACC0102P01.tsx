@@ -12,16 +12,19 @@ const ACC0102P01 = () => {
     const [uid, setUid] = useState<string>('')
     const [password, setPassword] = useState<string>('')
 
-    const onChange = (e:React.ChangeEvent<HTMLFormElement>) => {
-        const {target : {name, value}} = e;
+    const func = {
+        onChange : (e:React.ChangeEvent<HTMLInputElement>) => {
+            const {target : {name, value}} = e;
 
-        if(name === 'username'){
-
-        }
-        if(name === 'password'){
-            
-        }
+            if(name === 'username'){
+                setUid(value)
+            }
+            if(name === 'password'){
+                setPassword(value)
+            }
+        },
     }
+
     return (
         <div className="login">
             <div className="login__logo">
@@ -31,14 +34,17 @@ const ACC0102P01 = () => {
                 <dl className="form__icon id">
                     <dd>
                         <div className="form__block">
-                            <input type="text" name="username" title="아이디" placeholder="아이디를 입력해주세요." />
+                            <input type="text" name="username" title="아이디" placeholder="아이디를 입력해주세요." required
+                                   onChange={func.onChange} value={uid}
+                            />
                         </div>
                     </dd>
                 </dl>
                 <dl className="form__icon password">
                     <dd>
                         <div className="form__block">
-                            <input type="password" name="password" title="비밀번호" placeholder="비밀번호를 입력해주세요." />
+                            <input type="password" name="password" title="비밀번호" placeholder="비밀번호를 입력해주세요." required
+                                   onChange={func.onChange} value={password}/>
                             <button type="button" name="password" className="btn-password" />
                         </div>
                     </dd>
