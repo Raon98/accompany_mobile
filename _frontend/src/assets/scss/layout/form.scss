@@ -1,0 +1,63 @@
+@use "../base/mixins";
+
+@mixin icon($bg-image) {
+  content: "";
+  display: inline-block;
+  width: 1.128rem;
+  height: 1rem;
+  margin-left: 1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+  background-image: url($bg-image);
+}
+
+fieldset {
+  width: 100%;
+  border: 0;
+  min-width: 0;
+}
+
+.form {
+  &__icon {
+    &.id {
+      .form__block {
+        &::before {
+          @include icon('path/to/id-icon.png');
+        }
+      }
+    }
+
+    &.password {
+      .form__block {
+        &::before {
+          @include icon('path/to/password-icon.png');
+        }
+        input {
+          padding-left: 0.5rem;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  &__block {
+    @include mixins.flex_mixin;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    border: 1px solid gray;
+    min-height: 3.5rem;
+    border-radius: 0.375rem;
+  }
+  &__utils {
+    @include mixins.flex_mixin(center,center);
+    margin-top: 1rem;
+    color: darkslategrey;
+  }
+  & > *:not(legend) + * {
+    margin-top: 0.5rem;
+  }
+
+}

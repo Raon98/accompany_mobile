@@ -1,0 +1,28 @@
+@use "../base/mixins";
+
+$color-primary: #007bff;
+$color-success: #28a745;
+$color-danger: #dc3545;
+
+
+.button {
+  border: 0;
+  outline: none;
+  @include mixins.button-style_mixin($color-primary);
+}
+
+.button-success {
+  @include mixins.button-style_mixin($color-success);
+}
+
+.button-danger {
+  @include mixins.button-style_mixin($color-danger);
+}
+
+.login__btn {
+  @include mixins.fixed_mixin;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+}
