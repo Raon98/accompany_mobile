@@ -9,7 +9,7 @@ const AccompanyFooter = lazy(() => import("components/AccompanyFooter"));
 
 
 const AccompanyLayout = () => {
-    const isAuthenticated = false
+    const isAuthenticated = true
     const role = 'C,A'
     const [headerFlag, setHeaderFlag] = useState(false)
     const [footerFlag, setFooterFlag] = useState(false)

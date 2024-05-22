@@ -34,7 +34,7 @@ services:
       - backend
     volumes:
       - /usr/src/app/node_modules
-      - ./frontend:/usr/src/app
+      - ./_frontend:/usr/src/app
     stdin_open: true
     networks:
       - my_network
