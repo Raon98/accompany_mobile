@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="로그인페이지 html 작성">
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0102P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/ACC/ACC0102P01.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +254,7 @@
       <workItem from="1715558121063" duration="1306000" />
       <workItem from="1715671817198" duration="5225000" />
       <workItem from="1715925294822" duration="3042000" />
-      <workItem from="1716337258281" duration="1441000" />
+      <workItem from="1716337258281" duration="2231000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
