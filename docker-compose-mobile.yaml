@@ -20,7 +20,7 @@ services:
   frontend:
     image: raon98/accompany_mobile:frontend
     build:
-      context: ./frontend
+      context: ./_frontend
       dockerfile: Dockerfile_dev
       args:
         - REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
