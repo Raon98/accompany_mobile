@@ -9,8 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="로그인페이지 html 작성">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="프론트엔드 상단으로 파일위치 상단으로 변경">
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/base/common.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/base/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/base/mixins.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,29 +83,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Rebasing main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LG/Desktop/portfoilo/accompany_mobile/frontend/src/views/ACC&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15625&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2410197&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;461824838e3acc67aef1e47df69b78bf&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Rebasing main",
+    "last_opened_file_path": "C:/Users/LG/Desktop/portfoilo/accompany_mobile/frontend/src/views/ACC",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15625",
+    "project.structure.side.proportion": "0.2410197",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "461824838e3acc67aef1e47df69b78bf",
+    "ts.external.directory.path": "C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\_frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="acpy.api.config" />
@@ -255,6 +256,7 @@
       <workItem from="1715671817198" duration="5225000" />
       <workItem from="1715925294822" duration="3042000" />
       <workItem from="1716337258281" duration="2231000" />
+      <workItem from="1716357967215" duration="823000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -396,7 +398,21 @@
       <option name="project" value="LOCAL" />
       <updated>1715927015830</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="프론트엔드 상단으로 파일위치 상단으로 변경">
+      <created>1716358010597</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1716358010597</updated>
+    </task>
+    <task id="LOCAL-00022" summary="프론트엔드 상단으로 파일위치 상단으로 변경">
+      <created>1716358345008</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1716358345008</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,6 +460,7 @@
     <MESSAGE value="header scss 수정" />
     <MESSAGE value="coreFilter properties 적용 테스트 임시업로드" />
     <MESSAGE value="로그인페이지 html 작성" />
-    <option name="LAST_COMMIT_MESSAGE" value="로그인페이지 html 작성" />
+    <MESSAGE value="프론트엔드 상단으로 파일위치 상단으로 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="프론트엔드 상단으로 파일위치 상단으로 변경" />
   </component>
 </project>

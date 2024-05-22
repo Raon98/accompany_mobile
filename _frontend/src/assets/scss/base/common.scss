@@ -1,0 +1,28 @@
+@use "../base/mixins";
+
+$spacing-8: 0.5rem;
+$spacing-10: 0.625rem;
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+
+.mgr8 {
+  @include mixins.margin(right, $spacing-8);
+}
+
+.mgl8 {
+  @include mixins.margin(left, $spacing-8);
+}
+
+.mgt10 {
+  @include mixins.margin(top, $spacing-10);
+}
+
+.mgb10 {
+  @include mixins.margin(bottom, $spacing-10);
+}
