@@ -13,16 +13,21 @@ const ACC0102P01 = () => {
     const [password, setPassword] = useState<string>('')
 
     const func = {
-        onChange : (e:React.ChangeEvent<HTMLInputElement>) => {
-            const {target : {name, value}} = e;
+        onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
+            const {target: {name, value}} = e;
 
-            if(name === 'username'){
+            if (name === 'username') {
                 setUid(value)
             }
-            if(name === 'password'){
+            if (name === 'password') {
                 setPassword(value)
             }
         },
+        onSignUp: (e: React.MouseEvent<HTMLAnchorElement>) => {
+            e.preventDefault();
+
+            console.log('회원가입 페이지로 이동')
+        }
     }
 
     return (
@@ -50,7 +55,7 @@ const ACC0102P01 = () => {
                     </dd>
                 </dl>
                 <div className="form__utils">
-                    <a href="javascript:void(0)" className="form__sign">
+                    <a href="#" className="form__sign" onClick={func.onSignUp}>
                         회원가입
                     </a>
                 </div>
