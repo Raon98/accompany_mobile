@@ -9,8 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="visionKey 암호화방식 수정">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="불필요한 로그삭제">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/components/AccompanyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/components/AccompanyLayout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/CloudVisionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/CloudVisionConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -259,7 +260,8 @@
       <workItem from="1716357967215" duration="3046000" />
       <workItem from="1716361374283" duration="5509000" />
       <workItem from="1716367037414" duration="1256000" />
-      <workItem from="1716422232016" duration="2502000" />
+      <workItem from="1716422232016" duration="2957000" />
+      <workItem from="1716515479220" duration="513000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -443,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716368172022</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="visionKey key값 노출문제 해결">
+      <created>1716438236975</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1716438236975</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +481,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="backend 파일 분리" />
     <MESSAGE value="backend 라우터 파일 원복" />
     <MESSAGE value="backend DB연결 수정" />
     <MESSAGE value="라우터 등록페이지 수정" />
@@ -496,6 +504,8 @@
     <MESSAGE value="visionkey 암호화 작업" />
     <MESSAGE value="docker-compose 파일 수정" />
     <MESSAGE value="visionKey 암호화방식 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="visionKey 암호화방식 수정" />
+    <MESSAGE value="visionKey key값 노출문제 해결" />
+    <MESSAGE value="불필요한 로그삭제" />
+    <option name="LAST_COMMIT_MESSAGE" value="불필요한 로그삭제" />
   </component>
 </project>

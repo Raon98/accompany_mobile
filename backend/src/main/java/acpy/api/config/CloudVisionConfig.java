@@ -73,13 +73,11 @@ public class CloudVisionConfig {
 
     @Bean
     public ImageAnnotatorClient imageAnnotatorClient() throws IOException {
-        // Gson 객체 생성
+
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-        // JSON 문자열 생성
         String jsonString = gson.toJson(createJsonObject());
 
-        // JSON 문자열을 파일에 쓰기
         try (FileWriter file = new FileWriter(VisionKey)) {
             file.write(jsonString);
             file.flush();
@@ -87,7 +85,6 @@ public class CloudVisionConfig {
             e.printStackTrace();
         }
 
-        // 이미지 어노테이터 클라이언트 생성
         Resource credentialsResource = new ClassPathResource(VisionKey);
         AcpyLogger.info("credentialsResource {} ", credentialsResource);
         GoogleCredentials credentials = GoogleCredentials.fromStream(credentialsResource.getInputStream());
@@ -97,7 +94,6 @@ public class CloudVisionConfig {
         return ImageAnnotatorClient.create(settings);
     }
 
-    // JSON 객체 생성 메서드
     private Object createJsonObject() {
         return new Object() {
             String type = "service_account";
