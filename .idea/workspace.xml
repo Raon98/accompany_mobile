@@ -10,9 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="불필요한 로그삭제">
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/base/_typography.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/themes/_colors.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/themes/_fonts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/utils/_functions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/utils/variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/base/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_common.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/base/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/utils/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/base/reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/base/_reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/components/buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/components/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_login.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/components/AccompanyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/components/AccompanyLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/CloudVisionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/acpy/api/config/CloudVisionConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,46 +97,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Rebasing main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LG/Desktop/portfoilo/accompany_mobile/frontend/src/views/ACC&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15625&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2410197&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;461824838e3acc67aef1e47df69b78bf&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\_frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Rebasing main",
+    "last_opened_file_path": "C:/Users/LG/Desktop/portfoilo/accompany_mobile/_frontend/src/assets/scss/utils",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15625",
+    "project.structure.side.proportion": "0.2410197",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "461824838e3acc67aef1e47df69b78bf",
+    "ts.external.directory.path": "C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\_frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="acpy.api.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\scss\utils" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\scss\themes" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\scss\layout" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\views\ACC" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\java\acpy\service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\scss\page" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\scss\layout" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\scss\utils" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\resources\mappers\ACS" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\views\APC" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\assets\scss\base" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\frontend\src\assets\scss" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend" />
     </key>
   </component>
   <component name="RunManager">
@@ -261,7 +274,7 @@
       <workItem from="1716361374283" duration="5509000" />
       <workItem from="1716367037414" duration="1256000" />
       <workItem from="1716422232016" duration="2957000" />
-      <workItem from="1716515479220" duration="513000" />
+      <workItem from="1716515479220" duration="5956000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -452,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716438236975</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="불필요한 로그삭제">
+      <created>1716516092800</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1716516092800</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

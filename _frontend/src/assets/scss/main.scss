@@ -1,8 +1,21 @@
-/*BASE*/
-@import 'base/reset';
+// main.scss
 
-/*COMPONENTS*/
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'themes/colors';
+@import 'themes/fonts';
+
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/functions';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/common';
+
+/*components*/
 @import 'components/buttons';
 
-/*layout*/
-@import "layout/layout";
+/*Page*/
+@import 'pages/login';
