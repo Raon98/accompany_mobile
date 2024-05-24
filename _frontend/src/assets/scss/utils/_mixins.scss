@@ -1,28 +1,5 @@
-$button-font-size: 16px;
-$button-padding: 10px 20px;
-$button-border-radius: 4px;
 
-@mixin button-style_mixin($color) {
-  padding: $button-padding;
-  font-size: $button-font-size;
-  border-radius: $button-border-radius;
-  color: white;
-  background-color: $color;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  display: inline-block;
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: darken($color, 10%);
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba($color, 0.5);
-  }
-}
+@use "../utils/variables";
 
 @mixin fixed_mixin($width:100%) {
   position: fixed;

@@ -9,23 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="불필요한 로그삭제">
-      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/base/_typography.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/themes/_colors.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/themes/_fonts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/utils/_functions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/utils/variables.scss" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="로그인 페이지 작업">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/base/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_common.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/base/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/utils/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/base/reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/base/_reset.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/components/buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/components/_buttons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/components/AccompanyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/components/AccompanyLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/base/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/base/_typography.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/components/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/components/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_login.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/themes/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/themes/_colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/themes/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/themes/_fonts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/utils/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/utils/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/utils/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/utils/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,29 +94,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Rebasing main",
-    "last_opened_file_path": "C:/Users/LG/Desktop/portfoilo/accompany_mobile/_frontend/src/assets/scss/utils",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15625",
-    "project.structure.side.proportion": "0.2410197",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "461824838e3acc67aef1e47df69b78bf",
-    "ts.external.directory.path": "C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\_frontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Rebasing main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/LG/Desktop/portfoilo/accompany_mobile/_frontend/src/assets/scss/utils&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15625&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2410197&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;461824838e3acc67aef1e47df69b78bf&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\_frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="acpy.api.config" />
@@ -274,7 +271,8 @@
       <workItem from="1716361374283" duration="5509000" />
       <workItem from="1716367037414" duration="1256000" />
       <workItem from="1716422232016" duration="2957000" />
-      <workItem from="1716515479220" duration="5956000" />
+      <workItem from="1716515479220" duration="11743000" />
+      <workItem from="1716529662782" duration="917000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -472,7 +470,21 @@
       <option name="project" value="LOCAL" />
       <updated>1716516092800</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="scss 파일구조 변경">
+      <created>1716523732553</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1716523732553</updated>
+    </task>
+    <task id="LOCAL-00030" summary="로그인 페이지 작업">
+      <created>1716523757554</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1716523757554</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,8 +513,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="backend 라우터 파일 원복" />
-    <MESSAGE value="backend DB연결 수정" />
     <MESSAGE value="라우터 등록페이지 수정" />
     <MESSAGE value="docker 연결 성공" />
     <MESSAGE value="sanitize css 추가" />
@@ -526,6 +536,8 @@
     <MESSAGE value="visionKey 암호화방식 수정" />
     <MESSAGE value="visionKey key값 노출문제 해결" />
     <MESSAGE value="불필요한 로그삭제" />
-    <option name="LAST_COMMIT_MESSAGE" value="불필요한 로그삭제" />
+    <MESSAGE value="scss 파일구조 변경" />
+    <MESSAGE value="로그인 페이지 작업" />
+    <option name="LAST_COMMIT_MESSAGE" value="로그인 페이지 작업" />
   </component>
 </project>

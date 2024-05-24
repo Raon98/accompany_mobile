@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import {IoPersonCircleOutline} from "react-icons/io5";
 
 /******************************
  * @공통 (ACCOMPANY COMMON COMPONENT)
@@ -37,6 +38,7 @@ const ACC0102P01 = () => {
             </div>
             <fieldset className="form">
                 <dl className="form__icon id">
+                    <IoPersonCircleOutline/>
                     <dd>
                         <div className="form__block">
                             <input type="text" name="username" title="아이디" placeholder="아이디를 입력해주세요." required
@@ -50,7 +52,7 @@ const ACC0102P01 = () => {
                         <div className="form__block">
                             <input type="password" name="password" title="비밀번호" placeholder="비밀번호를 입력해주세요." required
                                    onChange={func.onChange} value={password}/>
-                            <button type="button" name="password" className="btn-password" />
+                            <button type="button" name="password" className="btn-password"/>
                         </div>
                     </dd>
                 </dl>
@@ -60,8 +62,8 @@ const ACC0102P01 = () => {
                     </a>
                 </div>
             </fieldset>
-            <div className="login__btn button">
-                <button>로그인</button>
+            <div className="login-fixed">
+                <button className="login__btn">로그인</button>
             </div>
         </div>
     );
