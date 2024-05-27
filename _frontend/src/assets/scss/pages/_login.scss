@@ -1,7 +1,7 @@
 @use "../utils/mixins";
 @use "../themes/colors";
 
-@mixin icon($bg-image) {
+@mixin icon() {
   content: "";
   display: inline-block;
   width: 1.128rem;
@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   background-position: center;
   flex-shrink: 0;
-  background-image: url($bg-image);
+  //background-image: url($bg-image);
 }
 
 fieldset {
@@ -34,7 +34,7 @@ fieldset {
     &.id {
       .form__block {
         &::before {
-          @include icon('');
+          @include icon;
         }
       }
     }
@@ -42,7 +42,7 @@ fieldset {
     &.password {
       .form__block {
         &::before {
-          @include icon('');
+          @include icon;
         }
         input {
           padding-left: 0.5rem;

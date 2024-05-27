@@ -19,4 +19,5 @@ public class ACS0201IN {
     private String wedd_flag;
     private String fnrl_flag;
 
+
 }
