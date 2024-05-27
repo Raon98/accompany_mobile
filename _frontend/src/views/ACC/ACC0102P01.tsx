@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import {useNavigate} from "react-router-dom";
+import { $api } from "plugins/api";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 /******************************
  * @공통 (ACCOMPANY COMMON COMPONENT)
@@ -8,37 +9,42 @@ import {useNavigate} from "react-router-dom";
  ********************************/
 
 const ACC0102P01 = () => {
-    const navigate = useNavigate();
-    const [uid, setUid] = useState<string>('')
-    const [password, setPassword] = useState<string>('')
+  const navigate = useNavigate();
+  const [uid, setUid] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
 
-    const func = {
-        onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
-            const {target: {name, value}} = e;
+  const func = {
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
+      const {
+        target: { name, value },
+      } = e;
 
-            if (name === 'username') {
-                setUid(value)
-            }
-            if (name === 'password') {
-                setPassword(value)
-            }
-        },
-        onSignUp: (e: React.MouseEvent<HTMLAnchorElement>) => {
-            e.preventDefault();
+      if (name === "username") {
+        setUid(value);
+      }
+      if (name === "password") {
+        setPassword(value);
+      }
+    },
+    onSignUp: (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
 
-            console.log('회원가입 페이지로 이동')
-        }
+      console.log("회원가입 페이지로 이동");
+    },
+    onClick : ()=> {
+        $api.AsyncPost('api', 'ACS0201S01', 'ACC0102P01',{uid:"test"},
+                    (res) => {
+                        console.log(res)
+                    });
     }
+  };
 
-    return (
-        <div className="login">
+  return (
+    <div className="login">
+      <div className="login__logo">동행하다</div>
 
-
-
-            {/*
-              <div className="login__logo">
-                동행하다
-            </div>
+      {/*
+            
             <fieldset className="form">
                 <dl className="form__icon id">
                     <dd>
@@ -64,13 +70,13 @@ const ACC0102P01 = () => {
                     </a>
                 </div>
             </fieldset>
-            <div className="login-fixed">
-                <button className="login__btn">로그인</button>
-            </div>
+          
             */}
-
-        </div>
-    );
+      <div className="login-fixed">
+        <button className="login__btn" onClick={func.onClick}>로그인</button>
+      </div>
+    </div>
+  );
 };
 
 export default ACC0102P01;
