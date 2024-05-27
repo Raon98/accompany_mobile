@@ -1,42 +1,43 @@
 package acpy.api.utils;
 
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.*;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+import static java.util.Calendar.HOUR;
 
 public class JwtUtil {
-    private final String SECRET_KEY = "accompanylogintestaccompanylogintestaccompanylogintestaccompanylogintest";
-    public static String generateToken(String uid) {
-        return Jwts.builder()
-                .setSubject(uid)
-                .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10)) // 10시간 유효
-                .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
-                .compact();
+    private static final String SECRET_KEY = "accompanylogintestaccompanylogintestaccompanylogintestaccompanylogintestaccompanylogintest";
+    private static final long ACC_TOKEN_VALIDITY = HOUR / 2;
+    private static final long REF_TOKEN_VALIDITY = HOUR * 24 * 15;
+
+
+    public Map<String, String> generateToken(String uid) {
+        Map<String, String> tokens = new HashMap<>();
+
+        JwtBuilder builder = Jwts.builder();
+        builder.setSubject(uid);
+        builder.setIssuedAt(new Date());
+        builder.setExpiration(new Date(System.currentTimeMillis() + ACC_TOKEN_VALIDITY));
+        builder.signWith(SignatureAlgorithm.HS256, SECRET_KEY); //  알고리즘 명시적으로 지정
+        String accessToken = builder.compact();
+
+        Date refTokenExpirationTime = new Date(System.currentTimeMillis() + REF_TOKEN_VALIDITY);
+        builder.setExpiration(refTokenExpirationTime);
+        builder.signWith(SignatureAlgorithm.HS256, SECRET_KEY); // 알고리즘 명시적으로 지정
+        String refreshToken = builder.compact();
+
+        tokens.put("accessToken", accessToken);
+        tokens.put("refreshToken", refreshToken);
+
+        return tokens;
     }
 
-    // 토큰에서 사용자 이름 추출
-    public static String extractUsername(String token) {
-        return extractClaims(token).getSubject();
+
+    private Jws<Claims> getAllClaimsFromToken(String token) {
+        return Jwts.parser().setSigningKey(SECRET_KEY).build().parseClaimsJws(token);
     }
 
-    // 토큰 유효성 검증
-    public static boolean validateToken(String token, String username) {
-        return extractUsername(token).equals(username) && !isTokenExpired(token);
-    }
-
-    // 토큰 만료 여부 확인
-    private static boolean isTokenExpired(String token) {
-        return extractClaims(token).getExpiration().before(new Date());
-    }
-
-    // 클레임 추출
-    private static Claims extractClaims(String token) {
-        return Jwts.parser()
-                .setSigningKey(SECRET_KEY)
-                .parseClaimsJws(token)
-                .getBody();
-    }
 }
