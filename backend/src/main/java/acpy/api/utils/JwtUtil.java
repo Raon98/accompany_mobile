@@ -24,12 +24,12 @@ public class JwtUtil {
         builder.setSubject(uid);
         builder.setIssuedAt(new Date());
         builder.setExpiration(new Date(System.currentTimeMillis() + ACC_TOKEN_VALIDITY));
-        builder.signWith(SignatureAlgorithm.HS256, SECRET_KEY); //  알고리즘 명시적으로 지정
+        builder.signWith(SignatureAlgorithm.HS256, SECRET_KEY); 
         String accessToken = builder.compact();
 
         Date refTokenExpirationTime = new Date(System.currentTimeMillis() + REF_TOKEN_VALIDITY);
         builder.setExpiration(refTokenExpirationTime);
-        builder.signWith(SignatureAlgorithm.HS256, SECRET_KEY); // 알고리즘 명시적으로 지정
+        builder.signWith(SignatureAlgorithm.HS256, SECRET_KEY); 
         String refreshToken = builder.compact();
 
         tokens.put("accessToken", accessToken);
@@ -41,9 +41,50 @@ public class JwtUtil {
         return tokens;
     }
 
+    public String generateAccessToken(String uid) {
+        AcpyLogger.info("============= generateAccessToken CALL START ==============");
+        JwtBuilder builder = Jwts.builder();
+        builder.setSubject(uid);
+        builder.setIssuedAt(new Date());
+        builder.setExpiration(new Date(System.currentTimeMillis() + ACC_TOKEN_VALIDITY));
+        builder.signWith(SignatureAlgorithm.HS256, SECRET_KEY); 
+        String accessToken = builder.compact();
+        AcpyLogger.info("============= generateAccessToken CALL END ==============");
+        return accessToken;
+    }
 
+    public String getUidFromToken(String token) {
+        return getAllClaimsFromToken(token).getBody().getSubject();
+    }
+    
     private Jws<Claims> getAllClaimsFromToken(String token) {
         return Jwts.parser().setSigningKey(SECRET_KEY).build().parseClaimsJws(token);
     }
+
+    public boolean validateToken(String token) {
+        try {
+            getAllClaimsFromToken(token);
+            return true;
+        } catch (ExpiredJwtException | UnsupportedJwtException | MalformedJwtException | SignatureException | IllegalArgumentException e) {
+            AcpyLogger.error("Invalid JWT Token: {}", e.getMessage());
+            return false;
+        }
+    }
+
+    public Map<String, String> refreshTokens(String refreshToken) {
+        AcpyLogger.info("============= refreshTokens CALL START ==============");
+        Map<String, String> tokens = new HashMap<>();
+        if (validateToken(refreshToken)) {
+            String uid = getUidFromToken(refreshToken);
+            String newAccessToken = generateAccessToken(uid);
+            tokens.put("accessToken", newAccessToken);
+            tokens.put("refreshToken", refreshToken); 
+        } else {
+            throw new RuntimeException("Invalid Refresh Token");
+        }
+        AcpyLogger.info("============= refreshTokens CALL END ==============");
+        return tokens;
+    }
+
 
 }
