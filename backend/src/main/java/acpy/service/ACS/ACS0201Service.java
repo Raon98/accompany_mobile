@@ -25,7 +25,7 @@ public class ACS0201Service {
         
 
         //2. DB 조회 성공시 JWT 토큰 발행
-        Map<String, String> result = jwtUtils.generateToken("TEST");
+        Map<String, String> result = jwtUtils.generateToken(in.getUid());
         System.out.println("serviceTester " + result);
 
         out.setData(result);

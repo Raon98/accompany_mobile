@@ -1,5 +1,5 @@
 package acpy.api.utils;
-
+import acpy.api.support.AcpyLogger;
 import io.jsonwebtoken.*;
 
 import java.util.Date;
@@ -9,12 +9,15 @@ import java.util.Map;
 import static java.util.Calendar.HOUR;
 
 public class JwtUtil {
+    
+    
     private static final String SECRET_KEY = "accompanylogintestaccompanylogintestaccompanylogintestaccompanylogintestaccompanylogintest";
     private static final long ACC_TOKEN_VALIDITY = HOUR / 2;
     private static final long REF_TOKEN_VALIDITY = HOUR * 24 * 15;
 
-
+    
     public Map<String, String> generateToken(String uid) {
+        AcpyLogger.info("============= generateToken CALL START ==============");
         Map<String, String> tokens = new HashMap<>();
 
         JwtBuilder builder = Jwts.builder();
@@ -32,6 +35,9 @@ public class JwtUtil {
         tokens.put("accessToken", accessToken);
         tokens.put("refreshToken", refreshToken);
 
+
+        AcpyLogger.info("============= TOKEN : {} ==============" ,tokens);
+        AcpyLogger.info("============= generateToken CALL START ==============");
         return tokens;
     }
 
