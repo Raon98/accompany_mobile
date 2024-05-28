@@ -1,7 +1,6 @@
 @use "../utils/mixins";
 
-$spacing-8: 0.5rem;
-$spacing-10: 0.625rem;
+@use "../utils/variables";
 
 .wrapper {
   width: 100%;
@@ -19,18 +18,30 @@ $spacing-10: 0.625rem;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+/* ipone 6/7/8 plue 이상*/
+@media screen and (min-width: 376px) {
+  html{font-size: 18px;}
+}
 
+/* ipone 6/7/8/ㅌ */
+@media screen and (min-width: 375px) {
+  html{font-size: 16px;}
+}
+/* 갤ㄺ시*/
+@media screen and (min-width: 360px) {
+  html{font-size: 16px;}
+}
 
 .mgr8 {
-  @include mixins.margin(right, $spacing-8);
+  @include mixins.margin(right, variables.$spacing-8);
 }
 
 .mgl8 {
-  @include mixins.margin(left, $spacing-8);
+  @include mixins.margin(left, variables.$spacing-8);
 }
 
 .mgt10 {
-  @include mixins.margin(top, $spacing-10);
+  @include mixins.margin(top, variables.$spacing-10);
 }
 
 .mgb10 {
