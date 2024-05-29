@@ -11,7 +11,7 @@ COPY . /usr/src/app
 
 # WINDOW
 RUN apk add --no-cache maven \
-    && apk add --no-cache curl \
+    && apk add --no-cache curl
 
 RUN mvn clean package
 
