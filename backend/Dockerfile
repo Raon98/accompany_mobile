@@ -1,11 +1,12 @@
-FROM adoptopenjdk/openjdk11:alpine-slim
+FROM adoptopenjdk/openjdk11
 
 WORKDIR /usr/src/app
 
 COPY . /usr/src/app
 
-RUN apk add --no-cache maven \
-    && apk add --no-cache curl
+RUN apt-get update && \
+    apt-get install -y maven curl && \
+    apt-get clean;
 
 RUN mvn clean package
 
@@ -13,7 +14,7 @@ ENV TOMCAT_VERSION 8.5.100
 ENV MAVEN_HOME=/root/.m2/repository
 ENV CATALINA_HOME /usr/local/tomcat
 
-RUN wget https://downloads.apache.org/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
+RUN curl -O https://downloads.apache.org/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
     tar -xzf apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
     rm apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
     mv apache-tomcat-${TOMCAT_VERSION} ${CATALINA_HOME}
