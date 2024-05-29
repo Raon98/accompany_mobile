@@ -60,3 +60,5 @@ config/constants/
 .env
 
 backend/target/
+
+visionKey.json
