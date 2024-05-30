@@ -11,7 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="백엔드 도커파일 빌드 mac / window 분리">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,6 +320,7 @@
       <workItem from="1716854264140" duration="2178000" />
       <workItem from="1716940669488" duration="8512000" />
       <workItem from="1716971811143" duration="571000" />
+      <workItem from="1717034399274" duration="1252000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
