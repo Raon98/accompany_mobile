@@ -1,12 +1,20 @@
-import {create} from "zustand";
+import { create } from "zustand";
+import { LocalStore } from "store/localStore";
+
 interface InfoType {
     [key: string]: string;
 }
 
-const AccStore = create(setState => ({
-        info: {},
-        setInfo : (info:InfoType) => setState({ info : info})
+const AccStore = create(set => ({
+    info: LocalStore.getLocalStore('info') ?? {},
+    setInfo: (info: InfoType) => {
+        set({ info });
+        LocalStore.setLocalStore('info', info);
     }
-))
+}));
+
+AccStore.subscribe((state:any) => {
+    LocalStore.setLocalStore('info', state.info);
+});
 
 export default AccStore;
