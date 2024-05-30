@@ -9,11 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="백엔드 도커파일 빌드 mac / window 분리">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="react_query 추가">
+      <change afterPath="$PROJECT_DIR$/_frontend/src/store/AccStore.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +22,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="myBatisXML" />
-        <option value="TypeScript File" />
         <option value="Class" />
+        <option value="package.json" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -320,7 +319,7 @@
       <workItem from="1716854264140" duration="2178000" />
       <workItem from="1716940669488" duration="8512000" />
       <workItem from="1716971811143" duration="571000" />
-      <workItem from="1717034399274" duration="1252000" />
+      <workItem from="1717034399274" duration="2277000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -595,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716972162159</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="react_query 추가">
+      <created>1717042391866</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1717042391866</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -624,7 +630,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="브라우저 라우터로 다시 변경" />
     <MESSAGE value="scss 수정" />
     <MESSAGE value="라우터 관리방법 수정" />
     <MESSAGE value="톰캣 버전 업그레이드 대응 99=&gt;100" />
@@ -649,6 +654,7 @@
     <MESSAGE value="amin theme color 추가" />
     <MESSAGE value="googleVision 암호화작업" />
     <MESSAGE value="백엔드 도커파일 빌드 mac / window 분리" />
-    <option name="LAST_COMMIT_MESSAGE" value="백엔드 도커파일 빌드 mac / window 분리" />
+    <MESSAGE value="react_query 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="react_query 추가" />
   </component>
 </project>
