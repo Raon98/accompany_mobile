@@ -32,10 +32,7 @@ const ACC0102P01 = () => {
       console.log("회원가입 페이지로 이동");
     },
     onClick : ()=> {
-        $api.AsyncPost('api', 'ACS0201S01', 'ACC0102P01',{uid:"test"},
-                    (res) => {
-                        console.log(res)
-                    });
+        const test = $api.AsyncPost('api', 'ACS0201S01', 'ACC0102P01',{uid:"test"});
     }
   };
 

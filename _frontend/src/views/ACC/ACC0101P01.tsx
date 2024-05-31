@@ -10,9 +10,8 @@ import {$api} from "plugins/api";
 
 const ACC0101P01 = () => {
     const navigate = useNavigate();
-    $api.AsyncPost('api', 'ACS0101S01', '', {test:"test"}, (res) => {
-        console.log("API TEST")
-    });
+    const test = $api.AsyncPost('api', 'ACS0101S01', '', {test:"test"}) ;
+    console.log(test)
     return (
         <div>
             메인페이지입니다

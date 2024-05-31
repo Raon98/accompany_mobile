@@ -53,14 +53,8 @@ const AAC0101P01 = () => {
                 header_flag : headerFlag,
                 footer_flag : footerFlag
             }
-            $api.AsyncPost('api', 'AUS0101S01', '', params, (res) => {
-                if (res.code === '000'){
-                    console.log("등록이 완료되었습니다.")
-                }else{
-                    console.log("등록에 실패하였습니다.")
-                }
-
-            });
+            const input = $api.AsyncPost('api', 'AUS0101S01', '', params);
+            console.log(input)
         }
     }
 

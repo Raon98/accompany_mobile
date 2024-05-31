@@ -5,7 +5,7 @@ interface InfoType {
     [key: string]: string;
 }
 
-const AccStore = create(set => ({
+const AccStore = create((set:any) => ({
     info: LocalStore.getLocalStore('info') ?? {},
     setInfo: (info: InfoType) => {
         set({ info });

@@ -10,9 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="Zustand 라이브러리 추가">
-      <change afterPath="$PROJECT_DIR$/_frontend/src/store/localStore.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/components/GoogleVisionCanves.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/components/GoogleVisionCanves.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/plugins/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/plugins/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/store/AccStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/store/AccStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/views/AAC/AAC0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/AAC/AAC0101P01.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0101P01.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,6 +325,7 @@
       <workItem from="1716940669488" duration="8512000" />
       <workItem from="1716971811143" duration="571000" />
       <workItem from="1717034399274" duration="3679000" />
+      <workItem from="1717130068397" duration="6338000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>

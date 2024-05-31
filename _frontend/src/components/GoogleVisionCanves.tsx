@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 
 import { $api } from "plugins/api";
 import CanvasDraw from "react-canvas-draw";
+import {useMutation} from "@tanstack/react-query";
 
 enum Language {
     ENGLISH = '영어(ENGLISH)',
@@ -9,23 +10,34 @@ enum Language {
 }
 
 const GoogleVisionCanves  = () => {
-        const canvasRef = useRef<CanvasDraw>(null);
-        const [recognizedText, setRecognizedText] = useState<string[]>([]);
-        const [lang, setLang] = useState<String>(Language.KOREAN)
-        const func = {
-            handleCanvasDraw: () => {
-                if (!canvasRef.current) return;
-                // @ts-ignore
-                const imageData = canvasRef.current.canvas.drawing.toDataURL('image/png').split(',')[1];
-                const params = {base64Image: imageData};
+    const canvasRef = useRef<CanvasDraw>(null);
+    const [recognizedText, setRecognizedText] = useState<string[]>([]);
+    const [lang, setLang] = useState<String>(Language.KOREAN)
 
-                $api.AsyncPost('ext', 'GoogleVision', 'DrawingCanvass', params,
-                    (res) => {
-                        setRecognizedText(func.recognizedFilter([...res.data]))
-                    });
 
-                // TEST :  func.recognizedFilter([...'김ㅅtㅣ씩시TA'])
-            },
+    const visionMutation = useMutation({
+        mutationFn: (imageData:string) =>  $api.AsyncPost('ext', 'GoogleVision', 'DrawingCanvass', {base64Image: imageData}),
+        onSuccess: (res) => {
+            setRecognizedText(func.recognizedFilter([...res.data]))
+        },
+        onError: () => {
+            console.error('에러 발생')
+        },
+        onSettled: () => {
+            console.log('결과에 관계 없이 무언가 실행됨')
+        }
+    })
+    const { mutate, isPending, isError, error, isSuccess } = visionMutation;
+
+    const func = {
+        handleCanvasDraw: () => {
+            if (!canvasRef.current) return;
+            // @ts-ignore
+            const imageData = canvasRef.current.canvas.drawing.toDataURL('image/png').split(',')[1];
+
+            mutate(imageData)
+
+        },
             clearCanvas:()=>{
                 if (!canvasRef.current) return;
                 canvasRef.current.clear();
