@@ -97,12 +97,14 @@ public class CloudVisionConfig {
         credentialsMap.put("universe_domain", getUniverseDomain());
 
         Gson gson = new GsonBuilder().create();
+
         try (FileWriter fileWriter = new FileWriter("src/main/resources/" + VisionKey)) {
             gson.toJson(credentialsMap, fileWriter);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+        
         Resource resource = new ClassPathResource(VisionKey);
         GoogleCredentials credentials = GoogleCredentials.fromStream(resource.getInputStream());
         ImageAnnotatorSettings clientSettings = ImageAnnotatorSettings.newBuilder()

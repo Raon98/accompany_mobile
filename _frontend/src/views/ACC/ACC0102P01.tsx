@@ -1,7 +1,7 @@
+import { useMutation } from "@tanstack/react-query";
 import { $api } from "plugins/api";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {useMutation} from "@tanstack/react-query";
 
 /******************************
  * @공통 (ACCOMPANY COMMON COMPONENT)
@@ -15,12 +15,13 @@ const ACC0102P01 = () => {
   const [password, setPassword] = useState<string>("");
 
   const sessionMutation = useMutation({
-    mutationFn : ()=> $api.AsyncPost('api', 'ACS0201S01', 'ACC0102P01',{uid:"test"}),
+    mutationFn: () =>
+      $api.AsyncPost("api", "ACS0201S01", "ACC0102P01", { uid: "test" }),
     onSuccess: (res) => {
-      console.log(res)
+      console.log(res);
     },
-  })
-  const {mutate,isPending,isError,isSuccess} = sessionMutation
+  });
+  const { mutate, isPending, isError, isSuccess } = sessionMutation;
   const func = {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
       const {
@@ -39,17 +40,17 @@ const ACC0102P01 = () => {
 
       console.log("회원가입 페이지로 이동");
     },
-    onClick : ()=> {
-        mutate()
-    }
+    onClick: () => {
+      mutate();
+    },
   };
 
   return (
     <div className="login">
-      <div className="login__logo">동행하다</div>
+      {/* <div className="login__logo">동행하다</div> */}
 
       {/*
-            
+            <form>
             <fieldset className="form">
                 <dl className="form__icon id">
                     <dd>
@@ -75,10 +76,12 @@ const ACC0102P01 = () => {
                     </a>
                 </div>
             </fieldset>
-          
+            </form>
             */}
       <div className="login-fixed">
-        <button className="login__btn" onClick={func.onClick}>로그인</button>
+        <button className="login__btn" onClick={func.onClick}>
+          로그인
+        </button>
       </div>
     </div>
   );
