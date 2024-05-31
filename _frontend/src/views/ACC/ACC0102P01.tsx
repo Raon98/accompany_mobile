@@ -2,12 +2,25 @@ import { useMutation } from "@tanstack/react-query";
 import { $api } from "plugins/api";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 /******************************
  * @공통 (ACCOMPANY COMMON COMPONENT)
  * @화면명:로그인화면
  * @작성자:김성철
  ********************************/
+
+const pagination = {
+  clickable: true,
+  renderBullet: function (index: number, className: string) {
+    return '<span class="' + className + '">' + "</span>";
+  },
+};
 
 const ACC0102P01 = () => {
   const navigate = useNavigate();
@@ -47,6 +60,30 @@ const ACC0102P01 = () => {
 
   return (
     <div className="login">
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+          dynamicBullets: true,
+        }}
+        modules={[Autoplay, Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+      </Swiper>
+      <div className="form">
+        <div className="form-flex">
+          <div className="form-drag__btn"></div>
+        </div>
+      </div>
+
       {/* <div className="login__logo">동행하다</div> */}
 
       {/*
@@ -78,11 +115,11 @@ const ACC0102P01 = () => {
             </fieldset>
             </form>
             */}
-      <div className="login-fixed">
+      {/* <div className="login-fixed">
         <button className="login__btn" onClick={func.onClick}>
           로그인
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
