@@ -1,6 +1,7 @@
 import { $api } from "plugins/api";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {useMutation} from "@tanstack/react-query";
 
 /******************************
  * @공통 (ACCOMPANY COMMON COMPONENT)
@@ -13,6 +14,13 @@ const ACC0102P01 = () => {
   const [uid, setUid] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
+  const sessionMutation = useMutation({
+    mutationFn : ()=> $api.AsyncPost('api', 'ACS0201S01', 'ACC0102P01',{uid:"test"}),
+    onSuccess: (res) => {
+      console.log(res)
+    },
+  })
+  const {mutate,isPending,isError,isSuccess} = sessionMutation
   const func = {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
       const {
@@ -32,7 +40,7 @@ const ACC0102P01 = () => {
       console.log("회원가입 페이지로 이동");
     },
     onClick : ()=> {
-        const test = $api.AsyncPost('api', 'ACS0201S01', 'ACC0102P01',{uid:"test"});
+        mutate()
     }
   };
 

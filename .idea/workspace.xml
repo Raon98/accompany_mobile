@@ -9,13 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="Zustand 라이브러리 추가">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="react-query에 맞게 api 수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/components/GoogleVisionCanves.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/components/GoogleVisionCanves.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/plugins/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/plugins/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/store/AccStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/store/AccStore.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/views/AAC/AAC0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/AAC/AAC0101P01.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0101P01.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -325,7 +320,7 @@
       <workItem from="1716940669488" duration="8512000" />
       <workItem from="1716971811143" duration="571000" />
       <workItem from="1717034399274" duration="3679000" />
-      <workItem from="1717130068397" duration="6338000" />
+      <workItem from="1717130068397" duration="7287000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -614,7 +609,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717043293903</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="react-query에 맞게 api 수정">
+      <created>1717136805055</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1717136805055</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,7 +645,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="라우터 관리방법 수정" />
     <MESSAGE value="톰캣 버전 업그레이드 대응 99=&gt;100" />
     <MESSAGE value="구글 visionkey" />
     <MESSAGE value="header scss 수정" />
@@ -668,6 +669,7 @@
     <MESSAGE value="백엔드 도커파일 빌드 mac / window 분리" />
     <MESSAGE value="react_query 추가" />
     <MESSAGE value="Zustand 라이브러리 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="Zustand 라이브러리 추가" />
+    <MESSAGE value="react-query에 맞게 api 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="react-query에 맞게 api 수정" />
   </component>
 </project>
