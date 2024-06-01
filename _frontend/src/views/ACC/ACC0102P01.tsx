@@ -26,6 +26,7 @@ const ACC0102P01 = () => {
   const navigate = useNavigate();
   const [uid, setUid] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [isActive, setIsActive] = useState(false);
 
   const sessionMutation = useMutation({
     mutationFn: () =>
@@ -54,7 +55,8 @@ const ACC0102P01 = () => {
       console.log("회원가입 페이지로 이동");
     },
     onClick: () => {
-      mutate();
+      setIsActive(!isActive);
+      // mutate();
     },
   };
 
@@ -72,13 +74,16 @@ const ACC0102P01 = () => {
           dynamicBullets: true,
         }}
         modules={[Autoplay, Pagination]}
-        className="mySwiper"
+        className={`mySwiper ${isActive ? "active" : ""}`}
       >
         <SwiperSlide>Slide 1</SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
       </Swiper>
-      <div className="form">
+      <div
+        className={`form ${isActive ? "active" : ""}`}
+        onClick={func.onClick}
+      >
         <div className="form-flex">
           <div className="form-drag__btn"></div>
         </div>
