@@ -74,16 +74,13 @@ const ACC0102P01 = () => {
           dynamicBullets: true,
         }}
         modules={[Autoplay, Pagination]}
-        className={`mySwiper ${isActive ? "active" : ""}`}
+        className={`mySwiper ${isActive ? "mySwiper--active" : ""}`}
       >
         <SwiperSlide>Slide 1</SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
       </Swiper>
-      <div
-        className={`form ${isActive ? "active" : ""}`}
-        onClick={func.onClick}
-      >
+      <div className="form" onClick={func.onClick}>
         <div className="form-flex">
           <div className="form-drag__btn"></div>
         </div>

@@ -131,7 +131,7 @@ fieldset {
   height: 70%;
   z-index: 0;
   transition: height 0.5s;
-  &.active{
+  &--active{
     height: 0%;
     transition: height 0.5s;
   }
