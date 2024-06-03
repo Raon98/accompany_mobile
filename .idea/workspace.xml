@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="react-query에 맞게 api 수정">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment=" react-query api Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,7 +321,8 @@
       <workItem from="1716940669488" duration="8512000" />
       <workItem from="1716971811143" duration="571000" />
       <workItem from="1717034399274" duration="3679000" />
-      <workItem from="1717130068397" duration="7287000" />
+      <workItem from="1717130068397" duration="8119000" />
+      <workItem from="1717374072261" duration="3247000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -616,7 +618,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717136805055</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary=" react-query api Test">
+      <created>1717137639383</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1717137639383</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -645,7 +654,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="톰캣 버전 업그레이드 대응 99=&gt;100" />
     <MESSAGE value="구글 visionkey" />
     <MESSAGE value="header scss 수정" />
     <MESSAGE value="coreFilter properties 적용 테스트 임시업로드" />
@@ -670,6 +678,7 @@
     <MESSAGE value="react_query 추가" />
     <MESSAGE value="Zustand 라이브러리 추가" />
     <MESSAGE value="react-query에 맞게 api 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="react-query에 맞게 api 수정" />
+    <MESSAGE value=" react-query api Test" />
+    <option name="LAST_COMMIT_MESSAGE" value=" react-query api Test" />
   </component>
 </project>
