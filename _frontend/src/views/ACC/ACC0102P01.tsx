@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import "swiper/css";
-import "swiper/css/navigation";
+// import "swiper/css";
 import "swiper/css/pagination";
 
 /******************************
@@ -65,20 +64,26 @@ const ACC0102P01 = () => {
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // }}
         pagination={{
           clickable: true,
           dynamicBullets: true,
         }}
-        modules={[Autoplay, Pagination]}
+        modules={[Pagination]} //Autoplay,
         className={`mySwiper ${isActive ? "mySwiper--active" : ""}`}
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide className="login-slide-1">
+          <img src="assets/images/login-slide1.svg" alt="Slide 1" />
+        </SwiperSlide>
+        <SwiperSlide className="login-slide-2">
+          <img src="assets/images/login-slide2.svg" alt="Slide 2" />
+        </SwiperSlide>
+        <SwiperSlide className="login-slide-3">
+          <img src="assets/images/login-slide3.svg" alt="Slide 3" />
+        </SwiperSlide>
       </Swiper>
       <div className="form" onClick={func.onClick}>
         <div className="form-flex">
