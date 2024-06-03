@@ -9,25 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="로그인 페이지 카카오 구글 아이콘 추가">
-      <change afterPath="$PROJECT_DIR$/_frontend/public/assets/images/slide_image1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/images/login-slide1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/images/login-slide2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/images/login-slide3.svg" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="슬라이더 이미지 작업">
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/images/login-slide-img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/images/login-slide-img3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/base/_reset.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/base/_typography.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/components/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_common.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_footer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_header.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_login.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/themes/_colors.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/themes/_fonts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/utils/_functions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/utils/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/utils/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/public/assets/images/slide_image1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/images/google_auth.svg" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/images/google_auth.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/images/login-slide1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/images/login-slide2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/images/login-slide3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/components/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/components/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_login.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +46,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
@@ -137,11 +132,11 @@
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\scss\themes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\public\assets\images" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\images" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\public\assets" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\public\assets\images" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\scss\page" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\scss\layout" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\scss\utils" />
     </key>
   </component>
   <component name="RunManager" selected="Application.JwtUtil">
@@ -339,7 +334,7 @@
       <workItem from="1717034399274" duration="3679000" />
       <workItem from="1717130068397" duration="8119000" />
       <workItem from="1717374072261" duration="14572000" />
-      <workItem from="1717395523579" duration="3253000" />
+      <workItem from="1717395523579" duration="9248000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>
@@ -663,7 +658,21 @@
       <option name="project" value="LOCAL" />
       <updated>1717396305688</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="슬라이더 이미지 작업">
+      <created>1717398845472</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1717398845472</updated>
+    </task>
+    <task id="LOCAL-00048" summary="슬라이더 이미지 작업">
+      <created>1717398869390</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1717398869391</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -692,7 +701,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="로그인페이지 html 작성" />
     <MESSAGE value="프론트엔드 상단으로 파일위치 상단으로 변경" />
     <MESSAGE value="공통 scss추가" />
     <MESSAGE value="visionkey 암호화 작업" />
@@ -717,6 +725,7 @@
     <MESSAGE value="package vision update" />
     <MESSAGE value="로그인 페이지 버튼 추가" />
     <MESSAGE value="로그인 페이지 카카오 구글 아이콘 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="로그인 페이지 카카오 구글 아이콘 추가" />
+    <MESSAGE value="슬라이더 이미지 작업" />
+    <option name="LAST_COMMIT_MESSAGE" value="슬라이더 이미지 작업" />
   </component>
 </project>

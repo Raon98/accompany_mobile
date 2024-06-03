@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// import "swiper/css";
+import "swiper/css";
 import "swiper/css/pagination";
 
 /******************************
@@ -64,42 +64,50 @@ const ACC0102P01 = () => {
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
           dynamicBullets: true,
         }}
-        modules={[Pagination]} //Autoplay,
+        modules={[Pagination,Autoplay]}
         className={`mySwiper ${isActive ? "mySwiper--active" : ""}`}
       >
-        <SwiperSlide className="login-slide-1">
-          <img src="assets/images/login-slide1.svg" alt="Slide 1" />
+        <SwiperSlide className="login-slide">
+          <img src={require("assets/images/login-slide-img1.png")} alt="Slide 1" />
         </SwiperSlide>
-        <SwiperSlide className="login-slide-2">
-          <img src="assets/images/login-slide2.svg" alt="Slide 2" />
+        <SwiperSlide className="login-slide">
+          <img src={require("assets/images/login-slide-img2.png")} alt="Slide 2" />
         </SwiperSlide>
-        <SwiperSlide className="login-slide-3">
-          <img src="assets/images/login-slide3.svg" alt="Slide 3" />
+        <SwiperSlide className="login-slide">
+          <img src={require("assets/images/login-slide-img3.png")} alt="Slide 3" />
         </SwiperSlide>
       </Swiper>
-      <div className="form" onClick={func.onClick}>
-        <div className="form-flex">
-          <div className="form-drag__btn"></div>
-        </div>
-        <div className="form__block">
-          <button className="primary-login__btn primary">
-            이메일로 로그인
-          </button>
-          <div className="oauth_login">
-            <div className="google__btn"/>
-            <div className="kakao__btn"/>
+      <div className={` form__absolute ${isActive ? "form__absolute--active" : ""}`}>
+        <div className="form" onClick={func.onClick}>
+          <div className="form-flex">
+            <div className="form-drag__btn"></div>
           </div>
+          <div className="form__block">
+            <button className="login__btn primary">
+              이메일로 시작하기
+            </button>
+            <button className="login__btn bdr google">
+              <span className="google-icon"></span>
+              구글로 시작하기
 
+
+            </button>
+            <button className="login__btn kakao">
+              <div className="kakao_icon"> </div>
+              카카오로 시작하기
+            </button>
+          </div>
         </div>
       </div>
+
 
       {/* <div className="login__logo">동행하다</div> */}
 

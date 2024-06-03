@@ -43,6 +43,25 @@ fieldset {
   left: 0;
   z-index: 99;
 }
+.form__absolute {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 37%;
+  z-index: 2;
+  transition: height 0.5s;
+
+  &--active{
+    height: 100%;
+    transition: height 0.5s;
+
+    .form {
+      background-color: colors.$theme-dark-pink-50 !important;
+    }
+  }
+
+}
 .login {
   @include mixins.fixed_mixin;
   left: 0;
@@ -51,9 +70,10 @@ fieldset {
   width: 100%;
 
   .form {
+    position: relative;
     height: 100%;
     margin-top: 0.275rem;
-    background-color: colors.$theme-dark-pink-100;
+    background-color: colors.$theme-very-light-pink-50;
     border-radius: 25px 25px 0 0;
     box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.2);
     &-flex {
@@ -152,8 +172,11 @@ fieldset {
   }
 }
 .mySwiper {
+  position: absolute;
+  top:0;
+  left: 0;
   width: 100%;
-  height: 65%;
+  height: 70%;
   z-index: 0;
   transition: height 0.5s;
   &--active{
@@ -168,7 +191,8 @@ fieldset {
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* 이미지를 비율 유지하면서 슬라이드에 맞게 조정 */
+      object-fit: cover;
+      opacity: .65;
     }
   }
   .swiper-pagination-bullet {
