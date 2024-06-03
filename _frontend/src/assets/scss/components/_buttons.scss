@@ -14,27 +14,27 @@
   background-color: transparent;
 
   &.bdr{
-    border: 1px solid $theme-600;
-    color: $theme-600;
+    border: 1px solid $theme-dark-pink-500;
+    color: $theme-dark-pink-500;
     background-color: $white;
     font-size: 1.025rem;
     font-weight: 500;
     &:hover {
-      background-color: colors.$theme-600;
+      background-color: colors.$theme-dark-pink-500;
       color: $white;
     }
 
   }
   &.primary {
-    background-color:$theme-600;
+    background-color:$theme-dark-pink-500;
     color:$white;
   }
 }
 
 
-.login__btn {
+.primary-login__btn {
   @extend .button;
   width: 80%;
-  height: 2.875rem;
+  height: 3.475rem;
   margin-top: 1.275rem;
 }

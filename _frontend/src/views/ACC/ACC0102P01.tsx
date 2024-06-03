@@ -85,12 +85,14 @@ const ACC0102P01 = () => {
           <div className="form-drag__btn"></div>
         </div>
         <div className="form__block">
-          <button className="login__btn primary">
+          <button className="primary-login__btn primary">
             이메일로 로그인
           </button>
-          <button className="login__btn bdr">
-            구글 로그인
-          </button>
+          <div className="oauth_login">
+            <div className="google__btn"/>
+            <div className="kakao__btn"/>
+          </div>
+
         </div>
       </div>
 

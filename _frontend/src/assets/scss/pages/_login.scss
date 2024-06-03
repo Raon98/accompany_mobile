@@ -14,6 +14,14 @@
   //background-image: url($bg-image);
 }
 
+@mixin oAuthIcon ($image) {
+  width: 2.385rem;
+  height: 2.385rem;
+  background: url($image) no-repeat center center;
+  background-size: contain;
+  border: none;
+}
+
 fieldset {
   width: 100%;
   border: 0;
@@ -24,7 +32,7 @@ fieldset {
   height: 4.5rem;
   font-size: 1.85rem;
   font-weight: 600;
-  color: $theme-800;
+  color: colors.$theme-800;
   margin: 1.375rem auto 2.375rem;
 }
 
@@ -46,7 +54,7 @@ fieldset {
   .form {
     height: 100%;
     margin-top: 0.275rem;
-    background-color: $theme-500;
+    background-color: colors.$theme-dark-pink-100;
     border-radius: 25px 25px 0 0;
     box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.2);
     &-flex {
@@ -65,6 +73,20 @@ fieldset {
     &__block {
       @include mixins.flex_mixin(space-between,center,column);
       margin-top : 3.725rem;
+
+      .oauth_login {
+        @include mixins.flex_mixin(space-around,center);
+        width: 35%;
+        margin-top: 1.875rem;
+
+        .google__btn {
+          @include oAuthIcon("../../images/google_auth.svg");
+        }
+
+        .kakao__btn {
+          @include oAuthIcon("../../images/kakao_auth.svg");
+        }
+      }
     }
 
 
@@ -165,6 +187,6 @@ fieldset {
   
   .swiper-pagination-bullet-active {
     color: #fff;
-    background: $theme-700
+    background: colors.$theme-700
   }
 }
