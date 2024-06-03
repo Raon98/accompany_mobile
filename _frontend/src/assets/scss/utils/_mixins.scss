@@ -6,11 +6,11 @@
   width: $width;
 }
 
-@mixin flex_mixin($justify:space-between,$align:center){
+@mixin flex_mixin($justify:space-between,$align:center,$direction:row){
   display: flex;
-  flex-direction: row;
   justify-content: $justify;
   align-items: $align;
+  flex-direction: $direction;
 }
 
 @mixin margin($direction, $value) {
