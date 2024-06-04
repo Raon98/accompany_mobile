@@ -158,14 +158,17 @@ fieldset {
         width: 1.25rem;
         height: 1.25rem;
         margin-right: 0.5rem;
-        border: 1px solid ghostwhite;;
-        border-radius: 20px;
+        border: 1px solid gray;
+        border-radius: 2px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 0.625rem auto;
         background-color: colors.$white-theme-50;
       }
       & > input[type="checkbox"]:checked {
         border-color: transparent;
         background-color: colors.$theme-500;
-        //background-image: url(); 체크모양 이미지첨부
+        background-image: url("../../images/checkbox-check.svg");
       }
     }
     .id {

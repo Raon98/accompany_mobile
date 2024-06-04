@@ -21,3 +21,9 @@ time, mark, audio, video {
 div {
     display: block;
 }
+
+input, button, select, textarea {
+    color : inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+}

@@ -9,10 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="로그인페이지 펼쳤을떄 화면 작업">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="로그인페이지 자동로그인 체크버튼 추가">
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/images/checkbox-check.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/base/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/base/_reset.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,14 +326,7 @@
       <workItem from="1717130068397" duration="8119000" />
       <workItem from="1717374072261" duration="14572000" />
       <workItem from="1717395523579" duration="9248000" />
-      <workItem from="1717460166678" duration="24276000" />
-    </task>
-    <task id="LOCAL-00003" summary="backend DB연결 수정">
-      <created>1712194078695</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1712194078695</updated>
+      <workItem from="1717460166678" duration="25315000" />
     </task>
     <task id="LOCAL-00004" summary="라우터 등록페이지 수정">
       <created>1712194604787</created>
@@ -670,7 +664,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717490899344</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="로그인페이지 자동로그인 체크버튼 추가">
+      <created>1717494059568</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1717494059568</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -699,7 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docker-compose 파일 수정" />
     <MESSAGE value="visionKey 암호화방식 수정" />
     <MESSAGE value="visionKey key값 노출문제 해결" />
     <MESSAGE value="불필요한 로그삭제" />
@@ -724,6 +724,7 @@
     <MESSAGE value="로그인 메인페이지 퍼블리싱" />
     <MESSAGE value="로그인 메인페이지 퍼블리싱 컬러 추가 및 버튼 색상 수정" />
     <MESSAGE value="로그인페이지 펼쳤을떄 화면 작업" />
-    <option name="LAST_COMMIT_MESSAGE" value="로그인페이지 펼쳤을떄 화면 작업" />
+    <MESSAGE value="로그인페이지 자동로그인 체크버튼 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="로그인페이지 자동로그인 체크버튼 추가" />
   </component>
 </project>
