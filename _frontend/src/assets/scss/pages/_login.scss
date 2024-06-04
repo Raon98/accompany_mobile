@@ -38,9 +38,9 @@
 @mixin loginTitle($fontSize) {
   font-size: $fontSize;
   font-weight: 800;
-  color: colors.$theme-very-light-pink-50;
+  color: colors.$white-theme-100;
   z-index: 10;
-  -webkit-text-stroke-color: 1px colors.$theme-very-light-pink-50;
+  -webkit-text-stroke-color: 1px colors.$white-theme-100;
 }
 
 fieldset {
@@ -102,7 +102,7 @@ fieldset {
     position: relative;
     height: 100%;
     margin-top: 0.375rem;
-    background-color: colors.$theme-very-light-pink-50;
+    background-color: colors.$white-theme-100;
     border-radius: 25px 25px 0 0;
     box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.3);
     &-flex {

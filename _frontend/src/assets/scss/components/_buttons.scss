@@ -41,7 +41,7 @@
   }
 
   &.primary {
-    @include bdr__btn(colors.$theme-500)
+    @include primary__btn(colors.$theme-500)
   }
 }
 
