@@ -10,18 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="슬라이더 이미지 작업">
-      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/images/login-slide-img2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/images/login-slide-img3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/images/kakao_auth.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/public/assets/images/slide_image1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/images/google_auth.svg" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/images/google_auth.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/images/login-slide1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/images/login-slide2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/images/login-slide3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/images/kakao_auth.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/components/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/components/_buttons.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_login.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/themes/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/themes/_colors.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -335,6 +329,7 @@
       <workItem from="1717130068397" duration="8119000" />
       <workItem from="1717374072261" duration="14572000" />
       <workItem from="1717395523579" duration="9248000" />
+      <workItem from="1717460166678" duration="6587000" />
     </task>
     <task id="LOCAL-00001" summary="backend 파일 분리">
       <created>1712190190860</created>

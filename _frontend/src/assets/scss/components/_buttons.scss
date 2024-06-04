@@ -2,6 +2,29 @@
 @use "../themes/colors";
 @use "../utils/variables";
 
+@mixin bdr__btn($color){
+  border: 1px solid $color;
+  color: $color;
+  background-color: colors.$white;
+  font-size: 1.025rem;
+  font-weight: 500;
+}
+
+@mixin primary__btn($color){
+  background-color: $color;
+  color: colors.$white;
+}
+
+@mixin btn-icon($bg){
+  width: 1.528rem;
+  height: 1.528rem;
+  background: url($bg) no-repeat;
+  background-size: contain;
+  margin-right: 0.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0.325rem;
+}
 .button {
   padding: variables.$button-padding;
   font-size: variables.$button-font-size;
@@ -14,20 +37,11 @@
   background-color: transparent;
 
   &.bdr{
-    border: 1px solid colors.$theme-500;
-    color: colors.$theme-500;
-    background-color: colors.$white;
-    font-size: 1.025rem;
-    font-weight: 500;
-    &:hover {
-      background-color: colors.$theme-500;
-      color: colors.$white;
-    }
-
+      @include bdr__btn(colors.$theme-500)
   }
+
   &.primary {
-    background-color: colors.$theme-500;
-    color: colors.$white;
+    @include bdr__btn(colors.$theme-500)
   }
 }
 
@@ -38,18 +52,18 @@
   height: 2.875rem;
   margin-top: 0.895rem;
 
-  .google-icon {
-    width: 1.528rem;
-    height: 1.528rem;
-    background: url("../../images/google_auth.svg") no-repeat;
-    background-size: contain;
-    margin-right: 0.5rem;
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 0.325rem;
+  &.google {
+    @include bdr__btn(colors.$matGray);
+    .google-icon{
+      @include btn-icon("../../images/google_auth.svg");
+    }
   }
 
-  .kakao {
-
+  &.kakao {
+    @include primary__btn(colors.$kakaoYellow);
+    color: #0A082C;
+    .kakao-icon{
+      @include btn-icon("../../images/kakao_auth.png");
+    }
   }
 }

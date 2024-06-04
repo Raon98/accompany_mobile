@@ -1,9 +1,9 @@
-import { useMutation } from "@tanstack/react-query";
-import { $api } from "plugins/api";
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Autoplay, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import {useMutation} from "@tanstack/react-query";
+import {$api} from "plugins/api";
+import React, {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {Autoplay, Pagination} from "swiper/modules";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -60,17 +60,27 @@ const ACC0102P01 = () => {
   };
 
   return (
-    <div className="login">
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
+      <div className="login">
+        {!isActive && (
+            <div className="login__title">
+              <div className="login__title-sub1">
+                당신의 순간을
+              </div>
+              <div className="login__title-sub2">
+                동행하다
+              </div>
+            </div>
+        )}
+        <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+              dynamicBullets: true,
         }}
         modules={[Pagination,Autoplay]}
         className={`mySwiper ${isActive ? "mySwiper--active" : ""}`}
@@ -94,14 +104,12 @@ const ACC0102P01 = () => {
             <button className="login__btn primary">
               이메일로 시작하기
             </button>
-            <button className="login__btn bdr google">
+            <button className="login__btn google">
               <span className="google-icon"></span>
               구글로 시작하기
-
-
             </button>
             <button className="login__btn kakao">
-              <div className="kakao_icon"> </div>
+              <span className="kakao-icon"></span>
               카카오로 시작하기
             </button>
           </div>
