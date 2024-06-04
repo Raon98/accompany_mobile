@@ -1,0 +1,19 @@
+@use "../utils/mixins";
+@use "../themes/colors";
+@use "../utils/variables";
+
+
+
+.loading-fixed{
+    @include mixins.fixed_mixin;
+    left: 0;
+    top: 0;
+    margin: 0;
+    height: 100%;
+    z-index: 10;
+    .loading{
+        @include mixins.flex_mixin(center);
+        height: 100%;
+    }
+}
+
