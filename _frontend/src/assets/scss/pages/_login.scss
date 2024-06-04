@@ -170,6 +170,9 @@ fieldset {
         background-color: colors.$theme-500;
         background-image: url("../../images/checkbox-check.svg");
       }
+      & > label {
+        margin-top: 2px;
+      }
     }
     .id {
       &.input-form__block::before{
