@@ -125,6 +125,10 @@ const ACC0102P01 = () => {
                              onChange={func.onChange} value={password}/>
                       {/*<button type="button" name="password" className="btn-password"/>*/}
                     </div>
+                    <div className="input-form__auto-login">
+                      <input type="checkbox" name="auto-login" id="auto-login" />
+                      <label htmlFor="auto-login">자동로그인</label>
+                    </div>
                     <div className="input-form__utils">
                       <a href="#" className="input-form__utils-option" onClick={func.onSignUp}>
                         아이디 찾기
