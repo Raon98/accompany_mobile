@@ -64,12 +64,13 @@ const ACC0102P01 = () => {
       console.log("회원가입 페이지로 이동");
     },
     onClick: (tag?: string) => {
-      const test = $api.AsyncPost("api", "ACS0101S01", "ACC0102P01", {
-        uid: "test",
-      });
-      console.log(test);
       if (tag === "e") {
-        mutate();
+        const test = $api
+          .AsyncPost("api", "ACS0101S01", "ACC0102P01", {
+            uid: "test",
+          })
+          .then((test) => console.log(test));
+        // mutate();
       } else if (tag === "g") {
       } else if (tag === "k") {
       }
