@@ -89,24 +89,14 @@ const ACC0102P01 = () => {
           modules={[Pagination, Autoplay]}
           className={`mySwiper ${isActive ? "mySwiper--active" : ""}`}
         >
-          <SwiperSlide className="login-slide">
-            <img
-              src={require("assets/images/login-slide-img1.png")}
-              alt="Slide 1"
-            />
-          </SwiperSlide>
-          <SwiperSlide className="login-slide">
-            <img
-              src={require("assets/images/login-slide-img2.png")}
-              alt="Slide 2"
-            />
-          </SwiperSlide>
-          <SwiperSlide className="login-slide">
-            <img
-              src={require("assets/images/login-slide-img3.png")}
-              alt="Slide 3"
-            />
-          </SwiperSlide>
+          {Array.from({length : 7}).map((v,idx) => (
+              <SwiperSlide className="login-slide">
+                <img
+                    src={require(`assets/images/login-slide-img${idx+1}.png`)}
+                    alt={`slide ${idx+1}`}
+                />
+              </SwiperSlide>
+          ))}
         </Swiper>
 
         <div
