@@ -9,8 +9,9 @@ interface SwitchProps {
 
 const Switch = ({modals}: SwitchProps) => {
     const [modalKeys] = useRecoilState(modalStore);
-    const openModals = Object.keys(modalKeys).find((key: string) => modalKeys[key]);
-
+    const openModals = Object.keys(modalKeys).find((key: string) => {
+        return modalKeys[key]
+    });
     return openModals ? modals[openModals] : null;
 };
 

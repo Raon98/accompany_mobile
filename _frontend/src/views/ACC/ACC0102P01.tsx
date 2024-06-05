@@ -9,6 +9,7 @@ import Loading from "components/utils/Loading";
 import "swiper/css";
 import "swiper/css/pagination";
 import useModal from "../../state/useModal";
+import {Modals} from "../../components/utils/Modals";
 
 /******************************
  * @공통 (ACCOMPANY COMMON COMPONENT)
@@ -74,12 +75,12 @@ const ACC0102P01 = () => {
 
   return (
     <>
+      <Modals/>
       {isPending && <Loading />}
       <div className={isActive ? "login" : "login-fixed"}>
         {!isActive && (
             <div className="login__title">
               <div className="login__title-sub1">당신의 순간을
-                <TESTBTN/>
               </div>
               <div className="login__title-sub2">동행하다</div>
             </div>

@@ -36,7 +36,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-react": "WATCHPACK_POLLING=true react-scripts start",
+    "start-react1": "WATCHPACK_POLLING=true react-scripts start",
+    "start-react": "react-scripts start",
     "sass": "sass --watch scss:css",
     "dev": "npm-run-all --parallel start-react sass"
   },

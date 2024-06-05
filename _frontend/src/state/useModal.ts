@@ -11,6 +11,7 @@ const useModal = (name: string): UseModal => {
     const [isOpenStates, setIsOpenStates] = useRecoilState(modalStore);
     const isOpen = isOpenStates[name];
 
+
     const onOpen = () => {
         setIsOpenStates((prev) => ({
             ...prev,
