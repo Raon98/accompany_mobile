@@ -8,8 +8,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Loading from "components/utils/Loading";
 import "swiper/css";
 import "swiper/css/pagination";
+import { Modals } from "../../components/utils/Modals";
 import useModal from "../../state/useModal";
-import {Modals} from "../../components/utils/Modals";
 
 /******************************
  * @공통 (ACCOMPANY COMMON COMPONENT)
@@ -24,11 +24,13 @@ const pagination = {
   },
 };
 const TESTBTN = () => {
-  const {onOpen} = useModal("confirm")
-  return (<div>
-    <button onClick={onOpen}>TEST</button>
-  </div>)
-}
+  const { onOpen } = useModal("confirm");
+  return (
+    <div>
+      <button onClick={onOpen}>TEST</button>
+    </div>
+  );
+};
 const ACC0102P01 = () => {
   const navigate = useNavigate();
   const [uid, setUid] = useState<string>("");
@@ -37,7 +39,7 @@ const ACC0102P01 = () => {
 
   const sessionMutation = useMutation({
     mutationFn: () =>
-        $api.AsyncPost("api", "ACS0201S01", "ACC0102P01", {uid: "test"}),
+      $api.AsyncPost("api", "ACS0201S01", "ACC0102P01", { uid: "test" }),
     onSuccess: (res) => {
       console.log(res);
     },
@@ -62,8 +64,10 @@ const ACC0102P01 = () => {
       console.log("회원가입 페이지로 이동");
     },
     onClick: (tag?: string) => {
-      const test = $api.AsyncPost("api", "ACS0101S01", "ACC0102P01", {uid: "test"})
-      console.log(test)
+      const test = $api.AsyncPost("api", "ACS0101S01", "ACC0102P01", {
+        uid: "test",
+      });
+      console.log(test);
       if (tag === "e") {
         mutate();
       } else if (tag === "g") {
@@ -75,15 +79,14 @@ const ACC0102P01 = () => {
 
   return (
     <>
-      <Modals/>
+      <Modals />
       {isPending && <Loading />}
       <div className={isActive ? "login" : "login-fixed"}>
         {!isActive && (
-            <div className="login__title">
-              <div className="login__title-sub1">당신의 순간을123
-              </div>
-              <div className="login__title-sub2">동행하다</div>
-            </div>
+          <div className="login__title">
+            <div className="login__title-sub1">당신의 순간을</div>
+            <div className="login__title-sub2">동행하다</div>
+          </div>
         )}
         <Swiper
           spaceBetween={30}
@@ -99,13 +102,13 @@ const ACC0102P01 = () => {
           modules={[Pagination, Autoplay]}
           className={`mySwiper ${isActive ? "mySwiper--active" : ""}`}
         >
-          {Array.from({length : 7}).map((v,idx) => (
-              <SwiperSlide className="login-slide" key={idx + 1}>
-                <img
-                    src={require(`assets/images/login-slide-img${idx + 1}.png`)}
-                    alt={`slide ${idx + 1}`}
-                />
-              </SwiperSlide>
+          {Array.from({ length: 7 }).map((v, idx) => (
+            <SwiperSlide className="login-slide" key={idx + 1}>
+              <img
+                src={require(`assets/images/login-slide-img${idx + 1}.png`)}
+                alt={`slide ${idx + 1}`}
+              />
+            </SwiperSlide>
           ))}
         </Swiper>
 

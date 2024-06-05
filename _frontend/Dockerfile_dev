@@ -16,7 +16,5 @@ ENV REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
 RUN echo "REACT_APP_BACKEND_URL: $REACT_APP_BACKEND_URL"
 
 ENV CHOKIDAR_USEPOLLING=true
-COPY ./script/start.sh /usr/src/app/start.sh
-RUN chmod +x /usr/src/app/start.sh
 
-CMD ["./start.sh"]
+CMD ["npm","run","dev"]
