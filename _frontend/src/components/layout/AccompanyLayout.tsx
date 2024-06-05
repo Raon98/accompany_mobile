@@ -1,11 +1,11 @@
 import React, {lazy, useEffect, useState} from 'react';
-import AccompanySection from "components/AccompanySection";
+import AccompanySection from "components/layout/AccompanySection";
 import Router,{RIM} from 'router';
 import {$api} from "plugins/api";
 import {useLocation, useNavigate} from "react-router-dom";
 
-const AccompanyHeader = lazy(() => import("components/AccompanyHeader"));
-const AccompanyFooter = lazy(() => import("components/AccompanyFooter"));
+const AccompanyHeader = lazy(() => import("components/layout/AccompanyHeader"));
+const AccompanyFooter = lazy(() => import("components/layout/AccompanyFooter"));
 
 
 const AccompanyLayout = () => {
