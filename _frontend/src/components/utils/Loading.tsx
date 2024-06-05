@@ -1,12 +1,16 @@
 import Spinner from "assets/images/loading.gif";
+import useLoading from "state/useLoading";
 const Loading = () => {
+  const { loading } = useLoading();
   return (
     <>
-      <div className="loading-fixed">
-        <div className="loading">
-          <img src={Spinner}></img>
+      {loading && (
+        <div className="loading-fixed">
+          <div className="loading">
+            <img src={Spinner}></img>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };

@@ -1,15 +1,14 @@
 import { useMutation } from "@tanstack/react-query";
-import { $api } from "plugins/api";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Loading from "components/utils/Loading";
+import asyncApi from "plugins/asyncApi";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Modals } from "../../components/utils/Modals";
-import useModal from "../../state/useModal";
 
 /******************************
  * @공통 (ACCOMPANY COMMON COMPONENT)
@@ -23,23 +22,17 @@ const pagination = {
     return '<span class="' + className + '">' + "</span>";
   },
 };
-const TESTBTN = () => {
-  const { onOpen } = useModal("confirm");
-  return (
-    <div>
-      <button onClick={onOpen}>TEST</button>
-    </div>
-  );
-};
+
 const ACC0102P01 = () => {
   const navigate = useNavigate();
   const [uid, setUid] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [isActive, setIsActive] = useState(false);
 
+  const { $api } = asyncApi();
+
   const sessionMutation = useMutation({
-    mutationFn: () =>
-      $api.AsyncPost("api", "ACS0201S01", "ACC0102P01", { uid: "test" }),
+    mutationFn: () => $api("api", "ACS0201S01", "ACC0102P01", { uid: "test" }),
     onSuccess: (res) => {
       console.log(res);
     },
@@ -65,12 +58,11 @@ const ACC0102P01 = () => {
     },
     onClick: (tag?: string) => {
       if (tag === "e") {
-        const test = $api
-          .AsyncPost("api", "ACS0101S01", "ACC0102P01", {
-            uid: "test",
-          })
-          .then((test) => console.log(test));
-        // mutate();
+        $api("api", "ACS0101S01", "ACC0102P01", {
+          uid: "test",
+        }).then((test)=>console.log(test));
+
+        mutate();
       } else if (tag === "g") {
       } else if (tag === "k") {
       }
