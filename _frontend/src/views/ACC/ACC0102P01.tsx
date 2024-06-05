@@ -80,7 +80,7 @@ const ACC0102P01 = () => {
       <div className={isActive ? "login" : "login-fixed"}>
         {!isActive && (
             <div className="login__title">
-              <div className="login__title-sub1">당신의 순간을
+              <div className="login__title-sub1">당신의 순간을123
               </div>
               <div className="login__title-sub2">동행하다</div>
             </div>

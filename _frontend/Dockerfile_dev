@@ -6,7 +6,6 @@ WORKDIR /usr/src/app
 COPY .npmrc ./.npmrc
 
 COPY package.json ./
-COPY package-lock.json ./
 
 RUN npm install
 
@@ -16,6 +15,8 @@ ARG REACT_APP_BACKEND_URL
 ENV REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
 RUN echo "REACT_APP_BACKEND_URL: $REACT_APP_BACKEND_URL"
 
-CMD ["npm","run","dev"]
-
 ENV CHOKIDAR_USEPOLLING=true
+COPY ./script/start.sh /usr/src/app/start.sh
+RUN chmod +x /usr/src/app/start.sh
+
+CMD ["./start.sh"]
