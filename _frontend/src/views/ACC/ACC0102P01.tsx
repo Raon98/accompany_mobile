@@ -60,7 +60,7 @@ const ACC0102P01 = () => {
       if (tag === "e") {
         $api("api", "ACS0101S01", "ACC0102P01", {
           uid: "test",
-        }).then((test)=>console.log(test));
+        }).then((test) => console.log(test));
 
         mutate();
       } else if (tag === "g") {
@@ -165,7 +165,7 @@ const ACC0102P01 = () => {
                     <a
                       href="#"
                       className="input-form__utils-option"
-                      onClick={func.onSignUp}
+                      onClick={() => navigate("/ACC0102P02")}
                     >
                       회원가입
                     </a>
@@ -205,7 +205,7 @@ const ACC0102P01 = () => {
                   className="login__btn primary"
                   onClick={() => func.onClick("e")}
                 >
-                  이메일로 시작하기
+                  아이디로 시작하기
                 </button>
                 <button
                   className="login__btn google"
