@@ -8,10 +8,10 @@ import Loading from "components/utils/Loading";
 import asyncApi from "plugins/asyncApi";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Modals } from "../../components/utils/Modals";
+import { Modals } from "components/utils/Modals";
 
 /******************************
- * @공통 (ACCOMPANY COMMON COMPONENT)
+ * @로그인 (ACCOMPANY  Login)
  * @화면명:로그인화면
  * @작성자:김성철
  ********************************/
@@ -23,7 +23,7 @@ const pagination = {
   },
 };
 
-const ACC0102P01 = () => {
+const ALI0101P01 = () => {
   const navigate = useNavigate();
   const [uid, setUid] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -32,7 +32,7 @@ const ACC0102P01 = () => {
   const { $api } = asyncApi();
 
   const sessionMutation = useMutation({
-    mutationFn: () => $api("api", "ACS0201S01", "ACC0102P01", { uid: "test" }),
+    mutationFn: () => $api("api", "ACS0201S01", "ALI0101P01", { uid: "test" }),
     onSuccess: (res) => {
       console.log(res);
     },
@@ -58,7 +58,7 @@ const ACC0102P01 = () => {
     },
     onClick: (tag?: string) => {
       if (tag === "e") {
-        $api("api", "ACS0101S01", "ACC0102P01", {
+        $api("api", "ACS0101S01", "ALI0101P01", {
           uid: "test",
         }).then((test) => console.log(test));
 
@@ -165,7 +165,7 @@ const ACC0102P01 = () => {
                     <a
                       href="#"
                       className="input-form__utils-option"
-                      onClick={() => navigate("/ACC0102P02")}
+                      onClick={() => navigate("/ASU0101P01")}
                     >
                       회원가입
                     </a>
@@ -230,4 +230,4 @@ const ACC0102P01 = () => {
   );
 };
 
-export default ACC0102P01;
+export default ALI0101P01;

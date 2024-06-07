@@ -24,8 +24,8 @@ const AccompanyLayout = () => {
     }
 
     if (!isAuthenticated) {
-      if (location.pathname === "/ACC0101P01") {
-        navigate("/ACC0102P01");
+      if (location.pathname === "/ACM0101P01") {
+        navigate("/ALI0101P01");
       }
     }
   }, [location.pathname]);

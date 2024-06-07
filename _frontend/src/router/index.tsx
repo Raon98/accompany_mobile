@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import AAC0101P01 from "views/AAC/AAC0101P01";
-import ACC0101P01 from "views/ACC/ACC0101P01";
-import ACC0101P02 from "views/ACC/ACC0101P02";
-import ACC0102P01 from "views/ACC/ACC0102P01";
-import ACC0102P02 from "views/ACC/ACC0102P02";
+import ADM0101P01 from "views/admin/ADM0101P01";
+import ACM0101P01 from "views/main/ACM0101P01";
+import ACM0101P02 from "views/main/ACM0101P02";
+import ALI0101P01 from "views/login/ALI0101P01";
+import ASU0101P01 from "views/sign/ASU0101P01";
+import ASU0101P02 from "views/sign/ASU0101P02";
 
 interface RouterProps {
   isAuthenticated: boolean;
@@ -13,14 +14,20 @@ interface RouterProps {
 /* 로그인 전 공통 */
 const NCM = [
   {
-    path: "/ACC0102P01",
-    el: <ACC0102P01 />,
+    path: "/ALI0101P01",
+    el: <ALI0101P01 />,
     hd: false,
     ft: false,
   },
   {
-    path: "/ACC0102P02",
-    el: <ACC0102P02 />,
+    path: "/ASU0101P01",
+    el: <ASU0101P01 />,
+    hd: false,
+    ft: false,
+  },
+  {
+    path: "/ASU0101P02",
+    el: <ASU0101P02 />,
     hd: false,
     ft: false,
   },
@@ -29,19 +36,19 @@ const NCM = [
 const YCM = [
   {
     path: "/",
-    el: <ACC0101P01 />,
+    el: <ACM0101P01 />,
     hd: true,
     ft: false,
   },
   {
-    path: "/ACC0101P01",
-    el: <ACC0101P01 />,
+    path: "/ACM0101P01",
+    el: <ACM0101P01 />,
     hd: true,
     ft: true,
   },
   {
-    path: "/ACC0101P02",
-    el: <ACC0101P02 />,
+    path: "/ACM0101P02",
+    el: <ACM0101P02 />,
     hd: false,
     ft: false,
   },
@@ -49,8 +56,8 @@ const YCM = [
 /*관리자 */
 const ADM = [
   {
-    path: "/AAC0101P01",
-    el: <AAC0101P01 />,
+    path: "/ADM0101P01",
+    el: <ADM0101P01 />,
     hd: false,
     ft: false,
   },
@@ -68,7 +75,7 @@ export default function Router({ isAuthenticated, role }: RouterProps) {
           {NCM.map((route, idx) => (
             <Route key={idx} path={route.path} element={route.el} />
           ))}
-          <Route path="/*" element={<ACC0102P01 />} />
+          <Route path="/*" element={<ALI0101P01 />} />
         </>
       )}
       {/* 로그인 후 공통 경로 */}
@@ -77,7 +84,7 @@ export default function Router({ isAuthenticated, role }: RouterProps) {
           {YCM.map((route, idx) => (
             <Route key={idx} path={route.path} element={route.el} />
           ))}
-          {/* <Route path="*" element={<ACC0101P01/>}/> */}
+          {/* <Route path="*" element={<ACM0101P01/>}/> */}
         </>
       )}
 
@@ -87,7 +94,7 @@ export default function Router({ isAuthenticated, role }: RouterProps) {
           {ADM.map((route, idx) => (
             <Route key={idx} path={route.path} element={route.el} />
           ))}
-          {/* <Route path="/*" element={<ACC0101P01/>}/> */}
+          {/* <Route path="/*" element={<ACM0101P01/>}/> */}
         </>
       )}
     </Routes>

@@ -2,14 +2,14 @@ import asyncApi from "plugins/asyncApi";
 import React, { useState } from "react";
 
 /******************************
- * @관리자 (ACCOMPANY ADMIN COMPONENT)
+ * @관리자 (ACCOMPANY ADMIN)
  * @화면명: 화면 라우터 관리/설정
  * @작성자:김성철
  ********************************/
 type chnlType = "M" | "A";
 type ynType = "Y" | "N";
 
-const AAC0101P01 = () => {
+const ADM0101P01 = () => {
   const [chnl, setChnl] = useState<chnlType>("M");
   const [componentId, setComponentId] = useState("");
   const [headerFlag, setHeaderFlag] = useState<ynType>("Y");
@@ -145,4 +145,4 @@ const AAC0101P01 = () => {
   );
 };
 
-export default AAC0101P01;
+export default ADM0101P01;

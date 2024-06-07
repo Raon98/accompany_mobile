@@ -9,12 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="모달 컴포넌트 테스트 완료">
-      <change afterPath="$PROJECT_DIR$/_frontend/script/start.sh" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="dockerfile_Dev 구조 변경">
+      <change afterPath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P02.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/Dockerfile_dev" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/Dockerfile_dev" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/components/layout/AccompanyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/components/layout/AccompanyLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/router/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/views/AAC/AAC0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/admin/ADM0101P01.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/main/ACM0101P01.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0101P02.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/main/ACM0101P02.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/login/ALI0101P01.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P02.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,46 +94,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Rebasing main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LG/Desktop/portfoilo/accompany_mobile/_frontend/src/components/utils&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15625&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2410197&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;461824838e3acc67aef1e47df69b78bf&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\_frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Rebasing main",
+    "last_opened_file_path": "C:/Users/LG/Desktop/portfoilo/accompany_mobile/_frontend/src/views/sign",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15625",
+    "project.structure.side.proportion": "0.2410197",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "461824838e3acc67aef1e47df69b78bf",
+    "ts.external.directory.path": "C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\_frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="acpy.api.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\views\sign" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\components\utils" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\images" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\resources" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\views\ACC" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\scss\utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\views\sign" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\views\login" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\components\utils" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\components\layout" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\images" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\public\assets" />
     </key>
   </component>
   <component name="RunManager" selected="Application.JwtUtil">
@@ -332,14 +336,9 @@
       <workItem from="1717546147157" duration="7203000" />
       <workItem from="1717562999852" duration="5462000" />
       <workItem from="1717568649059" duration="6836000" />
-      <workItem from="1717575917355" duration="1460000" />
-    </task>
-    <task id="LOCAL-00009" summary="css 파일구조 및 layout.scss 추가">
-      <created>1715044984449</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1715044984449</updated>
+      <workItem from="1717575917355" duration="1836000" />
+      <workItem from="1717577870821" duration="148000" />
+      <workItem from="1717719580520" duration="2718000" />
     </task>
     <task id="LOCAL-00010" summary="package.json 재업로드">
       <created>1715045033652</created>
@@ -677,7 +676,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717571708041</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="dockerfile_Dev 구조 변경">
+      <created>1717577574430</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1717577574432</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -706,7 +712,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="로그인 페이지 작업 중" />
     <MESSAGE value="로그인 jwt작업 준비중" />
     <MESSAGE value="로그인페이지 ui 재빌딩" />
     <MESSAGE value="jwt utils 수정" />
@@ -731,6 +736,7 @@
     <MESSAGE value="이미지 슬라이드 map으로 변환" />
     <MESSAGE value="모달 컴포넌트 및 recoil 임시 추가" />
     <MESSAGE value="모달 컴포넌트 테스트 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="모달 컴포넌트 테스트 완료" />
+    <MESSAGE value="dockerfile_Dev 구조 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="dockerfile_Dev 구조 변경" />
   </component>
 </project>
