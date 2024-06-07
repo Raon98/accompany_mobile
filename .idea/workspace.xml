@@ -9,16 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="dockerfile_Dev 구조 변경">
-      <change afterPath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P02.tsx" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="파일구조변경">
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/images/prev_btn.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_sign.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/components/layout/AccompanyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/components/layout/AccompanyLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/router/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/views/AAC/AAC0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/admin/ADM0101P01.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/main/ACM0101P01.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0101P02.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/main/ACM0101P02.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/login/ALI0101P01.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/views/ACC/ACC0102P02.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/store/accStore.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +103,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "Rebasing main",
-    "last_opened_file_path": "C:/Users/LG/Desktop/portfoilo/accompany_mobile/_frontend/src/views/sign",
+    "last_opened_file_path": "C:/Users/LG/Desktop/portfoilo/accompany_mobile/_frontend/src/assets/images",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -122,11 +121,11 @@
       <recent name="acpy.api.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\images" />
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\scss\pages" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\views\sign" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\components\utils" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\images" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\backend\src\main\resources" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\views\ACC" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\views\sign" />
@@ -338,14 +337,7 @@
       <workItem from="1717568649059" duration="6836000" />
       <workItem from="1717575917355" duration="1836000" />
       <workItem from="1717577870821" duration="148000" />
-      <workItem from="1717719580520" duration="2718000" />
-    </task>
-    <task id="LOCAL-00010" summary="package.json 재업로드">
-      <created>1715045033652</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1715045033652</updated>
+      <workItem from="1717719580520" duration="7039000" />
     </task>
     <task id="LOCAL-00011" summary="라우터 적용방식 리뉴얼">
       <created>1715147824772</created>
@@ -683,7 +675,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717577574432</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="파일구조변경">
+      <created>1717725780597</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1717725780597</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -712,7 +711,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="로그인 jwt작업 준비중" />
     <MESSAGE value="로그인페이지 ui 재빌딩" />
     <MESSAGE value="jwt utils 수정" />
     <MESSAGE value="scss media 적용" />
@@ -737,6 +735,7 @@
     <MESSAGE value="모달 컴포넌트 및 recoil 임시 추가" />
     <MESSAGE value="모달 컴포넌트 테스트 완료" />
     <MESSAGE value="dockerfile_Dev 구조 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="dockerfile_Dev 구조 변경" />
+    <MESSAGE value="파일구조변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="파일구조변경" />
   </component>
 </project>

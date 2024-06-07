@@ -9,14 +9,18 @@ import { useNavigate } from "react-router-dom";
 const ASU0101P01 = () => {
   const navigate = useNavigate();
 
-  console.log("회원가입화면");
   return (
-    <div>
-      회원가입페이지.
-      <button onClick={() => navigate("/ALI0101P01")}>
-        로그인페이지로 돌아가기
-      </button>
-    </div>
+      <>
+          <header>
+              <button className="header-prev__btn"></button>
+              <div className="header__title">
+                  회원가입
+              </div>
+          </header>
+          <div className="sign">
+
+          </div>
+      </>
   );
 };
 

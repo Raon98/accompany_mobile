@@ -1,0 +1,30 @@
+@use "../utils/mixins";
+@use "../themes/colors";
+
+
+.header {
+  &-prev__btn{
+    background-image:  url("../../images/prev_btn.svg");
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0;
+    color: transparent;
+    vertical-align: middle;
+    background-position: center center;
+    background-size: 1.5rem auto;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border: none;
+  }
+  &__title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.125rem;
+  }
+}
+.sign {
+
+}
