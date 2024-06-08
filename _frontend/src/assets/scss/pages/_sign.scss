@@ -26,6 +26,17 @@
   }
 }
 .sign {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    height: 2.25rem;
+    font-size: 1.215rem;
+    margin-top: 0.895rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
   &__block {
     @include mixins.flex_mixin(space-between,center,column);
     width: 100%;
