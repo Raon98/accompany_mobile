@@ -8,30 +8,46 @@ import useSign from "state/useSign";
  * @작성자:김성철
  ********************************/
 
+type FocusState = {
+  [key: string]: boolean;
+};
+
 const ASU0101P01 = () => {
   const { inSign, onState } = useSign();
   const navigate = useNavigate();
-  const [name, setName] = useState("");
-  const [isFocused, setIsFocused] = useState(false);
+  const [signData, setSignData] = useState({
+    email: "",
+    name: "",
+  });
+
+  const [isFocused, setIsFocused] = useState({
+    email: false,
+    name: false,
+  });
 
   const func = {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
       const {
         target: { name, value },
       } = e;
-
-      if (name === "name") {
-        setName(value);
-      }
-      if (name === "password") {
+      setSignData({
+        ...signData,
+        [name]: value,
+      });
+    },
+    handleFocus: (flag: string, name: string) => {
+      if (flag === "Focus") {
+        setIsFocused({
+          ...isFocused,
+          [name]: true,
+        });
       }
     },
-    handleFocus: (flag?: string) => {
-      if (flag === "Focus") {
-        setIsFocused(true);
-      } else {
-        setIsFocused(false);
-      }
+    handleBulr: () => {
+      setIsFocused({
+        email: false,
+        name: false,
+      });
     },
   };
   return (
@@ -50,12 +66,12 @@ const ASU0101P01 = () => {
               id="email"
               name="email"
               title="이메일"
-              className={isFocused ? "focused" : ""}
+              className={isFocused.email ? "focused" : ""}
               placeholder="이메일 입력"
-              value={name}
+              value={signData.email}
               onChange={func.onChange}
-              onFocus={() => func.handleFocus("Focus")}
-              onBlur={() => func.handleFocus}
+              onFocus={() => func.handleFocus("Focus", "email")}
+              onBlur={func.handleBulr}
               required
             />
           </div>
@@ -66,12 +82,12 @@ const ASU0101P01 = () => {
               id="name"
               name="name"
               title="이름"
-              className={isFocused ? "focused" : ""}
+              className={isFocused.name ? "focused" : ""}
               placeholder="이름 입력"
-              value={name}
+              value={signData.name}
               onChange={func.onChange}
-              onFocus={() => func.handleFocus("Focus")}
-              onBlur={() => func.handleFocus}
+              onFocus={() => func.handleFocus("Focus", "name")}
+              onBlur={func.handleBulr}
               required
             />
           </div>
