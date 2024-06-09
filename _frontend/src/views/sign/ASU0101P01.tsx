@@ -16,13 +16,19 @@ const ASU0101P01 = () => {
   const { inSign, onState } = useSign();
   const navigate = useNavigate();
   const [signData, setSignData] = useState({
+    uid: "",
     email: "",
     name: "",
+    password: "",
+    passwordConfirm: "",
   });
 
   const [isFocused, setIsFocused] = useState({
+    uid: false,
     email: false,
     name: false,
+    password: false,
+    passwordConfirm: false,
   });
 
   const func = {
@@ -45,8 +51,11 @@ const ASU0101P01 = () => {
     },
     handleBulr: () => {
       setIsFocused({
+        uid: false,
         email: false,
         name: false,
+        password: false,
+        passwordConfirm: false,
       });
     },
   };
@@ -87,6 +96,54 @@ const ASU0101P01 = () => {
               value={signData.name}
               onChange={func.onChange}
               onFocus={() => func.handleFocus("Focus", "name")}
+              onBlur={func.handleBulr}
+              required
+            />
+          </div>
+          <div className="sign__block">
+            <div className="password__block">
+              <label htmlFor="password">비밀번호 </label>
+              <input
+                type="text"
+                id="password"
+                name="password"
+                title="비밀번호"
+                className={isFocused.password ? "focused" : ""}
+                placeholder="비밀번호 입력 (문자, 숫자, 특수문자 포함 8~20자)"
+                value={signData.password}
+                onChange={func.onChange}
+                onFocus={() => func.handleFocus("Focus", "password")}
+                onBlur={func.handleBulr}
+                required
+              />
+              <label htmlFor="passwordConfirm">비밀번호 확인</label>
+              <input
+                type="text"
+                id="passwordConfirm"
+                name="passwordConfirm"
+                title="비밀번호 확인"
+                className={isFocused.passwordConfirm ? "focused" : ""}
+                placeholder="비밀번호 재입력"
+                value={signData.passwordConfirm}
+                onChange={func.onChange}
+                onFocus={() => func.handleFocus("Focus", "passwordConfirm")}
+                onBlur={func.handleBulr}
+                required
+              />
+            </div>
+          </div>
+          <div className="sign__block">
+            <label htmlFor="uid">아이디 </label>
+            <input
+              type="text"
+              id="uid"
+              name="uid"
+              title="아이디"
+              className={isFocused.uid ? "focused" : ""}
+              placeholder="아이디 입력 (6자~10자)"
+              value={signData.uid}
+              onChange={func.onChange}
+              onFocus={() => func.handleFocus("Focus", "uid")}
               onBlur={func.handleBulr}
               required
             />
