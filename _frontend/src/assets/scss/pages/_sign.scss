@@ -62,8 +62,24 @@
       &::placeholder {
         color: rgba(0,0,0,0.5);
       }
+      &.success {
+        border-bottom: 2px solid colors.$success-light-350;
+      }
       &.focused{
         border-bottom: 2px solid colors.$theme-light-750;
+      }
+
+    }
+    &.password {
+      height: 9.125rem;
+      & > label {
+        margin-bottom: 0.725rem;
+      }
+      & > input {
+        margin-bottom: 1.25rem;
+        &::placeholder {
+          font-size: 0.945rem;
+        }
       }
     }
 
