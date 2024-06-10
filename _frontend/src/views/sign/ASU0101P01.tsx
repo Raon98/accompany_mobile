@@ -8,12 +8,8 @@ import useSign from "state/useSign";
  * @작성자:김성철
  ********************************/
 
-type FocusState = {
-  [key: string]: boolean;
-};
-
 const ASU0101P01 = () => {
-  const { signState, onState } = useSign();
+  const { signState, onState, onFocusReset } = useSign();
   const navigate = useNavigate();
   const [signData, setSignData] = useState({
     uid: "",
@@ -49,29 +45,6 @@ const ASU0101P01 = () => {
         [name]: value,
       });
     },
-    handleEvent: (flag: string, name: string) => {
-      if (flag === "Focus") {
-        setIsFocused({
-          ...isFocused,
-          [name]: true,
-        });
-      }
-      if(flag === 'Success'){
-        setIsSuccess({
-          ...isSuccess,
-          [name]: true,
-        });
-      }
-    },
-    handleBulr: () => {
-      setIsFocused({
-        uid: false,
-        email: false,
-        name: false,
-        password: false,
-        passwordConfirm: false,
-      });
-    },
   };
   return (
     <>
@@ -89,12 +62,12 @@ const ASU0101P01 = () => {
               id="email"
               name="email"
               title="이메일"
-              className={isFocused.email ? "focused" : ""}
+              className={signState('email','focus') ? "focused" : ""}
               placeholder="이메일 입력"
               value={signData.email}
               onChange={func.onChange}
-              onFocus={() => func.handleEvent("Focus", "email")}
-              onBlur={func.handleBulr}
+              onFocus={() => onState("email", "focus")}
+              onBlur={onFocusReset}
               required
             />
           </div>
@@ -105,12 +78,12 @@ const ASU0101P01 = () => {
               id="name"
               name="name"
               title="이름"
-              className={isFocused.name ? "focused" : ""}
+              className={signState('name','focus') ? "focused" : ""}
               placeholder="이름 입력"
               value={signData.name}
               onChange={func.onChange}
-              onFocus={() => func.handleEvent("Focus", "name")}
-              onBlur={func.handleBulr}
+              onFocus={() => onState("name", "focus")}
+              onBlur={onFocusReset}
               required
             />
           </div>
@@ -121,12 +94,12 @@ const ASU0101P01 = () => {
                 id="password"
                 name="password"
                 title="비밀번호"
-                className={isFocused.password ? "focused" : ""}
+                className={signState('password','focus') ? "focused" : ""}
                 placeholder="비밀번호 입력 (문자, 숫자, 특수문자 포함 8~20자)"
                 value={signData.password}
                 onChange={func.onChange}
-                onFocus={() => func.handleEvent("Focus", "password")}
-                onBlur={func.handleBulr}
+                onFocus={() => onState("password", "focus")}
+                onBlur={onFocusReset}
                 required
               />
               <label htmlFor="passwordConfirm">비밀번호 확인</label>
@@ -135,12 +108,12 @@ const ASU0101P01 = () => {
                 id="passwordConfirm"
                 name="passwordConfirm"
                 title="비밀번호 확인"
-                className={["success", isFocused.passwordConfirm ? "focused" : ""].join(" ")}
+                className={[signState('passwordConfirm','focus') ? "focused" : ""].join(" ")}
                 placeholder="비밀번호 재입력"
                 value={signData.passwordConfirm}
                 onChange={func.onChange}
-                onFocus={() => func.handleEvent("Focus", "passwordConfirm")}
-                onBlur={func.handleBulr}
+                onFocus={() => onState("passwordConfirm", "focus")}
+                onBlur={onFocusReset}
                 required
               />
           </div>
@@ -151,12 +124,12 @@ const ASU0101P01 = () => {
               id="uid"
               name="uid"
               title="아이디"
-              className={isFocused.uid ? "focused" : ""}
+              className={signState('uid','focus') ? "focused" : ""}
               placeholder="아이디 입력 (6자~10자)"
               value={signData.uid}
               onChange={func.onChange}
-              onFocus={() => func.handleEvent("Focus", "uid")}
-              onBlur={func.handleBulr}
+              onFocus={() => onState("uid", "focus")}
+              onBlur={onFocusReset}
               required
             />
           </div>

@@ -9,14 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="회원가입 작업 및 recoil-persist 추가">
-      <change afterPath="$PROJECT_DIR$/_frontend/src/state/useSign.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_frontend/src/store/signStore.ts" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="회원가입 폼작업중">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/base/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/base/_reset.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_sign.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_sign.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/themes/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/themes/_colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/store/localStore.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/components/layout/AccompanyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/components/layout/AccompanyLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/state/useSign.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/state/useSign.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/store/signStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/store/signStore.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +108,7 @@
     "project.structure.proportion": "0.15625",
     "project.structure.side.proportion": "0.2410197",
     "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "461824838e3acc67aef1e47df69b78bf",
+    "spring.configuration.checksum": "9a59f267df7b686029b9a7935569a952",
     "ts.external.directory.path": "C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\_frontend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -337,21 +334,8 @@
       <workItem from="1717568649059" duration="6836000" />
       <workItem from="1717575917355" duration="1836000" />
       <workItem from="1717577870821" duration="148000" />
-      <workItem from="1717719580520" duration="15612000" />
-    </task>
-    <task id="LOCAL-00012" summary="프로젝트 구조 백엔드 명칭 변경">
-      <created>1715150197136</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1715150197136</updated>
-    </task>
-    <task id="LOCAL-00013" summary="브라우저 라우터로 다시 변경">
-      <created>1715158357354</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1715158357354</updated>
+      <workItem from="1717719580520" duration="15643000" />
+      <workItem from="1717992138352" duration="5559000" />
     </task>
     <task id="LOCAL-00014" summary="scss 수정">
       <created>1715324540308</created>
@@ -682,7 +666,21 @@
       <option name="project" value="LOCAL" />
       <updated>1717740143048</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="회원가입 틀완성">
+      <created>1717750762140</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1717750762141</updated>
+    </task>
+    <task id="LOCAL-00062" summary="회원가입 폼작업중">
+      <created>1717996577996</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1717996577997</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,8 +709,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="jwt utils 수정" />
-    <MESSAGE value="scss media 적용" />
     <MESSAGE value="amin theme color 추가" />
     <MESSAGE value="googleVision 암호화작업" />
     <MESSAGE value="백엔드 도커파일 빌드 mac / window 분리" />
@@ -736,6 +732,8 @@
     <MESSAGE value="dockerfile_Dev 구조 변경" />
     <MESSAGE value="파일구조변경" />
     <MESSAGE value="회원가입 작업 및 recoil-persist 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="회원가입 작업 및 recoil-persist 추가" />
+    <MESSAGE value="회원가입 틀완성" />
+    <MESSAGE value="회원가입 폼작업중" />
+    <option name="LAST_COMMIT_MESSAGE" value="회원가입 폼작업중" />
   </component>
 </project>

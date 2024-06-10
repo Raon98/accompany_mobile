@@ -1,25 +1,43 @@
 import {useRecoilState} from "recoil";
-import {SignState, signStore} from "store/signStore";
+import {FieldState, SignState, signStore} from "store/signStore";
 
 interface UseSign {
-    inSign : (name : keyof SignState) => boolean;
-    onState : (name: keyof SignState) => void;
+    signState : (name : keyof SignState, option :keyof FieldState) => boolean;
+    onState : (name: keyof SignState ,option: keyof FieldState) => void;
+    onFocusReset : () => void;
 }
-
 const useSign = (): UseSign => {
-    const [signState, setSignState] = useRecoilState(signStore);
+    const [signList, setSignState] = useRecoilState(signStore);
 
-    const inSign = (name : keyof SignState) => {
-        return signState[name];
+    const signState = (name : keyof SignState,option: keyof FieldState) => {
+        return signList[name][option];
     }
-    const onState = (name: keyof SignState) => {
+    const onState = (name: keyof SignState ,option: keyof FieldState) => {
         setSignState((prev) => ({
             ...prev,
-            [name]: true,
+            [name]: {
+                ...prev[name],
+                [option] : true
+            },
         }));
     };
+    const onFocusReset = () => {
+        setSignState((prev) => {
+            const resetState = {} as SignState;
+            for (const key in prev) {
+                if (prev.hasOwnProperty(key)) {
+                    resetState[key as keyof SignState] = {
+                        ...prev[key as keyof SignState],
+                        focus: false,
+                    };
+                }
+            }
+            return resetState;
+        });
+    };
 
-    return { inSign, onState };
+
+    return { signState, onState, onFocusReset };
 };
 
 export default useSign;

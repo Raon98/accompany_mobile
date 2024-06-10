@@ -24,7 +24,7 @@ const AccompanyLayout = () => {
     }
 
     if (!isAuthenticated) {
-      if (location.pathname === "/ACM0101P01") {
+      if (location.pathname === "/") {
         navigate("/ALI0101P01");
       }
     }
