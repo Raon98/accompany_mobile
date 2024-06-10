@@ -11,6 +11,8 @@ import useSign from "state/useSign";
 const ASU0101P01 = () => {
   const { signState, onState, onFocusReset,onBox,openBox } = useSign();
   const navigate = useNavigate();
+  const optionList = ['google.com','naver.com' ,'kakao.com', 'nate.com'];
+
   const [signData, setSignData] = useState({
     uid: "",
     email: "",
@@ -30,6 +32,13 @@ const ASU0101P01 = () => {
         [name]: value,
       });
     },
+    selOption : (domain :string) => {
+      openBox()
+      setSignData({
+        ...signData,
+        emailAddress : domain,
+      });
+    }
   };
   return (
     <>
@@ -63,7 +72,7 @@ const ASU0101P01 = () => {
                     id="emailAddress"
                     name="emailAddress"
                     title="이메일주소"
-                    className={signState('emailAddress', 'focus') ? "focused" : ""}
+                    className={signState('emailAddress', 'focus') || onBox? "focused" : ""}
                     placeholder="주소 입력"
                     value={signData.emailAddress}
                     onChange={func.onChange}
@@ -74,18 +83,11 @@ const ASU0101P01 = () => {
                 <div className={`emailAddress__option ${onBox ? 'select' : ''}`} onClick={() => openBox()} />
 
                 <ul className={`emailAddress__option--select ${onBox ? 'show' :''}`}>
-                  <li>
-                    <button type="button" className="option-btn">google.com</button>
-                  </li>
-                  <li>
-                    <button type="button" className="option-btn">naver.com</button>
-                  </li>
-                  <li>
-                    <button type="button" className="option-btn">kakao.com</button>
-                  </li>
-                  <li>
-                    <button type="button" className="option-btn">nate.com</button>
-                  </li>
+                  {optionList.map((domain,idx) => (
+                      <li key={idx}>
+                        <button type="button" className="option-btn" onClick={() => func.selOption(domain)}>{domain}</button>
+                      </li>
+                  ))}
                 </ul>
 
               </div>

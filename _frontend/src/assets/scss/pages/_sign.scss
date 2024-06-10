@@ -84,7 +84,7 @@
 
         &__option {
           display: inline-block;
-          width: 0.825rem;
+          width: 0.725rem;
           height: 0.825rem;
           right: 10px;
           top: 25%;
@@ -94,6 +94,7 @@
           background-repeat: no-repeat;
           position: absolute;
           z-index: 10;
+          opacity: 0.5;
 
           transition: transform 0.3s ease;
 

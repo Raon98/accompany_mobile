@@ -9,13 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="회원가입폼 상태관리 로직 추가">
-      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/images/arrow_bottom.svg" afterDir="false" />
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="이메일 주소 입력 폼추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_common.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_sign.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_sign.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/state/useSign.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/state/useSign.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/store/signStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/store/signStore.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -337,14 +333,7 @@
       <workItem from="1717575917355" duration="1836000" />
       <workItem from="1717577870821" duration="148000" />
       <workItem from="1717719580520" duration="15643000" />
-      <workItem from="1717992138352" duration="16121000" />
-    </task>
-    <task id="LOCAL-00015" summary="라우터 관리방법 수정">
-      <created>1715326901798</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1715326901798</updated>
+      <workItem from="1717992138352" duration="18222000" />
     </task>
     <task id="LOCAL-00016" summary="톰캣 버전 업그레이드 대응 99=&gt;100">
       <created>1715675290788</created>
@@ -682,7 +671,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717997836164</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="이메일 주소 입력 폼추가">
+      <created>1718008480317</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1718008480318</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,7 +707,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="googleVision 암호화작업" />
     <MESSAGE value="백엔드 도커파일 빌드 mac / window 분리" />
     <MESSAGE value="react_query 추가" />
     <MESSAGE value="Zustand 라이브러리 추가" />
@@ -736,6 +731,7 @@
     <MESSAGE value="회원가입 틀완성" />
     <MESSAGE value="회원가입 폼작업중" />
     <MESSAGE value="회원가입폼 상태관리 로직 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="회원가입폼 상태관리 로직 추가" />
+    <MESSAGE value="이메일 주소 입력 폼추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="이메일 주소 입력 폼추가" />
   </component>
 </project>
