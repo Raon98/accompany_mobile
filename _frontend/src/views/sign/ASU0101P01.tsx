@@ -9,7 +9,7 @@ import useSign from "state/useSign";
  ********************************/
 
 const ASU0101P01 = () => {
-  const { signState, onState, onFocusReset } = useSign();
+  const { signState, onState, onFocusReset,onBox,openBox } = useSign();
   const navigate = useNavigate();
   const [signData, setSignData] = useState({
     uid: "",
@@ -17,28 +17,13 @@ const ASU0101P01 = () => {
     name: "",
     password: "",
     passwordConfirm: "",
-  });
-
-  const [isFocused, setIsFocused] = useState({
-    uid: false,
-    email: false,
-    name: false,
-    password: false,
-    passwordConfirm: false,
-  });
-
-  const [isSuccess, setIsSuccess] = useState({
-    uid: false,
-    email: false,
-    name: false,
-    password: false,
-    passwordConfirm: false,
+    emailAddress: ""
   });
 
   const func = {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
       const {
-        target: { name, value },
+        target: {name, value},
       } = e;
       setSignData({
         ...signData,
@@ -57,29 +42,67 @@ const ASU0101P01 = () => {
         <div className="sign-content">
           <div className="sign__block">
             <label htmlFor="email">이메일 </label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              title="이메일"
-              className={signState('email','focus') ? "focused" : ""}
-              placeholder="이메일 입력"
-              value={signData.email}
-              onChange={func.onChange}
-              onFocus={() => onState("email", "focus")}
-              onBlur={onFocusReset}
-              required
-            />
+            <div className="email__block">
+              <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  title="이메일"
+                  className={signState('email', 'focus') ? "focused" : ""}
+                  placeholder="이메일 입력"
+                  value={signData.email}
+                  onChange={func.onChange}
+                  onFocus={() => onState("email", "focus")}
+                  onBlur={onFocusReset}
+                  required
+              />
+              <div className="email-asterisk">@</div>
+              <div className="emailAddress">
+                <input
+                    type="text"
+                    id="emailAddress"
+                    name="emailAddress"
+                    title="이메일주소"
+                    className={signState('emailAddress', 'focus') ? "focused" : ""}
+                    placeholder="주소 입력"
+                    value={signData.emailAddress}
+                    onChange={func.onChange}
+                    onFocus={() => onState("emailAddress", "focus")}
+                    onBlur={onFocusReset}
+                    required
+                />
+                <div className={`emailAddress__option ${onBox ? 'select' : ''}`} onClick={() => openBox()} />
+
+                <ul className={`emailAddress__option--select ${onBox ? 'show' :''}`}>
+                  <li>
+                    <button type="button" className="option-btn">google.com</button>
+                  </li>
+                  <li>
+                    <button type="button" className="option-btn">naver.com</button>
+                  </li>
+                  <li>
+                    <button type="button" className="option-btn">kakao.com</button>
+                  </li>
+                  <li>
+                    <button type="button" className="option-btn">nate.com</button>
+                  </li>
+                </ul>
+
+              </div>
+
+
+            </div>
           </div>
+
           <div className="sign__block">
             <label htmlFor="name">이름 </label>
             <input
-              type="text"
-              id="name"
-              name="name"
-              title="이름"
-              className={signState('name','focus') ? "focused" : ""}
-              placeholder="이름 입력"
+                type="text"
+                id="name"
+                name="name"
+                title="이름"
+                className={signState('name', 'focus') ? "focused" : ""}
+                placeholder="이름 입력"
               value={signData.name}
               onChange={func.onChange}
               onFocus={() => onState("name", "focus")}
@@ -90,31 +113,31 @@ const ASU0101P01 = () => {
           <div className="sign__block password">
               <label htmlFor="password">비밀번호 </label>
               <input
-                type="text"
-                id="password"
-                name="password"
-                title="비밀번호"
-                className={signState('password','focus') ? "focused" : ""}
-                placeholder="비밀번호 입력 (문자, 숫자, 특수문자 포함 8~20자)"
-                value={signData.password}
-                onChange={func.onChange}
-                onFocus={() => onState("password", "focus")}
-                onBlur={onFocusReset}
-                required
+                  type="password"
+                  id="password"
+                  name="password"
+                  title="비밀번호"
+                  className={signState('password','focus') ? "focused" : ""}
+                  placeholder="비밀번호 입력 (문자, 숫자, 특수문자 포함 8~20자)"
+                  value={signData.password}
+                  onChange={func.onChange}
+                  onFocus={() => onState("password", "focus")}
+                  onBlur={onFocusReset}
+                  required
               />
               <label htmlFor="passwordConfirm">비밀번호 확인</label>
               <input
-                type="text"
-                id="passwordConfirm"
-                name="passwordConfirm"
-                title="비밀번호 확인"
-                className={[signState('passwordConfirm','focus') ? "focused" : ""].join(" ")}
-                placeholder="비밀번호 재입력"
-                value={signData.passwordConfirm}
-                onChange={func.onChange}
-                onFocus={() => onState("passwordConfirm", "focus")}
-                onBlur={onFocusReset}
-                required
+                  type="password"
+                  id="passwordConfirm"
+                  name="passwordConfirm"
+                  title="비밀번호 확인"
+                  className={[signState('passwordConfirm','focus') ? "focused" : ""].join(" ")}
+                  placeholder="비밀번호 재입력"
+                  value={signData.passwordConfirm}
+                  onChange={func.onChange}
+                  onFocus={() => onState("passwordConfirm", "focus")}
+                  onBlur={onFocusReset}
+                  required
               />
           </div>
           <div className="sign__block">

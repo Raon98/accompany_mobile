@@ -9,9 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="회원가입 폼작업중">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="회원가입폼 상태관리 로직 추가">
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/images/arrow_bottom.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/components/layout/AccompanyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/components/layout/AccompanyLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_common.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_sign.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_sign.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/state/useSign.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/state/useSign.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/store/signStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/store/signStore.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" afterDir="false" />
@@ -100,7 +102,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "Rebasing main",
-    "last_opened_file_path": "C:/Users/LG/Desktop/portfoilo/accompany_mobile/_frontend/src/state",
+    "last_opened_file_path": "C:/Users/LG/Desktop/portfoilo/accompany_mobile/_frontend/src/assets/images",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -118,9 +120,9 @@
       <recent name="acpy.api.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\images" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\state" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\store" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\images" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\scss\pages" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\views\sign" />
     </key>
@@ -335,14 +337,7 @@
       <workItem from="1717575917355" duration="1836000" />
       <workItem from="1717577870821" duration="148000" />
       <workItem from="1717719580520" duration="15643000" />
-      <workItem from="1717992138352" duration="5559000" />
-    </task>
-    <task id="LOCAL-00014" summary="scss 수정">
-      <created>1715324540308</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1715324540308</updated>
+      <workItem from="1717992138352" duration="16121000" />
     </task>
     <task id="LOCAL-00015" summary="라우터 관리방법 수정">
       <created>1715326901798</created>
@@ -680,7 +675,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717996577997</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="회원가입폼 상태관리 로직 추가">
+      <created>1717997836164</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1717997836164</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -709,7 +711,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="amin theme color 추가" />
     <MESSAGE value="googleVision 암호화작업" />
     <MESSAGE value="백엔드 도커파일 빌드 mac / window 분리" />
     <MESSAGE value="react_query 추가" />
@@ -734,6 +735,7 @@
     <MESSAGE value="회원가입 작업 및 recoil-persist 추가" />
     <MESSAGE value="회원가입 틀완성" />
     <MESSAGE value="회원가입 폼작업중" />
-    <option name="LAST_COMMIT_MESSAGE" value="회원가입 폼작업중" />
+    <MESSAGE value="회원가입폼 상태관리 로직 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="회원가입폼 상태관리 로직 추가" />
   </component>
 </project>

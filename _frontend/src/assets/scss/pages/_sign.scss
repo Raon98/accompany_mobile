@@ -59,24 +59,115 @@
       font-size: 1.125rem;
       color: rgba(0, 0, 0, 0.8);
       outline: none;
+
       &::placeholder {
-        color: rgba(0,0,0,0.5);
+        color: rgba(0, 0, 0, 0.5);
       }
+
       &.success {
         border-bottom: 2px solid colors.$success-light-350;
       }
-      &.focused{
+
+      &.focused {
         border-bottom: 2px solid colors.$theme-light-750;
+      }
+    }
+
+    .email__block {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      .emailAddress {
+        position: relative;
+        width: 100%;
+
+        &__option {
+          display: inline-block;
+          width: 0.825rem;
+          height: 0.825rem;
+          right: 10px;
+          top: 25%;
+          background-image: url("../../images/arrow_bottom.svg");
+          background-position: center center;
+          background-size: 1.5rem auto;
+          background-repeat: no-repeat;
+          position: absolute;
+          z-index: 10;
+
+          transition: transform 0.3s ease;
+
+          &.select {
+            transform: rotate(180deg);
+          }
+
+          & > select {
+            &::-ms-expand {
+              display: none;
+            }
+          }
+
+          &--select {
+            display: flex;
+            position: absolute;
+            left: -10px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            background-color: #fff;
+            margin-top: 0.125rem;
+            border: 1px solid colors.$gray;
+            border-radius: 5px;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+
+            &.show {
+              max-height: 10rem;
+              opacity: 1;
+            }
+
+            & > li {
+              list-style: none;
+              width: 100%;
+              padding: 0.225rem;
+
+              & > button {
+                background: inherit;
+                border: 0;
+                width: 100%;
+                text-align: start;
+                cursor: pointer;
+
+                transition: background-color 0.3s ease;
+              }
+            }
+          }
+
+        }
+
+      }
+
+      .email-asterisk {
+        border-bottom: 1px solid #999;
+        height: 100%;
+        font-size: 0.925rem;
       }
 
     }
+
     &.password {
       height: 9.125rem;
+
       & > label {
         margin-bottom: 0.725rem;
       }
+
       & > input {
         margin-bottom: 1.25rem;
+
         &::placeholder {
           font-size: 0.945rem;
         }

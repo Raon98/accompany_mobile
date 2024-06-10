@@ -14,6 +14,7 @@ export interface SignState {
     passwordConfirm: FieldState;
     phone: FieldState;
     email: FieldState;
+    emailAddress: FieldState;
     gender: FieldState;
     private: FieldState;
 }
@@ -57,6 +58,12 @@ export const signStore = atom<SignState>({
             success: false,
             fail: false
         },
+        emailAddress: {
+            state: false,
+            focus: false,
+            success: false,
+            fail: false
+        },
         gender: {
             state: false,
             focus: false,
@@ -71,3 +78,8 @@ export const signStore = atom<SignState>({
         }
     }
 });
+
+export const emailSelectBox = atom({
+    key : "emailSelectBox",
+    default : false
+})
