@@ -43,7 +43,7 @@ const ASU0101P01 = () => {
   return (
     <>
       <header>
-        <button className="header-prev__btn"></button>
+        <button className="header-prev__btn" onClick={()=> navigate('/ALI0101P01')}/>
         <div className="header__title">회원가입</div>
       </header>
       <div className="sign">
@@ -89,10 +89,7 @@ const ASU0101P01 = () => {
                       </li>
                   ))}
                 </ul>
-
               </div>
-
-
             </div>
           </div>
 

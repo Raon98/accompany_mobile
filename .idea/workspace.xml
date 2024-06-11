@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="이메일 주소 입력 폼추가">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="이메일 주소 입력 폼 map으로 변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_sign.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_sign.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_login.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +106,7 @@
     "project.structure.proportion": "0.15625",
     "project.structure.side.proportion": "0.2410197",
     "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "9a59f267df7b686029b9a7935569a952",
+    "spring.configuration.checksum": "461824838e3acc67aef1e47df69b78bf",
     "ts.external.directory.path": "C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\_frontend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -333,14 +333,8 @@
       <workItem from="1717575917355" duration="1836000" />
       <workItem from="1717577870821" duration="148000" />
       <workItem from="1717719580520" duration="15643000" />
-      <workItem from="1717992138352" duration="18222000" />
-    </task>
-    <task id="LOCAL-00016" summary="톰캣 버전 업그레이드 대응 99=&gt;100">
-      <created>1715675290788</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1715675290789</updated>
+      <workItem from="1717992138352" duration="18543000" />
+      <workItem from="1718064351974" duration="1871000" />
     </task>
     <task id="LOCAL-00017" summary="구글 visionkey">
       <created>1715676160484</created>
@@ -678,7 +672,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718008480318</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="이메일 주소 입력 폼 map으로 변경">
+      <created>1718011266990</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1718011266990</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,7 +708,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="백엔드 도커파일 빌드 mac / window 분리" />
     <MESSAGE value="react_query 추가" />
     <MESSAGE value="Zustand 라이브러리 추가" />
     <MESSAGE value="react-query에 맞게 api 수정" />
@@ -732,6 +732,7 @@
     <MESSAGE value="회원가입 폼작업중" />
     <MESSAGE value="회원가입폼 상태관리 로직 추가" />
     <MESSAGE value="이메일 주소 입력 폼추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="이메일 주소 입력 폼추가" />
+    <MESSAGE value="이메일 주소 입력 폼 map으로 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="이메일 주소 입력 폼 map으로 변경" />
   </component>
 </project>
