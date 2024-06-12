@@ -40,8 +40,7 @@
   &__block {
     @include mixins.flex_mixin(space-between,center,column);
     width: 100%;
-    height: 4.735rem;
-    margin-top: 1.425rem;
+    margin-top: 2.125rem;
 
     label {
       @include mixins.flex_mixin(flex-start);
@@ -77,17 +76,22 @@
       display: flex;
       align-items: center;
       width: 100%;
+      height: 100%;
 
       .emailAddress {
         position: relative;
         width: 100%;
+        height: 100%;
 
+        input {
+          padding-left: 10px;
+        }
         &__option {
           display: inline-block;
-          width: 0.725rem;
+          width: 0.825rem;
           height: 0.825rem;
           right: 10px;
-          top: 25%;
+          top: 40%;
           background-image: url("../../images/arrow_bottom.svg");
           background-position: center center;
           background-size: 1.5rem auto;
@@ -155,12 +159,14 @@
         border-bottom: 1px solid #999;
         height: 100%;
         font-size: 0.925rem;
+        display: flex;
+        align-items: center;
       }
 
     }
 
     &.password {
-      height: 9.125rem;
+      height: 11.125rem;
 
       & > label {
         margin-bottom: 0.725rem;
@@ -174,6 +180,8 @@
         }
       }
     }
-
+    &.uid {
+      margin-top: 1.325rem;
+    }
   }
 }

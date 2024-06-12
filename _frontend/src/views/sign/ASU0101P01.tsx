@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, {useRef, useState} from "react";
+import {useNavigate} from "react-router-dom";
 import useSign from "state/useSign";
+import {FieldState} from "store/signStore";
 
 /******************************
  * @회원가입 (ACCOMPANY Sign Up)
@@ -8,36 +9,48 @@ import useSign from "state/useSign";
  * @작성자:김성철
  ********************************/
 
+interface SignData {
+  uid: { title: string; value: string };
+  email: { title: string; value: string };
+  emailAddress: { title: string; value: string };
+  name: { title: string; value: string };
+  password: { title: string; value: string };
+  passwordConfirm: { title: string; value: string };
+}
+
 const ASU0101P01 = () => {
   const { signState, onState, onFocusReset,onBox,openBox } = useSign();
   const navigate = useNavigate();
   const optionList = ['google.com','naver.com' ,'kakao.com', 'nate.com'];
-
-  const [signData, setSignData] = useState({
-    uid: "",
-    email: "",
-    name: "",
-    password: "",
-    passwordConfirm: "",
-    emailAddress: ""
+  const [signData, setSignData] = useState<SignData>({
+    uid: {title:'아이디를',value:''},
+    email: {title:'이메일을',value:''},
+    emailAddress: {title:'이메일을',value:''},
+    name: {title:'이름을',value:''},
+    password: {title:'비밀번호를',value:''},
+    passwordConfirm: {title:'비밀번호 확인을',value:''},
   });
-
+  const title = useRef(signData.uid.title)
   const func = {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
       const {
         target: {name, value},
       } = e;
-      setSignData({
-        ...signData,
-        [name]: value,
-      });
+      setSignData(prev => ({
+        ...prev,
+        [name]: {...prev[name as keyof SignData], value:value},
+      }));
     },
     selOption : (domain :string) => {
       openBox()
-      setSignData({
-        ...signData,
-        emailAddress : domain,
-      });
+      setSignData(prev => ({
+        ...prev,
+        emailAddress : {...prev["emailAddress"], value:domain},
+      }));
+    },
+    onFocus: (name: keyof SignData,option: keyof FieldState) => {
+      title.current =signData[name].title;
+      onState(name, option);
     }
   };
   return (
@@ -47,7 +60,7 @@ const ASU0101P01 = () => {
         <div className="header__title">회원가입</div>
       </header>
       <div className="sign">
-        <div className="sign__title">이름을 입력해주세요.</div>
+        <div className="sign__title">{title.current} 입력해주세요.</div>
         <div className="sign-content">
           <div className="sign__block">
             <label htmlFor="email">이메일 </label>
@@ -59,9 +72,9 @@ const ASU0101P01 = () => {
                   title="이메일"
                   className={signState('email', 'focus') ? "focused" : ""}
                   placeholder="이메일 입력"
-                  value={signData.email}
+                  value={signData.email.value}
                   onChange={func.onChange}
-                  onFocus={() => onState("email", "focus")}
+                  onFocus={() => func.onFocus("email", "focus")}
                   onBlur={onFocusReset}
                   required
               />
@@ -74,9 +87,9 @@ const ASU0101P01 = () => {
                     title="이메일주소"
                     className={signState('emailAddress', 'focus') || onBox? "focused" : ""}
                     placeholder="주소 입력"
-                    value={signData.emailAddress}
+                    value={signData.emailAddress.value}
                     onChange={func.onChange}
-                    onFocus={() => onState("emailAddress", "focus")}
+                    onFocus={() => func.onFocus("emailAddress", "focus")}
                     onBlur={onFocusReset}
                     required
                 />
@@ -102,9 +115,9 @@ const ASU0101P01 = () => {
                 title="이름"
                 className={signState('name', 'focus') ? "focused" : ""}
                 placeholder="이름 입력"
-              value={signData.name}
+              value={signData.name.value}
               onChange={func.onChange}
-              onFocus={() => onState("name", "focus")}
+              onFocus={() => func.onFocus("name", "focus")}
               onBlur={onFocusReset}
               required
             />
@@ -118,9 +131,9 @@ const ASU0101P01 = () => {
                   title="비밀번호"
                   className={signState('password','focus') ? "focused" : ""}
                   placeholder="비밀번호 입력 (문자, 숫자, 특수문자 포함 8~20자)"
-                  value={signData.password}
+                  value={signData.password.value}
                   onChange={func.onChange}
-                  onFocus={() => onState("password", "focus")}
+                  onFocus={() => func.onFocus("password", "focus")}
                   onBlur={onFocusReset}
                   required
               />
@@ -130,16 +143,16 @@ const ASU0101P01 = () => {
                   id="passwordConfirm"
                   name="passwordConfirm"
                   title="비밀번호 확인"
-                  className={[signState('passwordConfirm','focus') ? "focused" : ""].join(" ")}
+                  className={[signState('password','focus1') ? "focused" : ""].join(" ")}
                   placeholder="비밀번호 재입력"
-                  value={signData.passwordConfirm}
+                  value={signData.passwordConfirm.value}
                   onChange={func.onChange}
-                  onFocus={() => onState("passwordConfirm", "focus")}
+                  onFocus={() => func.onFocus("password", "focus1")}
                   onBlur={onFocusReset}
                   required
               />
           </div>
-          <div className="sign__block">
+          <div className="sign__block uid">
             <label htmlFor="uid">아이디 </label>
             <input
               type="text"
@@ -148,9 +161,9 @@ const ASU0101P01 = () => {
               title="아이디"
               className={signState('uid','focus') ? "focused" : ""}
               placeholder="아이디 입력 (6자~10자)"
-              value={signData.uid}
+              value={signData.uid.value}
               onChange={func.onChange}
-              onFocus={() => onState("uid", "focus")}
+              onFocus={() => func.onFocus("uid", "focus")}
               onBlur={onFocusReset}
               required
             />

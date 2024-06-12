@@ -9,9 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="이메일 주소 입력 폼 map으로 변경">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="회원가입 뒤로가기 버튼">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_login.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_sign.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_sign.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/state/useSign.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/state/useSign.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/store/signStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/store/signStore.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,29 +90,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Rebasing main",
-    "last_opened_file_path": "C:/Users/LG/Desktop/portfoilo/accompany_mobile/_frontend/src/assets/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15625",
-    "project.structure.side.proportion": "0.2410197",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "461824838e3acc67aef1e47df69b78bf",
-    "ts.external.directory.path": "C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\_frontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Rebasing main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/LG/Desktop/portfoilo/accompany_mobile/_frontend/src/assets/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15625&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2410197&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;461824838e3acc67aef1e47df69b78bf&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\LG\\Desktop\\portfoilo\\accompany_mobile\\_frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="acpy.api.config" />
@@ -334,14 +336,8 @@
       <workItem from="1717577870821" duration="148000" />
       <workItem from="1717719580520" duration="15643000" />
       <workItem from="1717992138352" duration="18543000" />
-      <workItem from="1718064351974" duration="1871000" />
-    </task>
-    <task id="LOCAL-00017" summary="구글 visionkey">
-      <created>1715676160484</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1715676160485</updated>
+      <workItem from="1718064351974" duration="3462000" />
+      <workItem from="1718150792235" duration="5932000" />
     </task>
     <task id="LOCAL-00018" summary="header scss 수정">
       <created>1715676301400</created>
@@ -679,7 +675,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718011266990</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="회원가입 뒤로가기 버튼">
+      <created>1718071213793</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1718071213794</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -708,7 +711,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="react_query 추가" />
     <MESSAGE value="Zustand 라이브러리 추가" />
     <MESSAGE value="react-query에 맞게 api 수정" />
     <MESSAGE value=" react-query api Test" />
@@ -733,6 +735,7 @@
     <MESSAGE value="회원가입폼 상태관리 로직 추가" />
     <MESSAGE value="이메일 주소 입력 폼추가" />
     <MESSAGE value="이메일 주소 입력 폼 map으로 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="이메일 주소 입력 폼 map으로 변경" />
+    <MESSAGE value="회원가입 뒤로가기 버튼" />
+    <option name="LAST_COMMIT_MESSAGE" value="회원가입 뒤로가기 버튼" />
   </component>
 </project>

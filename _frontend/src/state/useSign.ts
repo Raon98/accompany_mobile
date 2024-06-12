@@ -12,9 +12,10 @@ const useSign = (): UseSign => {
     const [signList, setSignState] = useRecoilState(signStore);
     const [onBox , setSelectBox] = useRecoilState(emailSelectBox);
 
-    const signState = (name : keyof SignState,option: keyof FieldState) => {
-        return signList[name][option];
-    }
+    const signState = (name: keyof SignState, option: string): boolean => {
+        return signList[name]?.[option as keyof FieldState] as boolean ?? false;
+    };
+
     const onState = (name: keyof SignState ,option: keyof FieldState) => {
         if(name === 'emailAddress'){
             setSelectBox(false);
@@ -33,8 +34,12 @@ const useSign = (): UseSign => {
             for (const key in prev) {
                 if (prev.hasOwnProperty(key)) {
                     resetState[key as keyof SignState] = {
-                        ...prev[key as keyof SignState],
+                        state: false,
                         focus: false,
+                        focus1: false,
+                        focus2: false,
+                        success: false,
+                        fail: false,
                     };
                 }
             }
