@@ -45,7 +45,11 @@
   }
 }
 
-
+.bdr__btn {
+  @extend .button;  
+  @include bdr__btn(colors.$theme-500);
+  width: 48%;
+}
 .login__btn {
   @extend .button;
   width: 80%;
