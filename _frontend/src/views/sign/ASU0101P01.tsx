@@ -1,7 +1,7 @@
 import React, {useRef, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import useSign from "state/useSign";
-import {FieldState} from "store/signStore";
+import {FieldState, SignState} from "store/signStore";
 
 /******************************
  * @회원가입 (ACCOMPANY Sign Up)
@@ -10,13 +10,7 @@ import {FieldState} from "store/signStore";
  ********************************/
 
 interface SignData {
-  uid: { title: string; value: string ,success : boolean};
-  email: { title: string; value: string ,success : boolean};
-  emailAddress: { title: string; value: string ,success : boolean};
-  name: { title: string; value: string ,success : boolean};
-  password: { title: string; value: string ,success : boolean};
-  passwordConfirm: { title: string; value: string ,success : boolean};
-  phone: { title: string; value: string ,success : boolean};
+  [key:string] : { title: string; value: string; success: boolean }
 }
 
 const ASU0101P01 = () => {
@@ -31,6 +25,9 @@ const ASU0101P01 = () => {
     password: {title:'비밀번호를',value:'',success :false},
     passwordConfirm: {title:'비밀번호 확인을',value:'',success :false},
     phone: {title:'전화번호를',value:'',success :false},
+    birthYy: {title:'생년월일을',value:'',success :false},
+    birthMm: {title:'생년월일을',value:'',success :false},
+    birthDd: {title:'생년월일을',value:'',success :false}
   });
   const title = useRef(signData.uid.title)
   const func = {
@@ -50,14 +47,31 @@ const ASU0101P01 = () => {
         emailAddress : {...prev["emailAddress"], value:domain},
       }));
     },
-    onFocus: (name: keyof SignData,option: keyof FieldState) => {
+    onFocus: (name: keyof SignState,option: keyof FieldState) => {
       title.current =signData[name].title;
       onState(name, option);
     },
-    onNext: (e: React.KeyboardEvent<HTMLInputElement>,name: keyof SignData,option: keyof FieldState) =>{
+    onNext: (e: React.KeyboardEvent<HTMLInputElement>,name: keyof SignState,option: keyof FieldState) =>{
+      const allowedKeys = ['Backspace', 'Enter'];
+      if (!allowedKeys.includes(e.key) && isNaN(Number(e.key))) {
+        e.preventDefault(); // 입력을 막음
+      }
       if(e.key ==='Enter'){
-          onState(name,option)
+        if(name === 'birthYy'){
+
+        }else if(name ==="birthMm"){
+
+        }else{
+          onState(name, option);
         }
+      }
+    },
+    onKeyDown : (e:React.KeyboardEvent,length:number) => {
+      const target = e.target as HTMLInputElement;
+
+      if (target.value.length >= length && e.key !== 'Backspace') {
+        e.preventDefault();
+      }
     }
   };
   return (
@@ -69,6 +83,59 @@ const ASU0101P01 = () => {
       <div className="sign">
         <div className="sign__title">{title.current} 입력해주세요.</div>
         <div className="sign-content">
+          <div className="sign__block birth">
+            <label htmlFor="birth">생년월일 </label>
+            <div className="birth__block">
+            <input
+                type="number"
+                id="birthYy"
+                name="birthYy"
+                title="생년월일"
+                className={signState('birthYy', 'focus') ? "focused" : ""}
+                placeholder="연도"
+                value={signData.birthYy.value}
+                onChange={func.onChange}
+                onFocus={() => func.onFocus("birthYy", "focus")}
+                onBlur={()=> onReset('focus')}
+                min="1900"
+                max="2100"
+                onKeyDown={(e) => func.onKeyDown(e,4)}
+                required
+            />
+              <input
+                  type="number"
+                  id="birthMm"
+                  name="birthMm"
+                  title="생년월일"
+                  className={signState('birthMm', 'focus') ? "focused" : ""}
+                  placeholder="월"
+                  value={signData.birthMm.value}
+                  onChange={func.onChange}
+                  onFocus={() => func.onFocus("birthMm", "focus")}
+                  onBlur={()=> onReset('focus')}
+                  min="1"
+                  max="12"
+                  onKeyDown={(e) => func.onKeyDown(e,2)}
+                  required
+              />
+              <input
+                  type="number"
+                  id="birthDd"
+                  name="birthDd"
+                  title="생년월일"
+                  className={signState('birthDd', 'focus') ? "focused" : ""}
+                  placeholder="일"
+                  value={signData.birthDd.value}
+                  onChange={func.onChange}
+                  onFocus={() => func.onFocus("birthDd", "focus")}
+                  onBlur={()=> onReset('focus')}
+                  min="1"
+                  max="31"
+                  onKeyDown={(e) => func.onKeyDown(e,2)}
+                  required
+              />
+            </div>
+          </div>
           <div className="sign__block phone">
             <label htmlFor="name">전화번호 </label>
             <input
@@ -86,9 +153,9 @@ const ASU0101P01 = () => {
                 required
             />
           </div>
-          <div className="sign__block">
+          <div className="sign__block email">
             <label htmlFor="email">이메일 </label>
-            <div className="email__block email">
+            <div className="email__block">
               <input
                   type="text"
                   id="email"

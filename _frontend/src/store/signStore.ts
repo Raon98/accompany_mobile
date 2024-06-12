@@ -14,65 +14,37 @@ export interface SignState {
     email: FieldState;
     emailAddress: FieldState;
     phone: FieldState;
-    birth : FieldState;
+    birthYy : FieldState;
+    birthMm : FieldState;
+    birthDd : FieldState;
     gender: FieldState;
     private: FieldState;
 }
 
+const defaultFieldState = {
+    state: false,
+    focus: false,
+    success: false
+};
+
+const defaultSignState = {
+    uid: defaultFieldState,
+    password: defaultFieldState,
+    passwordConfirm: defaultFieldState,
+    name: defaultFieldState,
+    email: defaultFieldState,
+    emailAddress: defaultFieldState,
+    phone: defaultFieldState,
+    birthYy: defaultFieldState,
+    birthMm: defaultFieldState,
+    birthDd: defaultFieldState,
+    gender: defaultFieldState,
+    private: defaultFieldState
+};
+
 export const signStore = atom<SignState>({
     key: "signStore",
-    default: {
-        uid: {
-            state: false,
-            focus: false,
-            success: false
-        },
-        password: {
-            state: false,
-            focus: false,
-            success: false
-        },
-        passwordConfirm: {
-            state: false,
-            focus: false,
-            success: false
-        },
-        name: {
-            state: true,
-            focus: false,
-            success: false
-        },
-        email: {
-            state: false,
-            focus: false,
-            success: false
-        },
-        emailAddress: {
-            state: false,
-            focus: false,
-            success: false
-        },
-        phone: {
-            state: false,
-            focus: false,
-            success: false
-        },
-        birth: {
-            state: false,
-            focus: false,
-            success: false
-        },
-        gender: {
-            state: false,
-            focus: false,
-            success: false
-        },
-        private: {
-            state: false,
-            focus: false,
-            success: false
-        }
-    }
+    default: defaultSignState
 });
 
 export const emailSelectBox = atom({

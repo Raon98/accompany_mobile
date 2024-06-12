@@ -88,7 +88,18 @@
         border-bottom: 2px solid colors.$theme-light-750;
       }
     }
+    .birth__block {
+      @include mixins.flex_mixin(center,center);
+      width: 100%;
+      height: 100%;
 
+      input {
+        margin: 0 5px;
+        text-align: center;
+        height: 2.75rem;
+        font-size: 1.125rem;
+      }
+    }
     .email__block {
       display: flex;
       align-items: center;
