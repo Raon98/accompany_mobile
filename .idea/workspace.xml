@@ -9,11 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="회원가입 뒤로가기 버튼">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="회원가입 화면 리모델링">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/layout/_common.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_sign.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_sign.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/components/layout/GoogleVisionCanves.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/components/layout/GoogleVisionCanves.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/state/useSign.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/state/useSign.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/store/signStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/store/signStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/views/login/ALI0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/login/ALI0101P01.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -337,14 +340,7 @@
       <workItem from="1717719580520" duration="15643000" />
       <workItem from="1717992138352" duration="18543000" />
       <workItem from="1718064351974" duration="3462000" />
-      <workItem from="1718150792235" duration="5932000" />
-    </task>
-    <task id="LOCAL-00018" summary="header scss 수정">
-      <created>1715676301400</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1715676301400</updated>
+      <workItem from="1718150792235" duration="11102000" />
     </task>
     <task id="LOCAL-00019" summary="coreFilter properties 적용 테스트 임시업로드">
       <created>1715676795107</created>
@@ -682,7 +678,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718071213794</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="회원가입 화면 리모델링">
+      <created>1718173871962</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1718173871963</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,7 +714,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Zustand 라이브러리 추가" />
     <MESSAGE value="react-query에 맞게 api 수정" />
     <MESSAGE value=" react-query api Test" />
     <MESSAGE value="package vision update" />
@@ -736,6 +738,7 @@
     <MESSAGE value="이메일 주소 입력 폼추가" />
     <MESSAGE value="이메일 주소 입력 폼 map으로 변경" />
     <MESSAGE value="회원가입 뒤로가기 버튼" />
-    <option name="LAST_COMMIT_MESSAGE" value="회원가입 뒤로가기 버튼" />
+    <MESSAGE value="회원가입 화면 리모델링" />
+    <option name="LAST_COMMIT_MESSAGE" value="회원가입 화면 리모델링" />
   </component>
 </project>

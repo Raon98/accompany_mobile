@@ -83,9 +83,9 @@ const GoogleVisionCanves = () => {
         ref={canvasRef}
         canvasWidth={1280}
         canvasHeight={720}
-        brushRadius={15} // 선의 굵기 설정
-        lazyRadius={2} // 마우스를 따라다니는 선의 부드러운 정도 설정
-        hideGrid={false} // 그리드 숨기기
+        brushRadius={15}
+        lazyRadius={2}
+        hideGrid={false}
       />
       <button onClick={func.handleCanvasDraw}>Recognize Text</button>
       <button onClick={func.clearCanvas}>Clear</button>

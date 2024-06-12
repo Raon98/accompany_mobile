@@ -4,7 +4,8 @@ import {emailSelectBox, FieldState, SignState, signStore} from "store/signStore"
 interface UseSign {
     signState : (name : keyof SignState, option :keyof FieldState) => boolean;
     onState : (name: keyof SignState ,option: keyof FieldState) => void;
-    onFocusReset : () => void;
+    onReset : (option: keyof FieldState) => void;
+    onAllReset : () => void;
     openBox : () => void;
     onBox: boolean;
 }
@@ -28,18 +29,30 @@ const useSign = (): UseSign => {
             },
         }));
     };
-    const onFocusReset = () => {
+    const onReset = (option: keyof FieldState) => {
+        setSignState((prev) => {
+            const resetState = {} as SignState;
+            for (const key in prev) {
+                if (prev.hasOwnProperty(key)) {
+                    resetState[key as keyof SignState] = {
+                        ...prev[key as keyof SignState],
+                        [option]: false,
+                    };
+                }
+            }
+            return resetState;
+        });
+    };
+
+    const onAllReset = () => {
         setSignState((prev) => {
             const resetState = {} as SignState;
             for (const key in prev) {
                 if (prev.hasOwnProperty(key)) {
                     resetState[key as keyof SignState] = {
                         state: false,
-                        focus: false,
-                        focus1: false,
-                        focus2: false,
                         success: false,
-                        fail: false,
+                        focus: false,
                     };
                 }
             }
@@ -52,7 +65,7 @@ const useSign = (): UseSign => {
     }
 
 
-    return { signState, onState, onFocusReset,openBox,onBox };
+    return { signState, onState, onReset ,onAllReset, openBox,onBox };
 };
 
 export default useSign;

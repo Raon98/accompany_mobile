@@ -10,25 +10,27 @@ import {FieldState} from "store/signStore";
  ********************************/
 
 interface SignData {
-  uid: { title: string; value: string };
-  email: { title: string; value: string };
-  emailAddress: { title: string; value: string };
-  name: { title: string; value: string };
-  password: { title: string; value: string };
-  passwordConfirm: { title: string; value: string };
+  uid: { title: string; value: string ,success : boolean};
+  email: { title: string; value: string ,success : boolean};
+  emailAddress: { title: string; value: string ,success : boolean};
+  name: { title: string; value: string ,success : boolean};
+  password: { title: string; value: string ,success : boolean};
+  passwordConfirm: { title: string; value: string ,success : boolean};
+  phone: { title: string; value: string ,success : boolean};
 }
 
 const ASU0101P01 = () => {
-  const { signState, onState, onFocusReset,onBox,openBox } = useSign();
+  const { signState, onState, onReset ,onBox,openBox } = useSign();
   const navigate = useNavigate();
   const optionList = ['google.com','naver.com' ,'kakao.com', 'nate.com'];
   const [signData, setSignData] = useState<SignData>({
-    uid: {title:'아이디를',value:''},
-    email: {title:'이메일을',value:''},
-    emailAddress: {title:'이메일을',value:''},
-    name: {title:'이름을',value:''},
-    password: {title:'비밀번호를',value:''},
-    passwordConfirm: {title:'비밀번호 확인을',value:''},
+    uid: {title:'아이디를',value:'',success :false},
+    email: {title:'이메일을',value:'',success :false},
+    emailAddress: {title:'이메일을',value:'',success :false},
+    name: {title:'이름을',value:'',success :false},
+    password: {title:'비밀번호를',value:'',success :false},
+    passwordConfirm: {title:'비밀번호 확인을',value:'',success :false},
+    phone: {title:'전화번호를',value:'',success :false},
   });
   const title = useRef(signData.uid.title)
   const func = {
@@ -51,6 +53,11 @@ const ASU0101P01 = () => {
     onFocus: (name: keyof SignData,option: keyof FieldState) => {
       title.current =signData[name].title;
       onState(name, option);
+    },
+    onNext: (e: React.KeyboardEvent<HTMLInputElement>,name: keyof SignData,option: keyof FieldState) =>{
+      if(e.key ==='Enter'){
+          onState(name,option)
+        }
     }
   };
   return (
@@ -62,9 +69,26 @@ const ASU0101P01 = () => {
       <div className="sign">
         <div className="sign__title">{title.current} 입력해주세요.</div>
         <div className="sign-content">
+          <div className="sign__block phone">
+            <label htmlFor="name">전화번호 </label>
+            <input
+                type="text"
+                id="phone"
+                name="phone"
+                title="전화번호"
+                className={signState('phone', 'focus') ? "focused" : ""}
+                placeholder="휴대폰번호 입력 ('-'제외 11자리입력)"
+                value={signData.phone.value}
+                onChange={func.onChange}
+                onFocus={() => func.onFocus("phone", "focus")}
+                onBlur={()=> onReset('focus')}
+                maxLength={11}
+                required
+            />
+          </div>
           <div className="sign__block">
             <label htmlFor="email">이메일 </label>
-            <div className="email__block">
+            <div className="email__block email">
               <input
                   type="text"
                   id="email"
@@ -75,7 +99,7 @@ const ASU0101P01 = () => {
                   value={signData.email.value}
                   onChange={func.onChange}
                   onFocus={() => func.onFocus("email", "focus")}
-                  onBlur={onFocusReset}
+                  onBlur={()=> onReset('focus')}
                   required
               />
               <div className="email-asterisk">@</div>
@@ -90,7 +114,7 @@ const ASU0101P01 = () => {
                     value={signData.emailAddress.value}
                     onChange={func.onChange}
                     onFocus={() => func.onFocus("emailAddress", "focus")}
-                    onBlur={onFocusReset}
+                    onBlur={()=> onReset('focus')}
                     required
                 />
                 <div className={`emailAddress__option ${onBox ? 'select' : ''}`} onClick={() => openBox()} />
@@ -106,7 +130,7 @@ const ASU0101P01 = () => {
             </div>
           </div>
 
-          <div className="sign__block">
+          <div className="sign__block name">
             <label htmlFor="name">이름 </label>
             <input
                 type="text"
@@ -118,39 +142,39 @@ const ASU0101P01 = () => {
               value={signData.name.value}
               onChange={func.onChange}
               onFocus={() => func.onFocus("name", "focus")}
-              onBlur={onFocusReset}
+              onBlur={()=> onReset('focus')}
               required
             />
           </div>
-          <div className="sign__block password">
-              <label htmlFor="password">비밀번호 </label>
-              <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  title="비밀번호"
-                  className={signState('password','focus') ? "focused" : ""}
-                  placeholder="비밀번호 입력 (문자, 숫자, 특수문자 포함 8~20자)"
-                  value={signData.password.value}
-                  onChange={func.onChange}
-                  onFocus={() => func.onFocus("password", "focus")}
-                  onBlur={onFocusReset}
-                  required
-              />
-              <label htmlFor="passwordConfirm">비밀번호 확인</label>
-              <input
-                  type="password"
-                  id="passwordConfirm"
-                  name="passwordConfirm"
-                  title="비밀번호 확인"
-                  className={[signState('password','focus1') ? "focused" : ""].join(" ")}
-                  placeholder="비밀번호 재입력"
-                  value={signData.passwordConfirm.value}
-                  onChange={func.onChange}
-                  onFocus={() => func.onFocus("password", "focus1")}
-                  onBlur={onFocusReset}
-                  required
-              />
+          <div className={`sign__block password ${signState("password","state") ? 'show' : 'hide'}`}>
+            <label htmlFor="password">비밀번호 </label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                title="비밀번호"
+                className={signState('password', 'focus') ? "focused" : ""}
+                placeholder="비밀번호 입력 (문자, 숫자, 특수문자 포함 8~20자)"
+                value={signData.password.value}
+                onChange={func.onChange}
+                onFocus={() => func.onFocus("password", "focus")}
+                onBlur={()=> onReset('focus')}
+                required
+            />
+            <label htmlFor="passwordConfirm">비밀번호 확인</label>
+            <input
+                type="password"
+                id="passwordConfirm"
+                name="passwordConfirm"
+                title="비밀번호 확인"
+                className={[signState('passwordConfirm', 'focus') ? "focused" : ""].join(" ")}
+                placeholder="비밀번호 재입력"
+                value={signData.passwordConfirm.value}
+                onChange={func.onChange}
+                onFocus={() => func.onFocus("passwordConfirm", "focus")}
+                onBlur={()=> onReset('focus')}
+                required
+            />
           </div>
           <div className="sign__block uid">
             <label htmlFor="uid">아이디 </label>
@@ -160,11 +184,14 @@ const ASU0101P01 = () => {
               name="uid"
               title="아이디"
               className={signState('uid','focus') ? "focused" : ""}
-              placeholder="아이디 입력 (6자~10자)"
+              placeholder="아이디 입력 (6자~13자)"
               value={signData.uid.value}
               onChange={func.onChange}
               onFocus={() => func.onFocus("uid", "focus")}
-              onBlur={onFocusReset}
+              onBlur={()=> onReset('focus')}
+              onKeyDown={(e) => func.onNext(e,"password","state")}
+              maxLength={13}
+              minLength={6}
               required
             />
           </div>

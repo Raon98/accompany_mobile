@@ -36,11 +36,28 @@
   &__content {
     display: flex;
     flex-direction: column;
+    transition: transform 0.5s ease;
+
+
   }
   &__block {
     @include mixins.flex_mixin(space-between,center,column);
     width: 100%;
     margin-top: 2.125rem;
+    transition: opacity 0.3s ease, height 0.3s ease;
+
+    &.hide {
+      opacity: 0 ;
+      height: 0 !important;
+      margin: 0;
+      & > * {
+        display: none;
+      }
+    }
+    &.show {
+      opacity: 1;
+      height: auto;
+    }
 
     label {
       @include mixins.flex_mixin(flex-start);
@@ -156,7 +173,6 @@
       }
 
       .email-asterisk {
-        border-bottom: 1px solid #999;
         height: 100%;
         font-size: 0.925rem;
         display: flex;

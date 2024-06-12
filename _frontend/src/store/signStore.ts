@@ -3,20 +3,18 @@ import { atom } from "recoil";
 export interface FieldState {
     state: boolean;
     focus: boolean;
-    focus1?: boolean;
-    focus2?: boolean;
     success: boolean;
-    fail: boolean;
 }
 
 export interface SignState {
     name: FieldState;
     uid: FieldState;
     password: FieldState;
-    passwordConfirm?: FieldState ;
-    phone: FieldState;
+    passwordConfirm: FieldState;
     email: FieldState;
     emailAddress: FieldState;
+    phone: FieldState;
+    birth : FieldState;
     gender: FieldState;
     private: FieldState;
 }
@@ -24,54 +22,55 @@ export interface SignState {
 export const signStore = atom<SignState>({
     key: "signStore",
     default: {
-        name: {
-            state: true,
-            focus: false,
-            success: false,
-            fail: false
-        },
         uid: {
             state: false,
             focus: false,
-            success: false,
-            fail: false
+            success: false
         },
         password: {
             state: false,
             focus: false,
-            focus1: false,
-            success: false,
-            fail: false
+            success: false
         },
-        phone: {
+        passwordConfirm: {
             state: false,
             focus: false,
-            success: false,
-            fail: false
+            success: false
+        },
+        name: {
+            state: true,
+            focus: false,
+            success: false
         },
         email: {
             state: false,
             focus: false,
-            success: false,
-            fail: false
+            success: false
         },
         emailAddress: {
             state: false,
             focus: false,
-            success: false,
-            fail: false
+            success: false
+        },
+        phone: {
+            state: false,
+            focus: false,
+            success: false
+        },
+        birth: {
+            state: false,
+            focus: false,
+            success: false
         },
         gender: {
             state: false,
             focus: false,
-            success: false,
-            fail: false
+            success: false
         },
         private: {
             state: false,
             focus: false,
-            success: false,
-            fail: false
+            success: false
         }
     }
 });

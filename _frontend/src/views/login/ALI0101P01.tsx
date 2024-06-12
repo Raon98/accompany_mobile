@@ -1,5 +1,5 @@
 import { useMutation } from "@tanstack/react-query";
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,6 +9,7 @@ import asyncApi from "plugins/asyncApi";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Modals } from "components/utils/Modals";
+import useSign from "state/useSign";
 
 /******************************
  * @로그인 (ACCOMPANY  Login)
@@ -28,7 +29,7 @@ const ALI0101P01 = () => {
   const [uid, setUid] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [isActive, setIsActive] = useState(false);
-
+  const { onAllReset } = useSign();
   const { $api } = asyncApi();
 
   const sessionMutation = useMutation({
@@ -69,6 +70,10 @@ const ALI0101P01 = () => {
       setIsActive(true);
     },
   };
+
+  useEffect(() => {
+    onAllReset()
+  }, []);
 
   return (
     <>
