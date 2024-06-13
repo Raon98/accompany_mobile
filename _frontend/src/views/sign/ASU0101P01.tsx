@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import useSign from "state/useSign";
 import { FieldState, SignState } from "store/signStore";
@@ -14,7 +14,7 @@ interface SignData {
 }
 
 const ASU0101P01 = () => {
-  const { signState, onState, onReset, onBox, openBox } = useSign();
+  const { onSign,signState, onState, onReset, onBox, openBox } = useSign();
   const navigate = useNavigate();
   const optionList = ["google.com", "naver.com", "kakao.com", "nate.com"];
   const [signData, setSignData] = useState<SignData>({
@@ -28,7 +28,7 @@ const ASU0101P01 = () => {
     birthYy: { title: "생년월일을", value: "", success: false },
     birthMm: { title: "생년월일을", value: "", success: false },
     birthDd: { title: "생년월일을", value: "", success: false },
-    gender: { title: "성별을", value: "", success: false },
+    gender: { title: "성별을", value: "m", success: false },
   });
   const title = useRef(signData.uid.title);
   const func = {
@@ -53,6 +53,7 @@ const ASU0101P01 = () => {
       }));
     },
     onFocus: (name: keyof SignState, option: keyof FieldState) => {
+      title.current = signData[name].title;
       onState(name, option);
     },
     onNext: (
@@ -63,6 +64,7 @@ const ASU0101P01 = () => {
     ) => {
       const allowedKeys = ["Backspace", "Enter"];
       const target = e.target as HTMLInputElement;
+      const el = document.getElementById(name);
 
       if (
         length &&
@@ -73,19 +75,16 @@ const ASU0101P01 = () => {
       }
 
       if (e.key === "Enter") {
-        if (name === "birthYy") {
-          const el = document.getElementById("birthMm");
-          el?.focus();
-        } else if (name === "birthMm") {
-          const el = document.getElementById("birthDd");
-          el?.focus();
-        } else {
-          title.current = signData[name].title;
-          if (name === "gender") {
-            onReset("focus");
-          }
-          onState(name, option);
-        }
+        onReset("focus");
+
+        onState(name, option, () => {
+
+          setTimeout(()=> {
+            title.current = signData[name].title;
+            el?.focus();
+          },50)
+
+        });
       }
     },
     onClick: (type: string) => {
@@ -98,6 +97,11 @@ const ASU0101P01 = () => {
       }
     },
   };
+  useEffect(()=>{
+    if(onSign){
+
+    }
+  },[onSign])
   return (
     <>
       <header>
@@ -110,7 +114,9 @@ const ASU0101P01 = () => {
       <div className="sign">
         <div className="sign__title">{title.current} 입력해주세요.</div>
         <div className="sign-content">
-          <div className="sign__block phone">
+          <div className={`sign__block gender ${
+              signState("gender", "state") ? "show" : "hide"
+          }`}>
             <label htmlFor="gender">성별 </label>
             <div className="gender__block">
               <button
@@ -131,7 +137,9 @@ const ASU0101P01 = () => {
               </button>
             </div>
           </div>
-          <div className="sign__block birth">
+          <div className={`sign__block birth ${
+              signState("birthYy", "state") ? "show" : "hide"
+          }`}>
             <label htmlFor="birth">생년월일 </label>
             <div className="birth__block">
               <input
@@ -147,7 +155,7 @@ const ASU0101P01 = () => {
                 onBlur={() => onReset("focus")}
                 min="1900"
                 max="2100"
-                onKeyDown={(e) => func.onNext(e, "birthYy", "state", 4)}
+                onKeyDown={(e) => func.onNext(e, "birthMm", "state", 4)}
                 required
               />
               <input
@@ -163,7 +171,7 @@ const ASU0101P01 = () => {
                 onBlur={() => onReset("focus")}
                 min="1"
                 max="12"
-                onKeyDown={(e) => func.onNext(e, "birthMm", "state", 2)}
+                onKeyDown={(e) => func.onNext(e, "birthDd", "state", 2)}
                 required
               />
               <input
@@ -184,7 +192,9 @@ const ASU0101P01 = () => {
               />
             </div>
           </div>
-          <div className="sign__block phone">
+          <div className={`sign__block phone ${
+              signState("phone", "state") ? "show" : "hide"
+          }`}>
             <label htmlFor="phone">전화번호 </label>
             <input
               type="text"
@@ -192,16 +202,19 @@ const ASU0101P01 = () => {
               name="phone"
               title="전화번호"
               className={signState("phone", "focus") ? "focused" : ""}
-              placeholder="휴대폰번호 입력 ('-'제외 11자리입력)"
+              placeholder="휴대폰번호 입력 ('-'제외입력)"
               value={signData.phone.value}
               onChange={func.onChange}
               onFocus={() => func.onFocus("phone", "focus")}
               onBlur={() => onReset("focus")}
+              onKeyDown={(e) => func.onNext(e, "birthYy", "state")}
               maxLength={11}
               required
             />
           </div>
-          <div className="sign__block email">
+          <div className={`sign__block email ${
+              signState("email", "state") ? "show" : "hide"
+          }`}>
             <label htmlFor="email">이메일 </label>
             <div className="email__block">
               <input
@@ -232,6 +245,7 @@ const ASU0101P01 = () => {
                   onChange={func.onChange}
                   onFocus={() => func.onFocus("emailAddress", "focus")}
                   onBlur={() => onReset("focus")}
+                  onKeyDown={(e) => func.onNext(e, "emailAddress", "state")}
                   required
                 />
                 <div
@@ -260,7 +274,9 @@ const ASU0101P01 = () => {
             </div>
           </div>
 
-          <div className="sign__block name">
+          <div className={`sign__block name ${
+              signState("name", "state") ? "show" : "hide"
+          }`}>
             <label htmlFor="name">이름 </label>
             <input
               type="text"
@@ -273,13 +289,14 @@ const ASU0101P01 = () => {
               onChange={func.onChange}
               onFocus={() => func.onFocus("name", "focus")}
               onBlur={() => onReset("focus")}
+              onKeyDown={(e) => func.onNext(e, "phone", "state")}
               required
             />
           </div>
           <div
-            className={`sign__block password ${
-              signState("password", "state") ? "show" : "hide"
-            }`}
+            className={`sign__block password 
+            ${signState("password", "state") ? "show" : "hide" }
+            `}
           >
             <label htmlFor="password">비밀번호 </label>
             <input
@@ -293,6 +310,7 @@ const ASU0101P01 = () => {
               onChange={func.onChange}
               onFocus={() => func.onFocus("password", "focus")}
               onBlur={() => onReset("focus")}
+              onKeyDown={(e) => func.onNext(e, "passwordConfirm", "state")}
               required
             />
             <label htmlFor="passwordConfirm">비밀번호 확인</label>
@@ -309,6 +327,7 @@ const ASU0101P01 = () => {
               onChange={func.onChange}
               onFocus={() => func.onFocus("passwordConfirm", "focus")}
               onBlur={() => onReset("focus")}
+              onKeyDown={(e) => func.onNext(e, "name", "state")}
               required
             />
           </div>

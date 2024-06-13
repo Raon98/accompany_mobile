@@ -1,9 +1,11 @@
 import {useRecoilState} from "recoil";
 import {emailSelectBox, FieldState, SignState, signStore} from "store/signStore";
+import {useState} from "react";
 
 interface UseSign {
+    onSign : boolean;
     signState : (name : keyof SignState, option :keyof FieldState) => boolean;
-    onState : (name: keyof SignState ,option: keyof FieldState) => void;
+    onState : (name: keyof SignState ,option: keyof FieldState, callback?: () => void) => void;
     onReset : (option: keyof FieldState) => void;
     onAllReset : () => void;
     openBox : () => void;
@@ -12,12 +14,14 @@ interface UseSign {
 const useSign = (): UseSign => {
     const [signList, setSignState] = useRecoilState(signStore);
     const [onBox , setSelectBox] = useRecoilState(emailSelectBox);
+    const [onSign ,setOnSign] = useState(false)
+
 
     const signState = (name: keyof SignState, option: string): boolean => {
         return signList[name]?.[option as keyof FieldState] as boolean ?? false;
     };
 
-    const onState = (name: keyof SignState ,option: keyof FieldState) => {
+    const onState = (name: keyof SignState ,option: keyof FieldState, callback?: () => void) => {
         if(name === 'emailAddress'){
             setSelectBox(false);
         }
@@ -28,6 +32,11 @@ const useSign = (): UseSign => {
                 [option] : true
             },
         }));
+
+        if(callback){
+            callback()
+        }
+
     };
     const onReset = (option: keyof FieldState) => {
         setSignState((prev) => {
@@ -65,7 +74,7 @@ const useSign = (): UseSign => {
     }
 
 
-    return { signState, onState, onReset ,onAllReset, openBox,onBox };
+    return { onSign,signState, onState, onReset ,onAllReset, openBox,onBox };
 };
 
 export default useSign;
