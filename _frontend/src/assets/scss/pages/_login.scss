@@ -89,11 +89,11 @@ fieldset {
       width: 100%;
       height: 37%;
       z-index: 2;
-      transition: height 0.3s;
+      transition: height 0.15s ease;
 
       &--active {
         height: 105%;
-        transition: height 0.3s;
+        transition: height 0.15s ease;
       }
     }
 
