@@ -3,7 +3,6 @@ import {emailSelectBox, FieldState, SignState, signStore} from "store/signStore"
 import {useState} from "react";
 
 interface UseSign {
-    onSign : boolean;
     signState : (name : keyof SignState, option :keyof FieldState) => boolean;
     onState : (name: keyof SignState ,option: keyof FieldState, callback?: () => void) => void;
     onReset : (option: keyof FieldState) => void;
@@ -14,7 +13,6 @@ interface UseSign {
 const useSign = (): UseSign => {
     const [signList, setSignState] = useRecoilState(signStore);
     const [onBox , setSelectBox] = useRecoilState(emailSelectBox);
-    const [onSign ,setOnSign] = useState(false)
 
 
     const signState = (name: keyof SignState, option: string): boolean => {
@@ -74,7 +72,7 @@ const useSign = (): UseSign => {
     }
 
 
-    return { onSign,signState, onState, onReset ,onAllReset, openBox,onBox };
+    return { signState, onState, onReset ,onAllReset, openBox,onBox };
 };
 
 export default useSign;

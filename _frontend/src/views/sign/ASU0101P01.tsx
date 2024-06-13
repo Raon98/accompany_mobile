@@ -14,7 +14,7 @@ interface SignData {
 }
 
 const ASU0101P01 = () => {
-  const { onSign,signState, onState, onReset, onBox, openBox } = useSign();
+  const { signState, onState, onReset, onBox, openBox } = useSign();
   const navigate = useNavigate();
   const optionList = ["google.com", "naver.com", "kakao.com", "nate.com"];
   const [signData, setSignData] = useState<SignData>({
@@ -97,11 +97,6 @@ const ASU0101P01 = () => {
       }
     },
   };
-  useEffect(()=>{
-    if(onSign){
-
-    }
-  },[onSign])
   return (
     <>
       <header>
@@ -197,7 +192,7 @@ const ASU0101P01 = () => {
           }`}>
             <label htmlFor="phone">전화번호 </label>
             <input
-              type="text"
+              type="number"
               id="phone"
               name="phone"
               title="전화번호"
@@ -207,8 +202,9 @@ const ASU0101P01 = () => {
               onChange={func.onChange}
               onFocus={() => func.onFocus("phone", "focus")}
               onBlur={() => onReset("focus")}
-              onKeyDown={(e) => func.onNext(e, "birthYy", "state")}
-              maxLength={11}
+              onKeyDown={(e) => func.onNext(e, "birthYy", "state",11)}
+              max={0}
+              min={99999999999}
               required
             />
           </div>
