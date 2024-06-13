@@ -1,7 +1,7 @@
-import React, {useEffect, useRef, useState} from "react";
-import { useNavigate } from "react-router-dom";
+import React, {useRef, useState} from "react";
+import {useNavigate} from "react-router-dom";
 import useSign from "state/useSign";
-import { FieldState, SignState } from "store/signStore";
+import {FieldState, SignState} from "store/signStore";
 
 /******************************
  * @회원가입 (ACCOMPANY Sign Up)
@@ -28,7 +28,7 @@ const ASU0101P01 = () => {
     birthYy: { title: "생년월일을", value: "", success: false },
     birthMm: { title: "생년월일을", value: "", success: false },
     birthDd: { title: "생년월일을", value: "", success: false },
-    gender: { title: "성별을", value: "m", success: false },
+    gender: { title: "성별을", value: "", success: false },
   });
   const title = useRef(signData.uid.title);
   const func = {
@@ -78,12 +78,15 @@ const ASU0101P01 = () => {
         onReset("focus");
 
         onState(name, option, () => {
-
           setTimeout(()=> {
             title.current = signData[name].title;
-            el?.focus();
+            if(name === 'gender'){
+              let el1 = document.getElementById("birthDd");
+              el1?.blur();
+            }else{
+              el?.focus();
+            }
           },50)
-
         });
       }
     },

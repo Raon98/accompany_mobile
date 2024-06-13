@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="회원가입 useSign 적용">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="feat.로그인화면 올라오는 트렌지션 속도변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" afterDir="false" />
     </list>
@@ -335,21 +335,7 @@
       <workItem from="1717992138352" duration="18543000" />
       <workItem from="1718064351974" duration="3462000" />
       <workItem from="1718150792235" duration="15556000" />
-      <workItem from="1718237680821" duration="7098000" />
-    </task>
-    <task id="LOCAL-00022" summary="프론트엔드 상단으로 파일위치 상단으로 변경">
-      <created>1716358345008</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1716358345008</updated>
-    </task>
-    <task id="LOCAL-00023" summary="공통 scss추가">
-      <created>1716358822272</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1716358822272</updated>
+      <workItem from="1718237680821" duration="8740000" />
     </task>
     <task id="LOCAL-00024" summary="visionkey 암호화 작업">
       <created>1716360397296</created>
@@ -680,7 +666,21 @@
       <option name="project" value="LOCAL" />
       <updated>1718251392798</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="불필요한 목록 제거">
+      <created>1718251844928</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1718251844928</updated>
+    </task>
+    <task id="LOCAL-00072" summary="feat.로그인화면 올라오는 트렌지션 속도변경">
+      <created>1718252934085</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1718252934085</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -709,8 +709,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="로그인 페이지 버튼 추가" />
-    <MESSAGE value="로그인 페이지 카카오 구글 아이콘 추가" />
     <MESSAGE value="슬라이더 이미지 작업" />
     <MESSAGE value="로그인 메인페이지 퍼블리싱" />
     <MESSAGE value="로그인 메인페이지 퍼블리싱 컬러 추가 및 버튼 색상 수정" />
@@ -734,6 +732,8 @@
     <MESSAGE value="회원가입 훅 추가 및 트렌젝션 추가" />
     <MESSAGE value="전화번호 글자수제한 기능 추가" />
     <MESSAGE value="회원가입 useSign 적용" />
-    <option name="LAST_COMMIT_MESSAGE" value="회원가입 useSign 적용" />
+    <MESSAGE value="불필요한 목록 제거" />
+    <MESSAGE value="feat.로그인화면 올라오는 트렌지션 속도변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat.로그인화면 올라오는 트렌지션 속도변경" />
   </component>
 </project>
