@@ -1,7 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-body, button,body,input {
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/NotoSansKR-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/NotoSansKR-Bold.ttf') format('truetype');
+}
+* {
   font-family: 'Noto Sans KR', sans-serif;
 }
 

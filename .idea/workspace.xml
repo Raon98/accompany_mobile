@@ -9,13 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="feat.공통유효성검사 추가 및 이메일 유효성 검사는 별도처리">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="feat.react Webpack Bundle 설정">
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/fonts/NotoSansKR-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/fonts/NotoSansKR-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/fonts/NotoSansKR-ExtraBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/fonts/NotoSansKR-ExtraLight.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/fonts/NotoSansKR-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/fonts/NotoSansKR-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/fonts/NotoSansKR-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/fonts/NotoSansKR-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/fonts/NotoSansKR-Thin.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/themes/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/themes/_fonts.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/webpack.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/webpack.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,11 +132,11 @@
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\views\sign" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\scss\font" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\views\sign" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\views\login" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\components\utils" />
       <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\components\layout" />
-      <recent name="C:\Users\LG\Desktop\portfoilo\accompany_mobile\_frontend\src\assets\images" />
     </key>
   </component>
   <component name="RunManager" selected="Application.JwtUtil">
@@ -340,14 +346,7 @@
       <workItem from="1718064351974" duration="3462000" />
       <workItem from="1718150792235" duration="15556000" />
       <workItem from="1718237680821" duration="11902000" />
-      <workItem from="1718323304884" duration="9920000" />
-    </task>
-    <task id="LOCAL-00030" summary="로그인 페이지 작업">
-      <created>1716523757554</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1716523757554</updated>
+      <workItem from="1718323304884" duration="10963000" />
     </task>
     <task id="LOCAL-00031" summary="로그인 페이지 작업 중">
       <created>1716530777391</created>
@@ -685,7 +684,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718348606073</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="feat.react Webpack Bundle 설정">
+      <created>1718354006537</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1718354006538</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -714,7 +720,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="체크박스 마진 추가" />
     <MESSAGE value="이미지 슬라이드 map으로 변환" />
     <MESSAGE value="모달 컴포넌트 및 recoil 임시 추가" />
     <MESSAGE value="모달 컴포넌트 테스트 완료" />
@@ -739,6 +744,7 @@
     <MESSAGE value="feat. 유효성검사 작업 오후작업진행중" />
     <MESSAGE value="refactor.불필요한 소스 정리" />
     <MESSAGE value="feat.공통유효성검사 추가 및 이메일 유효성 검사는 별도처리" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat.공통유효성검사 추가 및 이메일 유효성 검사는 별도처리" />
+    <MESSAGE value="feat.react Webpack Bundle 설정" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat.react Webpack Bundle 설정" />
   </component>
 </project>
