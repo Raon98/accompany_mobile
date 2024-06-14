@@ -46,13 +46,19 @@
     margin-top: 2.125rem;
     transition: opacity 0.3s ease, height 0.3s ease;
 
+    .info__text {
+      width: 100%;
+      font-size: 0.875rem;
+      margin-top: 0.425rem;
+      color: colors.$danger-light-400;
+    }
     &.hide {
       opacity: 0 ;
       height: 0 !important;
       width: 0 !important;
       margin: 0;
       & > * {
-        display: none;
+        display: none !important;
       }
     }
     &.show {
@@ -84,10 +90,13 @@
       &.success {
         border-bottom: 2px solid colors.$success-light-350;
       }
-
       &.focused {
         border-bottom: 2px solid colors.$theme-light-750;
       }
+      &.fail {
+        border-bottom: 2px solid colors.$danger-light-350;
+      }
+
     }
     .gender__block {
       @include mixins.flex_mixin;

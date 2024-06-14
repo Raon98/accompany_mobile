@@ -26,10 +26,9 @@ const useSign = (): UseSign => {
             ...prev,
             [name]: {
                 ...prev[name],
-                [option] : state || true
+                [option] : state !== undefined ? state : true
             },
         }));
-
         if(callback){
             callback()
         }
