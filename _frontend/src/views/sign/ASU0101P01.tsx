@@ -41,9 +41,17 @@ const ASU0101P01 = () => {
         [name]: {
           ...prev[name as keyof SignData],
           value: value,
-          success: true,
         },
       }));
+    },
+    onValidation : (name :keyof SignState):boolean => {
+
+      if(1 < 0) {
+        signState(name,"success")
+      }else {
+        signState(name,"fail")
+      }
+      return false;
     },
     selOption: (domain: string) => {
       openBox();
@@ -75,19 +83,20 @@ const ASU0101P01 = () => {
       }
 
       if (e.key === "Enter") {
-        onReset("focus");
-
-        onState(name, option, () => {
-          setTimeout(()=> {
-            title.current = signData[name].title;
-            if(name === 'gender'){
-              let el1 = document.getElementById("birthDd");
-              el1?.blur();
-            }else{
-              el?.focus();
-            }
-          },50)
-        });
+        if(func.onValidation(name)){
+          onReset("focus");
+          onState(name, option,true,() => {
+            setTimeout(()=> {
+              title.current = signData[name].title;
+              if(name === 'gender'){
+                let el1 = document.getElementById("birthDd");
+                el1?.blur();
+              }else{
+                el?.focus();
+              }
+            },50)
+          });
+        }
       }
     },
     onClick: (type: string) => {

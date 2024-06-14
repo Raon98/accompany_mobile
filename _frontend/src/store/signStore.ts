@@ -4,6 +4,7 @@ export interface FieldState {
     state: boolean;
     focus: boolean;
     success: boolean;
+    fail : boolean;
 }
 
 export interface SignState {
@@ -24,7 +25,8 @@ export interface SignState {
 const defaultFieldState = {
     state: false,
     focus: false,
-    success: false
+    success: false,
+    fail : false
 };
 
 const defaultSignState = {
