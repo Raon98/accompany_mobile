@@ -5,7 +5,7 @@ import {BrowserRouter} from "react-router-dom";
 import "./assets/scss/main.scss"
 
 const root = ReactDOM.createRoot(
-    document.getElementById('root') as HTMLElement
+    document.getElementById('app') as HTMLElement
 );
 root.render(
     <BrowserRouter>
