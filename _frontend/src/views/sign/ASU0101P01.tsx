@@ -41,11 +41,16 @@ const ASU0101P01 = () => {
         ...prev,
         [name]: {
           ...prev[name as keyof SignData],
-          value: value,
+          value: value.replace(' ',''),
         },
       }));
     },
     onValidation : (currentName :keyof SignState):boolean => {
+      /*공통 유효성 검사: 글자수 1이하일때*/
+      if(signData[currentName].value.length < 1){
+        onState(currentName,"fail")
+        return false
+      }
       /*아이디 유효성검사*/
       if(currentName === 'uid') {
         if(signData[currentName].value.length < 4){
@@ -54,8 +59,14 @@ const ASU0101P01 = () => {
           return false
         }
       }
+      /*이메일일 경우 주소까지 같이 입력후 성공여부 검사*/
+      if (currentName !=='email') {
+        onState(currentName, "success")
+      }
+      if(currentName === 'emailAddress'){
+        onState("email", "success")
+      }
 
-      onState(currentName,"success")
       onState(currentName,"fail",false)
       return true
     },
@@ -66,9 +77,9 @@ const ASU0101P01 = () => {
         emailAddress: { ...prev["emailAddress"], value: domain },
       }));
     },
-    onFocus: (name: keyof SignState, option: keyof FieldState) => {
-      title.current = signData[name].title;
-      onState(name, option);
+    onFocus: (currentName: keyof SignState, option: keyof FieldState) => {
+      title.current = signData[currentName].title;
+      onState(currentName, option);
     },
     onNext: (
       e: React.KeyboardEvent<HTMLInputElement>,
