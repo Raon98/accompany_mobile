@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="feat. 유효성검사 작업 오전 임시저장">
+    <list default="true" id="8783a5ea-fd17-466f-a17c-b45b43cd8f97" name="Changes" comment="feat. 유효성검사 작업 오후작업진행중">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_sign.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/assets/scss/pages/_sign.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_frontend/src/state/useSign.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/state/useSign.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/_frontend/src/views/sign/ASU0101P01.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -338,14 +336,7 @@
       <workItem from="1718064351974" duration="3462000" />
       <workItem from="1718150792235" duration="15556000" />
       <workItem from="1718237680821" duration="11902000" />
-      <workItem from="1718323304884" duration="5464000" />
-    </task>
-    <task id="LOCAL-00027" summary="visionKey key값 노출문제 해결">
-      <created>1716438236975</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1716438236975</updated>
+      <workItem from="1718323304884" duration="6403000" />
     </task>
     <task id="LOCAL-00028" summary="불필요한 로그삭제">
       <created>1716516092800</created>
@@ -683,7 +674,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718328575337</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="feat. 유효성검사 작업 오후작업진행중">
+      <created>1718342878850</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1718342878851</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -712,7 +710,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="로그인페이지 펼쳤을떄 화면 작업" />
     <MESSAGE value="로그인페이지 자동로그인 체크버튼 추가" />
     <MESSAGE value="체크박스 커스텀 성공" />
     <MESSAGE value="체크박스 마진 추가" />
@@ -737,6 +734,7 @@
     <MESSAGE value="feat.생년월일 마지막일시 포커스아웃 추가" />
     <MESSAGE value="fix.상단 hide 상태일때 선택되는 부분 수정" />
     <MESSAGE value="feat. 유효성검사 작업 오전 임시저장" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat. 유효성검사 작업 오전 임시저장" />
+    <MESSAGE value="feat. 유효성검사 작업 오후작업진행중" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat. 유효성검사 작업 오후작업진행중" />
   </component>
 </project>

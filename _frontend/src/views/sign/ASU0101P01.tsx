@@ -10,7 +10,7 @@ import {FieldState, SignState} from "store/signStore";
  ********************************/
 
 interface SignData {
-  [key: string]: { title: string; value: string; success: boolean };
+  [key: string]: { title: string; value: string; };
 }
 
 const ASU0101P01 = () => {
@@ -19,17 +19,17 @@ const ASU0101P01 = () => {
   const optionList = ["google.com", "naver.com", "kakao.com", "nate.com"];
   const validText = useRef('')
   const [signData, setSignData] = useState<SignData>({
-    uid: { title: "아이디를", value: "", success: false },
-    email: { title: "이메일을", value: "", success: false },
-    emailAddress: { title: "이메일을", value: "", success: false },
-    name: { title: "이름을", value: "", success: false },
-    password: { title: "비밀번호를", value: "", success: false },
-    passwordConfirm: { title: "비밀번호 확인을", value: "", success: false },
-    phone: { title: "전화번호를", value: "", success: false },
-    birthYy: { title: "생년월일을", value: "", success: false },
-    birthMm: { title: "생년월일을", value: "", success: false },
-    birthDd: { title: "생년월일을", value: "", success: false },
-    gender: { title: "성별을", value: "", success: false },
+    uid: { title: "아이디를", value: ""},
+    email: { title: "이메일을", value: "" },
+    emailAddress: { title: "이메일을", value: "" },
+    name: { title: "이름을", value: "" },
+    password: { title: "비밀번호를", value: "" },
+    passwordConfirm: { title: "비밀번호 확인을", value: ""},
+    phone: { title: "전화번호를", value: "" },
+    birthYy: { title: "생년월일을", value: "" },
+    birthMm: { title: "생년월일을", value: "" },
+    birthDd: { title: "생년월일을", value: ""},
+    gender: { title: "성별을", value: "" },
   });
   const title = useRef(signData.uid.title);
   const func = {
@@ -63,7 +63,7 @@ const ASU0101P01 = () => {
       openBox();
       setSignData((prev) => ({
         ...prev,
-        emailAddress: { ...prev["emailAddress"], value: domain, success: true },
+        emailAddress: { ...prev["emailAddress"], value: domain },
       }));
     },
     onFocus: (name: keyof SignState, option: keyof FieldState) => {
@@ -111,7 +111,7 @@ const ASU0101P01 = () => {
       if (gender === "m" || gender === "g") {
         setSignData((prev) => ({
           ...prev,
-          gender: { ...prev["gender"], value: gender, success: true },
+          gender: { ...prev["gender"], value: gender },
         }));
       }
     },
