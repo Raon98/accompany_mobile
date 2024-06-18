@@ -102,6 +102,10 @@ const ASU0101P01 = () => {
       if (currentName === "emailAddress") {
         onState("email", "success");
       }
+      if (currentName === "birthDd") {
+        onState("birthYy", "success");
+        onState("birthMm", "success");
+      }
 
       onState(currentName, "fail", false);
       return true;
@@ -135,7 +139,7 @@ const ASU0101P01 = () => {
       option: keyof FieldState,
       length?: number
     ) => {
-      const allowedKeys = ["Backspace", "Enter","Tab"];
+      const allowedKeys = ["Backspace", "Enter", "Tab"];
       const target = e.target as HTMLInputElement;
       const el = document.getElementById(nextName);
 
@@ -184,6 +188,7 @@ const ASU0101P01 = () => {
           gender: { ...prev["gender"], value: gender },
         }));
       }
+      onState("private", "state", true);
     },
   };
   return (
@@ -196,7 +201,12 @@ const ASU0101P01 = () => {
         <div className="header__title">회원가입</div>
       </header>
       <div className="sign">
-        <div className="sign__title">{title.current} 입력해주세요.</div>
+        {signState("private", "state") && (
+          <button className="bdr__btn priv_btn">개인정보 수집동의</button>
+        )}
+        {!signState("private", "state") && (
+          <div className="sign__title">{title.current} 입력해주세요.</div>
+        )}
         <div className="sign-content">
           <div
             className={`sign__block gender ${
