@@ -135,7 +135,7 @@ const ASU0101P01 = () => {
       option: keyof FieldState,
       length?: number
     ) => {
-      const allowedKeys = ["Backspace", "Enter"];
+      const allowedKeys = ["Backspace", "Enter","Tab"];
       const target = e.target as HTMLInputElement;
       const el = document.getElementById(nextName);
 
