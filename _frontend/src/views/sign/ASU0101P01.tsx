@@ -36,8 +36,8 @@ const ASU0101P01 = () => {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
       const { name, value } = e.target;
 
-      /*이메일이거나 주소일경우 영문숫자만 입력가능하도록 수정*/
-      if (name === "email" || name === "emailAddress") {
+      /*아이디 / 이메일/ 이메일 주소일경우 영문숫자만 입력가능하도록 수정*/
+      if (name === "uid" || name === "email" || name === "emailAddress") {
         const regex = /^[a-zA-Z0-9.]*$/;
         if (regex.test(value)) {
           setSignData((prev) => ({
@@ -47,6 +47,9 @@ const ASU0101P01 = () => {
               value: value.replace(" ", ""),
             },
           }));
+        } else {
+          validText.current = "영문으로 입력해주세요.";
+          onState(name, "fail");
         }
       } else {
         setSignData((prev) => ({
@@ -77,11 +80,9 @@ const ASU0101P01 = () => {
         /*최소 8자 이상 확인하고 문자, 숫자, 특수문자 포함 확인*/
         const regex =
           /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/;
-        console.log(regex.test(signData.password.value));
-        console.log(signData.password.value);
         if (!regex.test(signData.password.value)) {
           validText.current =
-            "비밀번호가 8자이상, 숫자, 특수문자가 포함됐는지 확인해주세요.";
+            "8자이상, 숫자, 특수문자가 포함됐는지 확인해주세요.";
           onState(currentName, "fail");
           return false;
         }
@@ -106,11 +107,22 @@ const ASU0101P01 = () => {
       return true;
     },
     selOption: (domain: string) => {
-      openBox();
-      setSignData((prev) => ({
-        ...prev,
-        emailAddress: { ...prev["emailAddress"], value: domain },
-      }));
+      const el = document.getElementById("phone");
+      if (func.onValidation("emailAddress")) {
+        openBox();
+        setSignData((prev) => ({
+          ...prev,
+          emailAddress: { ...prev["emailAddress"], value: domain },
+        }));
+
+        onReset("focus");
+        onState("phone", "state", true, () => {
+          setTimeout(() => {
+            title.current = signData["phone"].title;
+            el?.focus();
+          }, 50);
+        });
+      }
     },
     onFocus: (currentName: keyof SignState, option: keyof FieldState) => {
       title.current = signData[currentName].title;
@@ -176,7 +188,7 @@ const ASU0101P01 = () => {
   };
   return (
     <>
-      <header>
+      <header className="header">
         <button
           className="header-prev__btn"
           onClick={() => navigate("/ALI0101P01")}
