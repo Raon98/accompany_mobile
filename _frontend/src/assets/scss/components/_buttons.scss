@@ -44,12 +44,13 @@
     @include primary__btn(colors.$theme-500)
   }
 }
-
+/*테두리버튼*/
 .bdr__btn {
   @extend .button;  
   @include bdr__btn(colors.$theme-500);
   width: 48%;
 }
+/*로그인 화면 버튼*/
 .login__btn {
   @extend .button;
   width: 80%;
@@ -70,4 +71,14 @@
       @include btn-icon("../../images/kakao_auth.png");
     }
   }
+}
+
+/*회원가입 약관버튼*/
+.sign-term__btn {
+  @extend .button; 
+  @include primary__btn(colors.$theme-500);
+  @include mixins.fixed_mixin;
+  height: 3.385rem;
+  bottom: 0;
+  left: 0;
 }

@@ -8,7 +8,7 @@ import React from "react";
 
 const ASU0101P03 = () => {
   return (
-    <div className="Terms">
+    <div className="terms">
       <h1>동행하다 이용약관</h1>
 
       <h2>제1장 총칙</h2>

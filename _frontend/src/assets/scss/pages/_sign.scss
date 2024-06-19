@@ -12,7 +12,7 @@
     color: transparent;
     vertical-align: middle;
     background-position: center center;
-    background-size: 0.925rem auto;
+    background-size: 1.5rem auto;
     background-repeat: no-repeat;
     background-color: #fff;
     border: none;
@@ -241,7 +241,7 @@
   }
 }
 
-.Terms{
+.terms{
   h1, h2, h3 {
     color: #333;
 }
@@ -275,4 +275,46 @@ ul, ol {
     margin-bottom: 10px;
     padding-left: 20px;
 }
+}
+
+.sgin-terms {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    &__subject {
+    height: 60vh;
+    @include mixins.flex_mixin(center,self-start,column);
+    }
+    &__contents {
+      @include mixins.flex_mixin(center,self-start,column);
+    }
+    &__agreements{
+      width: 100%;
+      margin-top: 1rem;
+    }
+    &__agreement{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 2.815rem;
+      margin-left: 1.125rem;
+      margin-bottom: 0.425rem;
+      .option_btn {
+        background-color: transparent;
+        border-radius: 100%;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-color: colors.$theme-400;
+
+        &.check {
+          background-color:colors.$theme-500;
+        }
+      }
+      .option__text {
+        margin-left: 0.825rem;
+      }
+    }
 }

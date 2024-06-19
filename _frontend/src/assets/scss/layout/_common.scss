@@ -47,3 +47,8 @@
 .mgb10 {
   @include mixins.margin(bottom, $spacing-10);
 }
+
+.borderline {
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
