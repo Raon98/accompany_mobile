@@ -9,7 +9,8 @@ const ASU0101P02 = () => {
   return (
     <>
       <SignHeader title={"이용약관"} />
-      <div>약관화면입니다.</div>
+      <div>동행인으로서 첫 발걸음에 진심으로 환영합니다.</div>
+      
     </>
   );
 };
