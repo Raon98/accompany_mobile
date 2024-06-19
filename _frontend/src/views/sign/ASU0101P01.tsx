@@ -1,3 +1,4 @@
+import { SignHeader } from "components/layout/CustomHeader";
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useSign from "state/useSign";
@@ -216,13 +217,7 @@ const ASU0101P01 = () => {
   };
   return (
     <>
-      <header className="header">
-        <button
-          className="header-prev__btn"
-          onClick={() => navigate("/ALI0101P01")}
-        />
-        <div className="header__title">회원가입</div>
-      </header>
+      <SignHeader title={"회원가입"}/>
       <form className="sign">
         {!onSuccessForm && (
           <div className="sign__title">{title.current} 입력해주세요.</div>

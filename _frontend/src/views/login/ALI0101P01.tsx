@@ -170,7 +170,7 @@ const ALI0101P01 = () => {
                     <a
                       href="#"
                       className="input-form__utils-option"
-                      onClick={() => navigate("/ASU0101P01")}
+                      onClick={() => navigate("/ASU0101P02")}
                     >
                       회원가입
                     </a>
