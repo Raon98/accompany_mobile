@@ -53,3 +53,8 @@ export const emailSelectBox = atom({
     key : "emailSelectBox",
     default : false
 })
+
+export const successForm = atom({
+    key: "successForm",
+    default : false
+})

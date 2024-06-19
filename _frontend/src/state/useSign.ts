@@ -1,5 +1,5 @@
 import {useRecoilState} from "recoil";
-import {emailSelectBox, FieldState, SignState, signStore} from "store/signStore";
+import {successForm,emailSelectBox, FieldState, SignState, signStore} from "store/signStore";
 
 interface UseSign {
     signState : (name : keyof SignState, option :keyof FieldState) => boolean;
@@ -8,10 +8,13 @@ interface UseSign {
     onAllReset : () => void;
     openBox : () => void;
     onBox: boolean;
+    setSucces : (flag:boolean)=> void;
+    onSuccessForm : boolean;
 }
 const useSign = (): UseSign => {
     const [signList, setSignState] = useRecoilState(signStore);
     const [onBox , setSelectBox] = useRecoilState(emailSelectBox);
+    const [onSuccessForm , setSuccesForm] = useRecoilState(successForm);
 
 
     const signState = (name: keyof SignState, option: string): boolean => {
@@ -70,8 +73,11 @@ const useSign = (): UseSign => {
         setSelectBox(!onBox)
     }
 
+    const setSucces = (flag:boolean) => {
+        setSuccesForm(flag)
+    }
 
-    return { signState, onState, onReset ,onAllReset, openBox,onBox };
+    return { signState, onState, onReset ,onAllReset, openBox,onBox,setSucces,onSuccessForm };
 };
 
 export default useSign;

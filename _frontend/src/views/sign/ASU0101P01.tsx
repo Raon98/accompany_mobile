@@ -14,7 +14,15 @@ interface SignData {
 }
 
 const ASU0101P01 = () => {
-  const { signState, onState, onReset, onBox, openBox } = useSign();
+  const {
+    signState,
+    onState,
+    onReset,
+    onBox,
+    openBox,
+    onSuccessForm,
+    setSucces,
+  } = useSign();
   const navigate = useNavigate();
   const optionList = ["google.com", "naver.com", "kakao.com", "nate.com"];
   const validText = useRef("");
@@ -30,6 +38,7 @@ const ASU0101P01 = () => {
     birthMm: { title: "생년월일을", value: "" },
     birthDd: { title: "생년월일을", value: "" },
     gender: { title: "성별을", value: "" },
+    private: { title: "", value: signState("gender", "state") ? "Y" : "N" },
   });
   const title = useRef(signData.uid.title);
   const func = {
@@ -106,7 +115,14 @@ const ASU0101P01 = () => {
         onState("birthYy", "success");
         onState("birthMm", "success");
       }
-
+      /*휴대폰번호 11자리 고정*/
+      if (currentName === "phone") {
+        if (signData.phone.value.length !== 11) {
+          validText.current = "휴대폰 11자리를 입력해주세요.";
+          onState(currentName, "fail");
+          return false;
+        }
+      }
       onState(currentName, "fail", false);
       return true;
     },
@@ -151,7 +167,7 @@ const ASU0101P01 = () => {
         e.preventDefault();
       }
 
-      if (e.key === "Enter") {
+      if (e.key === "Enter" || e.key === "Tab") {
         if (func.onValidation(currentName)) {
           /*셍냔월일 월 이거나 일일경우 한자리입력시 앞자리 0 삽입*/
           if (currentName === "birthMm" || currentName === "birthDd") {
@@ -180,15 +196,22 @@ const ASU0101P01 = () => {
         }
       }
     },
-    onClick: (type: string) => {
-      const gender = type === "men" ? "m" : type === "girl" ? "g" : "";
-      if (gender === "m" || gender === "g") {
-        setSignData((prev) => ({
-          ...prev,
-          gender: { ...prev["gender"], value: gender },
-        }));
+    onClick: (name:string,type: string) => {
+     
+      if(name ==='gender'){
+        setSucces(true);
+        const gender = type === "men" ? "m" : type === "girl" ? "g" : "";
+        if (gender === "m" || gender === "g") {
+          setSignData((prev) => ({
+            ...prev,
+            gender: { ...prev["gender"], value: gender },
+          }));
+        }
       }
-      onState("private", "state", true);
+      
+    },
+    onSubmit: (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
     },
   };
   return (
@@ -200,11 +223,8 @@ const ASU0101P01 = () => {
         />
         <div className="header__title">회원가입</div>
       </header>
-      <div className="sign">
-        {signState("private", "state") && (
-          <button className="bdr__btn priv_btn">개인정보 수집동의</button>
-        )}
-        {!signState("private", "state") && (
+      <form className="sign">
+        {!onSuccessForm && (
           <div className="sign__title">{title.current} 입력해주세요.</div>
         )}
         <div className="sign-content">
@@ -216,18 +236,20 @@ const ASU0101P01 = () => {
             <label htmlFor="gender">성별 </label>
             <div className="gender__block">
               <button
+               type="button"
                 className={`bdr__btn ${
                   signData.gender.value === "m" ? "primary" : ""
                 } `}
-                onClick={() => func.onClick("men")}
+                onClick={(e) => func.onClick("gender","men")}
               >
                 남자
               </button>
               <button
+               type="button"
                 className={`bdr__btn ${
                   signData.gender.value === "g" ? "primary" : ""
                 } `}
-                onClick={() => func.onClick("girl")}
+                onClick={(e) => func.onClick("gender","girl")}
               >
                 여자
               </button>
@@ -260,7 +282,6 @@ const ASU0101P01 = () => {
                 onKeyDown={(e) =>
                   func.onNext(e, "birthYy", "birthMm", "state", 4)
                 }
-                required
               />
               <input
                 type="number"
@@ -282,7 +303,6 @@ const ASU0101P01 = () => {
                 onKeyDown={(e) =>
                   func.onNext(e, "birthMm", "birthDd", "state", 2)
                 }
-                required
               />
               <input
                 type="number"
@@ -304,7 +324,6 @@ const ASU0101P01 = () => {
                 onKeyDown={(e) =>
                   func.onNext(e, "birthDd", "gender", "state", 2)
                 }
-                required
               />
             </div>
           </div>
@@ -330,10 +349,12 @@ const ASU0101P01 = () => {
               onFocus={() => func.onFocus("phone", "focus")}
               onBlur={() => onReset("focus")}
               onKeyDown={(e) => func.onNext(e, "phone", "birthYy", "state", 11)}
-              max={0}
-              min={99999999999}
-              required
+              max={99999999999}
+              min={0}
             />
+            {signState("phone", "fail") && (
+              <div className="info__text">{validText.current}</div>
+            )}
           </div>
           <div
             className={`sign__block email ${
@@ -360,7 +381,6 @@ const ASU0101P01 = () => {
                 onKeyDown={(e) =>
                   func.onNext(e, "email", "emailAddress", "state")
                 }
-                required
               />
               <div className="email-asterisk">@</div>
               <div className="emailAddress">
@@ -382,7 +402,6 @@ const ASU0101P01 = () => {
                   onKeyDown={(e) =>
                     func.onNext(e, "emailAddress", "phone", "state")
                   }
-                  required
                 />
                 <div
                   className={`emailAddress__option ${onBox ? "select" : ""}`}
@@ -432,7 +451,6 @@ const ASU0101P01 = () => {
               onFocus={() => func.onFocus("name", "focus")}
               onBlur={() => onReset("focus")}
               onKeyDown={(e) => func.onNext(e, "name", "email", "state")}
-              required
             />
           </div>
           <div
@@ -459,7 +477,7 @@ const ASU0101P01 = () => {
               onKeyDown={(e) =>
                 func.onNext(e, "password", "passwordConfirm", "state")
               }
-              required
+              required={signState("password", "state")}
             />
             {signState("password", "fail") && (
               <div className="info__text">{validText.current}</div>
@@ -483,7 +501,6 @@ const ASU0101P01 = () => {
               onKeyDown={(e) =>
                 func.onNext(e, "passwordConfirm", "name", "state")
               }
-              required
             />
             {signState("passwordConfirm", "fail") && (
               <div className="info__text">{validText.current}</div>
@@ -516,7 +533,8 @@ const ASU0101P01 = () => {
             )}
           </div>
         </div>
-      </div>
+        {onSuccessForm && <button className="bdr__btn">가입하기</button>}
+      </form>
     </>
   );
 };
