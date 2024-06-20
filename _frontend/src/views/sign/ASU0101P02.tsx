@@ -14,13 +14,16 @@ const ASU0101P02 = () => {
       <BackBtnHeader title={"이용약관"} />
       <div className="sgin-terms">
         <div className="sgin-terms__subject">
-          <div className="title-sub1">동행인으로서 첫 발걸음에</div>
-          <div className="title-sub1">진심으로 환영합니다.</div>
+          <div className="title__sub1">
+            <span>동행인</span>으로서 첫 발걸음에
+            <div className="sub__logo"/>
+          </div>
+          <div className="title__sub2">진심으로 환영합니다.</div>
         </div>
         <div className="sgin-terms__contents">
           <div className="sgin-terms__agreement">
             <button className="option_btn" />
-            <div className="option__text">약관 전체동의</div>
+            <div className="option__text all">약관 전체동의</div>
           </div>
           <div className="borderline"></div>
           <div className="sgin-terms__agreements">
@@ -40,7 +43,7 @@ const ASU0101P02 = () => {
           className="sign-term__btn"
           onClick={() => navigate("/ASU0101P01")}
         >
-          동의하고 다음으로
+          <div>시작하기</div>
         </button>
       </div>
     </>

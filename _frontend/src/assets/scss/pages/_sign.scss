@@ -1,11 +1,10 @@
 @use "../utils/mixins";
 @use "../themes/colors";
 
-
 .header {
   background-color: #fff;
-  &-prev__btn{
-    background-image:  url("../../images/prev_btn.svg");
+  &-prev__btn {
+    background-image: url("../../images/prev_btn.svg");
     width: 1.55rem;
     height: 1.25rem;
     padding: 0;
@@ -38,11 +37,9 @@
     display: flex;
     flex-direction: column;
     transition: transform 0.5s ease;
-
-
   }
   &__block {
-    @include mixins.flex_mixin(space-between,center,column);
+    @include mixins.flex_mixin(space-between, center, column);
     width: 100%;
     margin-top: 2.125rem;
     transition: opacity 0.3s ease, height 0.3s ease;
@@ -54,7 +51,7 @@
       color: colors.$danger-light-400;
     }
     &.hide {
-      opacity: 0 ;
+      opacity: 0;
       height: 0 !important;
       width: 0 !important;
       margin: 0;
@@ -71,7 +68,7 @@
       @include mixins.flex_mixin(flex-start);
       width: 100%;
       font-size: 0.975rem;
-      color: rgba(0,0,0,0.5);
+      color: rgba(0, 0, 0, 0.5);
       margin-left: 0.425rem;
     }
     input {
@@ -97,7 +94,6 @@
       &.fail {
         border-bottom: 2px solid colors.$danger-light-350;
       }
-
     }
     .gender__block {
       @include mixins.flex_mixin;
@@ -106,7 +102,7 @@
       margin-top: 0.675rem;
     }
     .birth__block {
-      @include mixins.flex_mixin(center,center);
+      @include mixins.flex_mixin(center, center);
       width: 100%;
       height: 100%;
 
@@ -139,8 +135,8 @@
           top: 40%;
           background-image: url("../../images/arrow_bottom.svg");
           background-position: center center;
-          background-size: 1.5rem auto;
           background-repeat: no-repeat;
+          background-size: 1.5rem auto;
           position: absolute;
           z-index: 10;
           opacity: 0.5;
@@ -195,9 +191,7 @@
               }
             }
           }
-
         }
-
       }
 
       .email-asterisk {
@@ -206,21 +200,16 @@
         display: flex;
         align-items: center;
       }
-
     }
 
     &.password {
       height: 11.125rem;
-      
+
       & > label {
         margin-bottom: 0.725rem;
       }
-      &.fail {
-        
-      }
       & > input {
-
-        &.fail{
+        &.fail {
           margin-bottom: 0 !important;
         }
         margin-bottom: 1.25rem;
@@ -241,80 +230,121 @@
   }
 }
 
-.terms{
-  h1, h2, h3 {
+.terms {
+  h1,
+  h2,
+  h3 {
     color: #333;
-}
+  }
 
-h1 {
+  h1 {
     font-size: 24px;
     border-bottom: 2px solid #ccc;
     padding-bottom: 10px;
     margin-bottom: 20px;
-}
+  }
 
-h2 {
+  h2 {
     font-size: 20px;
     margin-top: 20px;
     margin-bottom: 10px;
-}
+  }
 
-h3 {
+  h3 {
     font-size: 16px;
     margin-top: 10px;
     margin-bottom: 5px;
-}
+  }
 
-p, ul, ol {
+  p,
+  ul,
+  ol {
     font-size: 14px;
     line-height: 1.6;
     color: #666;
-}
+  }
 
-ul, ol {
+  ul,
+  ol {
     margin-bottom: 10px;
     padding-left: 20px;
-}
+  }
 }
 
 .sgin-terms {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    
-    &__subject {
-    height: 60vh;
-    @include mixins.flex_mixin(center,self-start,column);
-    }
-    &__contents {
-      @include mixins.flex_mixin(center,self-start,column);
-    }
-    &__agreements{
-      width: 100%;
-      margin-top: 1rem;
-    }
-    &__agreement{
-      width: 100%;
-      display: flex;
-      align-items: center;
-      height: 2.815rem;
-      margin-left: 1.125rem;
-      margin-bottom: 0.425rem;
-      .option_btn {
-        background-color: transparent;
-        border-radius: 100%;
-        width: 1.5rem;
-        height: 1.5rem;
-        border-color: colors.$theme-400;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 
-        &.check {
-          background-color:colors.$theme-500;
+  &__subject {
+    height: 60vh;
+    @include mixins.flex_mixin(center, self-start, column);
+    .title {
+      &__sub1 {
+        position: relative;
+        font-size: 1.275rem;
+        & > span {
+          font-size: 1.735rem;  
+          color : colors.$theme-800;     
         }
       }
-      .option__text {
-        margin-left: 0.825rem;
+      &__sub2 {
+        font-size: 1.375rem;
       }
     }
+    .sub__logo {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 5rem;
+      height: 5rem;
+      background-image: url("../../images/accompany_side_logo.png");
+      position: absolute;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 8rem auto;
+      background-color: transparent;
+      margin-bottom: 2.65rem;
+      margin-left: 13.15rem;
+      transform: rotate(23deg);
+    }
+  }
+  &__contents {
+    @include mixins.flex_mixin(center, self-start, column);
+  }
+  &__agreements {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  &__agreement {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 2.815rem;
+    margin-left: 1.125rem;
+    margin-bottom: 0.425rem;
+    .option_btn {
+      background-color: transparent;
+      border-radius: 100%;
+      width: 1.25rem;
+      height: 1.25rem;
+      border-color: colors.$theme-400;
+
+      &.check {
+        background-color: colors.$theme-500;
+        background-image: url("../../images/checkbox-check.svg");
+        background-repeat: no-repeat;
+        background-size: 0.725rem 0.725rem;
+        background-position: center center;
+      }
+    }
+    .option__text {
+      margin-left: 0.825rem;
+      &.all {
+        font-size: 1.125rem;
+      }
+    }
+  }
 }
