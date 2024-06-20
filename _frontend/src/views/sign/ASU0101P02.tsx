@@ -37,19 +37,19 @@ const ASU0101P02 = () => {
         <div className="sgin-terms__contents">
           <div className="sgin-terms__agreement">
             <button className={`option__btn ${optionState('all') && optionState('use') && optionState('priv')? 'check' : ''} `} onClick={()=>setOptionState('all')}/>
-            <div className="option__text all">약관 전체동의</div>
+            <div className="option__text all" onClick={()=>setOptionState('all')}>약관 전체동의</div>
           </div>
           <div className="borderline"></div>
           <div className="sgin-terms__agreements">
             <div className="sgin-terms__agreement">
               <button className={`option__btn ${optionState('use')? 'check' : ''} `} onClick={()=>setOptionState('use')}/>
-              <div className="option__text">이용약관 동의(필수)</div>
+              <div className="option__text" onClick={()=>setOptionState('use')}>이용약관 동의(필수)</div>
               <div className="terms__btn" onClick={()=>func.onClickTerms('use')}/>
             </div>
            
             <div className="sgin-terms__agreement">
               <button className={`option__btn ${optionState('priv')? 'check' : ''} `} onClick={()=>setOptionState('priv')}/>
-              <div className="option__text">
+              <div className="option__text" onClick={()=>setOptionState('priv')}>
                 개인정보 수집 및 이용동의(필수)
               </div>
               <div className="terms__btn" onClick={()=>func.onClickTerms('private')}/>
