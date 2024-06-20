@@ -58,3 +58,12 @@ export const successForm = atom({
     key: "successForm",
     default : false
 })
+
+export const signTermsOption = atom({
+    key : "signTermsOption",
+    default : {
+        all : false,
+        use : false,
+        priv : false
+    }
+})

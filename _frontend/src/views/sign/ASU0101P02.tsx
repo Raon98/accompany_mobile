@@ -6,9 +6,21 @@ import { useNavigate } from "react-router-dom";
  * @화면명:회원가입 약관화면
  * @작성자:김성철
  ********************************/
+
+
+
 const ASU0101P02 = () => {
   const navigate = useNavigate();
-  const func = {};
+  const func = {
+    onClickTerms : (type:string) => {
+      if(type === 'use'){
+
+      }
+      if(type === 'private'){
+        
+      }
+    }
+  };
   return (
     <>
       <BackBtnHeader title={"이용약관"} />
@@ -22,20 +34,23 @@ const ASU0101P02 = () => {
         </div>
         <div className="sgin-terms__contents">
           <div className="sgin-terms__agreement">
-            <button className="option_btn" />
+            <button className="option__btn" />
             <div className="option__text all">약관 전체동의</div>
           </div>
           <div className="borderline"></div>
           <div className="sgin-terms__agreements">
             <div className="sgin-terms__agreement">
-              <button className="option_btn" />
+              <button className="option__btn" />
               <div className="option__text">이용약관 동의(필수)</div>
+              <div className="terms__btn" onClick={()=>func.onClickTerms('use')}/>
             </div>
+           
             <div className="sgin-terms__agreement">
-              <button className="option_btn" />
+              <button className="option__btn" />
               <div className="option__text">
                 개인정보 수집 및 이용동의(필수)
               </div>
+              <div className="terms__btn" onClick={()=>func.onClickTerms('private')}/>
             </div>
           </div>
         </div>

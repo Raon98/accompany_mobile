@@ -208,6 +208,7 @@ const ASU0101P01 = () => {
             gender: { ...prev["gender"], value: gender },
           }));
         }
+        window.scrollTo(0, document.body.scrollHeight);
       }
       
     },
@@ -528,7 +529,7 @@ const ASU0101P01 = () => {
             )}
           </div>
         </div>
-        {onSuccessForm && <button className="bdr__btn">가입하기</button>}
+        {onSuccessForm && <button className="sign-term__btn">가입하기</button>}
       </form>
     </>
   );
