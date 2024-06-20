@@ -37,20 +37,25 @@ const useSign = (): UseSign => {
   };
   const setOptionState = (name: keyof OptionState) => {
     if (name === "all") {
+        let state = true
+        if(optionState('all')){
+            state = false
+        }
       setOption((prev) => {
         const reset: OptionState = {};
         for (const key in prev) {
           if (prev.hasOwnProperty(key)) {
-            reset[key] = true;
+            reset[key] = state;
           }
         }
         return reset;
       });
     } else {
-      setOption((prev) => ({
-        ...prev,
-        [name]: !optionState(name),
-      }));
+        setOption((prev) => ({
+            ...prev,
+            all: false,
+            [name]: !optionState(name),
+        }));
     }
   };
   const signState = (name: keyof SignState, option: string): boolean => {
