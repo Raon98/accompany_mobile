@@ -1,5 +1,6 @@
 import { BackBtnHeader } from "components/layout/CustomHeader";
 import { useNavigate } from "react-router-dom";
+import useSign from "state/useSign";
 
 /******************************
  * @회원가입 (ACCOMPANY Sign Up)
@@ -11,13 +12,14 @@ import { useNavigate } from "react-router-dom";
 
 const ASU0101P02 = () => {
   const navigate = useNavigate();
+  const {optionState, setOptionState} =useSign()
   const func = {
     onClickTerms : (type:string) => {
       if(type === 'use'){
 
       }
       if(type === 'private'){
-        
+
       }
     }
   };
@@ -34,19 +36,19 @@ const ASU0101P02 = () => {
         </div>
         <div className="sgin-terms__contents">
           <div className="sgin-terms__agreement">
-            <button className="option__btn" />
+            <button className={`option__btn ${optionState('all') && optionState('use') && optionState('priv')? 'check' : ''} `} onClick={()=>setOptionState('all')}/>
             <div className="option__text all">약관 전체동의</div>
           </div>
           <div className="borderline"></div>
           <div className="sgin-terms__agreements">
             <div className="sgin-terms__agreement">
-              <button className="option__btn" />
+              <button className={`option__btn ${optionState('use')? 'check' : ''} `} onClick={()=>setOptionState('use')}/>
               <div className="option__text">이용약관 동의(필수)</div>
               <div className="terms__btn" onClick={()=>func.onClickTerms('use')}/>
             </div>
            
             <div className="sgin-terms__agreement">
-              <button className="option__btn" />
+              <button className={`option__btn ${optionState('priv')? 'check' : ''} `} onClick={()=>setOptionState('priv')}/>
               <div className="option__text">
                 개인정보 수집 및 이용동의(필수)
               </div>

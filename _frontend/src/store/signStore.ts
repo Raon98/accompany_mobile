@@ -21,7 +21,9 @@ export interface SignState {
     gender: FieldState;
     private: FieldState;
 }
-
+export interface OptionState {
+    [key: string]: boolean;
+}
 const defaultFieldState = {
     state: false,
     focus: false,
@@ -59,7 +61,7 @@ export const successForm = atom({
     default : false
 })
 
-export const signTermsOption = atom({
+export const signTermsOption = atom<OptionState>({
     key : "signTermsOption",
     default : {
         all : false,
