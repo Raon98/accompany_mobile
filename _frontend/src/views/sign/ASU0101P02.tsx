@@ -1,4 +1,4 @@
-import { SignHeader } from "components/layout/CustomHeader";
+import { BackBtnHeader } from "components/layout/CustomHeader";
 import { useNavigate } from "react-router-dom";
 
 /******************************
@@ -11,7 +11,7 @@ const ASU0101P02 = () => {
   const func = {};
   return (
     <>
-      <SignHeader title={"이용약관"} />
+      <BackBtnHeader title={"이용약관"} />
       <div className="sgin-terms">
         <div className="sgin-terms__subject">
           <div className="title-sub1">동행인으로서 첫 발걸음에</div>

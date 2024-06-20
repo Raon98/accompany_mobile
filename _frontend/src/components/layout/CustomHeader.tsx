@@ -2,10 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 
-interface SginHeaderProp {
+interface HeaderProp {
   title : string
 }
-export const SignHeader = ({title}:SginHeaderProp) => {
+export const BackBtnHeader = ({title}:HeaderProp) => {
     const navigate = useNavigate();
       return (
         <header className="header">
@@ -17,4 +17,16 @@ export const SignHeader = ({title}:SginHeaderProp) => {
         </header>
       );
     };
+
+
+export const CloseHeader = ({title}:HeaderProp) => {
+  const navigate = useNavigate();
+
+  return (
+    <header>
+      <div className="header__title">{title}</div>
+      <div className="close_btn" onClick={()=>navigate(-1)}></div>
+    </header>
+  )
+}
     
