@@ -13,10 +13,13 @@ const useModal = (name: string): UseModal => {
 
 
     const onOpen = () => {
+        
         setIsOpenStates((prev) => ({
             ...prev,
             [name]: true,
         }));
+
+        console.log(isOpen)
     };
 
     const onClose = () => {

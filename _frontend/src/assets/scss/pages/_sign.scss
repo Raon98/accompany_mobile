@@ -2,7 +2,7 @@
 @use "../themes/colors";
 
 .header {
-  background-color: #fff;
+  background-color: transparent;
   &-prev__btn {
     background-image: url("../../images/prev_btn.svg");
     width: 1.55rem;
@@ -13,7 +13,7 @@
     background-position: center center;
     background-size: 1.5rem auto;
     background-repeat: no-repeat;
-    background-color: #fff;
+    background-color: transparent;
     border: none;
   }
   &__title {
@@ -231,6 +231,8 @@
 }
 
 .terms {
+  margin-top: 3.5rem;
+  padding : 0 1rem;
   h1,
   h2,
   h3 {
@@ -238,36 +240,36 @@
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 1.5rem; 
     border-bottom: 2px solid #ccc;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    padding-bottom: 0.625rem;
+    margin-bottom: 1.25rem;
   }
 
   h2 {
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.625rem;
   }
 
   h3 {
-    font-size: 16px;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    font-size: 1rem; 
+    margin-top: 0.625rem;
+    margin-bottom: 0.3125rem;
   }
 
   p,
   ul,
   ol {
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.6;
     color: #666;
   }
 
   ul,
   ol {
-    margin-bottom: 10px;
-    padding-left: 20px;
+    margin-bottom: 0.625rem;
+    padding-left: 1.25rem;
   }
 }
 

@@ -1,0 +1,33 @@
+@use "../utils/mixins";
+@use "../themes/colors";
+@use "../utils/variables";
+
+.dimmed {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 7;
+    background-color: rgba(0, 0, 0, .5);
+}
+.modals {
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: white;
+    margin: 0;
+    width: 90%;
+    z-index: 10;
+    overflow-y: auto;
+    height: 60%;
+    border-radius: 10px;
+    &-content {
+        @include mixins.flex_mixin(center,center,column);
+        border-radius: 5px;
+        border: 1px solid;
+        border-color : rgba(0,0,0,0.5);
+    }
+}

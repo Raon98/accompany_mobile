@@ -1,6 +1,9 @@
 import { BackBtnHeader } from "components/layout/CustomHeader";
+import { Modals } from "components/utils/Modals";
 import { useNavigate } from "react-router-dom";
 import useSign from "state/useSign";
+import ASU0101P03 from "./ASU0101P03";
+import useModal from "state/useModal";
 
 /******************************
  * @회원가입 (ACCOMPANY Sign Up)
@@ -13,8 +16,11 @@ import useSign from "state/useSign";
 const ASU0101P02 = () => {
   const navigate = useNavigate();
   const {optionState, setOptionState} =useSign()
+  const {isOpen, onOpen} = useModal('component')
   const func = {
     onClickTerms : (type:string) => {
+      console.log('클릭')
+      onOpen()
       if(type === 'use'){
 
       }
@@ -25,7 +31,8 @@ const ASU0101P02 = () => {
   };
   return (
     <>
-      <BackBtnHeader title={"이용약관"} />
+      <BackBtnHeader title={"회원가입"} />
+      {isOpen &&<Modals Props1={<ASU0101P03/>} Props2={"이용약관"}/>}
       <div className="sgin-terms">
         <div className="sgin-terms__subject">
           <div className="title__sub1">
