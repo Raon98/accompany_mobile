@@ -8,9 +8,7 @@ import React from "react";
 
 const ASU0101P04 = () => {
   return (
-    <div className="Terms">
-       <h1>동행하다 개인정보 수집·이용 동의서</h1>
-        
+    <div className="terms">
         <h3>제1조 (수집하는 개인정보의 항목)</h3>
         <p>회사는 회원가입, 상담, 서비스 제공을 위해 아래와 같은 개인정보를 수집하고 있습니다.</p>
         <ul>

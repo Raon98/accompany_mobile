@@ -2,8 +2,10 @@ import { BackBtnHeader } from "components/layout/CustomHeader";
 import { Modals } from "components/utils/Modals";
 import { useNavigate } from "react-router-dom";
 import useSign from "state/useSign";
-import ASU0101P03 from "./ASU0101P03";
 import useModal from "state/useModal";
+import { useState } from "react";
+import ASU0101P03 from "views/sign/ASU0101P03";
+import ASU0101P04 from "views/sign/ASU0101P04";
 
 /******************************
  * @회원가입 (ACCOMPANY Sign Up)
@@ -11,28 +13,37 @@ import useModal from "state/useModal";
  * @작성자:김성철
  ********************************/
 
-
+interface modalContentProps {
+  component : JSX.Element | null
+  title : string
+}
 
 const ASU0101P02 = () => {
   const navigate = useNavigate();
-  const {optionState, setOptionState} =useSign()
-  const {isOpen, onOpen} = useModal('component')
+  const {optionState, setOptionState} =useSign();
+  const {isOpen, onOpen} = useModal('component');
+  const [modalContent, setModalContent] = useState<modalContentProps>({component : null, title :''});
   const func = {
     onClickTerms : (type:string) => {
-      console.log('클릭')
-      onOpen()
       if(type === 'use'){
-
+        setModalContent({
+          component : <ASU0101P03/>,
+          title : '이용약관'
+        })
       }
       if(type === 'private'){
-
+        setModalContent({
+          component : <ASU0101P04/>,
+          title : '개인정보 수집 이용 동의서'
+        })
       }
+      onOpen()
     }
   };
   return (
     <>
       <BackBtnHeader title={"회원가입"} />
-      {isOpen &&<Modals Props1={<ASU0101P03/>} Props2={"이용약관"}/>}
+      {isOpen &&<Modals Props1={modalContent.component} Props2={modalContent.title}/>}
       <div className="sgin-terms">
         <div className="sgin-terms__subject">
           <div className="title__sub1">
