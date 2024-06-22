@@ -1,9 +1,9 @@
 import { BackBtnHeader } from "components/layout/CustomHeader";
 import { Modals } from "components/utils/Modals";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import useSign from "state/useSign";
 import useModal from "state/useModal";
-import { useState } from "react";
+import useSign from "state/useSign";
 import ASU0101P03 from "views/sign/ASU0101P03";
 import ASU0101P04 from "views/sign/ASU0101P04";
 
@@ -14,70 +14,121 @@ import ASU0101P04 from "views/sign/ASU0101P04";
  ********************************/
 
 interface modalContentProps {
-  component : JSX.Element | null
-  title : string
+  Props1?: JSX.Element | null | string;
+  Props2?: string;
 }
 
+type ModalType = "component" | "confirm";
 const ASU0101P02 = () => {
   const navigate = useNavigate();
-  const {optionState, setOptionState} =useSign();
-  const {isOpen, onOpen} = useModal('component');
-  const [modalContent, setModalContent] = useState<modalContentProps>({component : null, title :''});
+  const { optionState, setOptionState } = useSign();
+  const [modalType, setModalType] = useState<ModalType>("component");
+  const { isOpen, onOpen } = useModal(modalType);
+  const [modalContent, setModalContent] = useState<modalContentProps>({
+    Props1: "",
+    Props2: "",
+  });
   const func = {
-    onClickTerms : (type:string) => {
-      if(type === 'use'){
+    onClickTerms: (type: string) => {
+      setModalType("component");
+      if (type === "use") {
         setModalContent({
-          component : <ASU0101P03/>,
-          title : '이용약관'
-        })
+          Props1: <ASU0101P03 />,
+          Props2: "이용약관",
+        });
       }
-      if(type === 'private'){
+      if (type === "private") {
         setModalContent({
-          component : <ASU0101P04/>,
-          title : '개인정보 수집 이용 동의서'
-        })
+          Props1: <ASU0101P04 />,
+          Props2: "개인정보 수집 이용 동의서",
+        });
       }
-      onOpen()
-    }
+    },
+    next: () => {
+      setModalType("confirm");
+      if (optionState("use") && optionState("priv")) {
+        navigate("/ASU0101P01");
+      } else {
+        setModalContent({
+          Props1: "필수약관을 동의해주세요!",
+        });
+      }
+    },
   };
+  useEffect(() => {
+    if (modalContent.Props1 || modalContent.Props2) {
+      onOpen();
+    }
+  }, [modalContent]);
   return (
     <>
       <BackBtnHeader title={"회원가입"} />
-      {isOpen &&<Modals Props1={modalContent.component} Props2={modalContent.title}/>}
+      {isOpen && (
+        <Modals Props1={modalContent.Props1} Props2={modalContent.Props2} />
+      )}
       <div className="sgin-terms">
         <div className="sgin-terms__subject">
           <div className="title__sub1">
             <span>동행인</span>으로서 첫 발걸음에
-            <div className="sub__logo"/>
+            <div className="sub__logo" />
           </div>
           <div className="title__sub2">진심으로 환영합니다.</div>
         </div>
         <div className="sgin-terms__contents">
           <div className="sgin-terms__agreement">
-            <button className={`option__btn ${optionState('all') && optionState('use') && optionState('priv')? 'check' : ''} `} onClick={()=>setOptionState('all')}/>
-            <div className="option__text all" onClick={()=>setOptionState('all')}>약관 전체동의</div>
+            <button
+              className={`option__btn ${
+                optionState("all") && optionState("use") && optionState("priv")
+                  ? "check"
+                  : ""
+              } `}
+              onClick={() => setOptionState("all")}
+            />
+            <div
+              className="option__text all"
+              onClick={() => setOptionState("all")}
+            >
+              약관 전체동의
+            </div>
           </div>
           <div className="borderline"></div>
           <div className="sgin-terms__agreements">
             <div className="sgin-terms__agreement">
-              <button className={`option__btn ${optionState('use')? 'check' : ''} `} onClick={()=>setOptionState('use')}/>
-              <div className="option__text" onClick={()=>setOptionState('use')}>이용약관 동의(필수)</div>
-              <div className="terms__btn" onClick={()=>func.onClickTerms('use')}/>
+              <button
+                className={`option__btn ${optionState("use") ? "check" : ""} `}
+                onClick={() => setOptionState("use")}
+              />
+              <div
+                className="option__text"
+                onClick={() => setOptionState("use")}
+              >
+                이용약관 동의(필수)
+              </div>
+              <div
+                className="terms__btn"
+                onClick={() => func.onClickTerms("use")}
+              />
             </div>
-           
+
             <div className="sgin-terms__agreement">
-              <button className={`option__btn ${optionState('priv')? 'check' : ''} `} onClick={()=>setOptionState('priv')}/>
-              <div className="option__text" onClick={()=>setOptionState('priv')}>
+              <button
+                className={`option__btn ${optionState("priv") ? "check" : ""} `}
+                onClick={() => setOptionState("priv")}
+              />
+              <div
+                className="option__text"
+                onClick={() => setOptionState("priv")}
+              >
                 개인정보 수집 및 이용동의(필수)
               </div>
-              <div className="terms__btn" onClick={()=>func.onClickTerms('private')}/>
+              <div
+                className="terms__btn"
+                onClick={() => func.onClickTerms("private")}
+              />
             </div>
           </div>
         </div>
-        <button
-          className="sign-term__btn"
-          onClick={() => navigate("/ASU0101P01")}
-        >
+        <button className="sign-term__btn" onClick={() => func.next()}>
           <div>시작하기</div>
         </button>
       </div>

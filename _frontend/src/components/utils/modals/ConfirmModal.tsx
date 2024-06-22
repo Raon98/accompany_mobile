@@ -1,18 +1,26 @@
-import React from 'react';
 import useModal from "state/useModal";
 
-export const ConfirmModal = () => {
-    console.log('확인 모달입니다.')
-    const {isOpen, onClose} = useModal('confirm')
-    return (
-        <>
-            {isOpen && (
-                <div>
-                확인모달입니다.
-                    <button onClick={onClose} className="button">닫기버튼</button>
-            </div>
-            )}
-        </>
-    );
-};
+interface ConfirmModalProps {
+  context: string;
+}
+export const ConfirmModal = ({ context }: ConfirmModalProps) => {
+  const { isOpen, onClose } = useModal("confirm");
 
+  return (
+    <>
+      {isOpen && (
+        <>
+          <div className="dimmed" onClick={onClose}></div>
+          <div className="modals confirm">
+            <div className="modals-content">
+              <>{context}</>
+            </div>
+            <button className="modal-confirm__btn" onClick={onClose}>
+              확인
+            </button>
+          </div>
+        </>
+      )}
+    </>
+  );
+};

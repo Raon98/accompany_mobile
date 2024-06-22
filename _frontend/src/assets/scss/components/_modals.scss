@@ -30,4 +30,15 @@
         border: 1px solid;
         border-color : rgba(0,0,0,0.5);
     }
+
+    &.confirm {
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        .modals-content {
+           border: none;
+            height: 75%;
+            font-size: 1.225rem;
+        }
+    }
 }

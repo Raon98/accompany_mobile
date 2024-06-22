@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import {modalStore} from "store/modalStore";
+import { modalStore } from "store/modalStore";
 
 interface UseModal {
     isOpen: boolean;
@@ -13,13 +13,10 @@ const useModal = (name: string): UseModal => {
 
 
     const onOpen = () => {
-        
         setIsOpenStates((prev) => ({
             ...prev,
             [name]: true,
         }));
-
-        console.log(isOpen)
     };
 
     const onClose = () => {

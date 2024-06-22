@@ -7,20 +7,25 @@ interface componentProp {
   title: string;
 }
 export const ComponentModal = ({ component, title }: componentProp) => {
-  const { isOpen } = useModal("component");
+  const { isOpen, onClose } = useModal("component");
   return (
     <>
       {isOpen && (
-        <div className="dimmed">
+        <>
+          <div className="dimmed" onClick={onClose}></div>
           <div className="modals">
             <div className="modals-content">
               <>
-                <CloseHeader title={title} type={"close"} option={{name : "component"}} />
+                <CloseHeader
+                  title={title}
+                  type={"close"}
+                  option={{ name: "component" }}
+                />
                 {component}
               </>
             </div>
           </div>
-        </div>
+        </>
       )}
     </>
   );

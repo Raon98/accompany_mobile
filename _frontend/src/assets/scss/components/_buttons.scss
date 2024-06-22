@@ -85,3 +85,12 @@
     padding-bottom: 5px;
   }
 }
+
+/*모달 확인 버튼*/
+.modal-confirm__btn {
+  @extend .button; 
+  @include primary__btn(colors.$theme-500);
+  border-radius: 1px 1px 4px 4px;
+  height: 20%;
+  margin-top: 1rem;
+}
