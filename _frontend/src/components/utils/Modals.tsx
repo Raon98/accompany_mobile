@@ -25,7 +25,7 @@ export const Modals = ({ Props1, Props2 }: ModalProps) => {
     <>
       <Switch
         modals={{
-          confirm: <ConfirmModal context={Props1} />,
+          confirm: <ConfirmModal Props1={Props1} />,
           component: <ComponentModal component={Props1} title={Props2} />,
         }}
       />

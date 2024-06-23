@@ -91,6 +91,12 @@
   @extend .button; 
   @include primary__btn(colors.$theme-500);
   border-radius: 1px 1px 4px 4px;
-  height: 20%;
-  margin-top: 1rem;
+  width: 100%;
+  &.confirm {
+    border-radius: 1px 1px 4px 0px;
+  }
+  &.cancel{
+    @include bdr__btn(colors.$theme-500);
+    border-radius: 1px 1px 0px 4px;
+  }
 }

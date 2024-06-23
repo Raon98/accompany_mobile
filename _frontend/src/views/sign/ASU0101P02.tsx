@@ -14,7 +14,7 @@ import ASU0101P04 from "views/sign/ASU0101P04";
  ********************************/
 
 interface modalContentProps {
-  Props1?: JSX.Element | null | string;
+  Props1?: JSX.Element | null | string | object;
   Props2?: string;
 }
 
@@ -25,7 +25,7 @@ const ASU0101P02 = () => {
   const [modalType, setModalType] = useState<ModalType>("component");
   const { isOpen, onOpen } = useModal(modalType);
   const [modalContent, setModalContent] = useState<modalContentProps>({
-    Props1: "",
+    Props1: null,
     Props2: "",
   });
   const func = {
@@ -50,7 +50,10 @@ const ASU0101P02 = () => {
         navigate("/ASU0101P01");
       } else {
         setModalContent({
-          Props1: "필수약관을 동의해주세요!",
+          Props1: {
+            content: "필수약관에 동의해주세요!",
+            cancel: true,
+          },
         });
       }
     },
