@@ -6,7 +6,7 @@ COPY . /usr/src/app
 
 RUN apt-get update && \
     apt-get install -y maven curl && \
-    apt-get clean;
+    apt-get clean
 
 RUN mvn clean package
 
