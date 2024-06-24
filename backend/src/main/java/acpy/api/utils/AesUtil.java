@@ -12,7 +12,7 @@ public class AesUtil {
     private static AppConfig appConfig;
 
     // private static byte[] privateKey_256 = appConfig.getPwdPrivateKey();
-    private static byte[] privateKey_256 = 'a1c2c3o4m5p6a7n8y9a1e0sprivatekey';
+    private static byte[] privateKey_256 = "a1c2c3o4m5p6a7n8y9a1e0sprivatekey";
     
 
     public static String encrypt(String plainText) throws Exception {
@@ -22,7 +22,7 @@ public class AesUtil {
         Cipher c = Cipher.getInstance("AES/CBC/PKCS5Padding");
         c.init(Cipher.ENCRYPT_MODE,secretKey,IV);
 
-        byte[] encryptionByte = c.doFinal(plainText)
+        byte[] encryptionByte = c.doFinal(plainText);
 
         return Hex.encodeHexString(encryptionByte);
     }
