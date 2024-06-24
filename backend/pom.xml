@@ -132,6 +132,21 @@
             <artifactId>spring-security-crypto</artifactId>
             <version>6.3.0</version>
         </dependency>
+        <dependency>
+            <groupId>javax.crypto</groupId>
+            <artifactId>javax.crypto</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.3.10</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.15</version>
+        </dependency>
     </dependencies>
 
     <build>
