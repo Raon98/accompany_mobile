@@ -1,8 +1,11 @@
 import { BackBtnHeader } from "components/layout/CustomHeader";
+import { Modals } from "components/utils/Modals";
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useModal from "state/useModal";
 import useSign from "state/useSign";
 import { FieldState, SignState } from "store/signStore";
+import { modalContentProps } from "./ASU0101P02";
 
 /******************************
  * @회원가입 (ACCOMPANY Sign Up)
@@ -27,6 +30,10 @@ const ASU0101P01 = () => {
   const navigate = useNavigate();
   const optionList = ["google.com", "naver.com", "kakao.com", "nate.com"];
   const validText = useRef("");
+  const { isOpen, onOpen } = useModal("confirm");
+  const [modalContent, setModalContent] = useState<modalContentProps>({
+    Props1: null,
+  });
   const [signData, setSignData] = useState<SignData>({
     uid: { title: "아이디를", value: "" },
     email: { title: "이메일을", value: "" },
@@ -197,9 +204,8 @@ const ASU0101P01 = () => {
         }
       }
     },
-    onClick: (name:string,type: string) => {
-     
-      if(name ==='gender'){
+    onClick: (name: string, type: string) => {
+      if (name === "gender") {
         setSucces(true);
         const gender = type === "men" ? "m" : type === "girl" ? "g" : "";
         if (gender === "m" || gender === "g") {
@@ -210,17 +216,26 @@ const ASU0101P01 = () => {
         }
         window.scrollTo(0, document.body.scrollHeight);
       }
-      
     },
     onSubmit: (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
+      if (true) {
+        setModalContent({
+          Props1: {
+            content: "위 정보대로 회원가입을 하시겠습니까?",
+            cancel: true,
+          },
+        });
+        onOpen();
+      }
     },
   };
   return (
     <>
-      <BackBtnHeader title={"회원가입"}/>
-      <form className="sign">
-        {!onSuccessForm && (
+      {isOpen && <Modals Props1={modalContent.Props1} />}
+      <BackBtnHeader title={"회원가입"} />
+      <form className="sign" onSubmit={func.onSubmit}>
+        {/* {!onSuccessForm && (
           <div className="sign__title">{title.current} 입력해주세요.</div>
         )}
         <div className="sign-content">
@@ -232,20 +247,20 @@ const ASU0101P01 = () => {
             <label htmlFor="gender">성별 </label>
             <div className="gender__block">
               <button
-               type="button"
+                type="button"
                 className={`bdr__btn ${
                   signData.gender.value === "m" ? "primary" : ""
                 } `}
-                onClick={(e) => func.onClick("gender","men")}
+                onClick={(e) => func.onClick("gender", "men")}
               >
                 남자
               </button>
               <button
-               type="button"
+                type="button"
                 className={`bdr__btn ${
                   signData.gender.value === "g" ? "primary" : ""
                 } `}
-                onClick={(e) => func.onClick("gender","girl")}
+                onClick={(e) => func.onClick("gender", "girl")}
               >
                 여자
               </button>
@@ -501,35 +516,35 @@ const ASU0101P01 = () => {
             {signState("passwordConfirm", "fail") && (
               <div className="info__text">{validText.current}</div>
             )}
-          </div>
-          <div className="sign__block uid">
-            <label htmlFor="uid">아이디</label>
-            <input
-              type="text"
-              id="uid"
-              name="uid"
-              title="아이디"
-              className={[
-                signState("uid", "focus") ? "focused" : "",
-                signState("uid", "success") ? "success" : "",
-                signState("uid", "fail") ? "fail" : "",
-              ].join(" ")}
-              placeholder="아이디 입력 (4자~13자)"
-              value={signData.uid.value}
-              onChange={func.onChange}
-              onFocus={() => func.onFocus("uid", "focus")}
-              onBlur={() => onReset("focus")}
-              onKeyDown={(e) => func.onNext(e, "uid", "password", "state")}
-              maxLength={13}
-              minLength={6}
-              required
-            />
-            {signState("uid", "fail") && (
-              <div className="info__text">{validText.current}</div>
-            )}
-          </div>
+          </div> */}
+        <div className="sign__block uid">
+          <label htmlFor="uid">아이디</label>
+          <input
+            type="text"
+            id="uid"
+            name="uid"
+            title="아이디"
+            className={[
+              signState("uid", "focus") ? "focused" : "",
+              signState("uid", "success") ? "success" : "",
+              signState("uid", "fail") ? "fail" : "",
+            ].join(" ")}
+            placeholder="아이디 입력 (4자~13자)"
+            value={signData.uid.value}
+            onChange={func.onChange}
+            onFocus={() => func.onFocus("uid", "focus")}
+            onBlur={() => onReset("focus")}
+            onKeyDown={(e) => func.onNext(e, "uid", "password", "state")}
+            maxLength={13}
+            minLength={6}
+            required
+          />
+          {signState("uid", "fail") && (
+            <div className="info__text">{validText.current}</div>
+          )}
         </div>
-        {onSuccessForm && <button className="sign-term__btn">가입하기</button>}
+        {/* </div> */}
+        {!onSuccessForm && <button className="sign-term__btn">가입하기</button>}
       </form>
     </>
   );

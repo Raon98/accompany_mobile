@@ -13,7 +13,7 @@ import ASU0101P04 from "views/sign/ASU0101P04";
  * @작성자:김성철
  ********************************/
 
-interface modalContentProps {
+export interface modalContentProps {
   Props1?: JSX.Element | null | string | object;
   Props2?: string;
 }
@@ -51,7 +51,8 @@ const ASU0101P02 = () => {
       } else {
         setModalContent({
           Props1: {
-            content: "필수약관에 동의해주세요!"
+            content:
+              "가입을 완료하시겠습니까? 소중한 순간을 동행하다와 함께하세요.",
           },
         });
       }
