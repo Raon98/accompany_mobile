@@ -27,9 +27,8 @@
     &-content {
         @include mixins.flex_mixin(center,center,column);
         border-radius: 5px;
-        border: 1px solid;
         border-color : rgba(0,0,0,0.5);
-        margin-top: 2rem;
+        
     }
 
     &.confirm {
@@ -40,6 +39,7 @@
            border: none;
             height: 75%;
             font-size: 1.115rem;
+            margin-top: 2rem;
         }
     }
 

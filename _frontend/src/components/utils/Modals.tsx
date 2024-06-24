@@ -16,7 +16,7 @@ const Switch = ({ modals }: SwitchProps) => {
   return openModals ? modals[openModals] : null;
 };
 
-interface ModalProps {
+interface  ModalProps {
   Props1?: any;
   Props2?: any;
 }

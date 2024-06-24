@@ -51,8 +51,7 @@ const ASU0101P02 = () => {
       } else {
         setModalContent({
           Props1: {
-            content: "필수약관에 동의해주세요!",
-            cancel: true,
+            content: "필수약관에 동의해주세요!"
           },
         });
       }
