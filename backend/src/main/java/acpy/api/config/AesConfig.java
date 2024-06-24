@@ -5,9 +5,9 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Value("${aes.key}")
-    private String AccompanyPwdKey;
+    private String PWD_PRIVATE_KEY;
 
-    public String getAccompanyPwdKey() {
+    public String getPwdPrivateKey() {
         return AccompanyPwdKey;
     }
 }

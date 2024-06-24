@@ -16,12 +16,12 @@ public class AesUtil {
 
     static {
         try {
-            keyValue = appConfig.getAccompanyPwdKey().getBytes();
+            keyValue = appConfig.getPwdPrivateKey().getBytes();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    
+
     public static String encrypt(String valueToEnc) throws Exception {
         KeyGenerator keyGen = KeyGenerator.getInstance(ALGORITHM);
         keyGen.init(KEY_SIZE);
