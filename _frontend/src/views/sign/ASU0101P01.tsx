@@ -1,5 +1,7 @@
+import { useMutation } from "@tanstack/react-query";
 import { BackBtnHeader } from "components/layout/CustomHeader";
 import { Modals } from "components/utils/Modals";
+import asyncApi from "plugins/asyncApi";
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useModal from "state/useModal";
@@ -28,12 +30,28 @@ const ASU0101P01 = () => {
     setSucces,
   } = useSign();
   const navigate = useNavigate();
+  const { $api } = asyncApi();
   const optionList = ["google.com", "naver.com", "kakao.com", "nate.com"];
   const validText = useRef("");
   const { isOpen, onOpen } = useModal("confirm");
   const [modalContent, setModalContent] = useState<modalContentProps>({
     Props1: null,
   });
+  const signMutation = useMutation({
+    mutationFn: (signData: object) =>
+      $api("api", "ACS0201S01", "ASU0101P01", { signData: signData }),
+    onSuccess: (res) => {
+      console.log(res);
+    },
+    onError: (err) => {
+      console.error(err);
+    },
+    onSettled: () => {
+      console.log("");
+    },
+  });
+  const { mutate, isPending, isError, error, isSuccess } = signMutation;
+
   const [signData, setSignData] = useState<SignData>({
     uid: { title: "아이디를", value: "" },
     email: { title: "이메일을", value: "" },
@@ -46,8 +64,8 @@ const ASU0101P01 = () => {
     birthMm: { title: "생년월일을", value: "" },
     birthDd: { title: "생년월일을", value: "" },
     gender: { title: "성별을", value: "" },
-    private: { title: "", value: signState("gender", "state") ? "Y" : "N" },
   });
+
   const title = useRef(signData.uid.title);
   const func = {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -222,8 +240,27 @@ const ASU0101P01 = () => {
       if (true) {
         setModalContent({
           Props1: {
-            content: "위 정보대로 회원가입을 하시겠습니까?",
+            content:
+              "가입을 완료하시겠습니까?<br/>소중한 순간을 동행하다와 함께하세요.",
             cancel: true,
+            confirmText: "확인",
+            cancelText: "취소",
+            confirmFn: () => {
+              const sign = {
+                uid: signData.uid.value,
+                pass: signData.password.value,
+                mail: signData.email.value + "@" + signData.emailAddress.value,
+                name: signData.name.value,
+                mohp: signData.phone.value,
+                birth:
+                  signData.birthYy.value +
+                  signData.birthMm.value +
+                  signData.birthDd.value,
+                gend: signData.gender.value,
+              };
+              console.log(sign);
+              mutate(sign);
+            },
           },
         });
         onOpen();
@@ -235,7 +272,7 @@ const ASU0101P01 = () => {
       {isOpen && <Modals Props1={modalContent.Props1} />}
       <BackBtnHeader title={"회원가입"} />
       <form className="sign" onSubmit={func.onSubmit}>
-        {/* {!onSuccessForm && (
+        {!onSuccessForm && (
           <div className="sign__title">{title.current} 입력해주세요.</div>
         )}
         <div className="sign-content">
@@ -516,35 +553,35 @@ const ASU0101P01 = () => {
             {signState("passwordConfirm", "fail") && (
               <div className="info__text">{validText.current}</div>
             )}
-          </div> */}
-        <div className="sign__block uid">
-          <label htmlFor="uid">아이디</label>
-          <input
-            type="text"
-            id="uid"
-            name="uid"
-            title="아이디"
-            className={[
-              signState("uid", "focus") ? "focused" : "",
-              signState("uid", "success") ? "success" : "",
-              signState("uid", "fail") ? "fail" : "",
-            ].join(" ")}
-            placeholder="아이디 입력 (4자~13자)"
-            value={signData.uid.value}
-            onChange={func.onChange}
-            onFocus={() => func.onFocus("uid", "focus")}
-            onBlur={() => onReset("focus")}
-            onKeyDown={(e) => func.onNext(e, "uid", "password", "state")}
-            maxLength={13}
-            minLength={6}
-            required
-          />
-          {signState("uid", "fail") && (
-            <div className="info__text">{validText.current}</div>
-          )}
+          </div>
+          <div className="sign__block uid">
+            <label htmlFor="uid">아이디</label>
+            <input
+              type="text"
+              id="uid"
+              name="uid"
+              title="아이디"
+              className={[
+                signState("uid", "focus") ? "focused" : "",
+                signState("uid", "success") ? "success" : "",
+                signState("uid", "fail") ? "fail" : "",
+              ].join(" ")}
+              placeholder="아이디 입력 (4자~13자)"
+              value={signData.uid.value}
+              onChange={func.onChange}
+              onFocus={() => func.onFocus("uid", "focus")}
+              onBlur={() => onReset("focus")}
+              onKeyDown={(e) => func.onNext(e, "uid", "password", "state")}
+              maxLength={13}
+              minLength={6}
+              required
+            />
+            {signState("uid", "fail") && (
+              <div className="info__text">{validText.current}</div>
+            )}
+          </div>
         </div>
-        {/* </div> */}
-        {!onSuccessForm && <button className="sign-term__btn">가입하기</button>}
+        {onSuccessForm && <button className="sign-term__btn">가입하기</button>}
       </form>
     </>
   );

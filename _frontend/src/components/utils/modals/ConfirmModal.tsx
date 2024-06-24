@@ -6,11 +6,20 @@ interface ConfirmModalProps {
     cancel?: boolean;
     confirmText?: string;
     cancelText?: string;
+    confirmFn?: () => void;
   };
 }
 export const ConfirmModal = ({ Props1 }: ConfirmModalProps) => {
   const { isOpen, onClose } = useModal("confirm");
 
+  const func = {
+    confirm: () => {
+      if (Props1.confirmFn) {
+        Props1.confirmFn();
+      }
+      onClose();
+    },
+  };
   return (
     <>
       {isOpen && (
@@ -18,7 +27,7 @@ export const ConfirmModal = ({ Props1 }: ConfirmModalProps) => {
           <div className="dimmed" onClick={onClose}></div>
           <div className="modals confirm">
             <div className="modals-content">
-              <>{Props1.content}</>
+              <div dangerouslySetInnerHTML={{ __html: Props1.content }} />
             </div>
             <div className="btn__block">
               {Props1.cancel && (
@@ -30,7 +39,7 @@ export const ConfirmModal = ({ Props1 }: ConfirmModalProps) => {
                 className={`modal-confirm__btn ${
                   Props1.cancel ? "confirm" : ""
                 }`}
-                onClick={onClose}
+                onClick={() => func.confirm()}
               >
                 {Props1.confirmText ? Props1.confirmText : "확인"}
               </button>

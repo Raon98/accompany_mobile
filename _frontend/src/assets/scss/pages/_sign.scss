@@ -42,7 +42,7 @@
   &__block {
     @include mixins.flex_mixin(space-between, center, column);
     width: 100%;
-    margin-top: 2.125rem;
+    margin-top: 1.125rem;
     transition: opacity 0.3s ease, height 0.3s ease;
 
     .info__text {
@@ -207,7 +207,7 @@
       height: 11.125rem;
 
       & > label {
-        margin-bottom: 0.725rem;
+        margin-top: 0.725rem;
       }
       & > input {
         &.fail {

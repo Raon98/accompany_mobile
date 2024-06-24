@@ -51,8 +51,7 @@ const ASU0101P02 = () => {
       } else {
         setModalContent({
           Props1: {
-            content:
-              "가입을 완료하시겠습니까? 소중한 순간을 동행하다와 함께하세요.",
+            content: "필수약관에 동의해주세요!",
           },
         });
       }
