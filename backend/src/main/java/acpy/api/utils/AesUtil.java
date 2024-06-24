@@ -1,41 +1,46 @@
+package acpy.api.utils;
+
 import javax.crypto.Cipher;
-import javax.crypto.KeyGenerator;
-import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import java.util.Base64;
 import org.apache.commons.codec.binary.Hex;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import acpy.api.config.AesConfig;
+import java.nio.charset.StandardCharsets;
 
-
+@Component
 public class AesUtil {
 
-    @Autowired
-    private static AesConfig aesConfig;
+    private final AesConfig aesConfig;
+    private static byte[] privateKey_256;
 
-    // private static byte[] privateKey_256 = appConfig.getPwdPrivateKey();
-    private static byte[] privateKey_256 = "a1c2c3o4m5p6a7n8y9a1e0sprivatekey";
-    
+    @Autowired
+    public AesUtil(AesConfig aesConfig) {
+        this.aesConfig = aesConfig;
+        privateKey_256 = aesConfig.getPwdPrivateKey().getBytes(StandardCharsets.UTF_8);
+    }
 
     public static String encrypt(String plainText) throws Exception {
-        SecretKeySpec secretKey = new SecretKeySpec(privateKey_256.getBytes(StandardCharsets.UTF_8),"AES");
-        IvParamterSpec IV = new IvParamterSpec(privateKey_256.substring(0,16).getBytes());
+        SecretKeySpec secretKey = new SecretKeySpec(privateKey_256, "AES");
+        IvParameterSpec IV = new IvParameterSpec(privateKey_256, 0, 16);
 
         Cipher c = Cipher.getInstance("AES/CBC/PKCS5Padding");
-        c.init(Cipher.ENCRYPT_MODE,secretKey,IV);
+        c.init(Cipher.ENCRYPT_MODE, secretKey, IV);
 
-        byte[] encryptionByte = c.doFinal(plainText);
+        byte[] encryptionByte = c.doFinal(plainText.getBytes(StandardCharsets.UTF_8));
 
         return Hex.encodeHexString(encryptionByte);
     }
 
     public static String decrypt(String encryptedValue) throws Exception {
-        SecretKeySpec secretKey = new SecretKeySpec(privateKey_256.getBytes(StandardCharsets.UTF_8),"AES");
-        IvParamterSpec IV = new IvParamterSpec(privateKey_256.substring(0,16).getBytes());
+        SecretKeySpec secretKey = new SecretKeySpec(privateKey_256, "AES");
+        IvParameterSpec IV = new IvParameterSpec(privateKey_256, 0, 16);
 
-        Cipher c = Cipher.getInstance("AES/ECB/PKCS5Padding");
-		c.init(Cipher.DECRYPT_MODE, secretKey,IV);
-		byte[] decodeByte = Hex.decodeHex(encodeText.toCharArray());
-		
-		return new String(c.doFinal(decodeByte), StandardCharsets.UTF_8);
+        Cipher c = Cipher.getInstance("AES/CBC/PKCS5Padding");
+        c.init(Cipher.DECRYPT_MODE, secretKey, IV);
+        byte[] decodeByte = Hex.decodeHex(encryptedValue.toCharArray());
+
+        return new String(c.doFinal(decodeByte), StandardCharsets.UTF_8);
     }
 }

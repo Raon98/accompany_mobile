@@ -10,6 +10,6 @@ public class AesConfig {
     private String PWD_PRIVATE_KEY;
 
     public String getPwdPrivateKey() {
-        return AccompanyPwdKey;
+        return PWD_PRIVATE_KEY;
     }
 }
