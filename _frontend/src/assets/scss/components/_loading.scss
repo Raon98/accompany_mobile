@@ -14,6 +14,9 @@
     .loading{
         @include mixins.flex_mixin(center);
         height: 100%;
+        & > img {
+            width: 5rem;
+        }
     }
 }
 

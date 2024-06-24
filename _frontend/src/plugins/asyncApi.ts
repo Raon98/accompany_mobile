@@ -26,7 +26,6 @@ const AsyncApi = () => {
         try {
             onStart();
            
-
             const rsp = await _axios.post(`/${proxy}/${serviceId}`, {
                 REQ_COM: {
                     serviceId: serviceId,
@@ -42,6 +41,7 @@ const AsyncApi = () => {
             onEnd();
             return rsp.data;
         } catch (error:any) {
+            onEnd();
             throw new Error(error.message);
         }
     };
