@@ -10,7 +10,7 @@ import org.apache.commons.codec.binary.Hex;
 public class AesUtil {
 
     @Autowired
-    private static AppConfig appConfig;
+    private static AesConfig aesConfig;
 
     // private static byte[] privateKey_256 = appConfig.getPwdPrivateKey();
     private static byte[] privateKey_256 = "a1c2c3o4m5p6a7n8y9a1e0sprivatekey";
