@@ -44,18 +44,19 @@ public class ACS0201Service {
         userReq.setFnrl_flag("N");
         userReq.setPiin_agrm(in.getSignData().getPriv());
 
-        if(!userReq.getUid() && !userReq.getIdty()){
+
+        if (userReq.getUid() != null && !userReq.getUid().isEmpty() && userReq.getIdty() != null && !userReq.getIdty().isEmpty()) {
             AcpyLogger.error("=============== DB저장 START ================");
             //DB MST저장
-            int save1 = AcpyMapper.insert("insertMstUserInfo",userReq)
-            int save2 = AcpyMapper.insert("insertPrivUserInfo",userReq)
+            int save1 = AcpyMapper.insert("insertMstUserInfo", userReq);
+            int save2 = AcpyMapper.insert("insertPrivUserInfo", userReq); 
             AcpyLogger.error("=============== DB저장 END ================");
 
-            if(save1 > 0 && save2 > 0) {
+            if (save1 > 0 && save2 > 0) {
                 // 2. 토큰 발행
-                AcpyLogger.error("=============== TOKEN 발행 START ================")
+                AcpyLogger.error("=============== TOKEN 발행 START ================");
                 result = jwtUtils.generateToken(in.getSignData().getUid());
-                AcpyLogger.error("=============== TOKEN 발행 END ================")
+                AcpyLogger.error("=============== TOKEN 발행 END ================");
             }
         }
 
