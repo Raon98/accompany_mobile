@@ -21,7 +21,7 @@ public class ACS0201Service {
      */
     public boolean ACS0201S01(ACS0201IN in, ACS0201OUT out) throws Exception {
         JwtUtil jwtUtils = new JwtUtil();
-        Map<String, String> result = jwtUtils.generateToken(in.getSignData().getUid(););
+        Map<String, String> result = jwtUtils.generateToken(in.getSignData().getUid());
         
         System.out.println("serviceTester " + result);
         // 1. DB 정보조회

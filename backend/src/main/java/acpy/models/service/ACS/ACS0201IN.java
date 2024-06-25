@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class ACS0201IN {
 
-    private Object signData;
+    private SignData signData;
 
     private String idty; /* 신분 0:관리자 1:일반이용자 2:주최자 */
     private String djch_flag;
