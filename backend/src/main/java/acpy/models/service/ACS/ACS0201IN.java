@@ -24,6 +24,7 @@ public class ACS0201IN {
         private String mohp; // 휴대폰번호
         private String birth; // 생년월일
         private String gend; // 성별
+        private String priv; 
     }
 
 }

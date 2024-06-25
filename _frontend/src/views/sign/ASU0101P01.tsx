@@ -64,6 +64,7 @@ const ASU0101P01 = () => {
     birthMm: { title: "생년월일을", value: "" },
     birthDd: { title: "생년월일을", value: "" },
     gender: { title: "성별을", value: "" },
+    private: { title: "", value: signState("gender", "state") ? "Y" : "N" },
   });
 
   const title = useRef(signData.uid.title);
@@ -257,6 +258,7 @@ const ASU0101P01 = () => {
                   signData.birthMm.value +
                   signData.birthDd.value,
                 gend: signData.gender.value,
+                priv : signData.private.value,
               };
               console.log(sign);
               mutate(sign);

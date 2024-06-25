@@ -16,6 +16,7 @@ public class JwtUtil {
     private static final long REF_TOKEN_VALIDITY = HOUR * 24 * 15;
 
     
+    @SuppressWarnings("deprecation")
     public Map<String, String> generateToken(String uid) {
         AcpyLogger.info("============= generateToken CALL START ==============");
         Map<String, String> tokens = new HashMap<>();

@@ -1,22 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="acpy.api.support.AcpyMapper">
-    <select id="selectAll" resultType="acpy.api.support.LowerKeyMap">
-        select *
-        from ACP_MST mst
-    </select>
+    <insert id="insertMstUserInfo">
+        INSERT INTO ACP_MST (UID,
+							IDTY,
+							IDNM,  
+							NAME,
+							MAIL,
+							MOHP,
+							PLAT,
+							GEND,
+							DJCH_FLAG,
+							WEDD_FLAG,
+							FNRL_FLAG,
+							PRIV_AGRM,
+							INID,
+							INDT,
+							UPID,
+							UPDT)
+            VALUE (#{uid},
+						#{idty},
+						CASE WHEN #{idty} = '0' THEN '관리자' WHEN #{idty} = '1' THEN '일반이용자' WHEN #{idty} = '2' THEN '주최자' ELSE '기타' END,
+						#{name},
+						#{mail},
+						#{mohp},
+						'',
+						#{gend},
+						#{djch_flag},
+						#{wedd_flag},
+						#{fnrl_flag},
+						#{priv_agrm},
+						"ADMIN",
+						NOW(),
+						"ADMIN",
+						"")
+    </insert>
 
-
-    <select id="selectParamTest" resultType="acpy.api.support.LowerKeyMap">
-        select *
-        from ACP_MST mst
-        where mst.idty = #{idty}
-    </select>
-
-    <insert id="insertTest">
-        INSERT INTO ACP_MST (UID,PASS,IDTY,NAME,MAIL,MOHP,UAGE,USEX,UARS,INID,INDT,UPID,UPDT)
-            VALUE (#{uid},#{pass},#{idty},#{name},#{mail},#{mohp},#{uage},#{usex},#{uars},"ADMIN","","ADMIN","")
+	<insert id="insertPrivUserInfo">
+        INSERT INTO ACP_PRV_INFO (UID,
+							PASS,
+							NAME,
+							MAIL,
+							MOHP,
+							AUTO_FLAG,
+							STATE,
+							INID,
+							INDT,
+							UPID,
+							UPDT)
+            VALUE (#{uid},
+						#{pass},
+						#{name},
+						#{mail},
+						#{mohp},
+						'N',
+						'N',
+						"ADMIN",
+						NOW(),
+						"ADMIN",
+						"")
     </insert>
 </mapper>
