@@ -1,18 +1,23 @@
 package acpy.api.controller;
 
-import acpy.api.support.AcpyLogger;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import acpy.api.support.AcpyLogger;
 
 @RequestMapping("/api")
 @RestController
@@ -26,7 +31,6 @@ public class AccompanyApiController {
         this.applicationContext = applicationContext;
     }
 
-
     @PostMapping("/{serviceId}")
     public ResponseEntity<Object> postServiceAPiRequest(
             @PathVariable(required = false) String serviceId,
@@ -34,50 +38,38 @@ public class AccompanyApiController {
     ) {
         AcpyLogger.info("============= Service CALL START ==============");
         try {
-
-            /* ServiceID : AUI0101S01
-             * 서비스 아이디만 입력할시 AUI0101Service파일 안에 AUI0101S01이있어야함
-             * AUI0101S01 => AUI0101Service
-             * */
-
-            String ServiceId = serviceId.substring(0,7);
-            String Service =ServiceId + "Service";
+            String ServiceId = serviceId.substring(0, 7);
+            String Service = ServiceId + "Service";
             AcpyLogger.info("============= ServiceID : {}==============", Service);
             AcpyLogger.info("============= MethodId : {}==============", serviceId);
 
-            // 요청된 서비스 빈 가져오기
             Object serviceBean = applicationContext.getBean(Service);
-
-            // 요청된 메서드 가져오기
             Method method = findMethod(serviceBean, serviceId);
             AcpyLogger.info("============= method : {}==============", method);
+
             if (method != null) {
                 Map<String, Object> datParams = (Map<String, Object>) params.get("REQ_DAT");
                 Map<String, Object> modifiedParams = datParams != null ? datParams : params;
 
-                Object inObj = mapParamsToInObject(ServiceId + "IN",modifiedParams);
+                Object inObj = inObjectCreate(ServiceId + "IN", modifiedParams);
                 Object outObj = applicationContext.getBean(ServiceId + "OUT");
 
-                AcpyLogger.info("============= Service inObj {} ==============",inObj);
-                AcpyLogger.info("============= Service outObj {} ==============",outObj);
+                AcpyLogger.info("============= Service inObj {} ==============", inObj);
+                AcpyLogger.info("============= Service outObj {} ==============", outObj);
                 AcpyLogger.info("============= Service CALL END ==============");
-                Object result = method.invoke(serviceBean,inObj,outObj);;
-                return ResponseEntity.ok(objectMapper.writeValueAsString(outObj));
+                method.invoke(serviceBean, inObj, outObj);
 
+                return ResponseEntity.ok(objectMapper.writeValueAsString(outObj));
             } else {
                 AcpyLogger.info("============= Service CALL ERROR ==============");
                 return ResponseEntity.badRequest().body("Method not found");
             }
-
         } catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error processing request");
         }
-
-
     }
 
-    // 메서드 찾기
     private Method findMethod(Object serviceBean, String methodName) {
         for (Method method : serviceBean.getClass().getDeclaredMethods()) {
             if (method.getName().equals(methodName)) {
@@ -87,19 +79,34 @@ public class AccompanyApiController {
         return null;
     }
 
-    private Object mapParamsToInObject(String inClassName, Map<String, Object> params) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-        Class<?> inClass = Class.forName("acpy.models.service."+inClassName.substring(0,3)+"."+ inClassName);
+    private Object inObjectCreate(String inClassName, Map<String, Object> params) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+        Class<?> inClass = Class.forName("acpy.models.service." + inClassName.substring(0, 3) + "." + inClassName);
         Object inObj = inClass.getDeclaredConstructor().newInstance();
 
-        // 파라미터 매핑
         for (Field field : inClass.getDeclaredFields()) {
+            field.setAccessible(true);
             if (params.containsKey(field.getName())) {
-                field.setAccessible(true);
-                field.set(inObj, params.get(field.getName()));
+                Object paramValue = params.get(field.getName());
+                if (isPrimitiveOrWrapper(field.getType()) || field.getType().equals(String.class)) {
+                    field.set(inObj, paramValue);
+                } else if (paramValue instanceof Map) {
+                    Object nestedObj = inObjectCreate(inClassName + "$" + field.getType().getSimpleName(), (Map<String, Object>) paramValue);
+                    field.set(inObj, nestedObj);
+                }
             }
         }
         return inObj;
     }
 
+    private boolean isPrimitiveOrWrapper(Class<?> type) {
+        return type.isPrimitive() ||
+                type.equals(Boolean.class) ||
+                type.equals(Integer.class) ||
+                type.equals(Character.class) ||
+                type.equals(Byte.class) ||
+                type.equals(Short.class) ||
+                type.equals(Double.class) ||
+                type.equals(Long.class) ||
+                type.equals(Float.class);
+    }
 }
-

@@ -1,8 +1,12 @@
 package acpy.models.service.ACS;
 
+import org.springframework.stereotype.Component;
+
 import lombok.Data;
 
+
 @Data
+@Component
 public class ACS0201IN {
 
     private SignData signData;
@@ -16,6 +20,7 @@ public class ACS0201IN {
     private String rfes_token;
 
     @Data
+    @Component
     public static class SignData {
         private String uid; // 아이디
         private String pass; // 비밀번호

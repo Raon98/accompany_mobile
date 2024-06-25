@@ -38,8 +38,10 @@ const ASU0101P01 = () => {
     Props1: null,
   });
   const signMutation = useMutation({
-    mutationFn: (signData: object) =>
-      $api("api", "ACS0201S01", "ASU0101P01", { signData: signData }),
+    mutationFn: (signData: object) => {
+      console.log(signData);
+      return $api("api", "ACS0201S01", "ASU0101P01", { signData: signData });
+    },
     onSuccess: (res) => {
       console.log(res);
     },
@@ -258,7 +260,7 @@ const ASU0101P01 = () => {
                   signData.birthMm.value +
                   signData.birthDd.value,
                 gend: signData.gender.value,
-                priv : signData.private.value,
+                priv: signData.private.value,
               };
               console.log(sign);
               mutate(sign);

@@ -1,7 +1,8 @@
 package acpy.models.db.ACS;
 
-import lombok.Data;
 import org.springframework.stereotype.Component;
+
+import lombok.Data;
 
 @Data
 @Component
@@ -17,5 +18,5 @@ public class ACS02REQ {
     private String djch_flag;
     private String wedd_flag;
     private String fnrl_flag;
-    private String piin_agrm;
+    private String priv_agrm;
 }

@@ -1,15 +1,23 @@
 package acpy.api.config;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Configuration;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
-@Configuration
 public class AesConfig {
 
-    @Value("${aes.key}")
-    private String PWD_PRIVATE_KEY;
+    private static final String FILE_PATH = "src/main/resources/application.properties";
+    private static final Properties properties = new Properties();
 
-    public String getPwdPrivateKey() {
-        return PWD_PRIVATE_KEY;
+    static {
+        try {
+            properties.load(new FileInputStream(FILE_PATH));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static String getPrivateKey() {
+        return properties.getProperty("aes.key");
     }
 }
