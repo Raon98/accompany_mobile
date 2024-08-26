@@ -30,6 +30,11 @@
         border-color : rgba(0,0,0,0.5);
         
     }
+    &-title {
+        @include mixins.flex_mixin(center,center,column);
+        margin-top: 2rem;
+        font-size: 1.375rem;
+    }
 
     &.confirm {
         height: 30%;
@@ -39,7 +44,7 @@
            border: none;
             height: 75%;
             font-size: 1.115rem;
-            margin: 2rem 1rem 0rem 1rem;
+            margin: 0rem 1rem 0rem 1rem;
         }
     }
 

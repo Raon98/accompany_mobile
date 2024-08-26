@@ -95,6 +95,8 @@
       &.fail {
         border-bottom: 2px solid colors.$danger-light-350;
       }
+
+      
     }
     .gender__block {
       @include mixins.flex_mixin;
@@ -222,6 +224,12 @@
     }
     &.uid {
       margin-top: 1.325rem;
+      position: relative;
+
+      & > .uid__form {
+        @include mixins.flex_mixin;
+        
+      }
     }
   }
   .priv_btn {

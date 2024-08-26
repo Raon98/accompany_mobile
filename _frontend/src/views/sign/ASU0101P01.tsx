@@ -238,6 +238,28 @@ const ASU0101P01 = () => {
         window.scrollTo(0, document.body.scrollHeight);
       }
     },
+    onCheck : () => {
+      if (signData.uid.value.length < 4) {
+
+        validText.current = "글자수가 4자이하입니다.";
+        onState("uid", "fail");
+        return false;
+      }else {
+        setModalContent({
+          Props1: {
+            content:
+              "사용 가능한 아이디입니다!",
+            confirmText: "확인",
+            style : {
+              height : "25%"
+            }
+          },
+        });
+
+        onOpen();
+      }
+      
+    },
     onSubmit: (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       if (true) {
@@ -560,6 +582,7 @@ const ASU0101P01 = () => {
           </div>
           <div className="sign__block uid">
             <label htmlFor="uid">아이디</label>
+            <div className="uid__form">
             <input
               type="text"
               id="uid"
@@ -579,10 +602,14 @@ const ASU0101P01 = () => {
               maxLength={13}
               minLength={6}
               required
-            />
+            />        
+            <button className="uid-check__btn" type="button" onClick={() => func.onCheck()}>중복확인</button>
+                     </div>
             {signState("uid", "fail") && (
               <div className="info__text">{validText.current}</div>
             )}
+    
+   
           </div>
         </div>
         {onSuccessForm && <button className="sign-term__btn">가입하기</button>}
