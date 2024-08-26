@@ -215,7 +215,7 @@ fieldset {
 
 
     &__utils {
-      @include mixins.flex_mixin(space-around, center);
+      @include mixins.flex_mixin(space-between, center);
       margin-top: 1.725rem;
       color: darkslategrey;
       width: 80%;

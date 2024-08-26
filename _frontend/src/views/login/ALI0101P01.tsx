@@ -158,14 +158,14 @@ const ALI0101P01 = () => {
                       className="input-form__utils-option"
                       onClick={func.onSignUp}
                     >
-                      아이디 찾기
+                     
                     </a>
                     <a
                       href="#"
                       className="input-form__utils-option"
                       onClick={func.onSignUp}
                     >
-                      비밀번호 재설정
+                      
                     </a>
                     <a
                       href="#"
