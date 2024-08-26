@@ -41,6 +41,19 @@ services:
     env_file:
       - .env
 
+  database:
+    image: raon98/accompany_mobile:database
+    build:
+      context: ./backend
+      dockerfile: Dockerfile_DB
+    restart: always
+    ports:
+      - "3306:3306"
+    networks:
+      - my_network
+    volumes:
+      - database_data:/var/lib/mysql
+
 networks:
   my_network:
     driver: bridge
