@@ -10,6 +10,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Modals } from "components/utils/Modals";
 import useSign from "state/useSign";
+import useModal from "state/useModal";
+import { modalContentProps } from "views/sign/ASU0101P02";
 
 /******************************
  * @로그인 (ACCOMPANY  Login)
@@ -32,11 +34,38 @@ const ALI0101P01 = () => {
   const { onAllReset } = useSign();
   const { $api } = asyncApi();
 
+  const {  isOpen,onOpen } = useModal("confirm");
+  const [modalContent, setModalContent] = useState<modalContentProps>({
+    Props1: null,
+  });
+  
   const sessionMutation = useMutation({
     mutationFn: () => $api("api", "ACS0201S01", "ALI0101P01", { uid: "test" }),
     onSuccess: (res) => {
       console.log(res);
+      setIsActive(true);
     },
+    onError : (e) => {
+      console.log(isActive)
+      if(isActive){
+        setModalContent({
+          Props1: {
+            title : "",
+            content:
+              "저희와 함께 동행해주세요! <br/> 회원가입을 진행하시겠어요?",
+            cancel: true,
+            confirmText: "확인",
+            cancelText: "취소",
+            confirmFn: () => {
+              navigate("/ASU0101P02")
+            },
+          },
+        });
+        onOpen()
+      }
+      setIsActive(true);
+      console.log(e)
+    }
   });
   const { mutate, isPending, isError, isSuccess } = sessionMutation;
   const func = {
@@ -58,16 +87,21 @@ const ALI0101P01 = () => {
       console.log("회원가입 페이지로 이동");
     },
     onClick: (tag?: string) => {
+      console.log(tag)
       if (tag === "e") {
-        $api("api", "ACS0101S01", "ALI0101P01", {
-          uid: "test",
-        }).then((test) => console.log(test));
+        // $api("api", "ACS0101S01", "ALI0101P01", {
+        //   uid: "test",
+        // }).then((test) => console.log(test));
 
         mutate();
       } else if (tag === "g") {
+
       } else if (tag === "k") {
+
+      } else {
+        setIsActive(true);
       }
-      setIsActive(true);
+      
     },
   };
 
@@ -77,7 +111,7 @@ const ALI0101P01 = () => {
 
   return (
     <>
-      <Modals />
+      {isOpen && <Modals Props1={modalContent.Props1} />}
       {isPending && <Loading />}
       <div className={isActive ? "login" : "login-fixed"}>
         {!isActive && (
@@ -115,9 +149,9 @@ const ALI0101P01 = () => {
             isActive ? "form__absolute--active" : ""
           }`}
         >
-          <div className="form" onClick={() => func.onClick()}>
+          <div className="form" >
             <div className="form-flex">
-              <div className="form-drag__btn"></div>
+              <div className="form-drag__btn" onClick={() => func.onClick()}></div>
             </div>
             {isActive && (
               <>
@@ -177,6 +211,7 @@ const ALI0101P01 = () => {
                   </div>
                   <div className="form__block form-login">
                     <button
+                      type="button"
                       className="login__btn primary"
                       onClick={() => func.onClick("e")}
                     >
@@ -184,6 +219,7 @@ const ALI0101P01 = () => {
                     </button>
                     <div className="form__block-oauth">
                       <button
+                       type="button"
                         className="login__btn google"
                         onClick={() => func.onClick("g")}
                       >
@@ -191,6 +227,7 @@ const ALI0101P01 = () => {
                         구글로 로그인
                       </button>
                       <button
+                       type="button"
                         className="login__btn kakao"
                         onClick={() => func.onClick("k")}
                       >
