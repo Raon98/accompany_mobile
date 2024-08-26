@@ -37,6 +37,7 @@ const ASU0101P01 = () => {
   const [modalContent, setModalContent] = useState<modalContentProps>({
     Props1: null,
   });
+  const [uidCheck,SetuidCheck] = useState(false)
   const signMutation = useMutation({
     mutationFn: (signData: object) => {
       console.log(signData);
@@ -107,6 +108,12 @@ const ASU0101P01 = () => {
       }
       /*아이디 유효성검사*/
       if (currentName === "uid") {
+        if(!uidCheck) {
+          validText.current = "아이디 중복 확인해주세요!";
+          onState(currentName, "fail");
+          return false;
+        }
+
         if (signData[currentName].value.length < 4) {
           validText.current = "글자수가 4자이하입니다.";
           onState(currentName, "fail");
@@ -250,6 +257,9 @@ const ASU0101P01 = () => {
             content:
               "사용 가능한 아이디입니다!",
             confirmText: "확인",
+            confirmFn : () => {
+              SetuidCheck(true)
+            },
             style : {
               height : "25%"
             }

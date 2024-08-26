@@ -42,11 +42,9 @@ const ALI0101P01 = () => {
   const sessionMutation = useMutation({
     mutationFn: () => $api("api", "ACS0201S01", "ALI0101P01", { uid: "test" }),
     onSuccess: (res) => {
-      console.log(res);
       setIsActive(true);
     },
     onError : (e) => {
-      console.log(isActive)
       if(isActive){
         setModalContent({
           Props1: {
