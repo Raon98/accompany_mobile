@@ -23,10 +23,10 @@ public class ACS0201Service {
      * @throws Exception
      */
     public boolean ACS0201S01(ACS0201IN in, ACS0201OUT out) throws Exception {
+        AcpyLogger.error("=============== 회원가입 START ================");
         JwtUtil jwtUtils = new JwtUtil();
         Map<String, String> result = null;
         //1. DB 정보저장
-        
         //1-1 pass 암호화
         String pass = AesUtil.encrypt(in.getSignData().getPass());
 
@@ -43,7 +43,7 @@ public class ACS0201Service {
         userReq.setDjch_flag("N");
         userReq.setWedd_flag("N");
         userReq.setFnrl_flag("N");
-        userReq.setPiin_agrm(in.getSignData().getPriv());
+        userReq.setPriv_agrm(in.getSignData().getPriv());
 
 
         if (userReq.getUid() != null && !userReq.getUid().isEmpty() && userReq.getIdty() != null && !userReq.getIdty().isEmpty()) {
@@ -62,6 +62,7 @@ public class ACS0201Service {
         }
 
         out.setData(result);
+        AcpyLogger.error("=============== 회원가입 END ================");
         return true;
     }
 }
