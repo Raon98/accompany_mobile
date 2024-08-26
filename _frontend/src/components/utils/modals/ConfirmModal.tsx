@@ -7,6 +7,9 @@ interface ConfirmModalProps {
     confirmText?: string;
     cancelText?: string;
     confirmFn?: () => void;
+    style? : {
+      height? : string;
+    }
   };
 }
 export const ConfirmModal = ({ Props1 }: ConfirmModalProps) => {
@@ -25,7 +28,7 @@ export const ConfirmModal = ({ Props1 }: ConfirmModalProps) => {
       {isOpen && (
         <>
           <div className="dimmed" onClick={onClose}></div>
-          <div className="modals confirm">
+          <div className="modals confirm" style={{height : Props1.style?.height? Props1.style.height : ''}}>
             <div className="modals-content">
               <div dangerouslySetInnerHTML={{ __html: Props1.content }} />
             </div>
