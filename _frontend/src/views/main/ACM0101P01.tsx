@@ -10,8 +10,8 @@ import { useNavigate } from "react-router-dom";
 const ACM0101P01 = () => {
   const { $api } = asyncApi();
   const navigate = useNavigate();
-  const test = $api("api", "ACS0101S01", "", { test: "test" });
-  console.log(test);
+  // const test = $api("api", "ACS0101S01", "", { test: "test" });
+  // console.log(test);
   return (
     <div>
       메인페이지입니다
