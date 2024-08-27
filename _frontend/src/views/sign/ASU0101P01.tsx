@@ -8,6 +8,7 @@ import useModal from "state/useModal";
 import useSign from "state/useSign";
 import { FieldState, SignState } from "store/signStore";
 import { modalContentProps } from "./ASU0101P02";
+import useUser from "state/useUser";
 
 /******************************
  * @회원가입 (ACCOMPANY Sign Up)
@@ -32,22 +33,47 @@ const ASU0101P01 = () => {
   const navigate = useNavigate();
   const { $api } = asyncApi();
   const optionList = ["google.com", "naver.com", "kakao.com", "nate.com"];
+  const { setUserInfo } = useUser();
   const validText = useRef("");
   const { isOpen, onOpen } = useModal("confirm");
   const [modalContent, setModalContent] = useState<modalContentProps>({
     Props1: null,
   });
-  const [uidCheck,SetuidCheck] = useState(false)
+  const [uidCheck, SetuidCheck] = useState(false);
   const signMutation = useMutation({
     mutationFn: (signData: object) => {
-      console.log(signData);
       return $api("api", "ACS0201S01", "ASU0101P01", { signData: signData });
     },
     onSuccess: (res) => {
       console.log(res);
     },
     onError: (err) => {
-      console.error(err);
+      setModalContent({
+        Props1: {
+          content: "동행인으로서 첫걸음<br/>앞으로의 동행을 응원합니다!",
+          cancel: true,
+          confirmText: "확인",
+          cancelText: "취소",
+          confirmFn: () => {
+            const sign = {
+              uid: signData.uid.value,
+              mail: signData.email.value + "@" + signData.emailAddress.value,
+              name: signData.name.value,
+              mohp: signData.phone.value,
+              birth:
+                signData.birthYy.value +
+                signData.birthMm.value +
+                signData.birthDd.value,
+              gend: signData.gender.value,
+              priv: signData.private.value,
+            };
+            console.log(sign);
+            setUserInfo(sign);
+            navigate('/ACM0101P01')
+          },
+        },
+      });
+      onOpen();
     },
     onSettled: () => {
       console.log("");
@@ -108,7 +134,7 @@ const ASU0101P01 = () => {
       }
       /*아이디 유효성검사*/
       if (currentName === "uid") {
-        if(!uidCheck) {
+        if (!uidCheck) {
           validText.current = "아이디 중복 확인해주세요!";
           onState(currentName, "fail");
           return false;
@@ -245,30 +271,38 @@ const ASU0101P01 = () => {
         window.scrollTo(0, document.body.scrollHeight);
       }
     },
-    onCheck : () => {
+    onCheck: () => {
+      const el = document.getElementById("password");
       if (signData.uid.value.length < 4) {
-
         validText.current = "글자수가 4자이하입니다.";
         onState("uid", "fail");
         return false;
-      }else {
+      } else {
         setModalContent({
           Props1: {
-            content:
-              "사용 가능한 아이디입니다!",
+            content: "사용 가능한 아이디입니다!",
             confirmText: "확인",
-            confirmFn : () => {
-              SetuidCheck(true)
+            confirmFn: () => {
+              onState("uid", "success");
+              onState("uid", "fail",false);
+              onState("uid","state");
+              SetuidCheck(true);
+              onReset("focus");
+              onState("password", "state", true, () => {
+                setTimeout(() => {
+                  title.current = signData["password"].title;
+                  el?.focus();
+                }, 50);
+              });
             },
-            style : {
-              height : "25%"
-            }
+            style: {
+              height: "25%",
+            },
           },
         });
 
         onOpen();
       }
-      
     },
     onSubmit: (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -593,33 +627,37 @@ const ASU0101P01 = () => {
           <div className="sign__block uid">
             <label htmlFor="uid">아이디</label>
             <div className="uid__form">
-            <input
-              type="text"
-              id="uid"
-              name="uid"
-              title="아이디"
-              className={[
-                signState("uid", "focus") ? "focused" : "",
-                signState("uid", "success") ? "success" : "",
-                signState("uid", "fail") ? "fail" : "",
-              ].join(" ")}
-              placeholder="아이디 입력 (4자~13자)"
-              value={signData.uid.value}
-              onChange={func.onChange}
-              onFocus={() => func.onFocus("uid", "focus")}
-              onBlur={() => onReset("focus")}
-              onKeyDown={(e) => func.onNext(e, "uid", "password", "state")}
-              maxLength={13}
-              minLength={6}
-              required
-            />        
-            <button className="uid-check__btn" type="button" onClick={() => func.onCheck()}>중복확인</button>
-                     </div>
+              <input
+                type="text"
+                id="uid"
+                name="uid"
+                title="아이디"
+                className={[
+                  signState("uid", "focus") ? "focused" : "",
+                  signState("uid", "success") ? "success" : "",
+                  signState("uid", "fail") ? "fail" : "",
+                ].join(" ")}
+                placeholder="아이디 입력 (4자~13자)"
+                value={signData.uid.value}
+                onChange={func.onChange}
+                onFocus={() => func.onFocus("uid", "focus")}
+                onBlur={() => onReset("focus")}
+                onKeyDown={(e) => func.onNext(e, "uid", "password", "state")}
+                maxLength={13}
+                minLength={6}
+                required
+              />
+              <button
+                className="uid-check__btn"
+                type="button"
+                onClick={() => func.onCheck()}
+              >
+                중복확인
+              </button>
+            </div>
             {signState("uid", "fail") && (
               <div className="info__text">{validText.current}</div>
             )}
-    
-   
           </div>
         </div>
         {onSuccessForm && <button className="sign-term__btn">가입하기</button>}

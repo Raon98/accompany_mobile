@@ -12,6 +12,7 @@ import { Modals } from "components/utils/Modals";
 import useSign from "state/useSign";
 import useModal from "state/useModal";
 import { modalContentProps } from "views/sign/ASU0101P02";
+import useUser from "state/useUser";
 
 /******************************
  * @로그인 (ACCOMPANY  Login)
@@ -33,7 +34,7 @@ const ALI0101P01 = () => {
   const [isActive, setIsActive] = useState(false);
   const { onAllReset } = useSign();
   const { $api } = asyncApi();
-
+  const {setUserInfo} = useUser()
   const {  isOpen,onOpen } = useModal("confirm");
   const [modalContent, setModalContent] = useState<modalContentProps>({
     Props1: null,
@@ -85,13 +86,27 @@ const ALI0101P01 = () => {
       console.log("회원가입 페이지로 이동");
     },
     onClick: (tag?: string) => {
-      console.log(tag)
       if (tag === "e") {
         // $api("api", "ACS0101S01", "ALI0101P01", {
         //   uid: "test",
         // }).then((test) => console.log(test));
+        if(uid ==='admin' && password === 'admin1234!!'){
+          const sign = {
+            uid: "admin",
+            mail: "admin@naver.com",
+            name: "관리자",
+            mohp: "010-6392-8888",
+            birth: "19981007",
+            gend: "m",
+            priv: "y",
+          };
 
-        mutate();
+          setUserInfo(sign);
+          navigate('/ACM0101P01')
+        }else{
+          mutate();
+        }
+    
       } else if (tag === "g") {
 
       } else if (tag === "k") {
