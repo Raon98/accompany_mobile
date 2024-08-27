@@ -1,0 +1,43 @@
+@use "../themes/colors";
+@use "../utils/mixins";
+
+.main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: colors.$theme-600;
+    padding: 3.5rem 1.5rem 3.75rem;
+
+    &__menu {
+        position: absolute;
+        z-index: 20;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background-color: #fff;
+        box-shadow: 2px 0px 10px rgba(0,0,0,0.7);
+        border-radius: 20px 20px 0 0;
+    }
+    &__top {
+        @include mixins.flex_mixin(space-between,flex-start,column);
+        height: 20%;
+
+        .top__block {
+            width: 100%;
+            height: 3.725rem;
+        }
+        .info {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.075rem;
+            
+            &__name, &__alarm {
+                color: #fff;
+                font-size: 1.185rem;
+                font-weight: 600;
+            }
+        }
+    }
+}

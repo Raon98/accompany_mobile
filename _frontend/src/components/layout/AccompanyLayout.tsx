@@ -22,8 +22,9 @@ const AccompanyLayout = () => {
     if (user.uid !== "") {
       setIsAuthenticated(true);
     }
+
     setMount(true);
-  }, []);
+  }, [user]);
 
   useEffect(() => {
     /*20240510 헤더푸터 사용/미사용여부 체크*/
@@ -32,11 +33,9 @@ const AccompanyLayout = () => {
       setHeaderFlag(path[0].hd);
       setFooterFlag(path[0].ft);
     }
-
-    if (!isAuthenticated) {
-      if (location.pathname === "/") {
-        navigate("/ALI0101P01");
-      }
+    
+    if (!isAuthenticated && user.uid === "") {
+      navigate("/ALI0101P01");
     }
   }, [location.pathname]);
 
