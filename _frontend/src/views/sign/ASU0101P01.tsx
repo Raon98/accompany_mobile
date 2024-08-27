@@ -8,6 +8,7 @@ import useModal from "state/useModal";
 import useSign from "state/useSign";
 import { FieldState, SignState } from "store/signStore";
 import { modalContentProps } from "./ASU0101P02";
+import useUser from "state/useUser";
 
 /******************************
  * @회원가입 (ACCOMPANY Sign Up)
@@ -32,6 +33,7 @@ const ASU0101P01 = () => {
   const navigate = useNavigate();
   const { $api } = asyncApi();
   const optionList = ["google.com", "naver.com", "kakao.com", "nate.com"];
+  const { setUserInfo } = useUser();
   const validText = useRef("");
   const { isOpen, onOpen } = useModal("confirm");
   const [modalContent, setModalContent] = useState<modalContentProps>({
@@ -40,7 +42,6 @@ const ASU0101P01 = () => {
   const [uidCheck, SetuidCheck] = useState(false);
   const signMutation = useMutation({
     mutationFn: (signData: object) => {
-      console.log(signData);
       return $api("api", "ACS0201S01", "ASU0101P01", { signData: signData });
     },
     onSuccess: (res) => {
@@ -56,7 +57,6 @@ const ASU0101P01 = () => {
           confirmFn: () => {
             const sign = {
               uid: signData.uid.value,
-              pass: signData.password.value,
               mail: signData.email.value + "@" + signData.emailAddress.value,
               name: signData.name.value,
               mohp: signData.phone.value,
@@ -68,6 +68,8 @@ const ASU0101P01 = () => {
               priv: signData.private.value,
             };
             console.log(sign);
+            setUserInfo(sign);
+            navigate('/ACM0101P01')
           },
         },
       });
@@ -281,9 +283,10 @@ const ASU0101P01 = () => {
             content: "사용 가능한 아이디입니다!",
             confirmText: "확인",
             confirmFn: () => {
-              SetuidCheck(true);
-              onState("uid","state");
               onState("uid", "success");
+              onState("uid", "fail",false);
+              onState("uid","state");
+              SetuidCheck(true);
               onReset("focus");
               onState("password", "state", true, () => {
                 setTimeout(() => {
