@@ -11,7 +11,7 @@
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: colors.$theme-600;
+    background-color: colors.$theme-500;
     padding: 3.5rem 1.5rem 3.75rem;
 
     &__container {
@@ -31,47 +31,96 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 0.875rem;
             &__title {
-                font-size: 1.115rem;
+                font-size: 0.975rem;
                 color: rgba(0,0,0,0.7);
             }
             &__contents {
                 background-color: #fff;
-                min-height: 8.725rem;
-                border: 1px solid var(--schedule-border);
+                min-height: 9.725rem;
                 border-radius: 10px;
                 padding: 0.75rem;
 
-                .schedule__item{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5px;
+                &.marry {
+                    border: 1px solid colors.$marry-border;
 
-                    .item {
-                        &__top-content {
-                            @include mixins.flex_mixin(space-between);
-                            margin: 0 0.275rem;
-                            
-                            .item__title {
-                                color: rgba(0,0,0,0.6);
-                                font-size: 1.125rem;
-                                & > .name {
-                                    color: colors.$theme-900;
+                    .schedule__item{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.875rem;
+    
+                        .item {
+                            &__top-content {
+                                @include mixins.flex_mixin(space-between);
+                                margin: 0 0.275rem;
+                                
+                                .item__title {
+                                    color: rgba(0,0,0,0.6);
+                                    font-size: 1.125rem;
+                                    & > .name {
+                                        color: colors.$theme-900;
+                                    }
+                                    & > .event {
+                                        color: colors.$theme-very-light-pink-750;
+                                    }
                                 }
-                                & > .event {
-                                    color: colors.$theme-very-light-pink-750;
+                            }
+                            &__content {
+                                width: 100%;
+                                height: 6rem;
+                                border-radius: 5px;
+                                background-color: colors.$theme-very-light-pink-300;
+
+                                .date__block {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    padding: 0.375rem 0.875rem;
+                                    color: rgba(0,0,0,0.85);
+
+                                    .dDay {
+                                        @include mixins.flex_mixin;
+                                        color: #000;
+                                        height: 1.5rem;
+                                        background-color: rgba(255,255,255,0.5);
+                                        text-wrap: nowrap;
+                                        margin-top: 0.275rem;
+                                        padding: 0.375rem 0.475rem;
+                                        backdrop-filter: blur(36px);
+                                        font-size: 0.775rem;
+                                        box-shadow: 1px 2px 1px rgba(255,255,255,0.2);
+                                        border-radius: 25px;
+                                        color: colors.$theme-very-light-pink-750;
+                                    }
+                                    .date {
+                                        font-size: 0.875rem;
+                                        color: rgba(0,0,0,0.7);
+                                    }
+                                }
+                                .contents__block {
+                                    display: flex;
+                                    // flex-direction: column;
+                                    align-items: flex-end;
+                                  
+                                    justify-content: space-around;
+                                    font-size: 0.825rem;
+                                    color: rgba(0,0,0,0.8);
+
+                                    .family {
+                                        @include mixins.flex_mixin(center,center,column);
+                                        
+                                        .children {
+                                            font-size: 0.975rem;
+                                            color: #000;
+                                        }
+                                    }
+                                  
                                 }
                             }
                         }
-                        &__content {
-                            width: 100%;
-                            height: 5.5rem;
-                            border-radius: 5px;
-                            background-color: var(--schedule-border);
-                        }
                     }
                 }
+                
             }
         }
     }
