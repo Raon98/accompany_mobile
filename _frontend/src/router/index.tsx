@@ -43,8 +43,8 @@ const YCM = [
   {
     path: "/ACM0101P01",
     el: <ACM0101P01 />,
-    hd: true,
-    ft: true,
+    hd: false,
+    ft: false,
   },
   {
     path: "/ACM0101P02",

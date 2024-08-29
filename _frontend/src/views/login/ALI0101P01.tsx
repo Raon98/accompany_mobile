@@ -94,7 +94,7 @@ const ALI0101P01 = () => {
           const sign = {
             uid: "admin",
             mail: "admin@naver.com",
-            name: "관리자",
+            name: "김성철",
             mohp: "010-6392-8888",
             birth: "19981007",
             gend: "m",

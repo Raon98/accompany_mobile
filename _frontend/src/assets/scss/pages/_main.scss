@@ -1,6 +1,10 @@
 @use "../themes/colors";
 @use "../utils/mixins";
 
+:root {
+    --schedule-border : #535a9c44;
+}
+
 .main {
     position: absolute;
     left: 0;
@@ -10,16 +14,66 @@
     background-color: colors.$theme-600;
     padding: 3.5rem 1.5rem 3.75rem;
 
-    &__menu {
+    &__container {
         position: absolute;
         z-index: 20;
         bottom: 0;
         left: 0;
         width: 100%;
         height: 70%;
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.95);
         box-shadow: 2px 0px 10px rgba(0,0,0,0.7);
         border-radius: 20px 20px 0 0;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        .schedule{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            &__title {
+                font-size: 1.115rem;
+                color: rgba(0,0,0,0.7);
+            }
+            &__contents {
+                background-color: #fff;
+                min-height: 8.725rem;
+                border: 1px solid var(--schedule-border);
+                border-radius: 10px;
+                padding: 0.75rem;
+
+                .schedule__item{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    .item {
+                        &__top-content {
+                            @include mixins.flex_mixin(space-between);
+                            margin: 0 0.275rem;
+                            
+                            .item__title {
+                                color: rgba(0,0,0,0.6);
+                                font-size: 1.125rem;
+                                & > .name {
+                                    color: colors.$theme-900;
+                                }
+                                & > .event {
+                                    color: colors.$theme-very-light-pink-750;
+                                }
+                            }
+                        }
+                        &__content {
+                            width: 100%;
+                            height: 5.5rem;
+                            border-radius: 5px;
+                            background-color: var(--schedule-border);
+                        }
+                    }
+                }
+            }
+        }
     }
     &__top {
         @include mixins.flex_mixin(space-between,flex-start,column);
