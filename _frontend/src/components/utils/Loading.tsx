@@ -6,9 +6,8 @@ const Loading = () => {
     <>
       {loading && (
         <div className="loading-fixed">
-          <div className="loading">
-            <img src={Spinner}></img>
-          </div>
+          <div className="spinner-item"></div>
+          {/* <div className="spinner-text">동행</div> */}
         </div>
       )}
     </>

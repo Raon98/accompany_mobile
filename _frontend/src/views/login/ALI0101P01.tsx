@@ -13,6 +13,7 @@ import useSign from "state/useSign";
 import useModal from "state/useModal";
 import { modalContentProps } from "views/sign/ASU0101P02";
 import useUser from "state/useUser";
+import useLoading from "state/useLoading";
 
 /******************************
  * @로그인 (ACCOMPANY  Login)
@@ -28,14 +29,18 @@ const pagination = {
 };
 
 const ALI0101P01 = () => {
+  const { $api } = asyncApi();
   const navigate = useNavigate();
+
   const [uid, setUid] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [isActive, setIsActive] = useState(false);
+  
+  const { onStart, onEnd } = useLoading();
   const { onAllReset } = useSign();
-  const { $api } = asyncApi();
   const {setUserInfo} = useUser()
-  const {  isOpen,onOpen } = useModal("confirm");
+const {  isOpen,onOpen } = useModal("confirm");
+
   const [modalContent, setModalContent] = useState<modalContentProps>({
     Props1: null,
   });
@@ -57,6 +62,8 @@ const ALI0101P01 = () => {
             cancelText: "취소",
             confirmFn: () => {
               navigate("/ASU0101P02")
+           
+      
             },
           },
         });
@@ -66,6 +73,7 @@ const ALI0101P01 = () => {
       console.log(e)
     }
   });
+
   const { mutate, isPending, isError, isSuccess } = sessionMutation;
   const func = {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -91,18 +99,24 @@ const ALI0101P01 = () => {
         //   uid: "test",
         // }).then((test) => console.log(test));
         if(uid ==='admin' && password === 'admin1234!!'){
-          const sign = {
-            uid: "admin",
-            mail: "admin@naver.com",
-            name: "관리자",
-            mohp: "010-6392-8888",
-            birth: "19981007",
-            gend: "m",
-            priv: "y",
-          };
-
-          setUserInfo(sign);
-          navigate('/ACM0101P01')
+    
+     
+          onStart()
+          setTimeout(() => {
+            const sign = {
+              uid: "admin",
+              mail: "admin@naver.com",
+              name: "김성철",
+              mohp: "010-6392-8888",
+              birth: "19981007",
+              gend: "m",
+              priv: "y",
+            };
+  
+            setUserInfo(sign);
+            onEnd()
+            navigate('/ACM0101P01')
+          }, 1000);
         }else{
           mutate();
         }
