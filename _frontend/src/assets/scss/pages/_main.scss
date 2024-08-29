@@ -129,8 +129,18 @@
         height: 20%;
 
         .top__block {
+            @include mixins.flex_mixin(space-between,center);
             width: 100%;
             height: 3.725rem;
+        }
+        .option {
+            @include mixins.flex_mixin(flex-end,center);
+            gap: 1.375rem;
+            margin-right: 1.275rem;
+            .notice, .logout {
+                height: 1.625rem;
+                opacity: .65;
+            }
         }
         .info {
             color: rgba(255, 255, 255, 0.95);

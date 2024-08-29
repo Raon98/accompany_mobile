@@ -16,20 +16,20 @@ const ACM0101P01 = () => {
       <div className="main__top">
         <div className="top__block">
           <div className="logo">
+       
+        
+          </div>
+          <div className="option">
           <img
                   src={require(`assets/images/noti.png`)}
                   alt="arrow"
-                  style={{ height: "1.75rem" }}
+                  className="notice"
                 ></img>
-                <img
+            <img
                   src={require(`assets/images/logout.png`)}
                   alt="arrow"
-                  style={{ height: "1.75rem" }}
+                  className="logout"
                 ></img>
-          </div>
-          <div className="option">
-            <div className="setting"></div>
-            <div className="logout"></div>
           </div>
         </div>
         <div className="info">
