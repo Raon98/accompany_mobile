@@ -2,21 +2,39 @@
 @use "../themes/colors";
 @use "../utils/variables";
 
-
-
-.loading-fixed{
-    @include mixins.fixed_mixin;
-    left: 0;
-    top: 0;
-    margin: 0;
-    height: 100%;
-    z-index: 10;
-    .loading{
-        @include mixins.flex_mixin(center);
-        height: 100%;
-        & > img {
-            width: 5rem;
-        }
+@keyframes full-rotate {
+    from {
+      transform: rotate(0deg);
     }
-}
-
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loading-fixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .spinner-item {
+    height: 5rem;
+    width: 5rem;
+    border: 2px solid #3b5cca;
+    border-radius: 50%;
+    border-top: none;
+    border-right: none;
+    animation: full-rotate 1s linear infinite;
+  }
+  
+  .spinner-text {
+    font-size: 1.2rem;
+    color: #50a2ff;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
