@@ -1,3 +1,4 @@
+import { clearSessionStorage } from "components/utils/store/Storage";
 import asyncApi from "plugins/asyncApi";
 import { useNavigate } from "react-router-dom";
 import useUser from "state/useUser";
@@ -9,27 +10,32 @@ import useUser from "state/useUser";
  ********************************/
 
 const ACM0101P01 = () => {
+  const navigate = useNavigate();
   const { user } = useUser();
-
+  const func = {
+    logout: () => {
+      clearSessionStorage("userInfo");
+      navigate("/ALI0101P01");
+    
+    },
+  };
   return (
     <div className="main">
       <div className="main__top">
         <div className="top__block">
-          <div className="logo">
-       
-        
-          </div>
+          <div className="logo"></div>
           <div className="option">
-          <img
-                  src={require(`assets/images/noti.png`)}
-                  alt="arrow"
-                  className="notice"
-                ></img>
             <img
-                  src={require(`assets/images/logout.png`)}
-                  alt="arrow"
-                  className="logout"
-                ></img>
+              src={require(`assets/images/noti.png`)}
+              alt="arrow"
+              className="notice"
+            ></img>
+            <img
+              src={require(`assets/images/logout.png`)}
+              alt="arrow"
+              className="logout"
+              onClick={() => func.logout()}
+            ></img>
           </div>
         </div>
         <div className="info">
@@ -70,7 +76,7 @@ const ACM0101P01 = () => {
                     <div className="children">자녀 임정훈</div>
                   </div>
                   <div className="family">
-                    <div>이노혁·박미주</div> 
+                    <div>이노혁·박미주</div>
                     <div className="children">지녀 이유리</div>
                   </div>
                 </div>
