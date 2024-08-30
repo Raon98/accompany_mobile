@@ -19,3 +19,7 @@ export const sessionStorageEffect = (key: string) => ({ setSelf, onSet }: any) =
         sessionStorage.setItem(key, JSON.stringify(newItem));
     });
 };
+
+export const clearSessionStorage = (key: string) => {
+    sessionStorage.removeItem(key);
+};
