@@ -1,19 +1,19 @@
 import { useMutation } from "@tanstack/react-query";
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Loading from "components/utils/Loading";
+import { Modals } from "components/utils/Modals";
 import asyncApi from "plugins/asyncApi";
+import useLoading from "state/useLoading";
+import useModal from "state/useModal";
+import useSign from "state/useSign";
+import useUser from "state/useUser";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Modals } from "components/utils/Modals";
-import useSign from "state/useSign";
-import useModal from "state/useModal";
 import { modalContentProps } from "views/sign/ASU0101P02";
-import useUser from "state/useUser";
-import useLoading from "state/useLoading";
 
 /******************************
  * @로그인 (ACCOMPANY  Login)
@@ -35,43 +35,41 @@ const ALI0101P01 = () => {
   const [uid, setUid] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [isActive, setIsActive] = useState(false);
-  
+
   const { onStart, onEnd } = useLoading();
   const { onAllReset } = useSign();
-  const {setUserInfo} = useUser()
-const {  isOpen,onOpen } = useModal("confirm");
+  const { setUserInfo } = useUser();
+  const { isOpen, onOpen } = useModal("confirm");
 
   const [modalContent, setModalContent] = useState<modalContentProps>({
     Props1: null,
   });
-  
+
   const sessionMutation = useMutation({
     mutationFn: () => $api("api", "ACS0201S01", "ALI0101P01", { uid: "test" }),
     onSuccess: (res) => {
       setIsActive(true);
     },
-    onError : (e) => {
-      if(isActive){
+    onError: (e) => {
+      if (isActive) {
         setModalContent({
           Props1: {
-            title : "",
+            title: "",
             content:
               "저희와 함께 동행해주세요! <br/> 회원가입을 진행하시겠어요?",
             cancel: true,
             confirmText: "확인",
             cancelText: "취소",
             confirmFn: () => {
-              navigate("/ASU0101P02")
-           
-      
+              navigate("/ASU0101P02");
             },
           },
         });
-        onOpen()
+        onOpen();
       }
       setIsActive(true);
-      console.log(e)
-    }
+      console.log(e);
+    },
   });
 
   const { mutate, isPending, isError, isSuccess } = sessionMutation;
@@ -98,10 +96,8 @@ const {  isOpen,onOpen } = useModal("confirm");
         // $api("api", "ACS0101S01", "ALI0101P01", {
         //   uid: "test",
         // }).then((test) => console.log(test));
-        if(uid ==='admin' && password === 'admin1234!!'){
-    
-     
-          onStart()
+        if (uid === "admin" && password === "admin1234!!") {
+          onStart();
           setTimeout(() => {
             const sign = {
               uid: "admin",
@@ -112,28 +108,24 @@ const {  isOpen,onOpen } = useModal("confirm");
               gend: "m",
               priv: "y",
             };
-  
+
             setUserInfo(sign);
-            onEnd()
-            navigate('/ACM0101P01')
+            onEnd();
+            navigate("/ACM0101P01");
           }, 1000);
-        }else{
+        } else {
           mutate();
         }
-    
       } else if (tag === "g") {
-
       } else if (tag === "k") {
-
       } else {
         setIsActive(true);
       }
-      
     },
   };
 
   useEffect(() => {
-    onAllReset()
+    onAllReset();
   }, []);
 
   return (
@@ -176,9 +168,12 @@ const {  isOpen,onOpen } = useModal("confirm");
             isActive ? "form__absolute--active" : ""
           }`}
         >
-          <div className="form" >
+          <div className="form">
             <div className="form-flex">
-              <div className="form-drag__btn" onClick={() => func.onClick()}></div>
+              <div
+                className="form-drag__btn"
+                onClick={() => func.onClick()}
+              ></div>
             </div>
             {isActive && (
               <>
@@ -218,16 +213,12 @@ const {  isOpen,onOpen } = useModal("confirm");
                       href="#"
                       className="input-form__utils-option"
                       onClick={func.onSignUp}
-                    >
-                     
-                    </a>
+                    ></a>
                     <a
                       href="#"
                       className="input-form__utils-option"
                       onClick={func.onSignUp}
-                    >
-                      
-                    </a>
+                    ></a>
                     <a
                       href="#"
                       className="input-form__utils-option"
@@ -246,7 +237,7 @@ const {  isOpen,onOpen } = useModal("confirm");
                     </button>
                     <div className="form__block-oauth">
                       <button
-                       type="button"
+                        type="button"
                         className="login__btn google"
                         onClick={() => func.onClick("g")}
                       >
@@ -254,7 +245,7 @@ const {  isOpen,onOpen } = useModal("confirm");
                         구글로 로그인
                       </button>
                       <button
-                       type="button"
+                        type="button"
                         className="login__btn kakao"
                         onClick={() => func.onClick("k")}
                       >

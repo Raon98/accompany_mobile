@@ -1,4 +1,4 @@
-version: "3.9"
+# version 필드 삭제 (선택 사항)
 
 services:
   backend:
@@ -22,9 +22,6 @@ services:
     build:
       context: ./_frontend
       dockerfile: Dockerfile_dev
-      args:
-        - REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
-        - CHOKIDAR_USEPOLLING=true
     ports:
       - "3000:3000"
     environment:
@@ -58,3 +55,5 @@ networks:
   my_network:
     driver: bridge
 
+volumes:
+  database_data:
