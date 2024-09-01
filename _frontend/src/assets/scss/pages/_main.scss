@@ -37,10 +37,12 @@
                 color: rgba(0,0,0,0.7);
             }
             &__contents {
+
                 background-color: #fff;
                 min-height: 9.725rem;
                 border-radius: 10px;
                 padding: 0.75rem;
+                width: 100%;
 
                 &.marry {
                     border: 1px solid colors.$marry-border;
@@ -154,3 +156,16 @@
         }
     }
 }
+
+.swiper .swiper-pagination-bullet {
+    background-color: var(--schedule-border ) !important;
+  }
+
+
+.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic  {
+    height: 20px !important;
+    position: relative !important;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }

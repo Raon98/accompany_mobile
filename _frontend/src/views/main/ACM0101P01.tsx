@@ -1,8 +1,10 @@
 import { clearSessionStorage } from "components/utils/store/Storage";
-import asyncApi from "plugins/asyncApi";
 import { useNavigate } from "react-router-dom";
 import useUser from "state/useUser";
-
+import { Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/scss";
+import "swiper/scss/pagination";
 /******************************
  * @공통 메인화면 (ACCOMPANY COMMON MAIN)
  * @화면명:메인화면
@@ -16,7 +18,6 @@ const ACM0101P01 = () => {
     logout: () => {
       clearSessionStorage("userInfo");
       navigate("/ALI0101P01");
-    
     },
   };
   return (
@@ -51,38 +52,91 @@ const ACM0101P01 = () => {
       <div className="main__container">
         <div className="schedule">
           <div className="schedule__title">동행일정</div>
-          <div className="schedule__contents marry">
-            <div className="schedule__item">
-              <div className="item__top-content">
-                <div className="item__title">
-                  <span className="name">임정훈</span>
-                  <span>님의 </span>
-                  <span className="event">결혼</span>
-                </div>
-                <img
-                  src={require(`assets/images/rightArrow_gray.png`)}
-                  alt="arrow"
-                  style={{ height: "0.85rem" }}
-                ></img>
-              </div>
-              <div className="item__content">
-                <div className="date__block">
-                  <div className="dDay">D-50</div>
-                  <div className="date">2025-03-16</div>
-                </div>
-                <div className="contents__block">
-                  <div className="family">
-                    <div>임홍규·이미진</div>
-                    <div className="children">자녀 임정훈</div>
+          <Swiper
+            centeredSlides={true}
+            spaceBetween={15}
+            pagination={{
+              clickable: true,
+              dynamicBullets: true,
+            }}
+            style={
+              {
+                width: "100%",
+                "--schedule-border": "#f57676",
+              } as React.CSSProperties
+            }
+            modules={[Pagination]}
+          >
+            <SwiperSlide>
+              <div className="schedule__contents marry">
+                <div className="schedule__item">
+                  <div className="item__top-content">
+                    <div className="item__title">
+                      <span className="name">임정훈</span>
+                      <span>님의 </span>
+                      <span className="event">결혼</span>
+                    </div>
+                    <img
+                      src={require(`assets/images/rightArrow_gray.png`)}
+                      alt="arrow"
+                      style={{ height: "0.85rem" }}
+                    ></img>
                   </div>
-                  <div className="family">
-                    <div>이노혁·박미주</div>
-                    <div className="children">지녀 이유리</div>
+                  <div className="item__content">
+                    <div className="date__block">
+                      <div className="dDay">D-50</div>
+                      <div className="date">2025-03-16</div>
+                    </div>
+                    <div className="contents__block">
+                      <div className="family">
+                        <div>임홍규·이미진</div>
+                        <div className="children">자녀 임정훈</div>
+                      </div>
+                      <div className="family">
+                        <div>이노혁·박미주</div>
+                        <div className="children">지녀 이유리</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="schedule__contents marry">
+                <div className="schedule__item">
+                  <div className="item__top-content">
+                    <div className="item__title">
+                      <span className="name">임정훈</span>
+                      <span>님의 </span>
+                      <span className="event">결혼</span>
+                    </div>
+                    <img
+                      src={require(`assets/images/rightArrow_gray.png`)}
+                      alt="arrow"
+                      style={{ height: "0.85rem" }}
+                    ></img>
+                  </div>
+                  <div className="item__content">
+                    <div className="date__block">
+                      <div className="dDay">D-50</div>
+                      <div className="date">2025-03-16</div>
+                    </div>
+                    <div className="contents__block">
+                      <div className="family">
+                        <div>임홍규·이미진</div>
+                        <div className="children">자녀 임정훈</div>
+                      </div>
+                      <div className="family">
+                        <div>이노혁·박미주</div>
+                        <div className="children">지녀 이유리</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
         <div className="accountBook">
           <div className="accountBook__user organizer"></div>
