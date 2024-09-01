@@ -68,13 +68,13 @@ const ACM0101P01 = () => {
             modules={[Pagination]}
           >
             <SwiperSlide>
-              <div className="schedule__contents marry">
+              <div className="schedule__contents funeral">
                 <div className="schedule__item">
                   <div className="item__top-content">
                     <div className="item__title">
-                      <span className="name">임정훈</span>
+                      <span className="name">유이진</span>
                       <span>님의 </span>
-                      <span className="event">결혼</span>
+                      <span className="event">부고</span>
                     </div>
                     <img
                       src={require(`assets/images/rightArrow_gray.png`)}
@@ -85,17 +85,11 @@ const ACM0101P01 = () => {
                   <div className="item__content">
                     <div className="date__block">
                       <div className="dDay">D-50</div>
-                      <div className="date">2025-03-16</div>
+                      <div className="comment">삼가 故人의 冥福을 빕니다.</div>
                     </div>
                     <div className="contents__block">
-                      <div className="family">
-                        <div>임홍규·이미진</div>
-                        <div className="children">자녀 임정훈</div>
-                      </div>
-                      <div className="family">
-                        <div>이노혁·박미주</div>
-                        <div className="children">지녀 이유리</div>
-                      </div>
+                      <div className="date">2025-03-16</div>
+                      <div className="deceased">故 유강남</div>
                     </div>
                   </div>
                 </div>
@@ -119,7 +113,7 @@ const ACM0101P01 = () => {
                   </div>
                   <div className="item__content">
                     <div className="date__block">
-                      <div className="dDay">D-50</div>
+                      <div className="dDay">D-24</div>
                       <div className="date">2025-03-16</div>
                     </div>
                     <div className="contents__block">
