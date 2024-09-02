@@ -11,7 +11,7 @@
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: colors.$theme-500;
+    background-color: #b86969;
     padding: 3.5rem 1.5rem 3.75rem;
 
     &__container {
@@ -21,7 +21,7 @@
         left: 0;
         width: 100%;
         height: 70%;
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: rgba(255, 255, 255, 0.99);
         box-shadow: 2px 0px 10px rgba(0,0,0,0.7);
         border-radius: 20px 20px 0 0;
         padding: 2rem;
@@ -33,7 +33,7 @@
             flex-direction: column;
             gap: 0.875rem;
             &__title {
-                font-size: 0.975rem;
+                font-size: 1.075rem;
                 color: rgba(0,0,0,0.7);
             }
             &__contents {
@@ -192,19 +192,27 @@
     }
     &__top {
         @include mixins.flex_mixin(space-between,flex-start,column);
-        height: 20%;
+        height: 21.5%;
 
         .top__block {
             @include mixins.flex_mixin(space-between,center);
             width: 100%;
             height: 3.725rem;
         }
+        .logo {
+            margin-bottom: 5.5rem;
+
+            &__title {
+                font-size: 0.975rem;
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
         .option {
             @include mixins.flex_mixin(flex-end,center);
             gap: 1.375rem;
             margin-right: 1.275rem;
             .notice, .logout {
-                height: 1.625rem;
+                height: 1.425rem;
                 opacity: .65;
             }
         }

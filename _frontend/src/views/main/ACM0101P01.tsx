@@ -58,16 +58,18 @@ const ACM0101P01 = () => {
     <div className="main">
       <div className="main__top">
         <div className="top__block">
-          <div className="logo"></div>
+          <div className="logo">
+              <div className="logo__title">ACCOMPANY:D</div>
+          </div>
           <div className="option">
             <img
               src={require(`assets/images/noti.png`)}
-              alt="arrow"
+              alt="notice"
               className="notice"
             ></img>
             <img
               src={require(`assets/images/logout.png`)}
-              alt="arrow"
+              alt="logout"
               className="logout"
               onClick={() => func.logout()}
             ></img>
