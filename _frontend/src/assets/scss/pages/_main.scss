@@ -144,10 +144,10 @@
     
                         .item__title {
                             & > .name {
-                                color: colors.$theme-900;
+                                color: #5d5d5d;
                             }
                             & > .event {
-                                color: colors.$white-theme-700;
+                                color: #373737;
                             }
                         }
     
@@ -156,7 +156,7 @@
                         }
     
                         .item__content {
-                            background-color: colors.$white-theme-200;
+                            background-color: #5d5d5d;
     
                             .comment {
                                 font-size: 0.925rem;
@@ -175,6 +175,7 @@
                                 .deceased {
                                     @include mixins.flex_mixin(center,center,column);
                                     font-size: 1.175rem; 
+                                    color: #fff;
                                 }
                                
                                 .date {
