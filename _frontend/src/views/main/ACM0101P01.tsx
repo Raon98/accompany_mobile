@@ -59,20 +59,20 @@ const ACM0101P01 = () => {
       <div className="main__top">
         <div className="top__block">
           <div className="logo">
-              <div className="logo__title">ACCOMPANY:D</div>
+             
           </div>
           <div className="option">
-            <img
-              src={require(`assets/images/noti.png`)}
+           <img
+              src={require(`assets/images/noti2.png`)}
               alt="notice"
               className="notice"
             ></img>
-            <img
+            {/*  <img
               src={require(`assets/images/logout.png`)}
               alt="logout"
               className="logout"
               onClick={() => func.logout()}
-            ></img>
+            ></img> */}
           </div>
         </div>
         <div className="info">
@@ -81,6 +81,16 @@ const ACM0101P01 = () => {
           </div>
           <div>
             새로운 동행일정이 <span className="info__alarm">3건</span> 있습니다.
+          </div>
+        </div>
+        <div className="pay">
+          <div className="pay__block start">
+            <div className="pay__block-title">동행출발금</div>
+            <div className="pay__block-amount">750,000</div>
+          </div>
+          <div className="pay__block end">
+            <div className="pay__block-title">동행도착금</div>
+            <div className="pay__block-amount">150,000</div>
           </div>
         </div>
       </div>
@@ -98,11 +108,7 @@ const ACM0101P01 = () => {
             style={
               {
                 width: "100%",
-                "--schedule-border":
-                  scheduleItem?.length > 0
-                    ? scheduleItem[currentSlideIdx].mainColor
-                    : "#535a9c44",
-              } as React.CSSProperties
+              }
             }
             modules={[Pagination]}
             onSlideChange={(swiper: SwiperCore) => func.onSlideChange(swiper)}
