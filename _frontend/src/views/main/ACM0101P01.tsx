@@ -57,59 +57,58 @@ const ACM0101P01 = () => {
   return (
     <div className="main">
       <div className="main__top">
-        <div className="top__block">
-          <div className="logo">
-             
-          </div>
-          <div className="option">
-           <img
-              src={require(`assets/images/noti2.png`)}
-              alt="notice"
-              className="notice"
-            ></img>
-            {/*  <img
+        <div className="main__top-block">
+          <div className="top__block">
+            <div className="logo"></div>
+            <div className="option">
+              <img
+                src={require(`assets/images/noti.png`)}
+                alt="notice"
+                className="notice"
+              ></img>
+              {/*  <img
               src={require(`assets/images/logout.png`)}
               alt="logout"
               className="logout"
               onClick={() => func.logout()}
             ></img> */}
+            </div>
           </div>
-        </div>
-        <div className="info">
-          <div>
-            <span className="info__name">{user.name}님</span> 안녕하세요
+          <div className="info">
+            <div>
+              <span className="info__name">{user.name}님</span> 안녕하세요
+            </div>
+            <div>
+              새로운 동행일정이 <span className="info__alarm">3건</span>{" "}
+              있습니다.
+            </div>
           </div>
-          <div>
-            새로운 동행일정이 <span className="info__alarm">3건</span> 있습니다.
-          </div>
-        </div>
-        <div className="pay">
-          <div className="pay__block start">
-            <div className="pay__block-title">동행출발금</div>
-            <div className="pay__block-amount">750,000</div>
-          </div>
-          <div className="pay__block end">
-            <div className="pay__block-title">동행도착금</div>
-            <div className="pay__block-amount">150,000</div>
+          <div className="pay">
+            <div className="pay__block start">
+              <div className="pay__block-title">동행출발금</div>
+              <div className="pay__block-amount">시작하기</div>
+            </div>
+            <div className="pay__block end">
+              <div className="pay__block-title">동행도착금</div>
+              <div className="pay__block-amount">150,000</div>
+            </div>
           </div>
         </div>
       </div>
-
       <div className="main__container">
         <div className="schedule">
           <div className="schedule__title">동행일정</div>
           <Swiper
+            slidesPerView={1.02}
             centeredSlides={true}
             spaceBetween={15}
             pagination={{
               clickable: true,
               dynamicBullets: true,
             }}
-            style={
-              {
-                width: "100%",
-              }
-            }
+            style={{
+              width: "100%",
+            }}
             modules={[Pagination]}
             onSlideChange={(swiper: SwiperCore) => func.onSlideChange(swiper)}
           >
