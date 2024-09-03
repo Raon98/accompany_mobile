@@ -122,6 +122,16 @@ const ALI0101P01 = () => {
         setIsActive(true);
       }
     },
+    onKeyDown : (e: React.KeyboardEvent<HTMLButtonElement>) => {
+      const allowedKeys = [ "Enter"];
+      console.log(e)
+      if (!allowedKeys.includes(e.key)){
+        e.preventDefault();
+      }
+      if (e.key === "Enter"){
+        func.onClick('e')
+      }
+    }
   };
 
   useEffect(() => {
@@ -232,6 +242,9 @@ const ALI0101P01 = () => {
                       type="button"
                       className="login__btn primary"
                       onClick={() => func.onClick("e")}
+                      onKeyDown={(e) =>
+                        func.onKeyDown(e)
+                      }
                     >
                       로그인
                     </button>
@@ -264,6 +277,7 @@ const ALI0101P01 = () => {
                 <button
                   className="login__btn primary"
                   onClick={() => func.onClick("e")}
+                 
                 >
                   아이디로 시작하기
                 </button>

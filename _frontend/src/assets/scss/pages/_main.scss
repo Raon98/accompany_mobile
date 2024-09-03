@@ -2,7 +2,7 @@
 @use "../utils/mixins";
 
 :root {
-    --schedule-border : #535a9c44;
+    --schedule-border : #313a92;
 }
 
 .main {
@@ -11,7 +11,7 @@
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: #b86969;
+    background-color:  #F9FAFB;
     padding: 3.5rem 1.5rem 3.75rem;
 
     &__container {
@@ -20,11 +20,9 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 70%;
-        background-color: rgba(255, 255, 255, 0.99);
-        box-shadow: 2px 0px 10px rgba(0,0,0,0.7);
-        border-radius: 20px 20px 0 0;
-        padding: 2rem;
+        height: 65%;
+        background-color: #F9FAFB;
+        padding: 0 1.5rem;
         display: flex;
         flex-direction: column;
         .schedule{
@@ -64,7 +62,7 @@
                             width: 100%;
                             height: 6rem;
                             border-radius: 5px;
-                          
+                            background-color: #524e8d;
 
                             .date__block {
                                 display: flex;
@@ -77,7 +75,7 @@
                                     @include mixins.flex_mixin;
                                     color: #000;
                                     height: 1.5rem;
-                                    background-color: rgba(255,255,255,0.5);
+                                    background-color: rgba(255, 255, 255, 0.85);
                                     text-wrap: nowrap;
                                     margin-top: 0.275rem;
                                     padding: 0.375rem 0.475rem;
@@ -88,7 +86,7 @@
                                 }
                                 .date {
                                     font-size: 0.875rem;
-                                    color: rgba(0,0,0,0.7);
+                                    color: #fff;
                                 }
                             }
                             
@@ -97,11 +95,11 @@
                 }
 
                 &.marry {
-                    border: 1px solid colors.$marry-border;
+                    border: 1px solid #f3dddd;
 
                     .item__title {
                         & > .name {
-                            color: colors.$theme-900;
+                            color: #010108;
                         }
                         & > .event {
                             color: colors.$theme-very-light-pink-750;
@@ -113,8 +111,6 @@
                     }
 
                     .item__content {
-                        background-color: colors.$theme-very-light-pink-300;
-
                         .contents__block {
                             display: flex;
                             // flex-direction: column;
@@ -122,14 +118,14 @@
                           
                             justify-content: space-around;
                             font-size: 0.825rem;
-                            color: rgba(0,0,0,0.8);
+                            color: rgba(255,255,255,0.85);
 
                             .family {
                                 @include mixins.flex_mixin(center,center,column);
                                 
                                 .children {
-                                    font-size: 0.975rem;
-                                    color: #000;
+                                    font-size: 1.045rem;
+                                    color: #fff;
                                 }
                             }
                           
@@ -140,14 +136,13 @@
                 }
                 
                 &.funeral {
-                    border: 1px solid colors.$funeral-border;
     
                         .item__title {
                             & > .name {
-                                color: colors.$theme-900;
+                                color: #010108;
                             }
                             & > .event {
-                                color: colors.$white-theme-700;
+                                color: #4d4545 ;
                             }
                         }
     
@@ -156,11 +151,9 @@
                         }
     
                         .item__content {
-                            background-color: colors.$white-theme-200;
-    
                             .comment {
                                 font-size: 0.925rem;
-                                color: colors.$funeral-text1;
+                                color: rgba(255,255,255,1);
                             }
                             .contents__block {
                                 display: flex;
@@ -169,19 +162,19 @@
                               
                                 justify-content: space-around;
                                 font-size: 0.825rem;
-                                color: rgba(0,0,0,0.8);
+                                color: #fff;
                                 height: 40%;
     
                                 .deceased {
                                     @include mixins.flex_mixin(center,center,column);
                                     font-size: 1.175rem; 
+                                    color: #fff;
                                 }
                                
                                 .date {
                                     font-size: 1.025rem; 
-                                    color: colors.$funeral-text1;
+                                      color: #fff;
                                 }
-
                             }
                         }
     
@@ -191,9 +184,15 @@
         }
     }
     &__top {
-        @include mixins.flex_mixin(space-between,flex-start,column);
-        height: 21.5%;
-
+        display: flex;
+        flex-direction: column;
+        height: 37.5%;
+        position: absolute;
+        width: 100%;
+        padding: 1.5rem 1.5rem;
+        left: 0;
+        top: 0;
+        gap : 1.75rem;
         .top__block {
             @include mixins.flex_mixin(space-between,center);
             width: 100%;
@@ -204,7 +203,7 @@
 
             &__title {
                 font-size: 0.975rem;
-                color: rgba(255, 255, 255, 0.7);
+
             }
         }
         .option {
@@ -217,13 +216,45 @@
             }
         }
         .info {
-            color: rgba(255, 255, 255, 0.95);
+        
             font-size: 1.075rem;
-            
+            color : rgba(0,0,0,0.7);
             &__name, &__alarm {
-                color: #fff;
-                font-size: 1.185rem;
+                
+                font-size: 1.285rem;
                 font-weight: 600;
+            }
+        }
+        .pay {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: .75rem;
+            &__block {
+                @include mixins.flex_mixin(center,center,column);
+                
+                width: 45%;
+                height: 5.25rem;
+                border-radius: 10px;
+                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+                &.start {
+                    border: 1px solid #f1f1ff;
+                    background-color: #34336e;
+                    color: #fff;
+                }
+                &.end {
+                    border: 1px solid #dee6ff;
+                    background-color: #5c8ce4;
+                    color: #fff;
+                }
+
+                &-title {
+                    font-size: 0.875rem;
+                    color: rgba(255,255,255,0.85);
+                }
+                &-amount {
+                    font-size: 1.075rem;
+                }
             }
         }
     }
