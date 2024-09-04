@@ -155,8 +155,8 @@
             @include mixins.flex_mixin(flex-end,center);
             gap: 1.375rem;
             margin-right: 1.275rem;
-            .notice, .logout {
-                height: 1.425rem;
+            .menu, .logout {
+                height: 1.025rem;
                 opacity: .65;
             }
         }

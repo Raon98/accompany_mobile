@@ -58,9 +58,9 @@ const ACM0101P01 = () => {
             <div className="logo"></div>
             <div className="option">
               <img
-                src={require(`assets/images/noti.png`)}
-                alt="notice"
-                className="notice"
+                src={require(`assets/images/menu.png`)}
+                alt="menu"
+                className="menu"
               ></img>
               {/*  <img
               src={require(`assets/images/logout.png`)}
