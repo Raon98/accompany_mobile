@@ -22,10 +22,8 @@ const scheduleItem = [
     dDay: "D-24",
     date: "2024-12-25",
     mainColor: "#f57676",
-    content1: "임홍규·이미진",
-    content2: "자녀 임정훈",
-    content3: "이노혁·박미주",
-    content4: "자녀 이유리",
+    partyName: "신랑 임정훈·신부 이유리",
+    className : "marry"
   },
   {
     idx: 2,
@@ -35,10 +33,8 @@ const scheduleItem = [
     dDay: "D-50",
     date: "2025-01-21",
     mainColor: "#374151",
-    content1: "故 유강남",
-    content2: "",
-    content3: "",
-    content4: "",
+    partyName: "故 유강남",
+    className : "funeral"
   },
 ];
 const ACM0101P01 = () => {
@@ -62,9 +58,9 @@ const ACM0101P01 = () => {
             <div className="logo"></div>
             <div className="option">
               <img
-                src={require(`assets/images/noti.png`)}
-                alt="notice"
-                className="notice"
+                src={require(`assets/images/menu.png`)}
+                alt="menu"
+                className="menu"
               ></img>
               {/*  <img
               src={require(`assets/images/logout.png`)}
@@ -97,7 +93,23 @@ const ACM0101P01 = () => {
       </div>
       <div className="main__container">
         <div className="schedule">
-          <div className="schedule__title">동행일정</div>
+          <div className="schedule-top">
+                  <div className="schedule__title">
+                    <div>동행일정</div>
+                    <img
+                      src={require(`assets/images/noti4.png`)}
+                      alt="notice"
+                      className="notice"
+                    ></img>
+                  </div>
+                  <img
+                    src={require(`assets/images/rightArrow_gray.png`)}
+                    alt="arrow"
+                    style={{ height: "0.85rem" }}
+                  ></img>
+          </div>
+         
+          
           <Swiper
             slidesPerView={1.02}
             centeredSlides={true}
@@ -114,71 +126,26 @@ const ACM0101P01 = () => {
           >
             {scheduleItem.map((schedule, idx) => (
               <SwiperSlide key={schedule.idx}>
-                {schedule.Evt === "M" && (
-                  <div className="schedule__contents marry">
+                
+                  <div className="schedule__contents">
                     <div className="schedule__item">
                       <div className="item__top-content">
-                        <div className="item__title">
+                        <div className={`item__title ${schedule.className}`}>
                           <span className="name">{schedule.userName}</span>
                           <span>님의 </span>
                           <span className="event">{schedule.EvtName}</span>
                         </div>
-                        <img
-                          src={require(`assets/images/rightArrow_gray.png`)}
-                          alt="arrow"
-                          style={{ height: "0.85rem" }}
-                        ></img>
+                        <div className={`dDay ${schedule.className}`}>{schedule.dDay}</div>
                       </div>
                       <div className="item__content">
                         <div className="date__block">
-                          <div className="dDay">{schedule.dDay}</div>
+                          <div className="name">{schedule.partyName}</div>
                           <div className="date">{schedule.date}</div>
-                        </div>
-                        <div className="contents__block">
-                          <div className="family">
-                            <div>{schedule.content1}</div>
-                            <div className="children">{schedule.content2}</div>
-                          </div>
-                          <div className="family">
-                            <div>{schedule.content3}</div>
-                            <div className="children">{schedule.content4}</div>
-                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                )}
-
-                {schedule.Evt === "F" && (
-                  <div className="schedule__contents funeral">
-                    <div className="schedule__item">
-                      <div className="item__top-content">
-                        <div className="item__title">
-                          <span className="name">{schedule.userName}</span>
-                          <span>님의 </span>
-                          <span className="event">{schedule.EvtName}</span>
-                        </div>
-                        <img
-                          src={require(`assets/images/rightArrow_gray.png`)}
-                          alt="arrow"
-                          style={{ height: "0.85rem" }}
-                        ></img>
-                      </div>
-                      <div className="item__content">
-                        <div className="date__block">
-                          <div className="dDay">{schedule.dDay}</div>
-                          <div className="comment">
-                            삼가 故人의 冥福을 빕니다.
-                          </div>
-                        </div>
-                        <div className="contents__block">
-                          <div className="date">{schedule.date}</div>
-                          <div className="deceased">{schedule.content1}</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
+          
               </SwiperSlide>
             ))}
           </Swiper>
