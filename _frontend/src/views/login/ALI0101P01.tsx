@@ -122,16 +122,11 @@ const ALI0101P01 = () => {
         setIsActive(true);
       }
     },
-    onKeyDown : (e: React.KeyboardEvent<HTMLButtonElement>) => {
-      const allowedKeys = [ "Enter"];
-      console.log(e)
-      if (!allowedKeys.includes(e.key)){
-        e.preventDefault();
+    onKeyEnter: (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === "Enter") {
+        func.onClick("e");
       }
-      if (e.key === "Enter"){
-        func.onClick('e')
-      }
-    }
+    },
   };
 
   useEffect(() => {
@@ -210,6 +205,7 @@ const ALI0101P01 = () => {
                       placeholder="비밀번호를 입력해주세요."
                       required
                       onChange={func.onChange}
+                      onKeyDown={(e) => func.onKeyEnter(e)}
                       value={password}
                     />
                     {/*<button type="button" name="password" className="btn-password"/>*/}
@@ -242,9 +238,6 @@ const ALI0101P01 = () => {
                       type="button"
                       className="login__btn primary"
                       onClick={() => func.onClick("e")}
-                      onKeyDown={(e) =>
-                        func.onKeyDown(e)
-                      }
                     >
                       로그인
                     </button>
@@ -277,7 +270,6 @@ const ALI0101P01 = () => {
                 <button
                   className="login__btn primary"
                   onClick={() => func.onClick("e")}
-                 
                 >
                   아이디로 시작하기
                 </button>
