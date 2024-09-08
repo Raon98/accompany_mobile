@@ -126,6 +126,40 @@
             
             }
         }
+
+        .myMenu {
+            width: 100%;
+            height: 100%;
+            margin-top: 1rem;
+            &-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 4.725rem);
+                gap: 16px;
+
+                .myMenu_item {
+                    @include mixins.flex_mixin(center,center,column);
+                    width: 100%;
+                    height: 100%;
+                    padding: 0.7rem;
+                    position: relative;
+                    
+                    & > img {
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        width: 2.75rem;
+                    }
+
+                    &-title {
+                        font-size: 0.785rem;
+                        color: rgba(0,0,0,0.55);
+                    }
+                }
+            }
+
+           
+        }
     }
     &__top {
         background: #5e5c9d;

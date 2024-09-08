@@ -23,7 +23,7 @@ const scheduleItem = [
     date: "2024-12-25",
     mainColor: "#f57676",
     partyName: "신랑 임정훈·신부 이유리",
-    className : "marry"
+    className: "marry",
   },
   {
     idx: 2,
@@ -34,7 +34,7 @@ const scheduleItem = [
     date: "2025-01-21",
     mainColor: "#374151",
     partyName: "故 유강남",
-    className : "funeral"
+    className: "funeral",
   },
 ];
 const ACM0101P01 = () => {
@@ -94,22 +94,21 @@ const ACM0101P01 = () => {
       <div className="main__container">
         <div className="schedule">
           <div className="schedule-top">
-                  <div className="schedule__title">
-                    <div>동행일정</div>
-                    <img
-                      src={require(`assets/images/noti4.png`)}
-                      alt="notice"
-                      className="notice"
-                    ></img>
-                  </div>
-                  <img
-                    src={require(`assets/images/rightArrow_gray.png`)}
-                    alt="arrow"
-                    style={{ height: "0.85rem" }}
-                  ></img>
+            <div className="schedule__title">
+              <div>동행일정</div>
+              <img
+                src={require(`assets/images/noti4.png`)}
+                alt="notice"
+                className="notice"
+              ></img>
+            </div>
+            <img
+              src={require(`assets/images/rightArrow_gray.png`)}
+              alt="arrow"
+              style={{ height: "0.85rem" }}
+            ></img>
           </div>
-         
-          
+
           <Swiper
             slidesPerView={1.02}
             centeredSlides={true}
@@ -126,35 +125,52 @@ const ACM0101P01 = () => {
           >
             {scheduleItem.map((schedule, idx) => (
               <SwiperSlide key={schedule.idx}>
-                
-                  <div className="schedule__contents">
-                    <div className="schedule__item">
-                      <div className="item__top-content">
-                        <div className={`item__title ${schedule.className}`}>
-                          <span className="name">{schedule.userName}</span>
-                          <span>님의 </span>
-                          <span className="event">{schedule.EvtName}</span>
-                        </div>
-                        <div className={`dDay ${schedule.className}`}>{schedule.dDay}</div>
+                <div className="schedule__contents">
+                  <div className="schedule__item">
+                    <div className="item__top-content">
+                      <div className={`item__title ${schedule.className}`}>
+                        <span className="name">{schedule.userName}</span>
+                        <span>님의 </span>
+                        <span className="event">{schedule.EvtName}</span>
                       </div>
-                      <div className="item__content">
-                        <div className="date__block">
-                          <div className="name">{schedule.partyName}</div>
-                          <div className="date">{schedule.date}</div>
-                        </div>
+                      <div className={`dDay ${schedule.className}`}>
+                        {schedule.dDay}
+                      </div>
+                    </div>
+                    <div className="item__content">
+                      <div className="date__block">
+                        <div className="name">{schedule.partyName}</div>
+                        <div className="date">{schedule.date}</div>
                       </div>
                     </div>
                   </div>
-          
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
-        <div className="accountBook">
-          <div className="accountBook__user organizer"></div>
-          <div className="accountBook__user companion"></div>
+
+        <div className="myMenu">
+          <div className="myMenu-container">
+            <div className="myMenu_item">
+              <img
+                src={require(`assets/images/ico-calender.png`)}
+                alt={`ico-calender`}
+              />
+              <div className="myMenu_item-title">동행일정</div>
+            </div>
+            <div className="myMenu_item">
+              <img
+                src={require(`assets/images/ico-bankbook.png`)}
+                alt={`ico-calender`}
+              />
+              <div className="myMenu_item-title">동행자금</div>
+            </div>
+            <div className="myMenu_item"></div>
+            <div className="myMenu_item"></div>
+            <div className="myMenu_item"></div>
+          </div>
         </div>
-        <div className="myMenu"></div>
       </div>
     </div>
   );
