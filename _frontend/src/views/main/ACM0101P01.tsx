@@ -157,7 +157,7 @@ const ACM0101P01 = () => {
                 src={require(`assets/images/ico-calender.png`)}
                 alt={`ico-calender`}
               />
-              <div className="myMenu_item-title">동행일정</div>
+              <div className="myMenu_item-title">일정등록</div>
             </div>
             <div className="myMenu_item">
               <img
@@ -166,7 +166,13 @@ const ACM0101P01 = () => {
               />
               <div className="myMenu_item-title">동행자금</div>
             </div>
-            <div className="myMenu_item"></div>
+            <div className="myMenu_item">
+            <img
+                src={require(`assets/images/ico-join.png`)}
+                alt={`ico-join`}
+              />
+              <div className="myMenu_item-title">참석하기</div>
+            </div>
             <div className="myMenu_item"></div>
             <div className="myMenu_item"></div>
           </div>
