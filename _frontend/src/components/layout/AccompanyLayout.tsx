@@ -34,11 +34,14 @@ const AccompanyLayout = () => {
       setFooterFlag(path[0].ft);
     }
     
-    if (!isAuthenticated && user.uid === "") {
-      navigate("/ALI0101P01");
-    }
+ 
   }, [location.pathname]);
 
+  useEffect(()=>{
+    if (!isAuthenticated) {
+      navigate("/ALI0101P01");
+    }
+  },[])
   return (
     <>
       {mount && (
