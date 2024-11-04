@@ -1,8 +1,8 @@
-import {atom} from "recoil";
+import { atom } from 'recoil'
 export const modalStore = atom<Record<string, boolean>>({
-    key : "modalStore",
-    default: {
-        confirm : false,
-        component : false
-    }
+  key: 'modalStore',
+  default: {
+    confirm: false,
+    component: false,
+  },
 })

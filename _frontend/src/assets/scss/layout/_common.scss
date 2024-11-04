@@ -1,6 +1,6 @@
-@use "../utils/mixins";
+@use '../utils/mixins';
 
-@use "../utils/variables";
+@use '../utils/variables';
 
 .wrapper {
   width: 100%;
@@ -20,16 +20,22 @@
 }
 /* ipone 6/7/8 plue 이상*/
 @media screen and (min-width: 376px) {
-  html{font-size: 18px;}
+  html {
+    font-size: 18px;
+  }
 }
 
 /* ipone 6/7/8/x */
 @media screen and (min-width: 375px) {
-  html{font-size: 16px;}
+  html {
+    font-size: 16px;
+  }
 }
 /* 갤럭시*/
 @media screen and (min-width: 360px) {
-  html{font-size: 16px;}
+  html {
+    font-size: 16px;
+  }
 }
 
 .mgr8 {

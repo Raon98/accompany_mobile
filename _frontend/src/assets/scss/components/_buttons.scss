@@ -1,8 +1,8 @@
-@use "../utils/mixins";
-@use "../themes/colors";
-@use "../utils/variables";
+@use '../utils/mixins';
+@use '../themes/colors';
+@use '../utils/variables';
 
-@mixin bdr__btn($color){
+@mixin bdr__btn($color) {
   border: 1px solid $color;
   color: $color;
   background-color: colors.$white;
@@ -10,12 +10,12 @@
   font-weight: 500;
 }
 
-@mixin primary__btn($color){
+@mixin primary__btn($color) {
   background-color: $color;
   color: colors.$white;
 }
 
-@mixin btn-icon($bg){
+@mixin btn-icon($bg) {
   width: 1.528rem;
   height: 1.528rem;
   background: url($bg) no-repeat;
@@ -36,17 +36,17 @@
   border: 0;
   background-color: transparent;
 
-  &.bdr{
-      @include bdr__btn(colors.$theme-500)
+  &.bdr {
+    @include bdr__btn(colors.$theme-500);
   }
 
   &.primary {
-    @include primary__btn(colors.$theme-500)
+    @include primary__btn(colors.$theme-500);
   }
 }
 /*테두리버튼*/
 .bdr__btn {
-  @extend .button;  
+  @extend .button;
   @include bdr__btn(colors.$theme-500);
   width: 48%;
 }
@@ -59,23 +59,23 @@
 
   &.google {
     @include bdr__btn(colors.$matGray);
-    .google-icon{
-      @include btn-icon("../../images/google_auth.svg");
+    .google-icon {
+      @include btn-icon('../../images/google_auth.svg');
     }
   }
 
   &.kakao {
     @include primary__btn(colors.$kakaoYellow);
-    color: #0A082C;
-    .kakao-icon{
-      @include btn-icon("../../images/kakao_auth.png");
+    color: #0a082c;
+    .kakao-icon {
+      @include btn-icon('../../images/kakao_auth.png');
     }
   }
 }
 
 /*회원가입 약관버튼*/
 .sign-term__btn {
-  @extend .button; 
+  @extend .button;
   @include primary__btn(colors.$theme-500);
   @include mixins.fixed_mixin;
   height: 3.385rem;
@@ -88,18 +88,18 @@
 
 /*모달 확인 버튼*/
 .modal-confirm__btn {
-  @extend .button; 
+  @extend .button;
   @include primary__btn(colors.$theme-500);
   width: 100%;
   border-radius: 3px;
   margin: 3px 3px 0 0;
-  &.cancel{
+  &.cancel {
     @include bdr__btn(colors.$theme-500);
   }
 }
 
 .uid-check__btn {
-  @extend .button; 
+  @extend .button;
   @include bdr__btn(colors.$theme-500);
   display: flex;
   align-items: center;

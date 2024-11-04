@@ -1,4 +1,4 @@
-import { useRecoilState } from "recoil";
+import { useRecoilState } from 'recoil'
 import {
   FieldState,
   OptionState,
@@ -7,99 +7,89 @@ import {
   signStore,
   signTermsOption,
   successForm,
-} from "store/signStore";
+} from 'store/signStore'
 
 interface UseSign {
-  signState: (name: keyof SignState, option: keyof FieldState) => boolean;
-  onState: (
-    name: keyof SignState,
-    option: keyof FieldState,
-    state?: boolean,
-    callback?: () => void
-  ) => void;
-  onReset: (option: keyof FieldState) => void;
-  onAllReset: () => void;
-  openBox: () => void;
-  onBox: boolean;
-  setSucces: (flag: boolean) => void;
-  onSuccessForm: boolean;
-  optionState: (name: keyof OptionState) => boolean;
-  setOptionState: (name: keyof OptionState) => void;
+  signState: (name: keyof SignState, option: keyof FieldState) => boolean
+  onState: (name: keyof SignState, option: keyof FieldState, state?: boolean, callback?: () => void) => void
+  onReset: (option: keyof FieldState) => void
+  onAllReset: () => void
+  openBox: () => void
+  onBox: boolean
+  setSucces: (flag: boolean) => void
+  onSuccessForm: boolean
+  optionState: (name: keyof OptionState) => boolean
+  setOptionState: (name: keyof OptionState) => void
 }
 const useSign = (): UseSign => {
-  const [signList, setSignState] = useRecoilState(signStore);
-  const [onBox, setSelectBox] = useRecoilState(emailSelectBox);
-  const [onSuccessForm, setSuccesForm] = useRecoilState(successForm);
-  const [onOption, setOption] = useRecoilState(signTermsOption);
+  const [signList, setSignState] = useRecoilState(signStore)
+  const [onBox, setSelectBox] = useRecoilState(emailSelectBox)
+  const [onSuccessForm, setSuccesForm] = useRecoilState(successForm)
+  const [onOption, setOption] = useRecoilState(signTermsOption)
 
   const optionState = (name: keyof OptionState) => {
-    return name ? onOption[name] : false;
-  };
+    return name ? onOption[name] : false
+  }
   const setOptionState = (name: keyof OptionState) => {
-    if (name === "all") {
-        let state = true
-        if(optionState('all')){
-            state = false
-        }
-      setOption((prev) => {
-        const reset: OptionState = {};
+    if (name === 'all') {
+      let state = true
+      if (optionState('all')) {
+        state = false
+      }
+      setOption(prev => {
+        const reset: OptionState = {}
         for (const key in prev) {
           if (prev.hasOwnProperty(key)) {
-            reset[key] = state;
+            reset[key] = state
           }
         }
-        return reset;
-      });
+        return reset
+      })
     } else {
-        setOption((prev) => ({
-            ...prev,
-            all: false,
-            [name]: !optionState(name),
-        }));
+      setOption(prev => ({
+        ...prev,
+        all: false,
+        [name]: !optionState(name),
+      }))
     }
-  };
+  }
   const signState = (name: keyof SignState, option: string): boolean => {
-    return (signList[name]?.[option as keyof FieldState] as boolean) ?? false;
-  };
+    return (signList[name]?.[option as keyof FieldState] as boolean) ?? false
+  }
 
-  const onState = (
-    name: keyof SignState,
-    option: keyof FieldState,
-    state?: boolean,
-    callback?: () => void
-  ) => {
-    if (name === "emailAddress") {
-      setSelectBox(false);
+  const onState = (name: keyof SignState, option: keyof FieldState, state?: boolean, callback?: () => void) => {
+    if (name === 'emailAddress') {
+      setSelectBox(false)
     }
-    setSignState((prev) => ({
+    setSignState(prev => ({
       ...prev,
       [name]: {
         ...prev[name],
         [option]: state !== undefined ? state : true,
       },
-    }));
+    }))
     if (callback) {
-      callback();
+      callback()
     }
-  };
+  }
   const onReset = (option: keyof FieldState) => {
-    setSignState((prev) => {
-      const resetState = {} as SignState;
+    setSignState(prev => {
+      const resetState = {} as SignState
       for (const key in prev) {
         if (prev.hasOwnProperty(key)) {
           resetState[key as keyof SignState] = {
             ...prev[key as keyof SignState],
             [option]: false,
-          };
+          }
         }
       }
-      return resetState;
-    });
-  };
+      return resetState
+    })
+  }
 
   const onAllReset = () => {
-    setSignState((prev) => {
-      const resetState = {} as SignState;
+    setSignState(prev => {
+      const resetState = {} as SignState
       for (const key in prev) {
         if (prev.hasOwnProperty(key)) {
           resetState[key as keyof SignState] = {
@@ -107,20 +97,20 @@ const useSign = (): UseSign => {
             success: false,
             focus: false,
             fail: false,
-          };
+          }
         }
       }
-      return resetState;
-    });
-  };
+      return resetState
+    })
+  }
 
   const openBox = () => {
-    setSelectBox(!onBox);
-  };
+    setSelectBox(!onBox)
+  }
 
   const setSucces = (flag: boolean) => {
-    setSuccesForm(flag);
-  };
+    setSuccesForm(flag)
+  }
 
   return {
     signState,
@@ -133,7 +123,7 @@ const useSign = (): UseSign => {
     onSuccessForm,
     optionState,
     setOptionState,
-  };
-};
+  }
+}
 
-export default useSign;
+export default useSign

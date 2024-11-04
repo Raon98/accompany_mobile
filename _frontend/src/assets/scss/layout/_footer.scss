@@ -1,12 +1,11 @@
-@use "../utils/mixins";
+@use '../utils/mixins';
 
 .footer {
   @include mixins.flex_mixin;
   @include mixins.fixed_mixin;
-  z-index:900;
+  z-index: 900;
   background-color: gray;
   text-align: center;
   box-shadow: 4px 0px 12px rgb(0 0 0/35%);
-  transition: all .2s cubic-bezier(.55,.97,.7,1);
-
+  transition: all 0.2s cubic-bezier(0.55, 0.97, 0.7, 1);
 }

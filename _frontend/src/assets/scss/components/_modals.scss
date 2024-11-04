@@ -1,56 +1,55 @@
-@use "../utils/mixins";
-@use "../themes/colors";
-@use "../utils/variables";
+@use '../utils/mixins';
+@use '../themes/colors';
+@use '../utils/variables';
 
 .dimmed {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 7;
-    background-color: rgba(0, 0, 0, .5);
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 7;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .modals {
-    position: fixed;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    background-color: white;
-    margin: 0;
-    width: 90%;
-    z-index: 20;
-    overflow-y: auto;
-    height: 60%;
-    border-radius: 10px;
-    &-content {
-        @include mixins.flex_mixin(center,center,column);
-        border-radius: 5px;
-        border-color : rgba(0,0,0,0.5);
-        
-    }
-    &-title {
-        @include mixins.flex_mixin(center,center,column);
-        margin-top: 2rem;
-        font-size: 1.375rem;
-    }
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  margin: 0;
+  width: 90%;
+  z-index: 20;
+  overflow-y: auto;
+  height: 60%;
+  border-radius: 10px;
+  &-content {
+    @include mixins.flex_mixin(center, center, column);
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.5);
+  }
+  &-title {
+    @include mixins.flex_mixin(center, center, column);
+    margin-top: 2rem;
+    font-size: 1.375rem;
+  }
 
-    &.confirm {
-        height: 30%;
-        display: flex;
-        flex-direction: column;
-        .modals-content {
-           border: none;
-            height: 75%;
-            font-size: 1.115rem;
-            margin: 0rem 1rem 0rem 1rem;
-        }
+  &.confirm {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    .modals-content {
+      border: none;
+      height: 75%;
+      font-size: 1.115rem;
+      margin: 0rem 1rem 0rem 1rem;
     }
+  }
 
-    .btn__block {
-        display: flex;
-        height: 20%;
-        margin: 1rem;
-    }
+  .btn__block {
+    display: flex;
+    height: 20%;
+    margin: 1rem;
+  }
 }

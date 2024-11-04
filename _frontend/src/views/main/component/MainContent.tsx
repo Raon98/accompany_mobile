@@ -1,12 +1,12 @@
-import { clearSessionStorage } from "components/utils/store/Storage";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import useUser from "state/useUser";
-import { Swiper as SwiperCore } from "swiper";
-import { Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/scss";
-import "swiper/scss/pagination";
+import { clearSessionStorage } from 'components/utils/store/Storage'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import useUser from 'state/useUser'
+import { Swiper as SwiperCore } from 'swiper'
+import { Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/scss'
+import 'swiper/scss/pagination'
 /******************************
  * @공통 메인화면 (ACCOMPANY COMMON MAIN)
  * @화면명:메인화면
@@ -16,40 +16,40 @@ import "swiper/scss/pagination";
 const scheduleItem = [
   {
     idx: 1,
-    userName: "임정훈",
-    Evt: "M",
-    EvtName: "결혼",
-    dDay: "D-24",
-    date: "2024-12-25",
-    mainColor: "#f57676",
-    partyName: "신랑 임정훈·신부 이유리",
-    className: "marry",
+    userName: '임정훈',
+    Evt: 'M',
+    EvtName: '결혼',
+    dDay: 'D-24',
+    date: '2024-12-25',
+    mainColor: '#f57676',
+    partyName: '신랑 임정훈·신부 이유리',
+    className: 'marry',
   },
   {
     idx: 2,
-    userName: "유이진",
-    Evt: "F",
-    EvtName: "부고",
-    dDay: "D-50",
-    date: "2025-01-21",
-    mainColor: "#374151",
-    partyName: "故 유강남",
-    className: "funeral",
+    userName: '유이진',
+    Evt: 'F',
+    EvtName: '부고',
+    dDay: 'D-50',
+    date: '2025-01-21',
+    mainColor: '#374151',
+    partyName: '故 유강남',
+    className: 'funeral',
   },
-];
-const ACM0101P01 = () => {
-  const navigate = useNavigate();
-  const { user } = useUser();
-  const [currentSlideIdx, setCurrentSlideIdx] = useState(0);
+]
+export default function MainContent() {
+  const navigate = useNavigate()
+  const { user } = useUser()
+  const [currentSlideIdx, setCurrentSlideIdx] = useState(0)
   const func = {
     logout: () => {
-      clearSessionStorage("userInfo");
-      navigate("/ALI0101P01");
+      clearSessionStorage('userInfo')
+      navigate('/login')
     },
     onSlideChange: (swiper: SwiperCore) => {
-      setCurrentSlideIdx(swiper.activeIndex);
+      setCurrentSlideIdx(swiper.activeIndex)
     },
-  };
+  }
   return (
     <div className="main">
       <div className="main__top">
@@ -57,11 +57,7 @@ const ACM0101P01 = () => {
           <div className="top__block">
             <div className="logo"></div>
             <div className="option">
-              <img
-                src={require(`assets/images/menu.png`)}
-                alt="menu"
-                className="menu"
-              ></img>
+              <img src={require(`assets/images/menu.png`)} alt="menu" className="menu"></img>
               {/*  <img
               src={require(`assets/images/logout.png`)}
               alt="logout"
@@ -75,8 +71,7 @@ const ACM0101P01 = () => {
               <span className="info__name">{user.name}님</span> 안녕하세요
             </div>
             <div>
-              새로운 동행일정이 <span className="info__alarm">3건</span>{" "}
-              있습니다.
+              새로운 동행일정이 <span className="info__alarm">3건</span> 있습니다.
             </div>
           </div>
           <div className="pay">
@@ -96,17 +91,9 @@ const ACM0101P01 = () => {
           <div className="schedule-top">
             <div className="schedule__title">
               <div>동행일정</div>
-              <img
-                src={require(`assets/images/noti4.png`)}
-                alt="notice"
-                className="notice"
-              ></img>
+              <img src={require(`assets/images/noti4.png`)} alt="notice" className="notice"></img>
             </div>
-            <img
-              src={require(`assets/images/rightArrow_gray.png`)}
-              alt="arrow"
-              style={{ height: "0.85rem" }}
-            ></img>
+            <img src={require(`assets/images/rightArrow_gray.png`)} alt="arrow" style={{ height: '0.85rem' }}></img>
           </div>
 
           <Swiper
@@ -118,7 +105,7 @@ const ACM0101P01 = () => {
               dynamicBullets: true,
             }}
             style={{
-              width: "100%",
+              width: '100%',
             }}
             modules={[Pagination]}
             onSlideChange={(swiper: SwiperCore) => func.onSlideChange(swiper)}
@@ -133,9 +120,7 @@ const ACM0101P01 = () => {
                         <span>님의 </span>
                         <span className="event">{schedule.EvtName}</span>
                       </div>
-                      <div className={`dDay ${schedule.className}`}>
-                        {schedule.dDay}
-                      </div>
+                      <div className={`dDay ${schedule.className}`}>{schedule.dDay}</div>
                     </div>
                     <div className="item__content">
                       <div className="date__block">
@@ -153,24 +138,15 @@ const ACM0101P01 = () => {
         <div className="myMenu">
           <div className="myMenu-container">
             <div className="myMenu_item">
-              <img
-                src={require(`assets/images/ico-calender.png`)}
-                alt={`ico-calender`}
-              />
+              <img src={require(`assets/images/ico-calender.png`)} alt={`ico-calender`} />
               <div className="myMenu_item-title">일정등록</div>
             </div>
             <div className="myMenu_item">
-              <img
-                src={require(`assets/images/ico-bankbook.png`)}
-                alt={`ico-calender`}
-              />
+              <img src={require(`assets/images/ico-bankbook.png`)} alt={`ico-calender`} />
               <div className="myMenu_item-title">동행자금</div>
             </div>
             <div className="myMenu_item">
-            <img
-                src={require(`assets/images/ico-join.png`)}
-                alt={`ico-join`}
-              />
+              <img src={require(`assets/images/ico-join.png`)} alt={`ico-join`} />
               <div className="myMenu_item-title">참석하기</div>
             </div>
             <div className="myMenu_item"></div>
@@ -179,7 +155,5 @@ const ACM0101P01 = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default ACM0101P01;
+  )
+}

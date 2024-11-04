@@ -1,12 +1,11 @@
+@use '../utils/variables';
 
-@use "../utils/variables";
-
-@mixin fixed_mixin($width:100%) {
+@mixin fixed_mixin($width: 100%) {
   position: fixed;
   width: $width;
 }
 
-@mixin flex_mixin($justify:space-between,$align:center,$direction:row){
+@mixin flex_mixin($justify: space-between, $align: center, $direction: row) {
   display: flex;
   justify-content: $justify;
   align-items: $align;

@@ -1,28 +1,28 @@
-import { atom, useRecoilState } from "recoil";
+import { atom, useRecoilState } from 'recoil'
 
 interface UseLoading {
-    loading: boolean;
-    onStart: () => void;
-    onEnd: () => void;
+  loading: boolean
+  onStart: () => void
+  onEnd: () => void
 }
 
 export const loadingStore = atom({
-    key : "loadingStore",
-    default: false
+  key: 'loadingStore',
+  default: false,
 })
 
 const useLoading = (): UseLoading => {
-    const [loading, setLoading] = useRecoilState(loadingStore);
+  const [loading, setLoading] = useRecoilState(loadingStore)
 
-    const onStart = () => {
-        setLoading(true);
-    };
+  const onStart = () => {
+    setLoading(true)
+  }
 
-    const onEnd = () => {
-        setLoading(false);
-    };
+  const onEnd = () => {
+    setLoading(false)
+  }
 
-    return { loading, onStart, onEnd };
-};
+  return { loading, onStart, onEnd }
+}
 
-export default useLoading;
+export default useLoading

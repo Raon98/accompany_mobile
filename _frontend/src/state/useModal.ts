@@ -1,32 +1,31 @@
-import { useRecoilState } from "recoil";
-import { modalStore } from "store/modalStore";
+import { useRecoilState } from 'recoil'
+import { modalStore } from 'store/modalStore'
 
 interface UseModal {
-    isOpen: boolean;
-    onOpen: () => void;
-    onClose: () => void;
+  isOpen: boolean
+  onOpen: () => void
+  onClose: () => void
 }
 
 const useModal = (name: string): UseModal => {
-    const [isOpenStates, setIsOpenStates] = useRecoilState(modalStore);
-    const isOpen = isOpenStates[name];
+  const [isOpenStates, setIsOpenStates] = useRecoilState(modalStore)
+  const isOpen = isOpenStates[name]
 
+  const onOpen = () => {
+    setIsOpenStates(prev => ({
+      ...prev,
+      [name]: true,
+    }))
+  }
 
-    const onOpen = () => {
-        setIsOpenStates((prev) => ({
-            ...prev,
-            [name]: true,
-        }));
-    };
+  const onClose = () => {
+    setIsOpenStates(prev => ({
+      ...prev,
+      [name]: false,
+    }))
+  }
 
-    const onClose = () => {
-        setIsOpenStates((prev) => ({
-            ...prev,
-            [name]: false,
-        }));
-    };
+  return { isOpen, onOpen, onClose }
+}
 
-    return { isOpen, onOpen, onClose };
-};
-
-export default useModal;
+export default useModal
