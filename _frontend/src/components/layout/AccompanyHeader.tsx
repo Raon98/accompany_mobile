@@ -1,17 +1,8 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const AccompanyHeader = () => {
-  return (
-    <header className="main-header">
-     
-    </header>
-  );
-};
+  return <header className="main-header"></header>
+}
 
-export default AccompanyHeader;
-
-
-
-
-    
+export default AccompanyHeader

@@ -1,10 +1,10 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import AccompanyLayout from "components/layout/AccompanyLayout";
-import { ToastContainer } from "react-toastify";
-import { RecoilRoot } from "recoil";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import AccompanyLayout from 'components/layout/AccompanyLayout'
+import { ToastContainer } from 'react-toastify'
+import { RecoilRoot } from 'recoil'
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient()
 
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
         </QueryClientProvider>
       </RecoilRoot>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App

@@ -1,10 +1,10 @@
-@use "../utils/mixins";
-@use "../themes/colors";
+@use '../utils/mixins';
+@use '../themes/colors';
 
 .header {
   background-color: transparent;
   &-prev__btn {
-    background-image: url("../../images/prev_btn.svg");
+    background-image: url('../../images/prev_btn.svg');
     width: 1.55rem;
     height: 1.25rem;
     padding: 0;
@@ -43,7 +43,9 @@
     @include mixins.flex_mixin(space-between, center, column);
     width: 100%;
     margin-top: 1.125rem;
-    transition: opacity 0.3s ease, height 0.3s ease;
+    transition:
+      opacity 0.3s ease,
+      height 0.3s ease;
 
     .info__text {
       width: 100%;
@@ -95,8 +97,6 @@
       &.fail {
         border-bottom: 2px solid colors.$danger-light-350;
       }
-
-      
     }
     .gender__block {
       @include mixins.flex_mixin;
@@ -136,7 +136,7 @@
           height: 0.825rem;
           right: 10px;
           top: 40%;
-          background-image: url("../../images/arrow_bottom.svg");
+          background-image: url('../../images/arrow_bottom.svg');
           background-position: center center;
           background-repeat: no-repeat;
           background-size: 1.5rem auto;
@@ -171,7 +171,9 @@
             max-height: 0;
             opacity: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease, opacity 0.3s ease;
+            transition:
+              max-height 0.3s ease,
+              opacity 0.3s ease;
 
             &.show {
               max-height: 10rem;
@@ -228,7 +230,6 @@
 
       & > .uid__form {
         @include mixins.flex_mixin;
-        
       }
     }
   }
@@ -241,7 +242,7 @@
 
 .terms {
   margin-top: 3.5rem;
-  padding : 0 1rem;
+  padding: 0 1rem;
   h1,
   h2,
   h3 {
@@ -249,7 +250,7 @@
   }
 
   h1 {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     border-bottom: 2px solid #ccc;
     padding-bottom: 0.625rem;
     margin-bottom: 1.25rem;
@@ -262,7 +263,7 @@
   }
 
   h3 {
-    font-size: 1rem; 
+    font-size: 1rem;
     margin-top: 0.625rem;
     margin-bottom: 0.3125rem;
   }
@@ -311,7 +312,7 @@
       bottom: 0;
       width: 5rem;
       height: 5rem;
-      background-image: url("../../images/accompany_side_logo.png");
+      background-image: url('../../images/accompany_side_logo.png');
       position: absolute;
       background-position: center center;
       background-repeat: no-repeat;
@@ -348,14 +349,14 @@
 
       &.check {
         background-color: colors.$theme-500;
-        background-image: url("../../images/checkbox-check.svg");
+        background-image: url('../../images/checkbox-check.svg');
         background-repeat: no-repeat;
         background-size: 0.725rem 0.725rem;
         background-position: center center;
       }
     }
     .terms__btn {
-      background-image: url("../../images/arrow_bottom.svg");
+      background-image: url('../../images/arrow_bottom.svg');
       background-repeat: no-repeat;
       background-size: 0.725rem 0.725rem;
       background-position: center center;

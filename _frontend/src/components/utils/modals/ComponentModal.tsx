@@ -1,13 +1,13 @@
-import { CloseHeader } from "components/layout/CustomHeader";
-import React from "react";
-import useModal from "state/useModal";
+import { CloseHeader } from 'components/layout/CustomHeader'
+import React from 'react'
+import useModal from 'state/useModal'
 
 interface componentProp {
-  component: React.Component;
-  title: string;
+  component: React.Component
+  title: string
 }
 export const ComponentModal = ({ component, title }: componentProp) => {
-  const { isOpen, onClose } = useModal("component");
+  const { isOpen, onClose } = useModal('component')
   return (
     <>
       {isOpen && (
@@ -16,11 +16,7 @@ export const ComponentModal = ({ component, title }: componentProp) => {
           <div className="modals">
             <div className="modals-content">
               <>
-                <CloseHeader
-                  title={title}
-                  type={"close"}
-                  option={{ name: "component" }}
-                />
+                <CloseHeader title={title} type={'close'} option={{ name: 'component' }} />
                 {component}
               </>
             </div>
@@ -28,5 +24,5 @@ export const ComponentModal = ({ component, title }: componentProp) => {
         </>
       )}
     </>
-  );
-};
+  )
+}

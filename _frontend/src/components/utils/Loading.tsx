@@ -1,7 +1,7 @@
-import Spinner from "assets/images/loading.gif";
-import useLoading from "state/useLoading";
+import Spinner from 'assets/images/loading.gif'
+import useLoading from 'state/useLoading'
 const Loading = () => {
-  const { loading } = useLoading();
+  const { loading } = useLoading()
   return (
     <>
       {loading && (
@@ -11,7 +11,7 @@ const Loading = () => {
         </div>
       )}
     </>
-  );
-};
+  )
+}
 
-export default Loading;
+export default Loading
