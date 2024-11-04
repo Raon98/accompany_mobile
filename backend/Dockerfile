@@ -14,7 +14,7 @@ ENV TOMCAT_VERSION 10.1.31
 ENV MAVEN_HOME=/root/.m2/repository
 ENV CATALINA_HOME /usr/local/tomcat
 
-RUN curl -O https://downloads.apache.org/tomcat/tomcat-10/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
+RUN curl -L -O https://archive.apache.org/dist/tomcat/tomcat-10/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
     tar -xzf apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
     rm apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
     mv apache-tomcat-${TOMCAT_VERSION} ${CATALINA_HOME}
