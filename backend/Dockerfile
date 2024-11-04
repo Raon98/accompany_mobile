@@ -10,11 +10,7 @@ RUN apt-get update && \
 
 RUN mvn clean package
 
-<<<<<<< HEAD
 ENV TOMCAT_VERSION 10.1.31
-=======
-ENV TOMCAT_VERSION 10.1.30
->>>>>>> 3f2c6188fea90202147eb4535527c897f526d002
 ENV MAVEN_HOME=/root/.m2/repository
 ENV CATALINA_HOME /usr/local/tomcat
 
